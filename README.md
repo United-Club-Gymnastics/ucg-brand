@@ -35,7 +35,7 @@ Add the two lines above to your repo's `AGENTS.md`. (Codex can also load `skills
 | [`templates/email/`](templates/email) | UCG's HTML announcement email template |
 | [`assets/logos/`](assets/logos) | All logo lockups in 4 colorways, SVG + PNG |
 | [`assets/icons/`](assets/icons) | Event (MAG/WAG/T&T) and apparatus icons, SVG + PNG |
-| [`assets/photos/`](assets/photos) | 36 curated 2026 Nationals photos with alt text |
+| [`assets/photos/`](assets/photos) | 37 curated 2026 Nationals photos, each in color and B&W, with alt text |
 | [`assets/animation/`](assets/animation) | Animated mark loops (MP4) in square, vertical and wide |
 | [`assets/social/`](assets/social) | Facebook cover, YouTube banner, Zoom backgrounds, email header |
 | [`skills/ucg-brand/`](skills/ucg-brand) | Agent skill (Claude Code plugin / Codex) |

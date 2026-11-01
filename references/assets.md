@@ -54,12 +54,12 @@ Use icons at one consistent size per layout, in a single brand color that meets 
 
 ## Photos — `assets/photos/`
 
-36 curated photos from 2026 UCG Nationals (15 color, 21 black-and-white), 2000px on the long edge, metadata stripped. `photos.json` lists each file with ready-to-use alt text, its tone, and its type:
+37 curated photos from 2026 UCG Nationals by photographer Bryan Johnson, each in a color and a black-and-white edit (74 files), 2000px on the long edge, metadata stripped. `photos.json` lists each file with ready-to-use alt text, its tone, and its type:
 - `athlete`: a single athlete, often B&W, for heroes and quotes
 - `movement`: skills in motion, dynamic crops
 - `community`: teams, coaches, judges, volunteers, fans
 
-File names: `ucg-<color|bw>-<what's in it>.jpg`. Credit "Photo: UCG" where credits are shown. Use them for UCG materials only, and crop rather than distort. The full Nationals sets live in the UCG brand toolkit.
+File names: `ucg-<color|bw>-<what's in it>.jpg`. Credit "Photo: Bryan Johnson" where credits are shown. Pick the B&W edit for athlete features with white type, and the color edit for community and belonging. Use them for UCG materials only, and crop rather than distort. The full Nationals sets live in the UCG brand toolkit.
 
 ## Social banners — `assets/social/`
 

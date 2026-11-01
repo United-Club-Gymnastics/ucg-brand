@@ -1,57 +1,641 @@
 [
  {
-  "file": "ucg-color-team-celebration.jpg",
-  "tone": "color",
-  "type": "community",
-  "width": 2000,
-  "height": 1335,
-  "alt": "A team in red warm-ups cheers beside the floor at Nationals.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-color-pommel-horse-finish.jpg",
-  "tone": "color",
-  "type": "athlete",
-  "width": 2000,
-  "height": 1335,
-  "alt": "A male gymnast raises both arms after finishing his pommel horse routine.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-color-judges-scoresheets.jpg",
-  "tone": "color",
-  "type": "community",
-  "width": 2000,
-  "height": 1333,
-  "alt": "Judges write scores on score sheets at the judging table.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-color-athletes-and-officials.jpg",
-  "tone": "color",
-  "type": "community",
-  "width": 2000,
-  "height": 1333,
-  "alt": "Athletes talk with officials beside the competition floor.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-color-volunteer-official.jpg",
-  "tone": "color",
-  "type": "community",
-  "width": 1335,
-  "height": 2000,
-  "alt": "A volunteer official in a yellow shirt holds a clipboard on the competition floor.",
-  "event": "2026 UCG Nationals"
- },
- {
   "file": "ucg-color-warmup-straddle.jpg",
   "tone": "color",
   "type": "athlete",
   "width": 2000,
   "height": 1335,
-  "alt": "An athlete stretches in a straddle split during warm-ups.",
-  "event": "2026 UCG Nationals"
+  "alt": "An athlete in a red and white hoodie stretches in a straddle split during warm-ups.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0019.jpg"
+ },
+ {
+  "file": "ucg-bw-warmup-straddle.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1335,
+  "alt": "An athlete in a red and white hoodie stretches in a straddle split during warm-ups.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0019.jpg"
+ },
+ {
+  "file": "ucg-color-beam-pose.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A gymnast in a navy leotard balances on one leg on the beam, arms raised.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0119.jpg"
+ },
+ {
+  "file": "ucg-bw-beam-pose.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A gymnast in a navy leotard balances on one leg on the beam, arms raised.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0119.jpg"
+ },
+ {
+  "file": "ucg-color-floor-salute.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A smiling gymnast in a maroon leotard and a crown salutes after her routine.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0179.jpg"
+ },
+ {
+  "file": "ucg-bw-floor-salute.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A smiling gymnast in a maroon leotard and a crown salutes after her routine.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0179.jpg"
+ },
+ {
+  "file": "ucg-color-bars-straddle.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast holds a straddle support on the low bar of the uneven bars.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0206.jpg"
+ },
+ {
+  "file": "ucg-bw-bars-straddle.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast holds a straddle support on the low bar of the uneven bars.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0206.jpg"
+ },
+ {
+  "file": "ucg-color-judge-score-card.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A judge holds up a score card at the judges' table.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0217.jpg"
+ },
+ {
+  "file": "ucg-bw-judge-score-card.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A judge holds up a score card at the judges' table.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0217.jpg"
+ },
+ {
+  "file": "ucg-color-rings-swing.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A male gymnast swings through the still rings under the arena lights.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0297.jpg"
+ },
+ {
+  "file": "ucg-bw-rings-swing.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A male gymnast swings through the still rings under the arena lights.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0297.jpg"
+ },
+ {
+  "file": "ucg-color-judges-table.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Judges laugh and wave from the judging table.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0438.jpg"
+ },
+ {
+  "file": "ucg-bw-judges-table.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Judges laugh and wave from the judging table.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0438.jpg"
+ },
+ {
+  "file": "ucg-color-teammates-cheer.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Teammates in maroon leotards cheer from the sidelines.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0597.jpg"
+ },
+ {
+  "file": "ucg-bw-teammates-cheer.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Teammates in maroon leotards cheer from the sidelines.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0597.jpg"
+ },
+ {
+  "file": "ucg-color-beam-walkover.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A gymnast arches through a walkover on the balance beam.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0717.jpg"
+ },
+ {
+  "file": "ucg-bw-beam-walkover.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A gymnast arches through a walkover on the balance beam.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0717.jpg"
+ },
+ {
+  "file": "ucg-color-friends-laughing.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 1335,
+  "height": 2000,
+  "alt": "Two athletes in club sweatshirts laugh together.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0797.jpg"
+ },
+ {
+  "file": "ucg-bw-friends-laughing.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 1335,
+  "height": 2000,
+  "alt": "Two athletes in club sweatshirts laugh together.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0797.jpg"
+ },
+ {
+  "file": "ucg-color-friends-on-floor.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A row of athletes sits on the floor, laughing and cheering.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0818.jpg"
+ },
+ {
+  "file": "ucg-bw-friends-on-floor.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A row of athletes sits on the floor, laughing and cheering.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0818.jpg"
+ },
+ {
+  "file": "ucg-color-team-celebration.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A team in navy leotards cheers with arms raised after a routine.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0896.jpg"
+ },
+ {
+  "file": "ucg-bw-team-celebration.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A team in navy leotards cheers with arms raised after a routine.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_0896.jpg"
+ },
+ {
+  "file": "ucg-color-high-bar-swing.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast swings under the high bar, body fully extended.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_1036.jpg"
+ },
+ {
+  "file": "ucg-bw-high-bar-swing.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast swings under the high bar, body fully extended.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_1036.jpg"
+ },
+ {
+  "file": "ucg-color-team-reach.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A team in red and black reaches toward the camera together.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_1155.jpg"
+ },
+ {
+  "file": "ucg-bw-team-reach.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A team in red and black reaches toward the camera together.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_1155.jpg"
+ },
+ {
+  "file": "ucg-color-team-arms-up.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A team in red and black leotards throws their arms in the air.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_1174.jpg"
+ },
+ {
+  "file": "ucg-bw-team-arms-up.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A team in red and black leotards throws their arms in the air.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_09_NAIGC Nationals_1174.jpg"
+ },
+ {
+  "file": "ucg-color-trampoline-flip.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast flips high above a trampoline.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_10_NAIGC Nationals_1360.jpg"
+ },
+ {
+  "file": "ucg-bw-trampoline-flip.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast flips high above a trampoline.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_10_NAIGC Nationals_1360.jpg"
+ },
+ {
+  "file": "ucg-color-trampoline-straddle.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 2000,
+  "alt": "A gymnast hits a straddle jump high above the trampoline as the crowd watches.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_10_NAIGC Nationals_1490.jpg"
+ },
+ {
+  "file": "ucg-bw-trampoline-straddle.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 2000,
+  "alt": "A gymnast hits a straddle jump high above the trampoline as the crowd watches.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_10_NAIGC Nationals_1490.jpg"
+ },
+ {
+  "file": "ucg-color-floor-run.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in red runs into a tumbling pass on the floor.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_10_NAIGC Nationals_1503.jpg"
+ },
+ {
+  "file": "ucg-bw-floor-run.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in red runs into a tumbling pass on the floor.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_10_NAIGC Nationals_1503.jpg"
+ },
+ {
+  "file": "ucg-color-team-lineup.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A team in red jackets lines the floor, cheering a teammate.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_10_NAIGC Nationals_1654.jpg"
+ },
+ {
+  "file": "ucg-bw-team-lineup.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A team in red jackets lines the floor, cheering a teammate.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_10_NAIGC Nationals_1654.jpg"
+ },
+ {
+  "file": "ucg-color-vault-flip.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast flips over the vault table.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_10_NAIGC Nationals_1674.jpg"
+ },
+ {
+  "file": "ucg-bw-vault-flip.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast flips over the vault table.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_10_NAIGC Nationals_1674.jpg"
+ },
+ {
+  "file": "ucg-color-trampoline-bounce.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast bounces high on a trampoline in the T&T area.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_10_NAIGC Nationals_1787.jpg"
+ },
+ {
+  "file": "ucg-bw-trampoline-bounce.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast bounces high on a trampoline in the T&T area.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_10_NAIGC Nationals_1787.jpg"
+ },
+ {
+  "file": "ucg-color-pommel-horse-swing.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast swings his legs across the pommel horse.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_10_NAIGC Nationals_1873.jpg"
+ },
+ {
+  "file": "ucg-bw-pommel-horse-swing.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast swings his legs across the pommel horse.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_10_NAIGC Nationals_1873.jpg"
+ },
+ {
+  "file": "ucg-color-dinosaur-fan.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 1333,
+  "height": 2000,
+  "alt": "A fan in an inflatable dinosaur costume sits with the crowd.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_10_NAIGC Nationals_2056.jpg"
+ },
+ {
+  "file": "ucg-bw-dinosaur-fan.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 1333,
+  "height": 2000,
+  "alt": "A fan in an inflatable dinosaur costume sits with the crowd.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_10_NAIGC Nationals_2056.jpg"
+ },
+ {
+  "file": "ucg-color-beam-leap-crowd.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast leaps on the beam while fans film from the stands.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2199.jpg"
+ },
+ {
+  "file": "ucg-bw-beam-leap-crowd.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast leaps on the beam while fans film from the stands.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2199.jpg"
+ },
+ {
+  "file": "ucg-color-beam-straddle.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in a navy leotard balances in a straddle on the beam.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2224.jpg"
+ },
+ {
+  "file": "ucg-bw-beam-straddle.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in a navy leotard balances in a straddle on the beam.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2224.jpg"
+ },
+ {
+  "file": "ucg-color-teammates-clapping.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A gymnast wearing a crown claps for a teammate.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2247.jpg"
+ },
+ {
+  "file": "ucg-bw-teammates-clapping.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A gymnast wearing a crown claps for a teammate.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2247.jpg"
+ },
+ {
+  "file": "ucg-color-teammates-react.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "Teammates in navy leotards shout and cheer beside the vault.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2273.jpg"
+ },
+ {
+  "file": "ucg-bw-teammates-react.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "Teammates in navy leotards shout and cheer beside the vault.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2273.jpg"
+ },
+ {
+  "file": "ucg-color-vault-layout.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast flies in a stretched layout over the vault table.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2302.jpg"
+ },
+ {
+  "file": "ucg-bw-vault-layout.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast flies in a stretched layout over the vault table.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2302.jpg"
+ },
+ {
+  "file": "ucg-color-team-on-beam.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Five teammates in navy leotards sit side by side on a beam, smiling.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2414.jpg"
+ },
+ {
+  "file": "ucg-bw-team-on-beam.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Five teammates in navy leotards sit side by side on a beam, smiling.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2414.jpg"
  },
  {
   "file": "ucg-color-coach-smiling.jpg",
@@ -60,205 +644,31 @@
   "width": 2000,
   "height": 1333,
   "alt": "A smiling coach with crossed arms watches the competition.",
-  "event": "2026 UCG Nationals"
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2440.jpg"
  },
  {
-  "file": "ucg-color-bars-handstand.jpg",
+  "file": "ucg-bw-coach-smiling.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A smiling coach with crossed arms watches the competition.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2440.jpg"
+ },
+ {
+  "file": "ucg-color-parallel-bars.jpg",
   "tone": "color",
   "type": "movement",
   "width": 2000,
   "height": 1333,
-  "alt": "A gymnast holds a handstand on the uneven bars while an official looks on.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-color-team-on-mat.jpg",
-  "tone": "color",
-  "type": "community",
-  "width": 2000,
-  "height": 1333,
-  "alt": "A women's team in matching leotards sits together on a mat, laughing.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-color-teammates-react.jpg",
-  "tone": "color",
-  "type": "community",
-  "width": 2000,
-  "height": 1335,
-  "alt": "Teammates in navy leotards react with excitement beside the vault runway.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-color-dinosaur-fan.jpg",
-  "tone": "color",
-  "type": "community",
-  "width": 1333,
-  "height": 2000,
-  "alt": "A fan in an inflatable dinosaur costume cheers from the floor.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-color-beam-pose.jpg",
-  "tone": "color",
-  "type": "athlete",
-  "width": 1335,
-  "height": 2000,
-  "alt": "A gymnast poses with both arms raised on the balance beam.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-color-rings-swing.jpg",
-  "tone": "color",
-  "type": "movement",
-  "width": 2000,
-  "height": 1333,
-  "alt": "A male gymnast swings on the still rings under the arena lights.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-color-bars-release.jpg",
-  "tone": "color",
-  "type": "movement",
-  "width": 2000,
-  "height": 1333,
-  "alt": "A gymnast flies above the uneven bars during a release move.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-color-high-bar.jpg",
-  "tone": "color",
-  "type": "movement",
-  "width": 2000,
-  "height": 1333,
-  "alt": "A gymnast swings over the high bar, seen from below.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-bw-beam-pose.jpg",
-  "tone": "black-and-white",
-  "type": "athlete",
-  "width": 1335,
-  "height": 2000,
-  "alt": "A gymnast balances on the beam with arms raised.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-bw-rings-swing.jpg",
-  "tone": "black-and-white",
-  "type": "movement",
-  "width": 2000,
-  "height": 1333,
-  "alt": "A gymnast swings through the still rings, seen from below.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-bw-floor-split-leap.jpg",
-  "tone": "black-and-white",
-  "type": "movement",
-  "width": 2000,
-  "height": 1333,
-  "alt": "A gymnast hits a split leap on the floor exercise.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-bw-friends-laughing.jpg",
-  "tone": "black-and-white",
-  "type": "community",
-  "width": 1335,
-  "height": 2000,
-  "alt": "Two athletes laugh together in the stands.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-bw-team-cheering.jpg",
-  "tone": "black-and-white",
-  "type": "community",
-  "width": 2000,
-  "height": 1333,
-  "alt": "A team throws their arms up, cheering for a teammate.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-bw-scorers-table.jpg",
-  "tone": "black-and-white",
-  "type": "community",
-  "width": 2000,
-  "height": 1335,
-  "alt": "Volunteers run scoring at a laptop on the officials' table.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-bw-double-mini-jump.jpg",
-  "tone": "black-and-white",
-  "type": "movement",
-  "width": 2000,
-  "height": 2000,
-  "alt": "A gymnast in a tuck jump high above the double mini trampoline, teammates watching.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-bw-floor-run.jpg",
-  "tone": "black-and-white",
-  "type": "movement",
-  "width": 2000,
-  "height": 1333,
-  "alt": "A gymnast sprints into a tumbling pass, with the crowd blurred behind.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-bw-team-huddle.jpg",
-  "tone": "black-and-white",
-  "type": "community",
-  "width": 2000,
-  "height": 1335,
-  "alt": "Teammates in matching leotards huddle and talk between events.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-bw-beam-finish.jpg",
-  "tone": "black-and-white",
-  "type": "athlete",
-  "width": 2000,
-  "height": 1335,
-  "alt": "A gymnast finishes her beam routine with arms raised.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-bw-floor-tumble.jpg",
-  "tone": "black-and-white",
-  "type": "movement",
-  "width": 2000,
-  "height": 1335,
-  "alt": "A gymnast flips through a tumbling pass on the floor.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-bw-teammates-react.jpg",
-  "tone": "black-and-white",
-  "type": "community",
-  "width": 2000,
-  "height": 1335,
-  "alt": "Teammates shout and celebrate beside the vault runway.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-bw-vault-handspring.jpg",
-  "tone": "black-and-white",
-  "type": "movement",
-  "width": 2000,
-  "height": 1333,
-  "alt": "A gymnast pushes through a handspring on the vault table.",
-  "event": "2026 UCG Nationals"
- },
- {
-  "file": "ucg-bw-team-on-mat.jpg",
-  "tone": "black-and-white",
-  "type": "community",
-  "width": 2000,
-  "height": 1333,
-  "alt": "Five teammates sit side by side on a mat, smiling.",
-  "event": "2026 UCG Nationals"
+  "alt": "A gymnast holds a straddle on the parallel bars in front of the judges.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2448.jpg"
  },
  {
   "file": "ucg-bw-parallel-bars.jpg",
@@ -266,26 +676,65 @@
   "type": "movement",
   "width": 2000,
   "height": 1333,
-  "alt": "A gymnast holds a straddle position on the parallel bars.",
-  "event": "2026 UCG Nationals"
+  "alt": "A gymnast holds a straddle on the parallel bars in front of the judges.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2448.jpg"
  },
  {
-  "file": "ucg-bw-high-bar-release.jpg",
-  "tone": "black-and-white",
-  "type": "movement",
+  "file": "ucg-color-mag-teammates.jpg",
+  "tone": "color",
+  "type": "community",
   "width": 2000,
   "height": 1333,
-  "alt": "A gymnast flies above the high bar under the arena lights.",
-  "event": "2026 UCG Nationals"
+  "alt": "Two male gymnasts laugh and celebrate with teammates.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2523.jpg"
  },
  {
-  "file": "ucg-bw-beam-jump.jpg",
+  "file": "ucg-bw-mag-teammates.jpg",
   "tone": "black-and-white",
-  "type": "movement",
+  "type": "community",
   "width": 2000,
   "height": 1333,
-  "alt": "A gymnast jumps high above the balance beam.",
-  "event": "2026 UCG Nationals"
+  "alt": "Two male gymnasts laugh and celebrate with teammates.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2523.jpg"
+ },
+ {
+  "file": "ucg-color-high-bar-crowd.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A crowd cheers as a gymnast performs on the high bar.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2689.jpg"
+ },
+ {
+  "file": "ucg-bw-high-bar-crowd.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A crowd cheers as a gymnast performs on the high bar.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2689.jpg"
+ },
+ {
+  "file": "ucg-color-coach-think-positive.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 1333,
+  "height": 2000,
+  "alt": "A coach in a \"Think Positive\" shirt watches from the floor.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2715.jpg"
  },
  {
   "file": "ucg-bw-coach-think-positive.jpg",
@@ -294,25 +743,42 @@
   "width": 1333,
   "height": 2000,
   "alt": "A coach in a \"Think Positive\" shirt watches from the floor.",
-  "event": "2026 UCG Nationals"
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2715.jpg"
  },
  {
-  "file": "ucg-bw-pommel-horse.jpg",
-  "tone": "black-and-white",
-  "type": "movement",
-  "width": 2000,
-  "height": 1335,
-  "alt": "A gymnast swings his legs around the pommel horse.",
-  "event": "2026 UCG Nationals"
+  "file": "ucg-color-beam-finish.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 1333,
+  "height": 2000,
+  "alt": "A gymnast salutes from the end of the balance beam.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2716.jpg"
  },
  {
-  "file": "ucg-bw-crowd-cheering.jpg",
+  "file": "ucg-bw-beam-finish.jpg",
   "tone": "black-and-white",
-  "type": "community",
+  "type": "athlete",
+  "width": 1333,
+  "height": 2000,
+  "alt": "A gymnast salutes from the end of the balance beam.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2716.jpg"
+ },
+ {
+  "file": "ucg-color-pommel-horse-salute.jpg",
+  "tone": "color",
+  "type": "athlete",
   "width": 2000,
   "height": 1335,
-  "alt": "Fans and teammates shout encouragement from the sidelines.",
-  "event": "2026 UCG Nationals"
+  "alt": "A gymnast raises his arms behind the pommel horse after his routine.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2891.jpg"
  },
  {
   "file": "ucg-bw-pommel-horse-salute.jpg",
@@ -320,7 +786,31 @@
   "type": "athlete",
   "width": 2000,
   "height": 1335,
-  "alt": "A gymnast salutes behind the pommel horse after his routine.",
-  "event": "2026 UCG Nationals"
+  "alt": "A gymnast raises his arms behind the pommel horse after his routine.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2891.jpg"
+ },
+ {
+  "file": "ucg-color-pommel-handstand.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast presses through a straddled handstand on the pommel horse.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2902.jpg"
+ },
+ {
+  "file": "ucg-bw-pommel-handstand.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast presses through a straddled handstand on the pommel horse.",
+  "event": "2026 UCG Nationals",
+  "credit": "Bryan Johnson",
+  "source_frame": "2026_04_11_NAIGC Nationals_2902.jpg"
  }
 ]
