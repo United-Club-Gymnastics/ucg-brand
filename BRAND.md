@@ -26,6 +26,12 @@ Welcoming, credible, joyful, practical. Write like people who know the sport and
 - Dates: `April 1–4, 2027` (en dash, no spaces); short form `Apr 1–4`; with a place, `April 1–4, 2027 · Portland, OR`. Times: `10:30 AM`, `7–9 PM ET`. Numbers: numerals for scores, dates and counts (`3 events`, `9.650`).
 - Use real links. If you don't have the exact URL (registration, a course page), use https://unitedclubgymnastics.org and flag it for the person to fix; never invent a URL.
 
+Examples:
+
+- Instead of "We are a leading provider of innovative solutions that drive operational excellence.", write "We help gymnasts stay connected to the sport by bringing clubs and independent athletes together."
+- Instead of "Registration for the aforementioned competition shall commence on 12/01.", write "Registration opens December 1. Here's how to sign up."
+- Instead of "Athletes failing to submit paperwork will be disqualified.", write "Send your paperwork by Friday so you're cleared to compete."
+
 ## Color
 
 | Role | Name | Hex |

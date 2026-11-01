@@ -243,11 +243,11 @@ def feature_tiles(ctx):
         ("Strong type", f'<div class="cq square on-white" style="border-radius:16px"><div class="abs" style="left:8cqw;bottom:8cqw;right:8cqw"><p class="subhead" style="font-size:4cqw;margin:0 0 3cqw;color:#184B56">April 2027</p><p class="display" style="font-size:19cqw;margin:0;color:#1E2B38">A guide to Nationals</p></div></div>'),
         ("Black & white photos, white type", f'<div class="cq square" style="border-radius:16px;background:#1E2B38">{photo("beam-pose")}<div class="abs" style="left:0;right:0;bottom:0;background:#1E2B38;padding:5cqw 7cqw"><p class="display" style="font-size:11cqw;margin:0;color:#FFFFFF">Join the club</p></div></div>'),
         ("Dynamic crops", f'<div class="cq square" style="border-radius:16px;background:#1E2B38">{photo("high-bar-swing", pos="60% 30%")}</div>'),
-        ("Rounded corners", f'<div class="cq square on-lb" style="border-radius:16px"><div class="abs" style="left:8cqw;right:8cqw;top:12cqw;background:#FFFFFF;border-radius:6cqw;padding:7cqw"><p class="subhead" style="font-size:4.4cqw;margin:0 0 3cqw;color:#184B56">Rule #1</p><p style="font-size:6cqw;margin:0;color:#1E2B38;font-weight:700;line-height:1.3">Athlete eligibility now extends through the 5th year of college.</p></div></div>'),
+        ("Rounded corners", f'<div class="cq square on-lb" style="border-radius:16px"><div class="abs" style="left:8cqw;right:8cqw;top:12cqw;background:#FFFFFF;border-radius:6cqw;padding:7cqw"><p class="subhead" style="font-size:4.4cqw;margin:0 0 3cqw;color:#184B56">Card title</p><p style="font-size:6cqw;margin:0;color:#1E2B38;font-weight:700;line-height:1.3">Cards, panels and photos all get rounded corners.</p></div></div>'),
         ("Event icons + color overlay", f'<div class="cq square overlay-screen" style="--overlay:#ADBAE9;border-radius:16px">{photo("beam-walkover")}<img class="abs" src="{R}assets/icons/event/wag-navy.svg" alt="WAG icon" style="width:40cqw;left:30cqw;top:30cqw"></div>'),
     ]
     body = "".join(f'<div>{t}<p class="mock-label">{E(n)}</p></div>' for n, t in tiles)
-    return vis("The six design features", f'<div class="grid" style="--min:220px">{body}</div>')
+    return vis("The six design features", f'<div class="grid" style="--min:220px">{body}</div>', "Example content.")
 
 
 def type_specimens(ctx):
@@ -261,14 +261,9 @@ def type_specimens(ctx):
 
 
 def voice_examples(ctx):
-    pairs = [
-        ("We are a leading provider of innovative solutions that drive operational excellence.",
-         "We help gymnasts stay connected to the sport by bringing clubs and independent athletes together."),
-        ("Registration for the aforementioned competition shall commence on 12/01.",
-         "Registration opens December 1. Here's how to sign up."),
-        ("Athletes failing to submit paperwork will be disqualified.",
-         "Send your paperwork by Friday so you're cleared to compete."),
-    ]
+    pairs = re.findall(r'^- Instead of "(.+?)", write "(.+?)"$', md_section(ctx.md("BRAND.md"), "Voice"), re.M)
+    if not pairs:
+        raise SystemExit("voice examples not found in BRAND.md")
     rows = "".join(f'<div class="dodont">{dont("Instead of", f"<div class=card><p>{E(a)}</p></div>")}{do("Write", f"<div class=card><p>{E(b)}</p></div>")}</div>' for a, b in pairs)
     return vis("Sounds like UCG", f'<div style="display:grid;gap:18px">{rows}</div>')
 
@@ -761,7 +756,7 @@ def social_formats(ctx):
 
 def social_posts(ctx):
     f = {fr["slug"]: fr for fr in ctx.frames()}
-    handle = lambda c: f'<div class="abs" style="left:{px(64)};bottom:{px(52)};font-family:Arial;font-weight:700;font-size:{px(26)};color:{c}">@unitedclubgymnastics</div>'
+    handle = lambda c: f'<div class="abs" style="left:{px(64)};bottom:{px(52)};font-family:Arial;font-weight:700;font-size:{px(36)};color:{c}">@unitedclubgymnastics</div>'
     p1 = f'''<div class="cq post on-bg"><img class="abs" src="{R}assets/logos/ucg-mark-navy.svg" alt="" style="width:{px(110)};right:{px(64)};top:{px(64)}">
 <div class="abs display" style="left:{px(64)};right:{px(64)};top:{px(330)};font-size:{px(190)};color:#1E2B38">For the love of the sport.</div>{handle("#1E2B38")}</div>'''
     p2 = f'''<div class="cq post" style="background:#1E2B38"><img class="abs" src="{thumb(f["vault-layout"]["bw"])}" alt="" style="top:0;left:0;width:100%;height:68%;object-fit:cover">
@@ -770,10 +765,10 @@ def social_posts(ctx):
     icons = "".join(f'<img src="{R}assets/icons/event/{s}-navy.svg" alt="{n}" style="width:{px(250)}">' for s, n in (("mag", "MAG"), ("wag", "WAG"), ("tnt", "T&amp;T")))
     p3 = f'''<div class="cq post on-purple"><div class="abs" style="left:{px(64)};right:{px(64)};top:{px(330)};display:flex;justify-content:space-between">{icons}</div>
 <div class="abs display" style="left:{px(64)};right:{px(64)};top:{px(700)};font-size:{px(120)};color:#1E2B38;text-align:center">MAG · WAG · T&amp;T</div>
-<div class="abs" style="left:{px(64)};right:{px(64)};top:{px(860)};font-family:Arial;font-size:{px(36)};color:#1E2B38;text-align:center">Three disciplines. One community.</div>{handle("#1E2B38")}</div>'''
+<div class="abs" style="left:{px(64)};right:{px(64)};top:{px(860)};font-family:Arial;font-size:{px(46)};color:#1E2B38;text-align:center">Three disciplines. One community.</div>{handle("#1E2B38")}</div>'''
     def car(bg, fg, eyebrow, title, sub, arrow=True):
-        return f'''<div class="cq post" style="background:{bg}"><div class="abs" style="left:{px(64)};top:{px(80)};font-family:Arial;font-weight:700;font-size:{px(30)};letter-spacing:.16em;text-transform:uppercase;color:{fg}">{eyebrow}</div>
-<div class="abs display" style="left:{px(64)};right:{px(64)};top:{px(420)};font-size:{px(150)};color:{fg}">{title}</div><div class="abs" style="left:{px(64)};right:{px(64)};top:{px(900)};font-family:Arial;font-size:{px(44)};color:{fg}">{sub}</div>
+        return f'''<div class="cq post" style="background:{bg}"><div class="abs" style="left:{px(64)};top:{px(80)};font-family:Arial;font-weight:700;font-size:{px(44)};letter-spacing:.16em;text-transform:uppercase;color:{fg}">{eyebrow}</div>
+<div class="abs display" style="left:{px(64)};right:{px(64)};top:{px(420)};font-size:{px(150)};color:{fg}">{title}</div><div class="abs" style="left:{px(64)};right:{px(64)};top:{px(900)};font-family:Arial;font-size:{px(54)};color:{fg}">{sub}</div>
 {f'<div class="abs" style="right:{px(64)};bottom:{px(48)};font-family:Arial;font-weight:700;font-size:{px(70)};color:{fg}">→</div>' if arrow else ""}</div>'''
     carousel = (car("#1E2B38", "#FFFFFF", "Nationals 2027", "Everything you need to know", "Swipe for the details")
                 + car("#DBEBEE", "#1E2B38", "When?", "April 2027", "Portland, Oregon")
@@ -782,7 +777,7 @@ def social_posts(ctx):
              f'<div>{p2}<p class="mock-label">Photo post: B&amp;W photo, White type on a Navy band.</p></div>'
              f'<div>{p3}<p class="mock-label">Event post: event icons on a color block.</p></div>')
     return (vis("Post recipes", f'<div class="grid" style="--min:230px">{posts}</div>')
-            + vis("Carousel", f'<div class="grid" style="--min:200px">{carousel}</div>', "Example content. One idea per slide, an arrow until the last."))
+            + vis("Carousel", f'<div class="grid" style="--min:260px">{carousel}</div>', "Example content. One idea per slide, an arrow until the last."))
 
 
 def event_pattern(ctx, size=4):

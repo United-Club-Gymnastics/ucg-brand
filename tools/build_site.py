@@ -241,7 +241,7 @@ def build():
             sid = slug_id(n) if n != "_intro" else "intro"
             if n != "_intro":
                 frag = re.sub(r"<h2[^>]*>", f'<h2 id="{sid}">', frag, count=1)
-                frag = re.sub(r"(<h2[^>]*>.*?) — <code>[^<]*</code>(</h2>)", r"", frag, count=1)  # drop file paths from page headings
+                frag = re.sub(r"(<h2[^>]*>.*?) — <code>[^<]*</code>(</h2>)", lambda m: m.group(1) + m.group(2), frag, count=1)  # drop file paths from page headings
                 toc_items.append(f'<a href="#{sid}">{html.escape(re.sub(r" — .*$", "", re.sub(r"`", "", n)))}</a>')
             extra = visuals[n](ctx) if n in visuals else ""
             parts.append(f'<section class="doc-section" id="sec-{sid}">\n<div class="prose">{frag}</div>\n{extra}\n</section>')
@@ -250,6 +250,8 @@ def build():
         toc = ('<nav class="toc" aria-label="On this page">' + "".join(toc_items) + "</nav>") if len(toc_items) > 1 else ""
         page = TEMPLATE.format(title=html.escape(title), blurb=html.escape(blurb), toc=toc, nav=nav_html(slug),
                                content="\n".join(parts), raw_url=f"{RAW}/{md}", md_path=md, github=GITHUB)
+        if any(ord(ch) < 32 and ch not in "\t\n\r" for ch in page):
+            raise SystemExit(f"{slug}: control characters in output (a bad regex replacement?)")
         out = ROOT / slug / "index.html"
         out.parent.mkdir(exist_ok=True)
         out.write_text(page, encoding="utf-8")
