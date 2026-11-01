@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Google Sheets · UCG Brand Kit</title>
+<meta name="description" content="Header rows, status colors and charts that stay readable.">
+<link rel="icon" href="../assets/logos/ucg-favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@700&display=swap" rel="stylesheet">
+<link href="../tokens/ucg.css" rel="stylesheet">
+<link href="../site/site.css" rel="stylesheet">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../"><img src="../assets/logos/ucg-primary-white.svg" alt="United Club Gymnastics"><span>Brand kit</span></a>
+    <nav class="header-links" aria-label="Kit links">
+      <a href="https://united-club-gymnastics.github.io/ucg-brand/references/sheets.md">Raw markdown</a>
+      <a href="https://github.com/United-Club-Gymnastics/ucg-brand">GitHub</a>
+    </nav>
+  </div>
+</header>
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">UCG brand kit</p>
+    <h1>Google Sheets</h1>
+    <p class="lead">Header rows, status colors and charts that stay readable.</p>
+    <nav class="toc" aria-label="On this page"><a href="#defaults">Defaults</a><a href="#layout">Layout</a><a href="#status-and-conditional-formatting">Status and conditional formatting</a><a href="#charts">Charts</a></nav>
+  </div>
+</section>
+<div class="wrap layout">
+  <aside class="sidenav">
+    <details class="nav-details" open>
+      <summary>All guides</summary>
+      <nav aria-label="Guides">
+<a class="nav-link" href="../">Overview</a>
+<a class="nav-link" href="../guidelines/">Brand guidelines</a>
+<a class="nav-link" href="../colors/">Color &amp; contrast</a>
+<a class="nav-link" href="../logos/">Logos</a>
+<a class="nav-link" href="../icons/">Icons</a>
+<a class="nav-link" href="../photos/">Photos</a>
+<a class="nav-link" href="../messaging/">Messaging &amp; voice</a>
+<a class="nav-link" href="../email/">Email</a>
+<a class="nav-link" href="../web/">Websites &amp; tools</a>
+<a class="nav-link" href="../slides/">Google Slides</a>
+<a class="nav-link" href="../docs/">Google Docs</a>
+<a class="nav-link is-active" href="../sheets/" aria-current="page">Google Sheets</a>
+<a class="nav-link" href="../social/">Social &amp; print</a>
+<a class="nav-link" href="../video/">Video &amp; Reels</a>
+      </nav>
+    </details>
+  </aside>
+  <main id="main" class="content">
+<section class="doc-section" id="sec-intro">
+<div class="prose">
+<p>Sheets are working tools first. Brand them lightly so they look like UCG and stay easy to read.</p>
+</div>
+
+</section>
+<section class="doc-section" id="sec-defaults">
+<div class="prose"><h2 id="defaults">Defaults</h2>
+<ul>
+<li>Font: <strong>Arial 10pt</strong> for data (Sheets' default theme font may be something else; set it in Format → Theme → Font to Arial). Saira Condensed Bold for a title row only.</li>
+<li>Theme colors (Format → Theme → Customize): Text Navy <code>#1E2B38</code>, Background White, Accent 1 Blue Green <code>#A5C8CF</code>, Accent 2 Purple <code>#ADBAE9</code>, Accent 3 Golden Yellow <code>#F6C328</code>, Accent 4 Red Orange <code>#F4694A</code>, Accent 5 Dark Blue Green <code>#184B56</code>, Accent 6 Light Blue <code>#DBEBEE</code>, Links Dark Blue Green.</li>
+</ul>
+</div>
+
+</section>
+<section class="doc-section" id="sec-layout">
+<div class="prose"><h2 id="layout">Layout</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Row / area</th>
+<th>Style</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title row (optional, row 1)</td>
+<td>Saira Condensed Bold 18pt, ALL CAPS, Navy text, no fill; merged across the table width</td>
+</tr>
+<tr>
+<td>Header row</td>
+<td>Navy <code>#1E2B38</code> fill, White Arial Bold 10pt, frozen, wrap text, vertical-align middle</td>
+</tr>
+<tr>
+<td>Data rows</td>
+<td>Alternating White / Light Blue <code>#DBEBEE</code> (Format → Alternating colors → custom), Navy text</td>
+</tr>
+<tr>
+<td>Borders</td>
+<td><code>#BFD5D9</code> thin, horizontal only, or none</td>
+</tr>
+<tr>
+<td>Totals row</td>
+<td>Arial Bold, Light Blue or Blue Green fill, Navy text</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Freeze the header row and any identifier column.</li>
+<li>Right-align numbers, left-align text, consistent decimals (scores to 3 decimals, money to 2).</li>
+<li>Use dates as real dates, formatted <code>Apr 8, 2027</code> or ISO <code>2027-04-08</code> consistently.</li>
+</ul>
+</div>
+<div class="vis"><p class="vis-title">What a UCG sheet looks like</p><div class="table-wrap" style="background:#FFFFFF"><table class="sheet"><tr><th class="ch"> </th><th class="ch">A</th><th class="ch">B</th><th class="ch">C</th><th class="ch">D</th><th class="ch">E</th></tr>
+<tr><td class="rh">1</td><td colspan="5" style="font-family:'Saira Condensed','Arial Narrow',Arial;font-weight:700;font-size:20px;text-transform:uppercase;color:#1E2B38;border-color:transparent">Nationals registrations</td></tr>
+<tr><td class="rh">2</td><th style="background:#1E2B38;color:#FFFFFF">Club</th><th style="background:#1E2B38;color:#FFFFFF">Discipline</th><th style="background:#1E2B38;color:#FFFFFF;text-align:right">Athletes</th><th style="background:#1E2B38;color:#FFFFFF">Status</th><th style="background:#1E2B38;color:#FFFFFF;text-align:right">Fees</th></tr>
+<tr><td class="rh">3</td><td style="background:#FFFFFF;color:#1E2B38">Example State</td><td style="background:#ADBAE9;color:#1E2B38;font-weight:700;text-align:center">WAG</td><td style="background:#FFFFFF;color:#1E2B38;text-align:right">24</td><td style="background:#DBEBEE;color:#184B56;font-weight:700">Registered</td><td style="background:#FFFFFF;color:#1E2B38;text-align:right">$1,320.00</td></tr><tr><td class="rh">4</td><td style="background:#DBEBEE;color:#1E2B38">River City Gym</td><td style="background:#A5C8CF;color:#1E2B38;font-weight:700;text-align:center">MAG</td><td style="background:#DBEBEE;color:#1E2B38;text-align:right">12</td><td style="background:#F6C328;color:#1E2B38;font-weight:700">Pending</td><td style="background:#DBEBEE;color:#1E2B38;text-align:right">$660.00</td></tr><tr><td class="rh">5</td><td style="background:#FFFFFF;color:#1E2B38">Northside Flyers</td><td style="background:#F6C328;color:#1E2B38;font-weight:700;text-align:center">T&amp;T</td><td style="background:#FFFFFF;color:#1E2B38;text-align:right">9</td><td style="background:#F4694A;color:#1E2B38;font-weight:700">Missing forms</td><td style="background:#FFFFFF;color:#1E2B38;text-align:right">$495.00</td></tr><tr><td class="rh">6</td><td style="background:#DBEBEE;color:#1E2B38">Lakeview Club</td><td style="background:#ADBAE9;color:#1E2B38;font-weight:700;text-align:center">WAG</td><td style="background:#DBEBEE;color:#1E2B38;text-align:right">17</td><td style="background:#DBEBEE;color:#184B56;font-weight:700">Registered</td><td style="background:#DBEBEE;color:#1E2B38;text-align:right">$935.00</td></tr><tr><td class="rh">7</td><td style="background:#A5C8CF;color:#1E2B38;font-weight:700">Total</td><td style="background:#A5C8CF"></td><td style="background:#A5C8CF;color:#1E2B38;font-weight:700;text-align:right">62</td><td style="background:#A5C8CF"></td><td style="background:#A5C8CF;color:#1E2B38;font-weight:700;text-align:right">$3,410.00</td></tr></table></div><p class="vis-note">Example data.</p></div>
+</section>
+<section class="doc-section" id="sec-status-and-conditional-formatting">
+<div class="prose"><h2 id="status-and-conditional-formatting">Status and conditional formatting</h2>
+<p>Use fills with Navy text, never colored text on white:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Meaning</th>
+<th>Fill</th>
+<th>Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Good / done / on track</td>
+<td>Light Blue <code>#DBEBEE</code> or Blue Green <code>#A5C8CF</code></td>
+<td>Dark Blue Green or Navy</td>
+</tr>
+<tr>
+<td>Attention / pending</td>
+<td>Golden Yellow <code>#F6C328</code></td>
+<td>Navy</td>
+</tr>
+<tr>
+<td>Urgent / error / blocked</td>
+<td>Red Orange <code>#F4694A</code></td>
+<td>Navy</td>
+</tr>
+<tr>
+<td>Neutral / info</td>
+<td>Purple <code>#ADBAE9</code></td>
+<td>Navy</td>
+</tr>
+</tbody>
+</table></div>
+<p>Discipline tags, if color-coded: WAG Purple, MAG Blue Green, T&amp;T Golden Yellow (Navy text on all three).</p>
+</div>
+<div class="vis"><div class="grid" style="--min:190px"><div style="background:#DBEBEE;color:#184B56;border-radius:8px;padding:12px 14px;font-weight:700;font-family:Arial">Good / done / on track</div><div style="background:#F6C328;color:#1E2B38;border-radius:8px;padding:12px 14px;font-weight:700;font-family:Arial">Attention / pending</div><div style="background:#F4694A;color:#1E2B38;border-radius:8px;padding:12px 14px;font-weight:700;font-family:Arial">Urgent / error / blocked</div><div style="background:#ADBAE9;color:#1E2B38;border-radius:8px;padding:12px 14px;font-weight:700;font-family:Arial">Neutral / info</div></div></div>
+</section>
+<section class="doc-section" id="sec-charts">
+<div class="prose"><h2 id="charts">Charts</h2>
+<p>Chart marks need 3:1 against the background. On a white chart, series colors in this order: Navy, Red Orange, Dark Blue Green. Purple, Golden Yellow and Blue Green are too pale on white (under 2:1), so only use them for bars with a Navy outline or on a Navy chart background (where Blue Green, Golden Yellow, Purple, Red Orange and White all pass). Light Blue only for backgrounds or gridlines. Arial for all chart text; no 3D, no gradients; label directly instead of a legend when there are few series.</p></div>
+<div class="vis"><p class="vis-title">Charts</p><div class="compare"><div class="card" style="padding:10px"><svg viewBox="0 0 520 300" role="img" aria-label="Example bar chart of athletes by discipline" style="width:100%;height:auto;background:#FFFFFF;border-radius:16px"><line x1="56" x2="510" y1="250" y2="250" stroke="#DBEBEE"/><text x="46" y="254" text-anchor="end" fill="#4A5A66" font-size="12" font-family="Arial">0</text><line x1="56" x2="510" y1="186" y2="186" stroke="#DBEBEE"/><text x="46" y="190" text-anchor="end" fill="#4A5A66" font-size="12" font-family="Arial">10</text><line x1="56" x2="510" y1="122" y2="122" stroke="#DBEBEE"/><text x="46" y="126" text-anchor="end" fill="#4A5A66" font-size="12" font-family="Arial">20</text><line x1="56" x2="510" y1="58" y2="58" stroke="#DBEBEE"/><text x="46" y="62" text-anchor="end" fill="#4A5A66" font-size="12" font-family="Arial">30</text><rect x="76" y="96.4" width="32" height="153.6" rx="3" fill="#1E2B38"/><rect x="114" y="173.2" width="32" height="76.8" rx="3" fill="#F4694A"/><rect x="152" y="192.4" width="32" height="57.6" rx="3" fill="#184B56"/><rect x="226" y="58.0" width="32" height="192.0" rx="3" fill="#1E2B38"/><rect x="264" y="154.0" width="32" height="96.0" rx="3" fill="#F4694A"/><rect x="302" y="179.6" width="32" height="70.4" rx="3" fill="#184B56"/><rect x="376" y="77.2" width="32" height="172.8" rx="3" fill="#1E2B38"/><rect x="414" y="134.8" width="32" height="115.2" rx="3" fill="#F4694A"/><rect x="452" y="160.4" width="32" height="89.6" rx="3" fill="#184B56"/><text x="130" y="272" text-anchor="middle" fill="#1E2B38" font-size="14" font-family="Arial">2025</text><text x="280" y="272" text-anchor="middle" fill="#1E2B38" font-size="14" font-family="Arial">2026</text><text x="430" y="272" text-anchor="middle" fill="#1E2B38" font-size="14" font-family="Arial">2027</text><rect x="56" y="14" width="14" height="14" rx="3" fill="#1E2B38"/><text x="76" y="26" fill="#1E2B38" font-size="13" font-family="Arial">WAG</text><rect x="176" y="14" width="14" height="14" rx="3" fill="#F4694A"/><text x="196" y="26" fill="#1E2B38" font-size="13" font-family="Arial">MAG</text><rect x="296" y="14" width="14" height="14" rx="3" fill="#184B56"/><text x="316" y="26" fill="#1E2B38" font-size="13" font-family="Arial">T&amp;T</text></svg><p class="mock-label">On white: Navy, Red Orange, Dark Blue Green.</p></div><div class="card" style="padding:10px"><svg viewBox="0 0 520 300" role="img" aria-label="Example bar chart of athletes by discipline" style="width:100%;height:auto;background:#1E2B38;border-radius:16px"><line x1="56" x2="510" y1="250" y2="250" stroke="#2F4352"/><text x="46" y="254" text-anchor="end" fill="#DBEBEE" font-size="12" font-family="Arial">0</text><line x1="56" x2="510" y1="186" y2="186" stroke="#2F4352"/><text x="46" y="190" text-anchor="end" fill="#DBEBEE" font-size="12" font-family="Arial">10</text><line x1="56" x2="510" y1="122" y2="122" stroke="#2F4352"/><text x="46" y="126" text-anchor="end" fill="#DBEBEE" font-size="12" font-family="Arial">20</text><line x1="56" x2="510" y1="58" y2="58" stroke="#2F4352"/><text x="46" y="62" text-anchor="end" fill="#DBEBEE" font-size="12" font-family="Arial">30</text><rect x="76" y="96.4" width="32" height="153.6" rx="3" fill="#A5C8CF"/><rect x="114" y="173.2" width="32" height="76.8" rx="3" fill="#F6C328"/><rect x="152" y="192.4" width="32" height="57.6" rx="3" fill="#ADBAE9"/><rect x="226" y="58.0" width="32" height="192.0" rx="3" fill="#A5C8CF"/><rect x="264" y="154.0" width="32" height="96.0" rx="3" fill="#F6C328"/><rect x="302" y="179.6" width="32" height="70.4" rx="3" fill="#ADBAE9"/><rect x="376" y="77.2" width="32" height="172.8" rx="3" fill="#A5C8CF"/><rect x="414" y="134.8" width="32" height="115.2" rx="3" fill="#F6C328"/><rect x="452" y="160.4" width="32" height="89.6" rx="3" fill="#ADBAE9"/><text x="130" y="272" text-anchor="middle" fill="#FFFFFF" font-size="14" font-family="Arial">2025</text><text x="280" y="272" text-anchor="middle" fill="#FFFFFF" font-size="14" font-family="Arial">2026</text><text x="430" y="272" text-anchor="middle" fill="#FFFFFF" font-size="14" font-family="Arial">2027</text><rect x="56" y="14" width="14" height="14" rx="3" fill="#A5C8CF"/><text x="76" y="26" fill="#FFFFFF" font-size="13" font-family="Arial">WAG</text><rect x="176" y="14" width="14" height="14" rx="3" fill="#F6C328"/><text x="196" y="26" fill="#FFFFFF" font-size="13" font-family="Arial">MAG</text><rect x="296" y="14" width="14" height="14" rx="3" fill="#ADBAE9"/><text x="316" y="26" fill="#FFFFFF" font-size="13" font-family="Arial">T&amp;T</text></svg><p class="mock-label">On Navy: Blue Green, Golden Yellow, Purple.</p></div></div><p class="vis-note">Example data.</p></div>
+</section>
+    <aside class="agent-note">
+      <p class="eyebrow">For AI agents</p>
+      <p>This page is generated from <a href="https://united-club-gymnastics.github.io/ucg-brand/references/sheets.md"><code>references/sheets.md</code></a>. Point AI tools at the raw markdown, not this page.</p>
+    </aside>
+  </main>
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="tag">For the Love of the Sport.</p>
+    <p>United Club Gymnastics · <a href="https://unitedclubgymnastics.org">unitedclubgymnastics.org</a> · Fonts are licensed to UCG and not included; this site uses Saira Condensed and Arial.</p>
+  </div>
+</footer>
+<script src="../site/site.js"></script>
+</body>
+</html>

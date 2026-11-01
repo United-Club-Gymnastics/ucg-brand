@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Email · UCG Brand Kit</title>
+<meta name="description" content="The announcement email template, fonts that work in inboxes, and signatures.">
+<link rel="icon" href="../assets/logos/ucg-favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@700&display=swap" rel="stylesheet">
+<link href="../tokens/ucg.css" rel="stylesheet">
+<link href="../site/site.css" rel="stylesheet">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../"><img src="../assets/logos/ucg-primary-white.svg" alt="United Club Gymnastics"><span>Brand kit</span></a>
+    <nav class="header-links" aria-label="Kit links">
+      <a href="https://united-club-gymnastics.github.io/ucg-brand/references/email.md">Raw markdown</a>
+      <a href="https://github.com/United-Club-Gymnastics/ucg-brand">GitHub</a>
+    </nav>
+  </div>
+</header>
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">UCG brand kit</p>
+    <h1>Email</h1>
+    <p class="lead">The announcement email template, fonts that work in inboxes, and signatures.</p>
+    <nav class="toc" aria-label="On this page"><a href="#announcement-newsletter-emails-html">Announcement / newsletter emails (HTML)</a><a href="#plain-text-and-personal-emails-gmail-replies">Plain-text and personal emails (Gmail, replies)</a></nav>
+  </div>
+</section>
+<div class="wrap layout">
+  <aside class="sidenav">
+    <details class="nav-details" open>
+      <summary>All guides</summary>
+      <nav aria-label="Guides">
+<a class="nav-link" href="../">Overview</a>
+<a class="nav-link" href="../guidelines/">Brand guidelines</a>
+<a class="nav-link" href="../colors/">Color &amp; contrast</a>
+<a class="nav-link" href="../logos/">Logos</a>
+<a class="nav-link" href="../icons/">Icons</a>
+<a class="nav-link" href="../photos/">Photos</a>
+<a class="nav-link" href="../messaging/">Messaging &amp; voice</a>
+<a class="nav-link is-active" href="../email/" aria-current="page">Email</a>
+<a class="nav-link" href="../web/">Websites &amp; tools</a>
+<a class="nav-link" href="../slides/">Google Slides</a>
+<a class="nav-link" href="../docs/">Google Docs</a>
+<a class="nav-link" href="../sheets/">Google Sheets</a>
+<a class="nav-link" href="../social/">Social &amp; print</a>
+<a class="nav-link" href="../video/">Video &amp; Reels</a>
+      </nav>
+    </details>
+  </aside>
+  <main id="main" class="content">
+<section class="doc-section" id="sec-intro">
+<div class="prose">
+</div>
+
+</section>
+<section class="doc-section" id="sec-announcement-newsletter-emails-html">
+<div class="prose"><h2 id="announcement-newsletter-emails-html">Announcement / newsletter emails (HTML)</h2>
+<p>Start from <a href="../templates/email/ucg-announcement-email.html"><code>templates/email/ucg-announcement-email.html</code></a>. It is UCG's working monthly-announcements template (sent through iContact) and its comments explain the rules. In short:</p>
+<ul>
+<li>Parts marked <strong>FIXED</strong> never change: header logo, base styles, dark-mode rules, sign-off and social links.</li>
+<li>Build the body from the <strong>BLOCKS</strong> between <code>BODY START</code> and <code>BODY END</code>: hero, feature band, section label, standard item, light card, navy card, two buttons, discipline section, deep band. Copy a block, replace every <code>[PLACEHOLDER]</code>, delete what you don't need.</li>
+<li>Keep the sender's wording. Fix only obvious typos.</li>
+<li>Alternate section backgrounds so neighbors differ: white → light blue → blue green → navy → dark blue green.</li>
+<li>Red Orange chips only for deadlines and urgent items, always with Navy text on them.</li>
+<li>Discipline chips: WAG Purple <code>#ADBAE9</code>, MAG Blue Green <code>#A5C8CF</code>, T&amp;T Golden Yellow <code>#F6C328</code>, all with Navy text.</li>
+<li>Every link is https. Buttons for main actions, text links (<code>Link text →</code>) for secondary ones.</li>
+<li>Images: only the fixed logo unless an image hosted by the email platform is supplied. Never use white or light images with transparent backgrounds; they vanish in dark mode.</li>
+<li>No unsubscribe link, address or footer below the socials. iContact adds its own.</li>
+<li>Keep every <code>class="…"</code> attribute when copying a block. The classes drive dark mode.</li>
+</ul>
+<p><strong>Fonts in email:</strong> most inboxes can't load custom fonts. Headlines use <code>'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif</code> (Saira loads from Google Fonts in Apple Mail and iOS; everyone else sees Arial Narrow or Arial). Body text is always <code>Arial,Helvetica,sans-serif</code>.</p>
+<p><strong>Buttons in email</strong> use the condensed headline stack (Saira Condensed → Arial Narrow), as the template does. That's a deliberate email exception: the design guide sets buttons in Suisse Intl / Arial, which is what websites and other media use.</p>
+<p><strong>Sizes used by the template:</strong> hero H1 52px (40px on mobile), section H2 36px, item titles 22px Arial bold, body 16px / 1.55, eyebrows 12–13px bold caps with 0.16em tracking, buttons 16px caps with 0.2em tracking, 8px button radius, 20px card radius, 600px container.</p>
+<p><strong>Contrast in dark mode:</strong> the template remaps backgrounds and text for Apple Mail, iOS and Outlook. If you add a new color pairing, add matching dark-mode classes and check both modes against <a href="../colors/"><code>color-pairs.md</code></a>.</p>
+</div>
+<div class="vis"><p class="vis-title">Example built from the template</p><div class="compare">
+<div><p class="mock-label" style="margin:0 0 8px"><b>Light mode</b></p><iframe class="email-frame" src="../templates/email/example-announcement.html" title="Example UCG announcement email, light mode" loading="lazy"></iframe></div>
+<div><p class="mock-label" style="margin:0 0 8px"><b>Dark mode</b> (Apple Mail, iOS Mail, Outlook)</p><iframe class="email-frame" src="../site/email-example-dark.html" title="Example UCG announcement email, dark mode" loading="lazy"></iframe></div></div>
+<div class="btn-row" style="margin-top:16px"><a class="btn" href="../templates/email/ucg-announcement-email.html" download>Download the template</a><a class="btn btn--ghost" href="../templates/email/example-announcement.html" download>Download this example</a></div><p class="vis-note">Example content for illustration: the dates and details are placeholders, and every link goes to the UCG homepage.</p></div>
+</section>
+<section class="doc-section" id="sec-plain-text-and-personal-emails-gmail-replies">
+<div class="prose"><h2 id="plain-text-and-personal-emails-gmail-replies">Plain-text and personal emails (Gmail, replies)</h2>
+<p>From the design guide (DG p37): when brand fonts aren't available, use Arial.</p>
+<ul>
+<li>Greeting and body: Arial 12pt, Navy or black.</li>
+<li>A short headline, if any: Arial Narrow 14pt bold, ALL CAPS.</li>
+<li>Signature: name and title in Arial 12pt, then <code>unitedclubgymnastics.org</code>. Optionally the email header logo (<code>assets/social/ucg-email-header.png</code>, navy background baked in) at 260px wide.</li>
+</ul>
+<p>Example signature:</p>
+<pre><code>Jordan Lee
+Events Coordinator, United Club Gymnastics
+unitedclubgymnastics.org
+</code></pre>
+<p>Write like <a href="../messaging/"><code>messaging.md</code></a> shows: warm opener, the key information first, one clear next step, friendly sign-off ("See you in the gym," / "The UCG Team").</p></div>
+<div class="vis"><p class="vis-title">A personal email</p><div class="card" style="max-width:640px;padding:0;overflow:hidden;font-family:Arial,Helvetica,sans-serif">
+<div style="background:#F1F5F6;padding:12px 18px;font-size:14px;color:#1E2B38;border-bottom:1px solid #CFE1E4"><b>To:</b> jordan@example.com<br><b>Subject:</b> Getting involved with UCG</div>
+<div style="padding:22px 22px 26px;font-size:16px;line-height:1.55;color:#1E2B38">
+<p style="margin:0 0 14px">Hi Jordan,</p><p style="margin:0 0 14px">Thanks for reaching out about getting involved with UCG. Whether you are coming from a college club, returning after time away, or looking for a new way to stay in the sport, there is a place for you here.</p>
+<p style="margin:0 0 22px">See you in the gym,</p>
+<p style="margin:0;font-size:16px">Jordan Lee<br>Events Coordinator, United Club Gymnastics<br><a href="https://unitedclubgymnastics.org" style="color:#184B56">unitedclubgymnastics.org</a></p>
+<img src="../assets/social/ucg-email-header.png" alt="United Club Gymnastics" style="display:block;width:260px;margin-top:14px;border-radius:6px"></div></div></div>
+</section>
+    <aside class="agent-note">
+      <p class="eyebrow">For AI agents</p>
+      <p>This page is generated from <a href="https://united-club-gymnastics.github.io/ucg-brand/references/email.md"><code>references/email.md</code></a>. Point AI tools at the raw markdown, not this page.</p>
+    </aside>
+  </main>
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="tag">For the Love of the Sport.</p>
+    <p>United Club Gymnastics · <a href="https://unitedclubgymnastics.org">unitedclubgymnastics.org</a> · Fonts are licensed to UCG and not included; this site uses Saira Condensed and Arial.</p>
+  </div>
+</footer>
+<script src="../site/site.js"></script>
+</body>
+</html>

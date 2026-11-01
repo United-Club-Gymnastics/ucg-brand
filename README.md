@@ -2,7 +2,7 @@
 
 Brand guidelines and assets for **United Club Gymnastics** (UCG), written so both people and AI coding agents (Claude Code, Codex, Cursor and others) can follow them.
 
-**Start here: [BRAND.md](BRAND.md).**
+**Start here: [BRAND.md](BRAND.md).** For people, the same guides with visual examples live at **https://united-club-gymnastics.github.io/ucg-brand/**.
 
 ## Point your AI agent at it
 
@@ -39,7 +39,8 @@ Add the two lines above to your repo's `AGENTS.md`. (Codex can also load `skills
 | [`assets/animation/`](assets/animation) | Animated mark loops (MP4) in square, vertical and wide |
 | [`assets/social/`](assets/social) | Facebook cover, YouTube banner, Zoom backgrounds, email header |
 | [`skills/ucg-brand/`](skills/ucg-brand) | Agent skill (Claude Code plugin / Codex) |
-| [`tools/`](tools) | Scripts that build the assets and the color-pair table |
+| [`tools/`](tools) | Scripts that build the assets, the color-pair table and the illustrated site |
+| `site/`, `guidelines/`, `colors/`, … | The illustrated human site (generated) |
 
 Assets are also served from `https://united-club-gymnastics.github.io/ucg-brand/assets/…` for hotlinking.
 
@@ -58,6 +59,11 @@ python tools/contrast.py                                   # regenerate referenc
 python tools/copy_logos.py "<toolkit>/01_Assets/01_Logo"   # refresh logos
 python tools/extract_icons.py "<toolkit>/01_Assets/All UCG Assets.svg"
 python tools/icon_pngs.py
+python tools/build_site.py                                 # rebuild the illustrated pages (<page>/index.html) from the .md files
+python tools/test_site.py http://127.0.0.1:8123/ucg-brand/ # check contrast, overflow, links (serve the parent folder first:
+                                                           #   python -m http.server 8123, run from the folder above this repo)
 ```
+
+The illustrated pages are generated: edit the `.md` files (and `tools/site_visuals.py` for the visual examples), never the `<page>/index.html` files directly. Agents should always be pointed at the raw `.md` files.
 
 Questions about the brand, or need a file that isn't here? Contact your team lead or department head.

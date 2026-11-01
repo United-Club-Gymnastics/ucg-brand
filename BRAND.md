@@ -48,6 +48,7 @@ Welcoming, credible, joyful, practical. Write like people who know the sport and
 Body text needs **4.5:1**, large text (24px+, or 18.5px+ bold), icons and logos need **3:1**.
 
 **Safe text pairs:**
+
 - Text on **Navy** or **Dark Blue Green** backgrounds: White, Light Blue, Blue Green, Golden Yellow or Purple. Red Orange works on Navy only.
 - Text on **White, Light Blue, Blue Green, Purple or Golden Yellow** backgrounds: Navy or Dark Blue Green.
 - Text on **Red Orange** backgrounds: Navy only.
@@ -92,6 +93,7 @@ Colorways: **navy** on light backgrounds, **light** (Light Blue) or **white** on
 ## Look and feel
 
 The six design features:
+
 1. **Color fills**: solid brand-color blocks behind type.
 2. **Strong type**: big ALL CAPS condensed headlines.
 3. **Black-and-white photography** with white type and graphics.

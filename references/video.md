@@ -5,7 +5,7 @@
 `assets/animation/` holds UCG's animated mark loops as MP4: the burst mark performing a skill (back flip, back handspring tuck, pommel horse, trampoline, synchro trampoline, uneven bars dismount, the three disciplines) plus an icon sequence. Each comes in:
 
 - `_square` (1:1), `_vertical` (9:16, Reels/Stories), `_wide` (16:9), some with `_reel` cuts
-- `_navy` (navy mark on light background) and `_light` (light mark on navy)
+- `_navy` (Light Blue mark on a Navy background) and `_light` (Navy mark on a Light Blue background)
 
 Use them as intros, outros, transitions and loading moments. Transparent-background (alpha .mov) and GIF versions exist in the UCG brand toolkit for editors who need to composite.
 

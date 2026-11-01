@@ -44,6 +44,7 @@ UCG's own pictograms (simple, bold gymnast figures with a ball-shaped head). Eve
 | `club-spirit` | A cheering crowd, for spirit awards and community. Also `club-spirit-original` (two-tone). |
 
 **Apparatus icons** (`apparatus-solid/`), named `<discipline>-<apparatus>`:
+
 - MAG: `mag-floor`, `mag-pommel-horse`, `mag-rings`, `mag-vault`, `mag-parallel-bars`, `mag-high-bar`
 - WAG: `wag-vault`, `wag-uneven-bars`, `wag-balance-beam`, `wag-floor`
 - T&T: `tnt-trampoline`, `tnt-double-mini`, `tnt-power-tumbling`, `tnt-synchro`
@@ -55,6 +56,7 @@ Use icons at one consistent size per layout, in a single brand color that meets 
 ## Photos — `assets/photos/`
 
 37 curated photos from 2026 UCG Nationals by photographer Bryan Johnson, each in a color and a black-and-white edit (74 files), 2000px on the long edge, metadata stripped. `photos.json` lists each file with ready-to-use alt text, its tone, and its type:
+
 - `athlete`: a single athlete, often B&W, for heroes and quotes
 - `movement`: skills in motion, dynamic crops
 - `community`: teams, coaches, judges, volunteers, fans
