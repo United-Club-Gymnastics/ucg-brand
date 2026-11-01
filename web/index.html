@@ -27,7 +27,7 @@
     <p class="eyebrow">UCG brand kit</p>
     <h1>Websites &amp; tools</h1>
     <p class="lead">CSS tokens, type scale and components for UCG websites and web apps.</p>
-    <nav class="toc" aria-label="On this page"><a href="#setup">Setup</a><a href="#layout">Layout</a><a href="#type-scale-starting-point">Type scale (starting point)</a><a href="#components">Components</a><a href="#dark-mode">Dark mode</a><a href="#accessibility-checklist">Accessibility checklist</a></nav>
+    <nav class="toc" aria-label="On this page"><a href="#layout">Layout</a><a href="#type-scale-starting-point">Type scale (starting point)</a><a href="#components">Components</a><a href="#dark-mode">Dark mode</a><a href="#accessibility-checklist">Accessibility checklist</a></nav>
   </div>
 </section>
 <div class="wrap layout">
@@ -57,17 +57,6 @@
 <div class="prose">
 <p>Applies to unitedclubgymnastics.org, UCG web apps (registration, scoring, planners, check-in) and any HTML page made for UCG.</p>
 </div>
-
-</section>
-<section class="doc-section" id="sec-setup">
-<div class="prose"><h2 id="setup">Setup</h2>
-<pre><code class="language-html">&lt;link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@700&amp;display=swap" rel="stylesheet"&gt;
-&lt;link href="https://united-club-gymnastics.github.io/ucg-brand/tokens/ucg.css" rel="stylesheet"&gt;
-</code></pre>
-<p><code>tokens/ucg.css</code> defines every color, font stack, radius and spacing step as CSS variables (<code>--ucg-navy</code>, <code>--ucg-font-display</code>, <code>--ucg-radius-card</code> …) plus a few helper classes (<code>.ucg-display</code>, <code>.ucg-subhead</code>, <code>.ucg-eyebrow</code>, <code>.ucg-btn</code>). Copy it into your project if you prefer not to hotlink.</p>
-<p><strong>Brand fonts on UCG-owned sites:</strong> UCG's license allows self-hosting Greed Condensed and Suisse Intl as woff2 via <code>@font-face</code> on UCG's own domains only. Get the files from the UCG brand toolkit (not from this repo; they are never published). On any other site, the stacks fall back to Saira Condensed and Arial automatically.</p>
-</div>
-
 </section>
 <section class="doc-section" id="sec-layout">
 <div class="prose"><h2 id="layout">Layout</h2>
@@ -80,7 +69,7 @@
 <li>Black-and-white photography with white type; color overlays use a B&amp;W photo on a brand color with <code>mix-blend-mode: screen</code>. Keep text on a solid or overlaid area that meets contrast.</li>
 </ul>
 </div>
-<div class="vis"><p class="vis-title">Alternate section backgrounds</p><div style="border-radius:16px;overflow:hidden;border:1px solid #CFE1E4"><div class="on-white" style="padding:22px 26px;border:0;border-bottom:1px solid #CFE1E4;"><span class="subhead" style="font-size:13px">White</span></div><div class="on-lb" style="padding:22px 26px;"><span class="subhead" style="font-size:13px">Light Blue</span></div><div class="on-bg" style="padding:22px 26px;"><span class="subhead" style="font-size:13px">Blue Green</span></div><div class="on-navy" style="padding:22px 26px;"><span class="subhead" style="font-size:13px">Navy</span></div></div></div><div class="vis"><p class="vis-title">Rounded corners</p><div class="grid" style="--min:130px"><div style="text-align:center"><div style="height:80px;background:#DBEBEE;border:2px solid #1E2B38;border-radius:8px"></div><p class="small" style="margin:8px 0 0"><b>Buttons</b><br>8px</p></div><div style="text-align:center"><div style="height:80px;background:#DBEBEE;border:2px solid #1E2B38;border-radius:12px"></div><p class="small" style="margin:8px 0 0"><b>Inputs, boxes</b><br>12px</p></div><div style="text-align:center"><div style="height:80px;background:#DBEBEE;border:2px solid #1E2B38;border-radius:20px"></div><p class="small" style="margin:8px 0 0"><b>Cards, photos</b><br>20px</p></div><div style="text-align:center"><div style="height:80px;background:#DBEBEE;border:2px solid #1E2B38;border-radius:999px"></div><p class="small" style="margin:8px 0 0"><b>Chips</b><br>999px</p></div></div></div>
+<div class="vis"><p class="vis-title">Alternate section backgrounds</p><div style="border-radius:16px;overflow:hidden;border:1px solid #CFE1E4"><div class="on-white" style="padding:22px 26px;border:0;border-bottom:1px solid #CFE1E4;"><span class="subhead" style="font-size:13px">White</span></div><div class="on-lb" style="padding:22px 26px;"><span class="subhead" style="font-size:13px">Light Blue</span></div><div class="on-bg" style="padding:22px 26px;"><span class="subhead" style="font-size:13px">Blue Green</span></div><div class="on-navy" style="padding:22px 26px;"><span class="subhead" style="font-size:13px">Navy</span></div></div></div><div class="vis"><p class="vis-title">Rounded corners</p><div class="grid" style="--min:130px"><div style="text-align:center"><div style="height:80px;background:#DBEBEE;border:2px solid #1E2B38;border-radius:8px"></div><p class="small" style="margin:8px 0 0"><b>Buttons</b><br/>8px</p></div><div style="text-align:center"><div style="height:80px;background:#DBEBEE;border:2px solid #1E2B38;border-radius:12px"></div><p class="small" style="margin:8px 0 0"><b>Inputs, boxes</b><br/>12px</p></div><div style="text-align:center"><div style="height:80px;background:#DBEBEE;border:2px solid #1E2B38;border-radius:20px"></div><p class="small" style="margin:8px 0 0"><b>Cards, photos</b><br/>20px</p></div><div style="text-align:center"><div style="height:80px;background:#DBEBEE;border:2px solid #1E2B38;border-radius:999px"></div><p class="small" style="margin:8px 0 0"><b>Chips</b><br/>999px</p></div></div></div>
 </section>
 <section class="doc-section" id="sec-type-scale-starting-point">
 <div class="prose"><h2 id="type-scale-starting-point">Type scale (starting point)</h2>
@@ -139,7 +128,7 @@
 </tbody>
 </table></div>
 </div>
-<div class="vis"><p class="vis-title">Type scale, live</p><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #CFE1E4"><div class="small"><b>Display / hero</b><br><span class="muted">clamp(48px, 7vw, 96px), ALL CAPS</span></div><div style="min-width:0"><span class="ucg-display" style="font-size:clamp(44px,6vw,72px)">For the love</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #CFE1E4"><div class="small"><b>H1</b><br><span class="muted">clamp(40px, 6vw, 80px)</span></div><div style="min-width:0"><span class="ucg-display" style="font-size:clamp(36px,5vw,56px)">A guide to Nationals</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #CFE1E4"><div class="small"><b>H2</b><br><span class="muted">clamp(32px, 4vw, 54px)</span></div><div style="min-width:0"><span class="ucg-display" style="font-size:clamp(28px,3.5vw,40px)">Find your club</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #CFE1E4"><div class="small"><b>H3</b><br><span class="muted">20–24px, 600, sentence case</span></div><div style="min-width:0"><span style="font-weight:700;font-size:22px">Volunteer sign-ups are open</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #CFE1E4"><div class="small"><b>Subhead / label</b><br><span class="muted">14–18px, 0.2em tracking</span></div><div style="min-width:0"><span class="ucg-subhead" style="font-size:16px">Sponsorship levels</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #CFE1E4"><div class="small"><b>Eyebrow</b><br><span class="muted">12–13px bold caps, 0.16em</span></div><div style="min-width:0"><span class="ucg-eyebrow" style="color:#184B56">New to UCG?</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #CFE1E4"><div class="small"><b>Body</b><br><span class="muted">16px / 1.55</span></div><div style="min-width:0"><span>UCG clubs compete in three disciplines. There is a place for you on the floor.</span></div></div></div>
+<div class="vis"><p class="vis-title">Type scale, live</p><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #CFE1E4"><div class="small"><b>Display / hero</b><br/><span class="muted">clamp(48px, 7vw, 96px), ALL CAPS</span></div><div style="min-width:0"><span class="ucg-display" style="font-size:clamp(44px,6vw,72px)">For the love</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #CFE1E4"><div class="small"><b>H1</b><br/><span class="muted">clamp(40px, 6vw, 80px)</span></div><div style="min-width:0"><span class="ucg-display" style="font-size:clamp(36px,5vw,56px)">A guide to Nationals</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #CFE1E4"><div class="small"><b>H2</b><br/><span class="muted">clamp(32px, 4vw, 54px)</span></div><div style="min-width:0"><span class="ucg-display" style="font-size:clamp(28px,3.5vw,40px)">Find your club</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #CFE1E4"><div class="small"><b>H3</b><br/><span class="muted">20–24px, 600, sentence case</span></div><div style="min-width:0"><span style="font-weight:700;font-size:22px">Volunteer sign-ups are open</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #CFE1E4"><div class="small"><b>Subhead / label</b><br/><span class="muted">14–18px, 0.2em tracking</span></div><div style="min-width:0"><span class="ucg-subhead" style="font-size:16px">Sponsorship levels</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #CFE1E4"><div class="small"><b>Eyebrow</b><br/><span class="muted">12–13px bold caps, 0.16em</span></div><div style="min-width:0"><span class="ucg-eyebrow" style="color:#184B56">New to UCG?</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #CFE1E4"><div class="small"><b>Body</b><br/><span class="muted">16px / 1.55</span></div><div style="min-width:0"><span>UCG clubs compete in three disciplines. There is a place for you on the floor.</span></div></div></div>
 </section>
 <section class="doc-section" id="sec-components">
 <div class="prose"><h2 id="components">Components</h2>
@@ -166,13 +155,13 @@
 <p class="vis-note">Always pair a status color with a word or symbol.</p></div><div class="panel on-lb"><p class="vis-title">Cards</p><div class="grid" style="--min:160px">
 <div style="background:#FFFFFF;border-radius:20px;padding:18px"><p class="ucg-eyebrow" style="color:#184B56;margin:0 0 6px">Compete</p><p style="font-weight:700;font-size:18px;margin:0 0 6px">Find a meet</p><p class="small" style="margin:0;color:#4A5A66">Sanctioned events near you.</p></div>
 <div style="background:#1E2B38;border-radius:20px;padding:18px"><p class="ucg-eyebrow" style="color:#A5C8CF;margin:0 0 6px">Featured</p><p style="font-weight:700;font-size:18px;margin:0 0 6px;color:#FFFFFF">Nationals 2027</p><p class="small" style="margin:0;color:#DBEBEE">Portland, Oregon.</p></div></div></div><div class="panel on-white"><p class="vis-title">List with dividers</p><div>
-<div style="padding:14px 0"><b>Reach out to UCG</b><br><span class="small muted">Tell us about your club or your situation.</span></div>
-<div style="padding:14px 0;border-top:1px solid #BFD5D9"><b>Speak with the team</b><br><span class="small muted">We'll answer questions about levels and events.</span></div>
-<div style="padding:14px 0;border-top:1px solid #BFD5D9"><b>Find your next step</b><br><span class="small muted">Join a club, compete independently or volunteer.</span></div></div>
+<div style="padding:14px 0"><b>Reach out to UCG</b><br/><span class="small muted">Tell us about your club or your situation.</span></div>
+<div style="padding:14px 0;border-top:1px solid #BFD5D9"><b>Speak with the team</b><br/><span class="small muted">We'll answer questions about levels and events.</span></div>
+<div style="padding:14px 0;border-top:1px solid #BFD5D9"><b>Find your next step</b><br/><span class="small muted">Join a club, compete independently or volunteer.</span></div></div>
 <p class="vis-note">Dividers between items only, none above the first or below the last.</p></div><div class="panel on-white"><p class="vis-title">Form fields</p>
-<label style="display:block;font-weight:700;font-size:14px;margin-bottom:6px" for="demo-club">Club name</label>
-<input id="demo-club" value="Example University Gymnastics" style="width:100%;font:inherit;color:#1E2B38;padding:11px 14px;border:1.5px solid #BFD5D9;border-radius:12px;margin-bottom:14px">
-<label style="display:block;font-weight:700;font-size:14px;margin-bottom:6px" for="demo-disc">Discipline</label>
+<label for="demo-club" style="display:block;font-weight:700;font-size:14px;margin-bottom:6px">Club name</label>
+<input id="demo-club" style="width:100%;font:inherit;color:#1E2B38;padding:11px 14px;border:1.5px solid #BFD5D9;border-radius:12px;margin-bottom:14px" value="Example University Gymnastics"/>
+<label for="demo-disc" style="display:block;font-weight:700;font-size:14px;margin-bottom:6px">Discipline</label>
 <select id="demo-disc" style="width:100%;font:inherit;color:#1E2B38;padding:11px 14px;border:1.5px solid #184B56;border-radius:12px;outline:3px solid rgba(24,75,86,.35);outline-offset:1px;background:#FFFFFF"><option>WAG</option><option>MAG</option><option>T&amp;T</option></select>
 <p class="vis-note">The second field shows the focus state: Dark Blue Green border and ring.</p></div><div class="panel on-white" style="grid-column:1/-1"><p class="vis-title">Table</p><div class="table-wrap" style="margin:0"><table>
 <thead><tr><th>Club</th><th>Discipline</th><th style="text-align:right">Athletes</th><th>Status</th></tr></thead>
@@ -191,12 +180,11 @@
 <section class="doc-section" id="sec-accessibility-checklist">
 <div class="prose"><h2 id="accessibility-checklist">Accessibility checklist</h2>
 <ul>
-<li>AA contrast for all text and UI (see <a href="../colors/"><code>color-pairs.md</code></a>), including hover, focus, disabled and dark-mode states.</li>
+<li><a class="term" href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum">AA</a><span class="term-def"> (the standard level of WCAG, the Web Content Accessibility Guidelines. In short, text needs a contrast ratio of at least 4.5:1 against its background, large text 3:1)</span> contrast for all text and UI (see <a href="../colors/"><code>color-pairs.md</code></a>), including hover, focus, disabled and dark-mode states.</li>
 <li>Never Golden Yellow, Purple, Blue Green or Red Orange text on White or Light Blue.</li>
 <li>Meaningful <code>alt</code> text on photos (<code>assets/photos/photos.json</code> has some ready to use); <code>aria-label</code> on icon-only buttons.</li>
 <li>Logos: <code>&lt;img src="…/ucg-primary-navy.svg" alt="United Club Gymnastics"&gt;</code>.</li>
 </ul></div>
-
 </section>
     <aside class="agent-note">
       <p class="eyebrow">For AI agents</p>
@@ -207,7 +195,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <p class="tag">For the Love of the Sport.</p>
-    <p>United Club Gymnastics · <a href="https://unitedclubgymnastics.org">unitedclubgymnastics.org</a> · Fonts are licensed to UCG and not included; this site uses Saira Condensed and Arial.</p>
+    <p>United Club Gymnastics · <a href="https://unitedclubgymnastics.org">unitedclubgymnastics.org</a> · Fonts are licensed to UCG and not included; this site uses Saira Condensed and Arial. UCG volunteers can <a href="https://drive.google.com/drive/folders/1SUukrVratYo8sd4KxiF5_eztUnhAV-_o">download the brand fonts</a>.</p>
   </div>
 </footer>
 <script src="../site/site.js"></script>

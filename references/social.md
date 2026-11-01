@@ -31,7 +31,7 @@ Expressive work can push color, scale and energy, but every piece keeps at least
 - **Mixed pieces** (e.g. a Nationals hype post that also gives registration dates): the facts (dates, deadlines, links, prices) stay in core colors and plain, readable type; the expressive range can carry the background, pattern or decoration around them.
 - You may recolor the mark within the palette, add a stroke, or use it big in the background. Never redraw or distort it.
 - Expressive color range (for these pieces only): `#FFEF77` `#FF988A` `#C0E388` `#8BB7E3` `#336494` `#504A83`. Pair them with Navy or White and still meet AA contrast for any text.
-- The **event pattern**: a repeating grid of "FOR THE LOVE OF THE SPORT" / "2026–2027 NATIONALS" lockups with the mark and "UCG", in Light Blue tones on Blue Green, for backgrounds and merch.
+- The **event pattern**: a repeating grid of "FOR THE LOVE OF THE SPORT" / "2026–2027 NATIONALS" lockups with the mark and "UCG", in Light Blue on Blue Green, for backgrounds and merch. Use the file as drawn: `assets/patterns/ucg-event-pattern-2026-27.svg` (or `.png`), taken from the design guide (p54).
 - For anything big or public-facing (large print runs, apparel), have a designer review it.
 
 ## Captions

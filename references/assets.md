@@ -32,7 +32,7 @@ Also in `assets/logos/`: `ucg-avatar-circle` / `ucg-avatar-square` (social profi
 
 ## Icons — `assets/icons/`
 
-UCG's own pictograms (simple, bold gymnast figures with a ball-shaped head). Event and solid apparatus icons come in `-navy`, `-light` and `-white` SVG + PNG versions; the duotone set has one `-duotone` version each. Index with labels: `assets/icons/icons.json`.
+UCG's own pictograms (simple, bold gymnast figures with a ball-shaped head). Every icon comes in `-navy`, `-light` and `-white` SVG + PNG versions. Index with labels: `assets/icons/icons.json`.
 
 **Event icons** (`event/`): one figure per discipline, used to label MAG, WAG and T&T content.
 
@@ -41,15 +41,13 @@ UCG's own pictograms (simple, bold gymnast figures with a ball-shaped head). Eve
 | `mag`, `mag-1`, `mag-2`, `mag-3` | Men's artistic gymnastics (primary + alternates) |
 | `wag`, `wag-1`, `wag-grad` | Women's artistic gymnastics (primary + alternates; `wag-grad` wears a grad cap) |
 | `tnt`, `tnt-2` | Trampoline & tumbling (primary + alternate) |
-| `club-spirit` | A cheering crowd, for spirit awards and community. Also `club-spirit-original` (two-tone). |
+| `club-spirit` | A cheering crowd, for spirit awards and community. The one-color versions are line art: each figure is outlined so the crowd doesn't merge into a blob. `club-spirit-original` is the two-tone version (Light Blue figures with Navy outlines). |
 
 **Apparatus icons** (`apparatus-solid/`), named `<discipline>-<apparatus>`:
 
 - MAG: `mag-floor`, `mag-pommel-horse`, `mag-rings`, `mag-vault`, `mag-parallel-bars`, `mag-high-bar`
 - WAG: `wag-vault`, `wag-uneven-bars`, `wag-balance-beam`, `wag-floor`
 - T&T: `tnt-trampoline`, `tnt-double-mini`, `tnt-power-tumbling`, `tnt-synchro`
-
-`apparatus-duotone/` has decorative two-tone versions (Navy apparatus, Light Blue figure). The Light Blue parts are very low contrast on White, so use these only as decoration, never as the only way to identify something.
 
 Use icons at one consistent size per layout, in a single brand color that meets 3:1 against its background. Don't mix them with emoji or other pictogram styles.
 
@@ -61,11 +59,15 @@ Use icons at one consistent size per layout, in a single brand color that meets 
 - `movement`: skills in motion, dynamic crops
 - `community`: teams, coaches, judges, volunteers, fans
 
-File names: `ucg-<color|bw>-<what's in it>.jpg`. Credit "Photo: Bryan Johnson" where credits are shown. Pick the B&W edit for athlete features with white type, and the color edit for community and belonging. Use them for UCG materials only, and crop rather than distort. The full Nationals sets live in the UCG brand toolkit.
+File names: `ucg-<color|bw>-<what's in it>.jpg`. Credit "Photo: Bryan Johnson" where credits are shown. Pick the B&W edit for athlete features with white type, and the color edit for community and belonging. Use them for UCG materials only, and crop rather than distort. The full Nationals sets live in the [UCG brand toolkit](https://drive.google.com/drive/folders/1M7wFuZvl7AUGmU7Rzh3bu_vErSauU2ZZ) (UCG volunteers only).
 
 ## Social banners — `assets/social/`
 
 Facebook cover, YouTube banner, Zoom backgrounds and the email header logo (`ucg-email-header.png`, navy background baked in so it survives dark mode).
+
+## Patterns — `assets/patterns/`
+
+`ucg-event-pattern-2026-27.svg` / `.png`: the 2026–27 Nationals event pattern from the design guide (p54). Decorative backgrounds and merch only. See [`social.md`](social.md).
 
 ## Palette files — `assets/palette/`
 
@@ -73,5 +75,5 @@ Facebook cover, YouTube banner, Zoom backgrounds and the email header logo (`ucg
 
 ## Not in this repo
 
-- **Fonts.** Greed Condensed and Suisse Intl are licensed to UCG and are never published. Use Saira Condensed Bold + Arial if you don't have them.
+- **Fonts.** Greed Condensed and Suisse Intl are licensed to UCG and are never published here. UCG volunteers can download them from the [UCG fonts folder](https://drive.google.com/drive/folders/1SUukrVratYo8sd4KxiF5_eztUnhAV-_o) (UCG Google accounts only). Everyone else uses Saira Condensed Bold + Arial.
 - **Masters and source files** (AI, EPS, the Figma templates, full-resolution photos, alpha-channel animations): in UCG's internal brand toolkit. Ask your team lead or department head.

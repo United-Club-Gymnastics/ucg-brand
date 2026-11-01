@@ -14,6 +14,7 @@ from PIL import Image, ImageOps
 
 E = html.escape
 R = "../"
+FONTS_DRIVE = "https://drive.google.com/drive/folders/1SUukrVratYo8sd4KxiF5_eztUnhAV-_o"
 
 
 class Context:
@@ -84,12 +85,16 @@ def prepare_media(ctx):
                                        capture_output=True, text=True, check=True).stdout.strip())
             subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-ss", f"{max(dur - 0.4, 0):.2f}", "-i", src,
                             "-frames:v", "1", "-vf", "scale=540:-2", "-q:v", "4", str(dst)], check=True)
+    # two copies of the example email with the mode pinned, so the side-by-side preview shows
+    # light and dark whatever the viewer's own system setting is
     ex = (ctx.root / "templates/email/example-announcement.html").read_text(encoding="utf-8")
-    dark = ex.replace("@media (prefers-color-scheme: dark)", "@media all")
-    if dark == ex:
-        raise SystemExit("dark-mode media query not found in example email")
-    (ctx.root / "site/email-example-dark.html").write_text(
-        dark.replace("<head>", '<head>\n<meta name="robots" content="noindex, nofollow">', 1), encoding="utf-8")
+    for mode, query in (("light", "@media not all"), ("dark", "@media all")):
+        pinned = ex.replace("@media (prefers-color-scheme: dark)", query)
+        if pinned == ex:
+            raise SystemExit("dark-mode media query not found in example email")
+        pinned = pinned.replace("light dark", mode)  # the color-scheme meta tags and :root rule
+        (ctx.root / f"site/email-example-{mode}.html").write_text(
+            pinned.replace("<head>", '<head>\n<meta name="robots" content="noindex, nofollow">', 1), encoding="utf-8")
 
 
 # ---------- helpers ----------
@@ -206,7 +211,7 @@ def safe_pairs(ctx, title="Safe text on every background"):
     return vis(title, f'<div class="grid" style="--min:200px">{"".join(panels)}</div>')
 
 
-def pillars(ctx, chips=False):
+def pillars(ctx, chips=False, title="Messaging themes"):
     text = ctx.md("references/messaging.md")
     phrases = {}
     for m in re.finditer(r"^### (.+?)(?: \(core\))?\n.*?^Key phrases: (.+?)$", text, re.S | re.M):
@@ -224,7 +229,7 @@ def pillars(ctx, chips=False):
     for s, cls in zip(ctx.brand["messaging"]["supporting"], ["on-lb", "on-bg", "on-purple", "on-yellow"]):
         sup.append(f'''<div class="panel {cls}"><p class="eyebrow" style="color:#1E2B38">Supporting</p>
 <p class="display" style="font-size:30px;margin:0 0 8px">{E(s["name"])}</p><p style="margin:0">{E(s["line"])}</p>{chip_row(s["name"], style="background:#FFFFFF;")}</div>''')
-    return vis("Messaging themes", f'<div class="grid" style="--min:340px">{core_card}{"".join(sup)}</div>')
+    return vis(title, f'<div class="grid" style="--min:340px">{core_card}{"".join(sup)}</div>')
 
 
 def logo_strip():
@@ -257,7 +262,8 @@ def type_specimens(ctx):
     imgs = (f'<div class="card" style="padding:12px"><img src="{R}site/examples/type/greed-condensed.png" alt="Greed Condensed Bold specimen: FOR THE LOVE OF THE SPORT, alphabet and numerals" style="display:block;width:100%;height:auto"></div>'
             f'<div class="card" style="padding:12px"><img src="{R}site/examples/type/suisse-intl.png" alt="Suisse Intl specimen in Regular and Semibold" style="display:block;width:100%;height:auto"></div>')
     return vis("Brand fonts and fallbacks", f'<div class="grid" style="--min:300px">{imgs}{live}</div>',
-               "The brand fonts are shown as images because the font files are licensed to UCG and never published.")
+               f'The brand fonts are shown as images because the font files are licensed to UCG and never published here. '
+               f'UCG volunteers can <a href="{FONTS_DRIVE}">download Greed Condensed and Suisse Intl</a> from the UCG Drive.')
 
 
 def voice_examples(ctx):
@@ -300,8 +306,7 @@ def contrast_matrix(ctx):
     legend = ('<div class="legend"><span><span class="tag tag--body">Any text</span> 4.5:1+</span>'
               '<span><span class="tag tag--large">Large only</span> 3–4.5:1: 24px+ text, icons, logos</span>'
               '<span><span class="tag tag--no">Never</span> under 3:1</span></div>')
-    return vis("Every pairing at a glance", f'<div class="matrix-scroll"><div class="matrix">{head}{"".join(cells)}</div></div>{legend}',
-               "The ratio under each sample is printed in a color that's readable on that background, so you can always read the verdict even where the sample itself fails.")
+    return vis("Every pairing at a glance", f'<div class="matrix-scroll"><div class="matrix">{head}{"".join(cells)}</div></div>{legend}')
 
 
 def overlay_demos(ctx):
@@ -378,13 +383,13 @@ def logo_rules(ctx):
     ]
     return (vis("Clear space", clear)
             + vis("Do", f'<div class="grid" style="--min:220px">{"".join(dos)}</div>')
-            + vis("Don't", f'<div class="grid" style="--min:220px">{"".join(donts)}</div>'))
+            + vis("Don't", f'<div class="grid" style="--min:260px">{"".join(donts)}</div>'))
 
 
 # ---------- icons ----------
 
 def icon_gallery(ctx):
-    groups = {"event": [], "apparatus-solid": [], "apparatus-duotone": []}
+    groups = {"event": [], "apparatus-solid": []}
     for ic in ctx.icons:
         groups[ic["set"]].append(ic)
     order_app = ["mag-floor", "mag-pommel-horse", "mag-rings", "mag-vault", "mag-parallel-bars", "mag-high-bar",
@@ -403,12 +408,9 @@ def icon_gallery(ctx):
         return "".join(out)
     toggle = ('<div class="toggle" data-swap-group="icon-sets" role="group" aria-label="Icon colorway">'
               '<button data-swap="navy" aria-pressed="true">Navy</button><button data-swap="light">Light blue</button><button data-swap="white">White</button></div>')
-    duo = "".join(f'''<div class="asset"><div class="tile icon-tile on-white" style="border-radius:0"><img src="{R}assets/icons/apparatus-duotone/{ic["slug"]}-duotone.svg" alt="" loading="lazy"></div>
-<div class="meta"><b>{E(ic["slug"].replace("tnt", "T&T").replace("mag", "MAG").replace("wag", "WAG").replace("-", " "))}</b><span class="dl"><a href="{R}assets/icons/apparatus-duotone/{ic["slug"]}-duotone.svg" download>SVG</a></span></div></div>''' for ic in sorted(groups["apparatus-duotone"], key=lambda i: order_app.index(i["slug"])))
     body = (f'{toggle}<div id="icon-sets"><h3 style="margin:8px 0 12px">Event icons</h3><div class="grid" style="--min:170px">{tiles(groups["event"], order_ev)}</div>'
-            f'<h3 style="margin:28px 0 12px">Apparatus icons</h3><div class="grid" style="--min:170px">{tiles(groups["apparatus-solid"], order_app)}</div></div>'
-            f'<h3 style="margin:28px 0 12px">Duotone (decorative only)</h3><div class="grid" style="--min:170px">{duo}</div>')
-    return vis("All icons", body, "The toggle switches every event and apparatus icon between Navy, Light Blue and White, and the download links follow.")
+            f'<h3 style="margin:28px 0 12px">Apparatus icons</h3><div class="grid" style="--min:170px">{tiles(groups["apparatus-solid"], order_app)}</div></div>')
+    return vis("All icons", body)
 
 
 def icon_usage(ctx):
@@ -432,12 +434,11 @@ def photo_gallery(ctx):
     for fr in frames:
         c, b = fr["color"], fr["bw"]
         items.append(f'''<figure class="photo" data-tags="{fr["type"]}"><img src="{thumb(c)}" data-src-color="{thumb(c)}" data-src-bw="{thumb(b)}" alt="{E(fr["alt"])}" loading="lazy" width="760" height="507">
-<figcaption>{E(fr["alt"])}<span class="dl"><a href="{R}assets/photos/{c}" data-href-color="{R}assets/photos/{c}" data-href-bw="{R}assets/photos/{b}" download>Full size</a></span></figcaption></figure>''')
+<figcaption><span class="dl"><a href="{R}assets/photos/{c}" data-href-color="{R}assets/photos/{c}" data-href-bw="{R}assets/photos/{b}" download>Download full size</a></span></figcaption></figure>''')
     controls = ('<div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center">'
                 '<div class="toggle" data-swap-group="photo-grid" role="group" aria-label="Tone"><button data-swap="color" aria-pressed="true">Color</button><button data-swap="bw">Black &amp; white</button></div>'
                 '<div class="toggle" data-filter-group="photo-grid" role="group" aria-label="Type"><button data-filter="all" aria-pressed="true">All</button><button data-filter="athlete">Athletes</button><button data-filter="movement">Movement</button><button data-filter="community">Community</button></div></div>')
-    return vis(f"All {len(frames)} photos", f'{controls}<div class="photo-grid" id="photo-grid">{"".join(items)}</div>',
-               "Photos by Bryan Johnson, 2026 UCG Nationals. Captions are the ready-to-use alt text. Full-size files are 2000px.")
+    return vis(f"All {len(frames)} photos", f'{controls}<div class="photo-grid" id="photo-grid">{"".join(items)}</div>')
 
 
 def photo_treatments(ctx):
@@ -451,7 +452,7 @@ def tone_cards(ctx):
     return vis("", f'<div class="grid" style="--min:220px">{cards}</div>')
 
 
-def headline_posters(ctx):
+def headline_posters(ctx, title="Set in caps, they look like this"):
     sec = md_section(ctx.md("references/messaging.md"), "Headlines")
     cats = re.findall(r"^\*\*(.+?):\*\* (.+)$", sec, re.M)
     if len(cats) < 4:
@@ -462,10 +463,10 @@ def headline_posters(ctx):
         heads = "".join(f'<li class="display" style="font-size:24px;margin:0 0 8px">{E(h.strip())}</li>' for h in lines.split("·"))
         eyebrow = "#A5C8CF" if cls == "on-navy" else "#1E2B38"
         cards.append(f'<div class="panel {cls}"><p class="eyebrow" style="color:{eyebrow}">{E(name)}</p><ul style="list-style:none;margin:0;padding:0">{heads}</ul></div>')
-    return vis("Set in caps, they look like this", f'<div class="grid" style="--min:340px">{"".join(cards)}</div>')
+    return vis(title, f'<div class="grid" style="--min:340px">{"".join(cards)}</div>')
 
 
-def copy_cards(ctx, heading):
+def copy_cards(ctx, heading, title="Copy and paste"):
     sec = md_section(ctx.md("references/messaging.md"), heading)
     items = re.findall(r"^(?:- )?\*\*(.+?)\*\*(?: \([^)]*\))?:?\s*(.+)$", sec, re.M)
     if not items:
@@ -475,10 +476,10 @@ def copy_cards(ctx, heading):
         label = label.rstrip(":")
         text = text.strip()
         cards.append(f'<div class="card"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px"><span class="eyebrow" style="margin:0">{E(label)}</span><button class="copy" data-copy="{E(text)}">Copy</button></div><p>{E(text)}</p></div>')
-    return vis("Copy and paste", f'<div class="grid" style="--min:340px">{"".join(cards)}</div>')
+    return vis(title, f'<div class="grid" style="--min:340px">{"".join(cards)}</div>')
 
 
-def caption_mock(ctx):
+def caption_mock(ctx, title="As posts"):
     sec = md_section(ctx.md("references/messaging.md"), "Example: social captions")
     quotes = [q for q in re.split(r"\n\s*\n", sec) if q.strip().startswith(">")]
     f = {fr["slug"]: fr for fr in ctx.frames()}
@@ -491,14 +492,14 @@ def caption_mock(ctx):
 <img src="{R}assets/logos/ucg-avatar-circle.png" alt="" style="width:32px;height:32px;border-radius:50%"><b class="small">unitedclubgymnastics</b></div>
 <img src="{thumb(f[slug]["color"])}" alt="{E(f[slug]["alt"])}" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover">
 <p class="small" style="padding:12px 14px 4px;margin:0"><b>unitedclubgymnastics</b> {E(body)}</p><p class="small" style="padding:0 14px 14px;margin:0;color:#184B56;font-weight:700">{E(tags)}</p></div>''')
-    return vis("As posts", f'<div class="grid" style="--min:280px">{"".join(posts)}</div>')
+    return vis(title, f'<div class="grid" style="--min:280px">{"".join(posts)}</div>')
 
 
 # ---------- email ----------
 
 def email_previews(ctx):
     return vis("Example built from the template", f'''<div class="compare">
-<div><p class="mock-label" style="margin:0 0 8px"><b>Light mode</b></p><iframe class="email-frame" src="{R}templates/email/example-announcement.html" title="Example UCG announcement email, light mode" loading="lazy"></iframe></div>
+<div><p class="mock-label" style="margin:0 0 8px"><b>Light mode</b></p><iframe class="email-frame" src="{R}site/email-example-light.html" title="Example UCG announcement email, light mode" loading="lazy"></iframe></div>
 <div><p class="mock-label" style="margin:0 0 8px"><b>Dark mode</b> (Apple Mail, iOS Mail, Outlook)</p><iframe class="email-frame" src="{R}site/email-example-dark.html" title="Example UCG announcement email, dark mode" loading="lazy"></iframe></div></div>
 <div class="btn-row" style="margin-top:16px"><a class="btn" href="{R}templates/email/ucg-announcement-email.html" download>Download the template</a><a class="btn btn--ghost" href="{R}templates/email/example-announcement.html" download>Download this example</a></div>''',
                "Example content for illustration: the dates and details are placeholders, and every link goes to the UCG homepage.")
@@ -578,6 +579,62 @@ def web_dark(ctx):
 <a class="ucg-btn ucg-btn--on-dark" href="#">Continue →</a> <a href="#" style="color:#A5C8CF;margin-left:12px">Text link</a></div>''')
 
 
+# ---------- Google templates (slides, docs, sheets) ----------
+
+# key -> (name, kind, file id, what it's for); previews in site/examples/templates/<key>.png
+TEMPLATES = {
+    "slides": ("UCG Slides Template", "presentation", "1aJHuTtVjkRVPzteyeOgZdMWxWDLeAFNSvdaMtY3whks", "Branded layouts for New slide, plus an example of every slide type: cover, agenda, cards, section break, numbers, table, sponsors, closing and a working-meeting slide."),
+    "policy": ("UCG Policy Template", "document", "1oC-g9xVgEFwP1pCBPfpUfnWDGawBIE3UF858RqZhGG8", "Purpose, scope, definitions, numbered sections, contacts and version history."),
+    "change-proposal": ("UCG Change Proposal Template", "document", "11yKkZv8L44MRprWYa-Ppe_IXf-Wu4KcG2ku_heYfjtU", "Propose a change and plan how it rolls out and who hears about it."),
+    "minutes": ("UCG Meeting Minutes Template", "document", "1TY-l1Mkk5kIwuBvkkxQU3mpWvLMLzPEKL-nCmmHlfh8", "Attendance, agenda, decisions and action items, plus minute-taking guidelines."),
+    "email-draft": ("UCG Email Draft Template", "document", "13eIZoEsXOzOZCphU0q-_o5OzgLqNAaC8tsz1A0JpJu4", "Draft an announcement email block by block before it's built in the HTML template."),
+    "sheets": ("UCG Sheets Template", "spreadsheets", "138BylbdttmkkCohApng-HlhUDbECz8rtueqv_Tp30x0", "UCG theme, frozen header, banded rows, status colors, dropdowns and a chart."),
+}
+
+
+def template_url(key, action="copy"):
+    _, kind, fid, _ = TEMPLATES[key]
+    return f"https://docs.google.com/{kind}/d/{fid}/{action}"
+
+
+def template_cards(ctx, keys, title="Templates"):
+    cards = []
+    for k in keys:
+        name, _, _, what = TEMPLATES[k]
+        cards.append(f'''<div class="card template-card"><a href="{template_url(k, "edit")}" class="template-preview"><img src="{R}site/examples/templates/{k}.png" alt="Preview of the {E(name)}" loading="lazy"></a>
+<h3>{E(name)}</h3><p class="small">{E(what)}</p>
+<div class="btn-row"><a class="btn btn--sm" href="{template_url(k)}">Make a copy →</a><a class="btn btn--sm btn--ghost" href="{template_url(k, "edit")}">Preview</a></div></div>''')
+    layout = "--min:340px" if len(keys) % 2 == 0 else "--min:260px;max-width:440px"  # 2 x 2, or one card not stretched
+    return vis(title, f'<div class="grid" style="{layout}">{"".join(cards)}</div>',
+               "The links work for anyone signed in with a UCG Google account. “Make a copy” puts your own editable copy in your Drive; the templates themselves stay untouched.")
+
+
+DOC_STEPS = [
+    "Open the template you need and click <b>Make a copy</b> (or File → Make a copy). Save it in your team's folder.",
+    "Replace every <b>[bracketed]</b> placeholder and delete the grey guidance lines.",
+    "Use the built-in styles (Title, Heading 1, Heading 2, Normal text) from the style menu instead of formatting by hand, so headings stay on brand.",
+    "Delete any section you don't need rather than leaving it empty.",
+]
+SLIDE_STEPS = [
+    "Click <b>Make a copy</b> (or File → Make a copy) and rename the deck.",
+    "Delete the example slides you don't need. Duplicate the ones you do (right-click → Duplicate) and replace the text.",
+    "For a fresh slide, use <b>New slide</b> and pick a layout: they're already in UCG colors and fonts, with the footers in place.",
+    "Type titles in capitals (Slides can't force caps), and keep to Saira Condensed and Arial.",
+    "Swap the cover photo for one from the <a href=\"../photos/\">photo library</a> if you like; keep the Navy overlay so the text stays readable.",
+]
+SHEET_STEPS = [
+    "Click <b>Make a copy</b> (or File → Make a copy) and rename the file.",
+    "Rename the tab and the column headers. Keep the header row frozen.",
+    "Type into the banded rows; extend the banding with Format → Alternating colors if you add rows.",
+    "Pick Status and Discipline from the dropdowns. The words drive the colors.",
+    "Charts and new cells pick up the UCG theme (Format → Theme) automatically.",
+]
+
+
+def how_to_use(steps, title="How to use them"):
+    return vis(title, '<ol class="steps">' + "".join(f"<li>{s}</li>" for s in steps) + "</ol>")
+
+
 # ---------- slides ----------
 
 def slide_theme(ctx):
@@ -588,37 +645,11 @@ def slide_theme(ctx):
     return vis("Theme colors to set", f'<div class="strip">{strip}</div>')
 
 
-def slide_spec(ctx):
-    guide = "border:1px dashed #F4694A"
-    s = f'''<div class="cq slide" style="background:#FFFFFF">
-<div class="abs" style="left:6.2cqw;top:0;bottom:0;border-left:1px dashed #F4694A" aria-hidden="true"></div>
-<div class="abs" style="right:6.2cqw;top:0;bottom:0;border-left:1px dashed #F4694A" aria-hidden="true"></div>
-<div class="abs" style="left:6.2cqw;top:{pt(36*0.98)};font-family:Arial;font-weight:700;font-size:{pt(10)};letter-spacing:.16em;text-transform:uppercase;color:#184B56">Before we start</div>
-<div class="abs display" style="left:6.2cqw;top:8.1cqw;font-size:{pt(39)};color:#1E2B38">Buffet</div>
-<div class="abs" style="left:6.2cqw;top:15.7cqw;width:47.5cqw;height:36.4cqw;background:#1E2B38;border-radius:2.2cqw;padding:3.4cqw">
-<span style="display:inline-block;background:#F6C328;color:#1E2B38;border-radius:2cqw;padding:.5cqw 1.6cqw;font-family:'Saira Condensed','Arial Narrow',Arial;font-weight:700;font-size:{pt(9.75)}">GLUTEN FREE</span>
-<p style="margin:2cqw 0 1.4cqw;font-family:Arial;font-weight:700;font-size:{pt(19.5)};line-height:1.2;color:#FFFFFF">There is a dedicated GF buffet line on the far right.</p>
-<p style="margin:0;font-family:Arial;font-size:{pt(12)};color:#DBEBEE">Please only eat from that line if you need it.</p></div>
-<div class="abs" style="left:55.8cqw;top:15.7cqw;width:38cqw;height:10.7cqw;background:#DBEBEE;border-radius:2.2cqw;padding:2.4cqw">
-<p style="margin:0 0 .8cqw;font-family:'Saira Condensed','Arial Narrow',Arial;font-weight:700;font-size:{pt(9)};color:#184B56">ALLERGENS</p><p style="margin:0;font-family:Arial;font-size:{pt(12)};color:#1E2B38">Most allergens are labelled on the buffet.</p></div>
-<div class="abs" style="left:55.8cqw;top:27.7cqw;width:38cqw;height:11.6cqw;background:#A5C8CF;border-radius:2.2cqw;padding:2.4cqw">
-<p style="margin:0 0 .8cqw;font-family:'Saira Condensed','Arial Narrow',Arial;font-weight:700;font-size:{pt(9)};color:#184B56">SEATING</p><p style="margin:0;font-family:Arial;font-size:{pt(12)};color:#1E2B38">Sit anywhere. Awards run by level.</p></div>
-<div class="abs" style="left:3cqw;bottom:1.4cqw;font-family:'Saira Condensed','Arial Narrow',Arial;font-weight:700;font-size:{pt(10)};color:#184B56">@unitedclubgymnastics</div>
-<div class="abs" style="right:3cqw;bottom:1.4cqw;font-family:'Saira Condensed','Arial Narrow',Arial;font-weight:700;font-size:{pt(10)};color:#184B56">#UCGNationals2027</div>
-<div class="abs" style="left:7cqw;top:55cqw;font-size:1.6cqw;color:#1E2B38" aria-hidden="true"></div>
-</div>'''
-    notes = '''<ul class="small" style="margin:12px 0 0;padding-left:20px">
-<li>Dashed lines: 0.62 in side margins.</li><li>Eyebrow Arial Bold caps ~10pt in Dark Blue Green; title Saira Condensed Bold 39pt in Navy.</li>
-<li>Cards: rounded rectangles in Navy, Light Blue and Blue Green; labels Saira 9pt Dark Blue Green; body Arial 12pt.</li>
-<li>Footer handles Saira 10pt in the bottom corners.</li></ul>'''
-    return vis("Measured from the Banquet deck", s + notes, "Rebuilt in HTML at true proportions. The slide scales with the page.")
-
-
 def slide_gallery(ctx):
     shots = [("cover", "Cover: B&W photo under Navy, huge Saira title"), ("info-cards", "Info cards: one Navy card, the rest light"),
              ("thank-you-band", "Thank-you band: solid Blue Green, big mark"), ("big-numbers", "Big numbers / milestones"),
              ("section-break", "Section break: Navy with apparatus icons"), ("closing", "Closing: solid Golden Yellow, next steps as pills")]
-    real = "".join(f'<figure style="margin:0"><img src="{R}site/examples/slides/banquet-{f}.jpg" alt="{E(c)}" loading="lazy" style="display:block;width:100%;border-radius:10px;box-shadow:0 8px 24px rgba(30,43,56,.16)"><figcaption class="mock-label">{E(c)}</figcaption></figure>' for f, c in shots)
+    real = "".join(f'<figure style="margin:0"><img src="{R}site/examples/slides/example-{f}.jpg" alt="{E(c)}" loading="lazy" style="display:block;width:100%;border-radius:10px;box-shadow:0 8px 24px rgba(30,43,56,.16)"><figcaption class="mock-label">{E(c)}</figcaption></figure>' for f, c in shots)
     D = "'Saira Condensed','Arial Narrow',Arial,sans-serif"
     rows = "".join(f'''<div class="abs" style="left:{x}cqw;top:{y}cqw;width:41.3cqw;border-bottom:1px solid #BFD5D9;padding-bottom:1.4cqw;display:flex;gap:2cqw;align-items:baseline">
 <span style="font-family:{D};font-weight:700;font-size:{pt(19.5)};color:#184B56">{n}</span><span style="font-family:Arial;font-weight:700;font-size:{pt(14)};color:#1E2B38">{t}</span></div>'''
@@ -632,11 +663,10 @@ def slide_gallery(ctx):
 <table class="abs" style="left:6.2cqw;top:13cqw;border-collapse:collapse"><tr>{status}</tr></table>
 <ul class="abs" style="left:6.2cqw;top:20cqw;right:6.2cqw;margin:0;padding-left:2.4cqw;font-family:Arial;font-size:{pt(15)};line-height:1.45;color:#1E2B38"><li>Rebrand rollout continues across the org</li><li>Sanctioning is open: 12 events so far</li></ul>
 <div class="abs" style="left:0;right:0;bottom:0;height:9cqw;border-top:.4cqw solid #A5C8CF;display:flex;align-items:center;gap:3cqw;padding:0 3cqw"><img src="{R}assets/logos/ucg-primary-navy.svg" alt="" style="height:4cqw"><span style="font-family:Arial;font-weight:700;font-size:{pt(8)};color:#1E2B38">FOR THE LOVE OF THE SPORT.</span></div></div>'''
-    rebuilt = (f'<figure style="margin:0">{agenda}<figcaption class="mock-label">Agenda, rebuilt: numbers in Dark Blue Green instead of Blue Green.</figcaption></figure>'
+    rebuilt = (f'<figure style="margin:0">{agenda}<figcaption class="mock-label">Agenda: numbers in Dark Blue Green, never Blue Green, on Light Blue.</figcaption></figure>'
                f'<figure style="margin:0">{work}<figcaption class="mock-label">Working meeting: status cells in brand colors with words.</figcaption></figure>')
-    return (vis("From the Banquet deck", f'<div class="grid" style="--min:300px">{real}</div>')
-            + vis("Rebuilt with corrected contrast", f'<div class="grid" style="--min:300px">{rebuilt}</div>',
-                  "Example content."))
+    return (vis("Examples", f'<div class="grid" style="--min:300px">{real}</div>')
+            + vis("More examples", f'<div class="grid" style="--min:300px">{rebuilt}</div>', "Example content."))
 
 
 def slide_traps(ctx):
@@ -715,11 +745,11 @@ def sheet_mock(ctx):
     return vis("What a UCG sheet looks like", t, "Example data.")
 
 
-def sheet_status(ctx):
+def sheet_status(ctx, title=""):
     items = [("Good / done / on track", "#DBEBEE", "#184B56"), ("Attention / pending", "#F6C328", "#1E2B38"),
              ("Urgent / error / blocked", "#F4694A", "#1E2B38"), ("Neutral / info", "#ADBAE9", "#1E2B38")]
     chips = "".join(f'<div style="background:{b};color:{f};border-radius:8px;padding:12px 14px;font-weight:700;font-family:Arial">{t}</div>' for t, b, f in items)
-    return vis("", f'<div class="grid" style="--min:190px">{chips}</div>')
+    return vis(title, f'<div class="grid" style="--min:190px">{chips}</div>')
 
 
 def chart_svg(bg, colors, text, muted, grid):
@@ -780,24 +810,25 @@ def social_posts(ctx):
             + vis("Carousel", f'<div class="grid" style="--min:260px">{carousel}</div>', "Example content. One idea per slide, an arrow until the last."))
 
 
-def event_pattern(ctx, size=4):
-    tile = f'''<div style="display:flex;align-items:center;gap:10px;padding:14px 18px"><img src="{R}assets/logos/ucg-mark-light.svg" alt="" style="height:38px">
-<span style="font-family:var(--ucg-font-display);font-weight:700;text-transform:uppercase;line-height:.95;color:#DBEBEE;font-size:15px">For the love<br>of the sport</span>
-<span style="font-family:var(--ucg-font-display);font-weight:700;text-transform:uppercase;line-height:.95;color:#DBEBEE;font-size:15px">2026–2027<br>Nationals</span></div>'''
-    return f'<div aria-hidden="true" data-contrast-skip style="background:#A5C8CF;border-radius:16px;overflow:hidden;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))">{tile * (size * 3)}</div>'
+def event_pattern(ctx):
+    base = f"{R}assets/patterns/ucg-event-pattern-2026-27"
+    return (f'<img src="{base}.png" alt="Event pattern: rows of the UCG mark, UCG, FOR THE LOVE OF THE SPORT and 2026–2027 NATIONALS in Light Blue on Blue Green" '
+            f'style="display:block;width:100%;height:auto;border-radius:16px">'
+            f'<div class="btn-row" style="margin-top:12px"><a class="btn btn--sm" href="{base}.svg" download>SVG</a><a class="btn btn--sm btn--ghost" href="{base}.png" download>PNG</a></div>')
 
 
 def social_expressive(ctx):
     ex = ctx.brand["colors"]["expressive"]["swatches"]
     strip = "".join(f'<div style="background:{h};color:{readable_on(h)}">{h}</div>' for h in ex)
-    mixed = f'''<div class="cq post" style="background:#8BB7E3;width:100%;max-width:360px;flex:1 1 260px">
-<div class="abs" style="inset:0;opacity:.5;display:grid;grid-template-columns:repeat(4,1fr);gap:{px(40)};padding:{px(40)}" aria-hidden="true">{"".join(f'<img src="{R}assets/icons/apparatus-solid/{s}-white.svg" alt="" style="width:100%">' for s in ["mag-rings", "wag-balance-beam", "tnt-trampoline", "mag-pommel-horse"] * 5)}</div>
+    icons = ["mag-rings", "wag-balance-beam", "tnt-trampoline", "mag-pommel-horse"]  # each row shifts one to the right
+    mixed =f'''<div class="cq post" style="background:#8BB7E3;width:100%;max-width:360px;flex:1 1 260px">
+<div class="abs" style="inset:0;opacity:.5;display:grid;grid-template-columns:repeat(4,1fr);gap:{px(40)};padding:{px(40)}" aria-hidden="true">{"".join(f'<img src="{R}assets/icons/apparatus-solid/{icons[(c - r) % 4]}-white.svg" alt="" style="width:100%">' for r in range(5) for c in range(4))}</div>
 <div class="abs" style="left:{px(80)};right:{px(80)};top:{px(380)};background:#1E2B38;border-radius:{px(40)};padding:{px(70)}">
 <p style="margin:0 0 {px(20)};font-family:Arial;font-weight:700;font-size:{px(30)};letter-spacing:.16em;text-transform:uppercase;color:#A5C8CF">Nationals 2027</p>
 <p class="display" style="margin:0 0 {px(30)};font-size:{px(120)};color:#FFFFFF">Registration opens Dec 1</p>
 <p style="margin:0;font-family:Arial;font-size:{px(38)};color:#DBEBEE">unitedclubgymnastics.org</p></div></div>'''
     return (vis("Expressive colors", f'<div class="strip">{strip}</div>')
-            + vis("Event pattern (decorative)", event_pattern(ctx), "Repeating lockups in Light Blue on Blue Green, for backgrounds and merch only. It's texture, so it never carries information.")
+            + vis("Event pattern (decorative)", event_pattern(ctx), "From the design guide (p54). Light Blue lockups on Blue Green, for backgrounds and merch only. It's texture, so it never carries information.")
             + vis("A mixed piece", f'<div style="display:flex;flex-wrap:wrap;gap:20px;align-items:center">{mixed}<p class="small" style="max-width:360px">Expressive background and pattern, while the facts (event, date, link) sit on a solid Navy panel in core colors and plain type.</p></div>', "Example content."))
 
 
@@ -877,26 +908,22 @@ VISUALS = {
     },
     "colors": {
         "_top": lambda c: palette_cards(c) + support_and_expressive(c),
-        "Quick list: safe for body text": lambda c: safe_pairs(c, "See it"),
-        "Full table": contrast_matrix,
+        "Quick list: safe for body text": lambda c: safe_pairs(c, "See it") + contrast_matrix(c),
         "Palette files — assets/palette/": palette_files,
         "_end": overlay_demos,
     },
     "logos": {"Logos — assets/logos/": lambda c: logo_gallery(c) + logo_rules(c)},
     "icons": {"Icons — assets/icons/": lambda c: icon_gallery(c) + icon_usage(c)},
-    "photos": {"Photos — assets/photos/": lambda c: photo_gallery(c) + photo_treatments(c)},
+    "photos": {"Photos — assets/photos/": lambda c: photo_treatments(c) + photo_gallery(c)},
     "messaging": {
-        "Messaging themes": lambda c: pillars(c, chips=True),
+        "Messaging themes": lambda c: pillars(c, chips=True, title=""),
         "Tone of voice": tone_cards,
-        "Headlines": headline_posters,
-        "One-liners": lambda c: copy_cards(c, "One-liners"),
-        "About us (boilerplate)": lambda c: copy_cards(c, "About us (boilerplate)"),
-        "Example: social captions": caption_mock,
+        "Headlines": lambda c: headline_posters(c, title=""),
+        "One-liners": lambda c: copy_cards(c, "One-liners", title=""),
+        "About us (boilerplate)": lambda c: copy_cards(c, "About us (boilerplate)", title=""),
+        "Example: social captions": lambda c: caption_mock(c, title=""),
     },
-    "email": {
-        "Announcement / newsletter emails (HTML)": email_previews,
-        "Plain-text and personal emails (Gmail, replies)": gmail_mock,
-    },
+    "email": {"Announcement / newsletter emails (HTML)": email_previews},
     "web": {
         "Layout": web_layout,
         "Type scale (starting point)": web_type,
@@ -904,13 +931,16 @@ VISUALS = {
         "Dark mode": web_dark,
     },
     "slides": {
-        "Setup": slide_theme,
-        "Grid and type (from the banquet deck)": slide_spec,
+        "_intro": lambda c: template_cards(c, ["slides"], "The template") + how_to_use(SLIDE_STEPS, "How to use it"),
         "Slide types": slide_gallery,
         "Contrast traps seen in real decks": slide_traps,
+        "Setup": slide_theme,
     },
-    "docs": {"Page setup": doc_page, "Styles": doc_styles, "Letters and memos": letter_mock},
-    "sheets": {"Layout": sheet_mock, "Status and conditional formatting": sheet_status, "Charts": sheet_charts},
+    "docs": {"_intro": lambda c: template_cards(c, ["policy", "change-proposal", "minutes", "email-draft"]) + how_to_use(DOC_STEPS)},
+    "sheets": {
+        "_intro": lambda c: template_cards(c, ["sheets"], "The template") + how_to_use(SHEET_STEPS, "How to use it")
+                            + sheet_mock(c) + sheet_status(c, "Status colors") + sheet_charts(c),
+    },
     "social": {
         "Formats": social_formats,
         "Post recipes (from the design guide)": social_posts,

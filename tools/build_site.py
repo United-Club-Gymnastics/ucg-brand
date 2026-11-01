@@ -36,15 +36,15 @@ PAGES = [
     ("messaging", "Messaging & voice", "references/messaging.md", None,
      "How UCG sounds: messaging themes, tone, approved headlines and copy you can use."),
     ("email", "Email", "references/email.md", None,
-     "The announcement email template, fonts that work in inboxes, and signatures."),
+     "The announcement email template and fonts that work in inboxes."),
     ("web", "Websites & tools", "references/web.md", None,
      "CSS tokens, type scale and components for UCG websites and web apps."),
     ("slides", "Google Slides", "references/slides.md", None,
-     "Grid, type sizes and slide types, from the Nationals 2027 Banquet deck."),
+     "Start every deck from the UCG Slides template, with guidance for going beyond it."),
     ("docs", "Google Docs", "references/docs.md", None,
-     "Paragraph styles and layout for policies, guides and letters."),
+     "Templates for policies, change proposals, meeting minutes and email drafts."),
     ("sheets", "Google Sheets", "references/sheets.md", None,
-     "Header rows, status colors and charts that stay readable."),
+     "Start from the UCG Sheets template: header rows, status colors and charts that stay readable."),
     ("social", "Social & print", "references/social.md", ["Formats", "Post recipes (from the design guide)", "Expressive design (merch, campaigns, Nationals, big moments)", "Captions", "Print"],
      "Post recipes, expressive design, banners and print colors."),
     ("video", "Video & Reels", "references/video.md", None,
@@ -53,6 +53,7 @@ PAGES = [
 # H2 sections deliberately shown on a different page than their markdown file
 EXTRA_SECTIONS = {
     ("references/assets.md", "Social banners — assets/social/"): "social",
+    ("references/assets.md", "Patterns — assets/patterns/"): "social",
     ("references/assets.md", "Palette files — assets/palette/"): "colors",
 }
 RESERVED = {"assets", "templates", "tokens", "tools", "skills", "references", "site"}
@@ -67,6 +68,158 @@ DIR_TO_PAGE = {"assets/logos": "logos", "assets/icons": "icons", "assets/photos"
 
 GITHUB = "https://github.com/United-Club-Gymnastics/ucg-brand"
 RAW = "https://united-club-gymnastics.github.io/ucg-brand"
+FONTS_DRIVE = "https://drive.google.com/drive/folders/1SUukrVratYo8sd4KxiF5_eztUnhAV-_o"
+PHOTOS_DRIVE = "https://drive.google.com/drive/folders/1M7wFuZvl7AUGmU7Rzh3bu_vErSauU2ZZ"
+
+
+# ---------- human-page edits: what people see differs from what agents read ----------
+# Text that only helps agents (setup code, file tables, prose the visuals already show) is
+# hidden on the illustrated pages; the markdown keeps all of it.
+
+def visual_only(frag):
+    """Keep only the section heading; the section's visual carries the content."""
+    m = re.match(r"\s*(<h2[^>]*>.*?</h2>)", frag, re.S)
+    return m.group(1) if m else ""
+
+
+def drop_text(*starts):
+    """Remove paragraphs and list items whose text starts with one of `starts`."""
+    def edit(frag):
+        soup = BeautifulSoup(frag, "html.parser")
+        for el in soup.find_all(["p", "li"]):
+            if el.get_text(" ", strip=True).startswith(starts):
+                el.decompose()
+        return str(soup)
+    return edit
+
+
+def drop_lists(frag):
+    soup = BeautifulSoup(frag, "html.parser")
+    for el in soup.find_all(["ul", "ol"]):
+        el.decompose()
+    return str(soup)
+
+
+def replace_prose(new_html):
+    return lambda frag: visual_only(frag) + new_html
+
+
+def first_paragraph(frag):
+    m = re.search(r"<p>.*?</p>", frag, re.S)
+    return m.group(0) if m else ""
+
+
+def colors_intro(frag):
+    # these sentences describe the full table, which the page doesn't show
+    return re.sub(r"\s*The 'Guide' column.*?(</p>)", lambda m: m.group(1), frag, count=1, flags=re.S)
+
+
+PHOTOS_INTRO = ('<p>37 curated photos from 2026 UCG Nationals by photographer Bryan Johnson, each in a color and a '
+                'black-and-white edit (74 files), 2000px on the long edge. Credit "Photo: Bryan Johnson" where credits are '
+                'shown. Pick the B&amp;W edit for athlete features with white type, and the color edit for community and '
+                'belonging. Use them for UCG materials only, and crop rather than distort. The full Nationals sets '
+                f'<a href="{PHOTOS_DRIVE}">live in the UCG brand toolkit</a>.</p>')
+
+# slug -> {"hide": sections not shown, "edit": {section or "_intro": fn(html) -> html}, "order": sections to put first}
+HUMAN = {
+    "colors": {"hide": ["Full table"], "edit": {"_intro": colors_intro}},
+    "logos": {"edit": {"Logos — assets/logos/": drop_text("Badges are two-tone", "Also in")}},
+    "icons": {"edit": {"Icons — assets/icons/": visual_only}},
+    "photos": {"edit": {"Photos — assets/photos/": replace_prose(PHOTOS_INTRO)}},
+    "messaging": {"edit": {"Messaging themes": visual_only, "Tone of voice": drop_lists, "Headlines": visual_only,
+                           "One-liners": visual_only, "About us (boilerplate)": visual_only,
+                           "Example: social captions": visual_only}},
+    "email": {"hide": ["Plain-text and personal emails (Gmail, replies)"]},
+    "web": {"hide": ["Setup"]},
+    "slides": {"hide": ["Grid and type", "Building decks with the API (for agents)"]},
+    "docs": {"hide": ["Page setup", "Styles", "Writing policies", "Letters and memos", "Building docs with the API (for agents)"],
+             "edit": {"_intro": first_paragraph}},  # the template cards replace the link list
+    "sheets": {"edit": {"_intro": drop_text("The details below")}},
+}
+
+CONTRAST_RULE = "text needs a contrast ratio of at least 4.5:1 against its background, large text 3:1"
+TERMS = {  # first mention on each page gets a short definition and a link: term -> (link, definition)
+    "WCAG": ("https://www.w3.org/WAI/standards-guidelines/wcag/",
+             "the Web Content Accessibility Guidelines, the international standard for accessible web content"),
+    "AA": ("https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum",
+           f"the standard level of WCAG, the Web Content Accessibility Guidelines. In short, {CONTRAST_RULE}"),
+    "WCAG AA": ("https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum",
+                f"the standard level of the Web Content Accessibility Guidelines: {CONTRAST_RULE}"),
+}
+SKIP_TERM_IN = {"code", "pre", "a", "button", "script", "style", "summary", "th", "label"}
+HEADINGS = {"h1", "h2", "h3", "h4", "h5", "h6"}
+
+
+def explain_terms(html_text):
+    soup = BeautifulSoup(html_text, "html.parser")
+    todo = {"WCAG", "AA"}
+    for node in list(soup.find_all(string=re.compile(r"\b(WCAG|AA)\b"))):
+        if not todo:
+            break
+        parents = [p for p in node.parents if p.name]
+        if any(p.name in SKIP_TERM_IN or {"vis-title", "tag", "mh"} & set(p.get("class") or []) for p in parents):
+            continue
+        m = re.search(r"\bWCAG AA\b|\bWCAG\b|\bAA\b", node)
+        if not m or not todo & set(m.group(0).split()):
+            continue
+        term = m.group(0)
+        link, note = TERMS[term]
+        if term == "AA" and "WCAG" not in todo:
+            note = f"WCAG's standard level: {CONTRAST_RULE}"
+        todo -={"WCAG", "AA"} if term != "WCAG" else {"WCAG"}  # the AA definition spells out WCAG too
+        heading = next((p for p in parents if p.name in HEADINGS), None)
+        if heading:  # define it in a line under the heading rather than inside it
+            heading.insert_after(BeautifulSoup(f'<p class="term-def"><a class="term" href="{link}">{term}</a> is {html.escape(note)}.</p>', "html.parser"))
+            continue
+        node.replace_with(BeautifulSoup(f'{html.escape(node[:m.start()])}<a class="term" href="{link}">{term}</a>'
+                                        f'<span class="term-def"> ({html.escape(note)})</span>{html.escape(node[m.end():])}', "html.parser"))
+    return str(soup)
+
+
+LOGO_TILE = {"navy": "on-lb", "light": "on-navy", "white": "on-dbg", "black": "on-white"}
+
+
+def table_examples(html_text):
+    """Add a visual column to tables of colors and logos."""
+    soup = BeautifulSoup(html_text, "html.parser")
+    for table in soup.find_all("table"):
+        heads = [th.get_text(" ", strip=True) for th in table.find_all("th")]
+        rows = table.find("tbody").find_all("tr") if table.find("tbody") else []
+
+        def add(label, cell_for):
+            th = soup.new_tag("th")
+            th.string = label
+            table.find("tr").insert(0, th)
+            for tr in rows:
+                td = BeautifulSoup(f'<td class="ex-cell">{cell_for(tr)}</td>', "html.parser")
+                tr.insert(0, td)
+
+        if "Hex" in heads:
+            i = heads.index("Hex")
+
+            def swatch(tr):
+                hexv = tr.find_all("td")[i].get_text(strip=True)
+                return f'<span class="mini-swatch" style="background:{hexv}" role="img" aria-label="{hexv} swatch"></span>'
+            add("Swatch", swatch)
+        elif any(h.startswith("Files") for h in heads) or heads[:1] == ["<logo>"]:
+            col = next(k for k, h in enumerate(heads) if h.startswith("Files") or h == "<logo>")
+
+            def logo(tr):
+                m = re.search(r"ucg-([a-z-]+?)-(?:\{|…)", tr.find_all("td")[col].get_text()) or \
+                    re.fullmatch(r"([a-z-]+)", tr.find_all("td")[col].get_text(strip=True))
+                fam = m.group(1)
+                return f'<span class="mini-logo on-white"><img src="../assets/logos/ucg-{fam}-navy.svg" alt="{fam.replace("-", " ")} logo"></span>'
+            add("Example", logo)
+        elif heads[:1] == ["<colorway>"]:
+            def colorway(tr):
+                cw = tr.find_all("td")[0].get_text(strip=True)
+                return f'<span class="mini-logo {LOGO_TILE[cw]}"><img src="../assets/logos/ucg-primary-{cw}.svg" alt="Primary logo, {cw}"></span>'
+            add("Example", colorway)
+    return str(soup)
+
+
+def enhance(html_text):
+    return explain_terms(table_examples(html_text))
 
 
 def render_md(path):
@@ -185,7 +338,7 @@ TEMPLATE = """<!doctype html>
 <footer class="site-footer">
   <div class="wrap">
     <p class="tag">For the Love of the Sport.</p>
-    <p>United Club Gymnastics · <a href="https://unitedclubgymnastics.org">unitedclubgymnastics.org</a> · Fonts are licensed to UCG and not included; this site uses Saira Condensed and Arial.</p>
+    <p>United Club Gymnastics · <a href="https://unitedclubgymnastics.org">unitedclubgymnastics.org</a> · Fonts are licensed to UCG and not included; this site uses Saira Condensed and Arial. UCG volunteers can <a href="{fonts}">download the brand fonts</a>.</p>
   </div>
 </footer>
 <script src="../site/site.js"></script>
@@ -228,6 +381,10 @@ def build():
             if eslug == slug:
                 chosen += [(n, h) for n, h in render_md(emd)[1] if n == en]
         names = [n for n, _ in chosen]
+        human_names = list(HUMAN.get(slug, {}).get("hide", [])) + [k for k in HUMAN.get(slug, {}).get("edit", {}) if k != "_intro"]
+        for key in human_names:
+            if key not in names:
+                raise SystemExit(f"{slug}: HUMAN edit names missing section '{key}'; have {names}")
         for key in visuals:
             if key not in names and key not in ("_top", "_end"):
                 raise SystemExit(f"{slug}: visual attached to missing section '{key}'; have {names}")
@@ -235,7 +392,10 @@ def build():
         if "_top" in visuals:
             parts.append(visuals["_top"](ctx))
         toc_items = []
+        human = HUMAN.get(slug, {})
         for n, h in chosen:
+            if n in human.get("hide", ()):
+                continue
             src_md = next((emd for (emd, en) in EXTRA_SECTIONS if en == n), md)
             frag = rewrite_links(h, src_md)
             sid = slug_id(n) if n != "_intro" else "intro"
@@ -243,13 +403,15 @@ def build():
                 frag = re.sub(r"<h2[^>]*>", f'<h2 id="{sid}">', frag, count=1)
                 frag = re.sub(r"(<h2[^>]*>.*?) — <code>[^<]*</code>(</h2>)", lambda m: m.group(1) + m.group(2), frag, count=1)  # drop file paths from page headings
                 toc_items.append(f'<a href="#{sid}">{html.escape(re.sub(r" — .*$", "", re.sub(r"`", "", n)))}</a>')
+            if n in human.get("edit", {}):
+                frag = human["edit"][n](frag)
             extra = visuals[n](ctx) if n in visuals else ""
             parts.append(f'<section class="doc-section" id="sec-{sid}">\n<div class="prose">{frag}</div>\n{extra}\n</section>')
         if "_end" in visuals:
             parts.append(visuals["_end"](ctx))
         toc = ('<nav class="toc" aria-label="On this page">' + "".join(toc_items) + "</nav>") if len(toc_items) > 1 else ""
         page = TEMPLATE.format(title=html.escape(title), blurb=html.escape(blurb), toc=toc, nav=nav_html(slug),
-                               content="\n".join(parts), raw_url=f"{RAW}/{md}", md_path=md, github=GITHUB)
+                               content=enhance("\n".join(parts)), fonts=FONTS_DRIVE, raw_url=f"{RAW}/{md}", md_path=md, github=GITHUB)
         if any(ord(ch) < 32 and ch not in "\t\n\r" for ch in page):
             raise SystemExit(f"{slug}: control characters in output (a bad regex replacement?)")
         out = ROOT / slug / "index.html"

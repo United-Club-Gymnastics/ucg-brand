@@ -46,7 +46,7 @@ Examples:
 | Neutral | White | `#FFFFFF` |
 
 - Navy carries most text and dark surfaces. Light Blue, White and Blue Green are the main light surfaces. Secondary colors are accents: chips, highlights, data, one bold slide.
-- Supporting UI values (not in the guide, already used in UCG templates): muted text `#4A5A66`, borders `#BFD5D9` / `#CFE1E4`.
+- Supporting UI values (not in the design guide; they come from UCG's HTML email templates, which were built with AI help in 2026): muted text `#4A5A66`, borders `#BFD5D9` / `#CFE1E4`.
 - No gradients, no off-palette colors. Six extra "expressive" colors exist only for merch, social campaigns and event graphics (see [`references/social.md`](references/social.md)).
 
 ### Contrast is a hard rule (WCAG AA everywhere)
@@ -71,7 +71,7 @@ Body text needs **4.5:1**, large text (24px+, or 18.5px+ bold), icons and logos 
 - Headlines are ALL CAPS, short and tight (line-height ~0.92, tracking ~0). Condensed subheads and labels use 20% tracking (`letter-spacing: 0.2em`).
 - Body copy is sentence case. Avoid Title Case for anything but proper names.
 - Buttons: Suisse Intl or Arial, ALL CAPS, `letter-spacing: 0.2em`, short verb labels ("Register", "Join the club").
-- Greed and Suisse are licensed to UCG. Only UCG volunteers making UCG materials may use them, and only UCG-owned websites may self-host them. **Never copy or link font files anywhere.** If you don't have them, use Saira Condensed Bold + Arial.
+- Greed and Suisse are licensed to UCG. Only UCG volunteers making UCG materials may use them, and only UCG-owned websites may self-host them. Volunteers download them from the [UCG fonts folder](https://drive.google.com/drive/folders/1SUukrVratYo8sd4KxiF5_eztUnhAV-_o) (UCG Google accounts only). **Never copy or re-share the font files anywhere else.** If you don't have them, use Saira Condensed Bold + Arial.
 
 | Surface | Fonts |
 |---|---|

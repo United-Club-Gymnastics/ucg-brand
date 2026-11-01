@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Google Slides · UCG Brand Kit</title>
-<meta name="description" content="Grid, type sizes and slide types, from the Nationals 2027 Banquet deck.">
+<meta name="description" content="Start every deck from the UCG Slides template, with guidance for going beyond it.">
 <link rel="icon" href="../assets/logos/ucg-favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@700&display=swap" rel="stylesheet">
 <link href="../tokens/ucg.css" rel="stylesheet">
@@ -26,8 +26,8 @@
   <div class="wrap">
     <p class="eyebrow">UCG brand kit</p>
     <h1>Google Slides</h1>
-    <p class="lead">Grid, type sizes and slide types, from the Nationals 2027 Banquet deck.</p>
-    <nav class="toc" aria-label="On this page"><a href="#setup">Setup</a><a href="#grid-and-type-from-the-banquet-deck">Grid and type (from the banquet deck)</a><a href="#slide-types">Slide types</a><a href="#contrast-traps-seen-in-real-decks">Contrast traps seen in real decks</a><a href="#building-decks-with-the-api-for-agents">Building decks with the API (for agents)</a></nav>
+    <p class="lead">Start every deck from the UCG Slides template, with guidance for going beyond it.</p>
+    <nav class="toc" aria-label="On this page"><a href="#setup">Setup</a><a href="#slide-types">Slide types</a><a href="#contrast-traps-seen-in-real-decks">Contrast traps seen in real decks</a></nav>
   </div>
 </section>
 <div class="wrap layout">
@@ -55,9 +55,12 @@
   <main id="main" class="content">
 <section class="doc-section" id="sec-intro">
 <div class="prose">
-<p>Reference deck: <strong>Nationals 2027 Awards Banquet</strong> (UCG Drive). It is the best current example of the brand in Slides. Measurements below come from it.</p>
+<p><strong>Start every new deck from the <a href="https://docs.google.com/presentation/d/1aJHuTtVjkRVPzteyeOgZdMWxWDLeAFNSvdaMtY3whks/copy">UCG Slides template</a></strong> (the link makes your own copy; UCG Google accounts only). It already has the theme colors, fonts, footers and an example of every slide type below: delete the slides you don't need and duplicate the ones you do.</p>
+<p>If you need to go well beyond the template or make a new kind of slide, use the guidance below.</p>
 </div>
-
+<div class="vis"><p class="vis-title">The template</p><div class="grid" style="--min:260px;max-width:440px"><div class="card template-card"><a class="template-preview" href="https://docs.google.com/presentation/d/1aJHuTtVjkRVPzteyeOgZdMWxWDLeAFNSvdaMtY3whks/edit"><img alt="Preview of the UCG Slides Template" loading="lazy" src="../site/examples/templates/slides.png"/></a>
+<h3>UCG Slides Template</h3><p class="small">Branded layouts for New slide, plus an example of every slide type: cover, agenda, cards, section break, numbers, table, sponsors, closing and a working-meeting slide.</p>
+<div class="btn-row"><a class="btn btn--sm" href="https://docs.google.com/presentation/d/1aJHuTtVjkRVPzteyeOgZdMWxWDLeAFNSvdaMtY3whks/copy">Make a copy →</a><a class="btn btn--sm btn--ghost" href="https://docs.google.com/presentation/d/1aJHuTtVjkRVPzteyeOgZdMWxWDLeAFNSvdaMtY3whks/edit">Preview</a></div></div></div><p class="vis-note">The links work for anyone signed in with a UCG Google account. “Make a copy” puts your own editable copy in your Drive; the templates themselves stay untouched.</p></div><div class="vis"><p class="vis-title">How to use it</p><ol class="steps"><li>Click <b>Make a copy</b> (or File → Make a copy) and rename the deck.</li><li>Delete the example slides you don't need. Duplicate the ones you do (right-click → Duplicate) and replace the text.</li><li>For a fresh slide, use <b>New slide</b> and pick a layout: they're already in UCG colors and fonts, with the footers in place.</li><li>Type titles in capitals (Slides can't force caps), and keep to Saira Condensed and Arial.</li><li>Swap the cover photo for one from the <a href="../photos/">photo library</a> if you like; keep the Navy overlay so the text stays readable.</li></ol></div>
 </section>
 <section class="doc-section" id="sec-setup">
 <div class="prose"><h2 id="setup">Setup</h2>
@@ -68,120 +71,7 @@
 <li><strong>Images:</strong> Slides can't insert SVG. Use the PNG versions of logos and icons from <code>assets/</code> (all have transparent backgrounds).</li>
 </ul>
 </div>
-<div class="vis"><p class="vis-title">Theme colors to set</p><div class="strip"><div style="background:#1E2B38;color:#FFFFFF;">Dark 1<br><span style="font-weight:400">Navy</span></div><div style="background:#FFFFFF;color:#1E2B38;box-shadow:inset 0 0 0 1px #CFE1E4;">Light 1<br><span style="font-weight:400">White</span></div><div style="background:#184B56;color:#FFFFFF;">Dark 2<br><span style="font-weight:400">Dark Blue Green</span></div><div style="background:#DBEBEE;color:#1E2B38;box-shadow:inset 0 0 0 1px #CFE1E4;">Light 2<br><span style="font-weight:400">Light Blue</span></div><div style="background:#A5C8CF;color:#1E2B38;">Accent 1<br><span style="font-weight:400">Blue Green</span></div><div style="background:#ADBAE9;color:#1E2B38;">Accent 2<br><span style="font-weight:400">Purple</span></div><div style="background:#F6C328;color:#1E2B38;">Accent 3<br><span style="font-weight:400">Golden Yellow</span></div><div style="background:#F4694A;color:#1E2B38;">Accent 4<br><span style="font-weight:400">Red Orange</span></div></div></div>
-</section>
-<section class="doc-section" id="sec-grid-and-type-from-the-banquet-deck">
-<div class="prose"><h2 id="grid-and-type-from-the-banquet-deck">Grid and type (from the banquet deck)</h2>
-<div class="table-wrap"><table class="wide">
-<thead>
-<tr>
-<th>Element</th>
-<th>Font</th>
-<th>Size</th>
-<th>Color</th>
-<th>Position</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Margins</td>
-<td></td>
-<td></td>
-<td></td>
-<td>0.62 in left/right, title top at 0.5 in</td>
-</tr>
-<tr>
-<td>Eyebrow above title</td>
-<td>Arial Bold, ALL CAPS</td>
-<td>9.75–10.5pt</td>
-<td>Dark Blue Green (light bg) / Blue Green (dark bg)</td>
-<td>directly above the title</td>
-</tr>
-<tr>
-<td>Slide title</td>
-<td>Saira Condensed Bold</td>
-<td>34–39pt</td>
-<td>Navy (light bg) / White (dark bg)</td>
-<td>y 0.5 in</td>
-</tr>
-<tr>
-<td>Intro line under title</td>
-<td>Arial</td>
-<td>12pt</td>
-<td><code>#4A5A66</code></td>
-<td>~0.5 in below title top</td>
-</tr>
-<tr>
-<td>Cover / section title</td>
-<td>Saira Condensed Bold</td>
-<td>60–84pt</td>
-<td>White on Navy or photo</td>
-<td>left-aligned, stacked lines</td>
-</tr>
-<tr>
-<td>Card label</td>
-<td>Saira Condensed Bold</td>
-<td>9–10pt</td>
-<td>Dark Blue Green</td>
-<td>top of card</td>
-</tr>
-<tr>
-<td>Card heading</td>
-<td>Arial Bold</td>
-<td>15–20pt</td>
-<td>Navy, or White on Navy cards</td>
-<td></td>
-</tr>
-<tr>
-<td>Body text in cards</td>
-<td>Arial</td>
-<td>11–12pt</td>
-<td>Navy / <code>#4A5A66</code>; Light Blue on Navy</td>
-<td></td>
-</tr>
-<tr>
-<td>Big numbers</td>
-<td>Saira Condensed Bold</td>
-<td>33pt+</td>
-<td>Navy on light, Blue Green on Navy</td>
-<td></td>
-</tr>
-<tr>
-<td>Footer handles</td>
-<td>Saira Condensed Bold</td>
-<td>10pt</td>
-<td>Dark Blue Green (light) / Light Blue (dark)</td>
-<td>bottom corners, y 5.3 in: <code>@unitedclubgymnastics</code> left, event hashtag right</td>
-</tr>
-</tbody>
-</table></div>
-<ul>
-<li><strong>Cards:</strong> rounded rectangles in Light Blue, Blue Green or Navy with ~0.25 in inner padding, 0.15–0.2 in gaps. Use one Navy card for the item you want noticed.</li>
-<li><strong>Chips:</strong> small rounded rectangle in a secondary color with Saira caps label in Navy (e.g. Golden Yellow "GLUTEN FREE").</li>
-<li><strong>Dividers:</strong> thin <code>#BFD5D9</code> lines between list rows; numbered rows use a Saira number then an Arial Bold label.</li>
-<li><strong>Tables:</strong> Navy or Blue Green header row, alternating White / Light Blue rows, Arial 9–10pt body, Saira caps for column headers.</li>
-</ul>
-</div>
-<div class="vis"><p class="vis-title">Measured from the Banquet deck</p><div class="cq slide" style="background:#FFFFFF">
-<div class="abs" style="left:6.2cqw;top:0;bottom:0;border-left:1px dashed #F4694A" aria-hidden="true"></div>
-<div class="abs" style="right:6.2cqw;top:0;bottom:0;border-left:1px dashed #F4694A" aria-hidden="true"></div>
-<div class="abs" style="left:6.2cqw;top:4.900cqw;font-family:Arial;font-weight:700;font-size:1.389cqw;letter-spacing:.16em;text-transform:uppercase;color:#184B56">Before we start</div>
-<div class="abs display" style="left:6.2cqw;top:8.1cqw;font-size:5.417cqw;color:#1E2B38">Buffet</div>
-<div class="abs" style="left:6.2cqw;top:15.7cqw;width:47.5cqw;height:36.4cqw;background:#1E2B38;border-radius:2.2cqw;padding:3.4cqw">
-<span style="display:inline-block;background:#F6C328;color:#1E2B38;border-radius:2cqw;padding:.5cqw 1.6cqw;font-family:'Saira Condensed','Arial Narrow',Arial;font-weight:700;font-size:1.354cqw">GLUTEN FREE</span>
-<p style="margin:2cqw 0 1.4cqw;font-family:Arial;font-weight:700;font-size:2.708cqw;line-height:1.2;color:#FFFFFF">There is a dedicated GF buffet line on the far right.</p>
-<p style="margin:0;font-family:Arial;font-size:1.667cqw;color:#DBEBEE">Please only eat from that line if you need it.</p></div>
-<div class="abs" style="left:55.8cqw;top:15.7cqw;width:38cqw;height:10.7cqw;background:#DBEBEE;border-radius:2.2cqw;padding:2.4cqw">
-<p style="margin:0 0 .8cqw;font-family:'Saira Condensed','Arial Narrow',Arial;font-weight:700;font-size:1.250cqw;color:#184B56">ALLERGENS</p><p style="margin:0;font-family:Arial;font-size:1.667cqw;color:#1E2B38">Most allergens are labelled on the buffet.</p></div>
-<div class="abs" style="left:55.8cqw;top:27.7cqw;width:38cqw;height:11.6cqw;background:#A5C8CF;border-radius:2.2cqw;padding:2.4cqw">
-<p style="margin:0 0 .8cqw;font-family:'Saira Condensed','Arial Narrow',Arial;font-weight:700;font-size:1.250cqw;color:#184B56">SEATING</p><p style="margin:0;font-family:Arial;font-size:1.667cqw;color:#1E2B38">Sit anywhere. Awards run by level.</p></div>
-<div class="abs" style="left:3cqw;bottom:1.4cqw;font-family:'Saira Condensed','Arial Narrow',Arial;font-weight:700;font-size:1.389cqw;color:#184B56">@unitedclubgymnastics</div>
-<div class="abs" style="right:3cqw;bottom:1.4cqw;font-family:'Saira Condensed','Arial Narrow',Arial;font-weight:700;font-size:1.389cqw;color:#184B56">#UCGNationals2027</div>
-<div class="abs" style="left:7cqw;top:55cqw;font-size:1.6cqw;color:#1E2B38" aria-hidden="true"></div>
-</div><ul class="small" style="margin:12px 0 0;padding-left:20px">
-<li>Dashed lines: 0.62 in side margins.</li><li>Eyebrow Arial Bold caps ~10pt in Dark Blue Green; title Saira Condensed Bold 39pt in Navy.</li>
-<li>Cards: rounded rectangles in Navy, Light Blue and Blue Green; labels Saira 9pt Dark Blue Green; body Arial 12pt.</li>
-<li>Footer handles Saira 10pt in the bottom corners.</li></ul><p class="vis-note">Rebuilt in HTML at true proportions. The slide scales with the page.</p></div>
+<div class="vis"><p class="vis-title">Theme colors to set</p><div class="strip"><div style="background:#1E2B38;color:#FFFFFF;">Dark 1<br/><span style="font-weight:400">Navy</span></div><div style="background:#FFFFFF;color:#1E2B38;box-shadow:inset 0 0 0 1px #CFE1E4;">Light 1<br/><span style="font-weight:400">White</span></div><div style="background:#184B56;color:#FFFFFF;">Dark 2<br/><span style="font-weight:400">Dark Blue Green</span></div><div style="background:#DBEBEE;color:#1E2B38;box-shadow:inset 0 0 0 1px #CFE1E4;">Light 2<br/><span style="font-weight:400">Light Blue</span></div><div style="background:#A5C8CF;color:#1E2B38;">Accent 1<br/><span style="font-weight:400">Blue Green</span></div><div style="background:#ADBAE9;color:#1E2B38;">Accent 2<br/><span style="font-weight:400">Purple</span></div><div style="background:#F6C328;color:#1E2B38;">Accent 3<br/><span style="font-weight:400">Golden Yellow</span></div><div style="background:#F4694A;color:#1E2B38;">Accent 4<br/><span style="font-weight:400">Red Orange</span></div></div></div>
 </section>
 <section class="doc-section" id="sec-slide-types">
 <div class="prose"><h2 id="slide-types">Slide types</h2>
@@ -197,17 +87,17 @@
 </ol>
 <p>Leadership or working-meeting decks can be simpler: White slides, Saira title, Arial bullets 14–16pt, and a footer with the primary logo and <code>FOR THE LOVE OF THE SPORT.</code> on a thin Blue Green rule. Status cells use brand colors with a word ("On track" in Dark Blue Green text on Light Blue, "At risk" Navy on Golden Yellow, "Blocked" Navy on Red Orange). Don't use Google's default mint or green fills.</p>
 </div>
-<div class="vis"><p class="vis-title">From the Banquet deck</p><div class="grid" style="--min:300px"><figure style="margin:0"><img src="../site/examples/slides/banquet-cover.jpg" alt="Cover: B&amp;W photo under Navy, huge Saira title" loading="lazy" style="display:block;width:100%;border-radius:10px;box-shadow:0 8px 24px rgba(30,43,56,.16)"><figcaption class="mock-label">Cover: B&amp;W photo under Navy, huge Saira title</figcaption></figure><figure style="margin:0"><img src="../site/examples/slides/banquet-info-cards.jpg" alt="Info cards: one Navy card, the rest light" loading="lazy" style="display:block;width:100%;border-radius:10px;box-shadow:0 8px 24px rgba(30,43,56,.16)"><figcaption class="mock-label">Info cards: one Navy card, the rest light</figcaption></figure><figure style="margin:0"><img src="../site/examples/slides/banquet-thank-you-band.jpg" alt="Thank-you band: solid Blue Green, big mark" loading="lazy" style="display:block;width:100%;border-radius:10px;box-shadow:0 8px 24px rgba(30,43,56,.16)"><figcaption class="mock-label">Thank-you band: solid Blue Green, big mark</figcaption></figure><figure style="margin:0"><img src="../site/examples/slides/banquet-big-numbers.jpg" alt="Big numbers / milestones" loading="lazy" style="display:block;width:100%;border-radius:10px;box-shadow:0 8px 24px rgba(30,43,56,.16)"><figcaption class="mock-label">Big numbers / milestones</figcaption></figure><figure style="margin:0"><img src="../site/examples/slides/banquet-section-break.jpg" alt="Section break: Navy with apparatus icons" loading="lazy" style="display:block;width:100%;border-radius:10px;box-shadow:0 8px 24px rgba(30,43,56,.16)"><figcaption class="mock-label">Section break: Navy with apparatus icons</figcaption></figure><figure style="margin:0"><img src="../site/examples/slides/banquet-closing.jpg" alt="Closing: solid Golden Yellow, next steps as pills" loading="lazy" style="display:block;width:100%;border-radius:10px;box-shadow:0 8px 24px rgba(30,43,56,.16)"><figcaption class="mock-label">Closing: solid Golden Yellow, next steps as pills</figcaption></figure></div></div><div class="vis"><p class="vis-title">Rebuilt with corrected contrast</p><div class="grid" style="--min:300px"><figure style="margin:0"><div class="cq slide" style="background:#DBEBEE"><div class="abs display" style="left:6.2cqw;top:5cqw;font-size:5.417cqw;color:#1E2B38">Tonight</div><div class="abs" style="left:6.2cqw;top:13cqw;width:41.3cqw;border-bottom:1px solid #BFD5D9;padding-bottom:1.4cqw;display:flex;gap:2cqw;align-items:baseline">
+<div class="vis"><p class="vis-title">Examples</p><div class="grid" style="--min:300px"><figure style="margin:0"><img alt="Cover: B&amp;W photo under Navy, huge Saira title" loading="lazy" src="../site/examples/slides/example-cover.jpg" style="display:block;width:100%;border-radius:10px;box-shadow:0 8px 24px rgba(30,43,56,.16)"/><figcaption class="mock-label">Cover: B&amp;W photo under Navy, huge Saira title</figcaption></figure><figure style="margin:0"><img alt="Info cards: one Navy card, the rest light" loading="lazy" src="../site/examples/slides/example-info-cards.jpg" style="display:block;width:100%;border-radius:10px;box-shadow:0 8px 24px rgba(30,43,56,.16)"/><figcaption class="mock-label">Info cards: one Navy card, the rest light</figcaption></figure><figure style="margin:0"><img alt="Thank-you band: solid Blue Green, big mark" loading="lazy" src="../site/examples/slides/example-thank-you-band.jpg" style="display:block;width:100%;border-radius:10px;box-shadow:0 8px 24px rgba(30,43,56,.16)"/><figcaption class="mock-label">Thank-you band: solid Blue Green, big mark</figcaption></figure><figure style="margin:0"><img alt="Big numbers / milestones" loading="lazy" src="../site/examples/slides/example-big-numbers.jpg" style="display:block;width:100%;border-radius:10px;box-shadow:0 8px 24px rgba(30,43,56,.16)"/><figcaption class="mock-label">Big numbers / milestones</figcaption></figure><figure style="margin:0"><img alt="Section break: Navy with apparatus icons" loading="lazy" src="../site/examples/slides/example-section-break.jpg" style="display:block;width:100%;border-radius:10px;box-shadow:0 8px 24px rgba(30,43,56,.16)"/><figcaption class="mock-label">Section break: Navy with apparatus icons</figcaption></figure><figure style="margin:0"><img alt="Closing: solid Golden Yellow, next steps as pills" loading="lazy" src="../site/examples/slides/example-closing.jpg" style="display:block;width:100%;border-radius:10px;box-shadow:0 8px 24px rgba(30,43,56,.16)"/><figcaption class="mock-label">Closing: solid Golden Yellow, next steps as pills</figcaption></figure></div></div><div class="vis"><p class="vis-title">More examples</p><div class="grid" style="--min:300px"><figure style="margin:0"><div class="cq slide" style="background:#DBEBEE"><div class="abs display" style="left:6.2cqw;top:5cqw;font-size:5.417cqw;color:#1E2B38">Tonight</div><div class="abs" style="left:6.2cqw;top:13cqw;width:41.3cqw;border-bottom:1px solid #BFD5D9;padding-bottom:1.4cqw;display:flex;gap:2cqw;align-items:baseline">
 <span style="font-family:'Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:2.708cqw;color:#184B56">01</span><span style="font-family:Arial;font-weight:700;font-size:1.944cqw;color:#1E2B38">Eat, buffet is open</span></div><div class="abs" style="left:6.2cqw;top:19.7cqw;width:41.3cqw;border-bottom:1px solid #BFD5D9;padding-bottom:1.4cqw;display:flex;gap:2cqw;align-items:baseline">
 <span style="font-family:'Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:2.708cqw;color:#184B56">02</span><span style="font-family:Arial;font-weight:700;font-size:1.944cqw;color:#1E2B38">Sponsors and volunteers</span></div><div class="abs" style="left:6.2cqw;top:26.4cqw;width:41.3cqw;border-bottom:1px solid #BFD5D9;padding-bottom:1.4cqw;display:flex;gap:2cqw;align-items:baseline">
 <span style="font-family:'Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:2.708cqw;color:#184B56">03</span><span style="font-family:Arial;font-weight:700;font-size:1.944cqw;color:#1E2B38">Judges' awards</span></div><div class="abs" style="left:52.5cqw;top:13cqw;width:41.3cqw;border-bottom:1px solid #BFD5D9;padding-bottom:1.4cqw;display:flex;gap:2cqw;align-items:baseline">
 <span style="font-family:'Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:2.708cqw;color:#184B56">04</span><span style="font-family:Arial;font-weight:700;font-size:1.944cqw;color:#1E2B38">Individual awards</span></div><div class="abs" style="left:52.5cqw;top:19.7cqw;width:41.3cqw;border-bottom:1px solid #BFD5D9;padding-bottom:1.4cqw;display:flex;gap:2cqw;align-items:baseline">
 <span style="font-family:'Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:2.708cqw;color:#184B56">05</span><span style="font-family:Arial;font-weight:700;font-size:1.944cqw;color:#1E2B38">Team awards</span></div><div class="abs" style="left:52.5cqw;top:26.4cqw;width:41.3cqw;border-bottom:1px solid #BFD5D9;padding-bottom:1.4cqw;display:flex;gap:2cqw;align-items:baseline">
 <span style="font-family:'Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:2.708cqw;color:#184B56">06</span><span style="font-family:Arial;font-weight:700;font-size:1.944cqw;color:#1E2B38">Looking ahead</span></div>
-<div class="abs" style="left:3cqw;bottom:1.4cqw;font-family:'Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:1.389cqw;color:#184B56">@unitedclubgymnastics</div></div><figcaption class="mock-label">Agenda, rebuilt: numbers in Dark Blue Green instead of Blue Green.</figcaption></figure><figure style="margin:0"><div class="cq slide" style="background:#FFFFFF"><div class="abs display" style="left:6.2cqw;top:5cqw;font-size:4.167cqw;color:#1E2B38">Events department</div>
+<div class="abs" style="left:3cqw;bottom:1.4cqw;font-family:'Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:1.389cqw;color:#184B56">@unitedclubgymnastics</div></div><figcaption class="mock-label">Agenda: numbers in Dark Blue Green, never Blue Green, on Light Blue.</figcaption></figure><figure style="margin:0"><div class="cq slide" style="background:#FFFFFF"><div class="abs display" style="left:6.2cqw;top:5cqw;font-size:4.167cqw;color:#1E2B38">Events department</div>
 <table class="abs" style="left:6.2cqw;top:13cqw;border-collapse:collapse"><tr><td style="padding:1cqw 1.4cqw;border:1px solid #BFD5D9;background:#DBEBEE;color:#184B56;font-family:Arial;font-size:1.528cqw;font-weight:700">On track</td><td style="padding:1cqw 1.4cqw;border:1px solid #BFD5D9;background:#F6C328;color:#1E2B38;font-family:Arial;font-size:1.528cqw;font-weight:700">At risk</td><td style="padding:1cqw 1.4cqw;border:1px solid #BFD5D9;background:#F4694A;color:#1E2B38;font-family:Arial;font-size:1.528cqw;font-weight:700">Blocked</td></tr></table>
 <ul class="abs" style="left:6.2cqw;top:20cqw;right:6.2cqw;margin:0;padding-left:2.4cqw;font-family:Arial;font-size:2.083cqw;line-height:1.45;color:#1E2B38"><li>Rebrand rollout continues across the org</li><li>Sanctioning is open: 12 events so far</li></ul>
-<div class="abs" style="left:0;right:0;bottom:0;height:9cqw;border-top:.4cqw solid #A5C8CF;display:flex;align-items:center;gap:3cqw;padding:0 3cqw"><img src="../assets/logos/ucg-primary-navy.svg" alt="" style="height:4cqw"><span style="font-family:Arial;font-weight:700;font-size:1.111cqw;color:#1E2B38">FOR THE LOVE OF THE SPORT.</span></div></div><figcaption class="mock-label">Working meeting: status cells in brand colors with words.</figcaption></figure></div><p class="vis-note">Example content.</p></div>
+<div class="abs" style="left:0;right:0;bottom:0;height:9cqw;border-top:.4cqw solid #A5C8CF;display:flex;align-items:center;gap:3cqw;padding:0 3cqw"><img alt="" src="../assets/logos/ucg-primary-navy.svg" style="height:4cqw"/><span style="font-family:Arial;font-weight:700;font-size:1.111cqw;color:#1E2B38">FOR THE LOVE OF THE SPORT.</span></div></div><figcaption class="mock-label">Working meeting: status cells in brand colors with words.</figcaption></figure></div><p class="vis-note">Example content.</p></div>
 </section>
 <section class="doc-section" id="sec-contrast-traps-seen-in-real-decks">
 <div class="prose"><h2 id="contrast-traps-seen-in-real-decks">Contrast traps seen in real decks</h2>
@@ -218,12 +108,7 @@
 <li>White or Light Blue text on a photo without a Navy overlay behind it.</li>
 </ul>
 </div>
-<div class="vis"><p class="vis-title">Before and after</p><div class="dodont"><div><span class="verdict verdict--dont">✗ Blue Green on Light Blue (1.4:1)</span><div class="panel on-lb" style="display:flex;align-items:center;gap:14px" data-contrast-skip><span style="font-family:'Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:48px;color:#A5C8CF">01</span><b style="color:#1E2B38">By level</b></div></div><div><span class="verdict verdict--do">✓ Dark Blue Green (8.4:1)</span><div class="panel on-lb" style="display:flex;align-items:center;gap:14px"><span style="font-family:'Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:48px;color:#184B56">01</span><b style="color:#1E2B38">By level</b></div></div></div><div class="dodont" style="margin-top:16px"><div><span class="verdict verdict--dont">✗ Grey #74858F footer (3.1:1)</span><div class="panel on-lb" data-contrast-skip><span style="font-size:13px;color:#74858F">UCG Board of Directors · Nationals 2027</span></div></div><div><span class="verdict verdict--do">✓ #4A5A66 (5.8:1)</span><div class="panel on-lb"><span style="font-size:13px;color:#4A5A66">UCG Board of Directors · Nationals 2027</span></div></div></div></div>
-</section>
-<section class="doc-section" id="sec-building-decks-with-the-api-for-agents">
-<div class="prose"><h2 id="building-decks-with-the-api-for-agents">Building decks with the API (for agents)</h2>
-<p>Use a UCG Google Workspace account, not a personal one, so files land in UCG's Drive. Easiest path: duplicate the banquet deck (Drive <code>files.copy</code>), delete the slides you don't need, and replace text, so geometry and styles stay right. When creating shapes, set <code>fontFamily</code> to <code>Saira Condensed</code> with <code>weightedFontFamily.weight: 700</code> for headlines and <code>Arial</code> for body, and pass colors as RGB from the palette.</p></div>
-
+<div class="vis"><p class="vis-title">Before and after</p><div class="dodont"><div><span class="verdict verdict--dont">✗ Blue Green on Light Blue (1.4:1)</span><div class="panel on-lb" data-contrast-skip="" style="display:flex;align-items:center;gap:14px"><span style="font-family:'Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:48px;color:#A5C8CF">01</span><b style="color:#1E2B38">By level</b></div></div><div><span class="verdict verdict--do">✓ Dark Blue Green (8.4:1)</span><div class="panel on-lb" style="display:flex;align-items:center;gap:14px"><span style="font-family:'Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:48px;color:#184B56">01</span><b style="color:#1E2B38">By level</b></div></div></div><div class="dodont" style="margin-top:16px"><div><span class="verdict verdict--dont">✗ Grey #74858F footer (3.1:1)</span><div class="panel on-lb" data-contrast-skip=""><span style="font-size:13px;color:#74858F">UCG Board of Directors · Nationals 2027</span></div></div><div><span class="verdict verdict--do">✓ #4A5A66 (5.8:1)</span><div class="panel on-lb"><span style="font-size:13px;color:#4A5A66">UCG Board of Directors · Nationals 2027</span></div></div></div></div>
 </section>
     <aside class="agent-note">
       <p class="eyebrow">For AI agents</p>
@@ -234,7 +119,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <p class="tag">For the Love of the Sport.</p>
-    <p>United Club Gymnastics · <a href="https://unitedclubgymnastics.org">unitedclubgymnastics.org</a> · Fonts are licensed to UCG and not included; this site uses Saira Condensed and Arial.</p>
+    <p>United Club Gymnastics · <a href="https://unitedclubgymnastics.org">unitedclubgymnastics.org</a> · Fonts are licensed to UCG and not included; this site uses Saira Condensed and Arial. UCG volunteers can <a href="https://drive.google.com/drive/folders/1SUukrVratYo8sd4KxiF5_eztUnhAV-_o">download the brand fonts</a>.</p>
   </div>
 </footer>
 <script src="../site/site.js"></script>

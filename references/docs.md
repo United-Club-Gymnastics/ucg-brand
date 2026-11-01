@@ -2,6 +2,15 @@
 
 Policies and official documents are "core system" work: clarity beats flair. Keep them calm, consistent and easy to scan.
 
+**Start from a template** (each link makes your own copy; UCG Google accounts only):
+
+- [Policy](https://docs.google.com/document/d/1oC-g9xVgEFwP1pCBPfpUfnWDGawBIE3UF858RqZhGG8/copy): purpose, scope, definitions, numbered sections, contacts, version history
+- [Change proposal](https://docs.google.com/document/d/11yKkZv8L44MRprWYa-Ppe_IXf-Wu4KcG2ku_heYfjtU/copy): the proposal, rollout and communication plan
+- [Meeting minutes](https://docs.google.com/document/d/1TY-l1Mkk5kIwuBvkkxQU3mpWvLMLzPEKL-nCmmHlfh8/copy): attendance, agenda, decisions, action items, minute-taking guidelines
+- [Email draft](https://docs.google.com/document/d/13eIZoEsXOzOZCphU0q-_o5OzgLqNAaC8tsz1A0JpJu4/copy): draft an announcement block by block before it's built in the [HTML email template](email.md)
+
+Replace every `[bracketed]` placeholder, delete the grey guidance lines, and use the built-in styles (Title, Heading 1, Heading 2, Normal text). The rest of this page is for building something the templates don't cover.
+
 ## Page setup
 
 - US Letter, portrait, 1 in margins (0.75 in is fine for long reference guides).
@@ -41,3 +50,7 @@ Set these once with Format → Paragraph styles → "Update to match", then Opti
 ## Letters and memos
 
 Follow the design guide letterhead: logo top-left, then `Date`, `From`, `Subject` lines in Arial 10pt, body Arial 11pt, sign-off with name, title and `unitedclubgymnastics.org`.
+
+## Building docs with the API (for agents)
+
+Use a UCG Google Workspace account so files land in UCG's Drive. Copy the matching template (Drive `files.copy`) instead of building from scratch: policy `1oC-g9xVgEFwP1pCBPfpUfnWDGawBIE3UF858RqZhGG8`, change proposal `11yKkZv8L44MRprWYa-Ppe_IXf-Wu4KcG2ku_heYfjtU`, meeting minutes `1TY-l1Mkk5kIwuBvkkxQU3mpWvLMLzPEKL-nCmmHlfh8`, email draft `13eIZoEsXOzOZCphU0q-_o5OzgLqNAaC8tsz1A0JpJu4`. Their named styles are already set, so apply `namedStyleType` (TITLE, HEADING_1 …) rather than formatting text by hand. Google Docs styles can't force capitals, so type Title and Heading 1 text in capitals.

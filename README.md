@@ -38,6 +38,7 @@ Add the two lines above to your repo's `AGENTS.md`. (Codex can also load `skills
 | [`assets/photos/`](assets/photos) | 37 curated 2026 Nationals photos, each in color and B&W, with alt text |
 | [`assets/animation/`](assets/animation) | Animated mark loops (MP4) in square, vertical and wide |
 | [`assets/social/`](assets/social) | Facebook cover, YouTube banner, Zoom backgrounds, email header |
+| [`assets/patterns/`](assets/patterns) | The 2026–27 Nationals event pattern (SVG + PNG, from the design guide) |
 | [`skills/ucg-brand/`](skills/ucg-brand) | Agent skill (Claude Code plugin / Codex) |
 | [`tools/`](tools) | Scripts that build the assets, the color-pair table and the illustrated site |
 | `site/`, `guidelines/`, `colors/`, … | The illustrated human site (generated) |
@@ -59,6 +60,7 @@ python tools/contrast.py                                   # regenerate referenc
 python tools/copy_logos.py "<toolkit>/01_Assets/01_Logo"   # refresh logos
 python tools/extract_icons.py "<toolkit>/01_Assets/All UCG Assets.svg"
 python tools/icon_pngs.py
+python tools/club_spirit.py                                # redraw Club Spirit with outlined figures (after extract_icons)
 python tools/build_site.py                                 # rebuild the illustrated pages (<page>/index.html) from the .md files
 python tools/test_site.py http://127.0.0.1:8123/ucg-brand/ # check contrast, overflow, links (serve the parent folder first:
                                                            #   python -m http.server 8123, run from the folder above this repo)

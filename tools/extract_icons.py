@@ -79,7 +79,7 @@ tiles = [d for d in drawings if d.get("fill") and hexcol(d["fill"]) == WHITE and
 manifest = []
 for text, cx, ly in labels:
     kind, slug = classify(text, cx)
-    if not slug:
+    if not slug or kind == "apparatus-duotone":  # the board's duotone apparatus set isn't published
         continue
     # the tile directly above the label
     cands = [t for t in tiles if t["rect"].x0 - 5 <= cx <= t["rect"].x1 + 5 and 0 <= ly - t["rect"].y1 <= 60]
@@ -131,15 +131,11 @@ for text, cx, ly in labels:
 
     folder = OUT / kind
     folder.mkdir(parents=True, exist_ok=True)
-    files = {}
-    if kind == "apparatus-duotone":
-        files[f"{slug}-duotone.svg"] = svg()
-    else:
-        files[f"{slug}-navy.svg"] = svg({c: NAVY for c in fills})
-        files[f"{slug}-light.svg"] = svg({c: LIGHT for c in fills})
-        files[f"{slug}-white.svg"] = svg({c: WHITE for c in fills})
-        if len(fills) > 1:  # keep the designer's multi-color version too
-            files[f"{slug}-original.svg"] = svg()
+    files = {f"{slug}-navy.svg": svg({c: NAVY for c in fills}),
+             f"{slug}-light.svg": svg({c: LIGHT for c in fills}),
+             f"{slug}-white.svg": svg({c: WHITE for c in fills})}
+    if len(fills) > 1:  # keep the designer's multi-color version too
+        files[f"{slug}-original.svg"] = svg()
     for name, s in files.items():
         (folder / name).write_text(s, encoding="utf-8")
     manifest.append({"label": text, "set": kind, "slug": slug, "source_fills": fills, "files": [f"{kind}/{n}" for n in files]})

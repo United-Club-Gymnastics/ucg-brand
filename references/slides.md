@@ -1,6 +1,8 @@
 # Google Slides
 
-Reference deck: **Nationals 2027 Awards Banquet** (UCG Drive). It is the best current example of the brand in Slides. Measurements below come from it.
+**Start every new deck from the [UCG Slides template](https://docs.google.com/presentation/d/1aJHuTtVjkRVPzteyeOgZdMWxWDLeAFNSvdaMtY3whks/copy)** (the link makes your own copy; UCG Google accounts only). It already has the theme colors, fonts, footers and an example of every slide type below: delete the slides you don't need and duplicate the ones you do.
+
+If you need to go well beyond the template or make a new kind of slide, use the guidance below.
 
 ## Setup
 
@@ -9,7 +11,7 @@ Reference deck: **Nationals 2027 Awards Banquet** (UCG Drive). It is the best cu
 - **Palette:** set the theme colors to the brand palette (Slide → Edit theme → Colors): Dark 1 Navy `#1E2B38`, Light 1 White, Dark 2 Dark Blue Green `#184B56`, Light 2 Light Blue `#DBEBEE`, Accent 1 Blue Green `#A5C8CF`, Accent 2 Purple `#ADBAE9`, Accent 3 Golden Yellow `#F6C328`, Accent 4 Red Orange `#F4694A`, Hyperlink Dark Blue Green.
 - **Images:** Slides can't insert SVG. Use the PNG versions of logos and icons from `assets/` (all have transparent backgrounds).
 
-## Grid and type (from the banquet deck)
+## Grid and type
 
 | Element | Font | Size | Color | Position |
 |---|---|---|---|---|
@@ -51,4 +53,4 @@ Leadership or working-meeting decks can be simpler: White slides, Saira title, A
 
 ## Building decks with the API (for agents)
 
-Use a UCG Google Workspace account, not a personal one, so files land in UCG's Drive. Easiest path: duplicate the banquet deck (Drive `files.copy`), delete the slides you don't need, and replace text, so geometry and styles stay right. When creating shapes, set `fontFamily` to `Saira Condensed` with `weightedFontFamily.weight: 700` for headlines and `Arial` for body, and pass colors as RGB from the palette.
+Use a UCG Google Workspace account, not a personal one, so files land in UCG's Drive. Easiest path: copy the UCG Slides template (Drive `files.copy` on `1aJHuTtVjkRVPzteyeOgZdMWxWDLeAFNSvdaMtY3whks`), delete the slides you don't need, and replace text, so geometry and styles stay right. When creating shapes, set `fontFamily` to `Saira Condensed` with `weightedFontFamily.weight: 700` for headlines and `Arial` for body, and pass colors as RGB from the palette.

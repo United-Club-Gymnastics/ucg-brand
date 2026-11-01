@@ -66,7 +66,7 @@
       "swatches": ["#FFEF77", "#FF988A", "#C0E388", "#8BB7E3", "#336494", "#504A83"]
     },
     "ui_support": {
-      "note": "Not in the guides. Used by UCG's web and email templates for muted text, borders and dark mode. Keep using these rather than inventing new greys.",
+      "note": "Not in the design guides. They come from UCG's HTML email templates (built with AI help in 2026): text-muted, border, navy-deep and page-dark from the monthly announcement template, border-soft from the club banner email. Keep using these rather than inventing new greys.",
       "values": {
         "text-muted": "#4A5A66",
         "border": "#BFD5D9",

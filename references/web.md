@@ -11,7 +11,7 @@ Applies to unitedclubgymnastics.org, UCG web apps (registration, scoring, planne
 
 `tokens/ucg.css` defines every color, font stack, radius and spacing step as CSS variables (`--ucg-navy`, `--ucg-font-display`, `--ucg-radius-card` …) plus a few helper classes (`.ucg-display`, `.ucg-subhead`, `.ucg-eyebrow`, `.ucg-btn`). Copy it into your project if you prefer not to hotlink.
 
-**Brand fonts on UCG-owned sites:** UCG's license allows self-hosting Greed Condensed and Suisse Intl as woff2 via `@font-face` on UCG's own domains only. Get the files from the UCG brand toolkit (not from this repo; they are never published). On any other site, the stacks fall back to Saira Condensed and Arial automatically.
+**Brand fonts on UCG-owned sites:** UCG's license allows self-hosting Greed Condensed and Suisse Intl as woff2 via `@font-face` on UCG's own domains only. UCG volunteers get the files from the [UCG fonts folder](https://drive.google.com/drive/folders/1SUukrVratYo8sd4KxiF5_eztUnhAV-_o) (not from this repo; they are never published). On any other site, the stacks fall back to Saira Condensed and Arial automatically.
 
 ## Layout
 
