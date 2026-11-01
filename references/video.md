@@ -16,7 +16,7 @@ Use them as intros, outros, transitions and loading moments. Transparent-backgro
 - **Color:** Navy, Dark Blue Green or Blue Green backgrounds; White, Light Blue or Golden Yellow type on dark; Navy type on light. Same AA contrast rules as everything else, on every frame. When a background changes color mid-transition behind an element of the same color, render the element twice (one per background) so there's never a same-color frame.
 - **Footage:** real UCG events. B&W footage with White type, or a duotone / color overlay in Navy or Dark Blue Green with the light end dark enough for White text to stay at 4.5:1. Avoid footage showing old NAIGC branding.
 - **Structure:** hook in the first second (a big headline or a striking skill), one idea per screen, numbers before → after, end card with the mark animation, the next step and `@unitedclubgymnastics`.
-- **Motion:** confident and athletic, not bouncy. Ease-out moves, snappy cuts on the beat, the mark and icons can tumble and flip (that's what the mark animations do).
+- **Motion:** confident and athletic. Section titles can slam in with a single overshoot; reading holds stay still (no slow drifts or bobbing); the next beat starts as soon as the last one settles. The mark and icons can tumble and flip (that's what the mark animations do).
 - **Music:** licensed or platform library tracks only.
 
 ## Livestream and broadcast graphics
