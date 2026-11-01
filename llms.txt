@@ -1,0 +1,17 @@
+# UCG brand kit
+
+> Brand guidelines and assets for United Club Gymnastics (UCG), a volunteer-run nonprofit for adult club gymnastics. Read BRAND.md first, then the reference for your medium.
+
+- [BRAND.md](https://united-club-gymnastics.github.io/ucg-brand/BRAND.md): core rules (palette, AA contrast, fonts, logos, voice, checklist)
+- [Color pairs](https://united-club-gymnastics.github.io/ucg-brand/references/color-pairs.md)
+- [Email](https://united-club-gymnastics.github.io/ucg-brand/references/email.md)
+- [Web and tools](https://united-club-gymnastics.github.io/ucg-brand/references/web.md)
+- [Google Slides](https://united-club-gymnastics.github.io/ucg-brand/references/slides.md)
+- [Google Docs](https://united-club-gymnastics.github.io/ucg-brand/references/docs.md)
+- [Google Sheets](https://united-club-gymnastics.github.io/ucg-brand/references/sheets.md)
+- [Social and print](https://united-club-gymnastics.github.io/ucg-brand/references/social.md)
+- [Video and Reels](https://united-club-gymnastics.github.io/ucg-brand/references/video.md)
+- [Messaging](https://united-club-gymnastics.github.io/ucg-brand/references/messaging.md)
+- [Assets](https://united-club-gymnastics.github.io/ucg-brand/references/assets.md)
+- [brand.json](https://united-club-gymnastics.github.io/ucg-brand/brand.json)
+- [CSS tokens](https://united-club-gymnastics.github.io/ucg-brand/tokens/ucg.css)

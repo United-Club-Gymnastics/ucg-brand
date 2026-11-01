@@ -1,0 +1,155 @@
+{
+  "name": "United Club Gymnastics",
+  "short": "UCG",
+  "formerly": "NAIGC",
+  "website": "https://unitedclubgymnastics.org",
+  "social": {
+    "instagram": "@unitedclubgymnastics",
+    "facebook": "https://www.facebook.com/unitedclubgymnastics"
+  },
+  "tagline": "For the Love of the Sport.",
+  "sources": {
+    "DG": "UCG Design Guide (Build Design Studio, 2026), 91 pages",
+    "ADG": "UCG Abridged Design Guide, 43 pages",
+    "EDG": "UCG Guide to Expressive Design, 9 pages",
+    "MG": "UCG Messaging Guide, 39 pages",
+    "BB": "UCG Brand Brief",
+    "CS": "UCG Cheat Sheet",
+    "ORG": "Decision by UCG after the guides were delivered (overrides the guides)"
+  },
+
+  "messaging": {
+    "core": {
+      "name": "For the Love of the Sport",
+      "line": "Healthy competition fueled by joy, passion, and personal drive.",
+      "source": "ORG (the guides list A Place to Land as core; UCG chose For the Love of the Sport)"
+    },
+    "supporting": [
+      { "name": "A Place to Land", "line": "A long-term competitive home beyond traditional gymnastics pathways.", "source": "MG p16" },
+      { "name": "Open Gym", "line": "A welcoming competitive space where anyone can belong and participate.", "source": "MG p17" },
+      { "name": "On the Same Team", "line": "A culture of camaraderie across competitors, clubs, and communities.", "source": "MG p19" },
+      { "name": "Good Spot", "line": "Supportive structure that keeps competition safe, fair, and organized.", "source": "MG p20" }
+    ],
+    "tone": [
+      { "name": "Welcoming", "line": "Warm, open, and encouraging. Speak to gymnasts like they already belong." },
+      { "name": "Credible", "line": "Clear, trusted, and organized. Approachable, but still a governing body." },
+      { "name": "Joyful", "line": "Energetic, positive, full of life, without becoming unserious." },
+      { "name": "Practical", "line": "Helpful, direct, easy to follow. People should know exactly what to do next." }
+    ],
+    "tone_source": "MG p29",
+    "facts": {
+      "description": "Nonprofit, fully volunteer-run organization supporting adult club gymnastics, ages 18+",
+      "scale": "161 clubs and 2,500+ athletes nationwide",
+      "disciplines": ["WAG", "MAG", "Trampoline & Tumbling (T&T)"],
+      "source": "DG p73 (check current numbers before publishing)"
+    }
+  },
+
+  "colors": {
+    "primary": [
+      { "id": "navy", "name": "Navy Blue", "hex": "#1E2B38", "rgb": [30, 43, 56], "cmyk": [46, 23, 0, 78], "pantone": "2377", "source": "DG p39" },
+      { "id": "blue-green", "name": "Blue Green", "hex": "#A5C8CF", "rgb": [165, 200, 207], "cmyk": [20, 3, 0, 19], "pantone": "551", "source": "DG p39" },
+      { "id": "light-blue", "name": "Light Blue", "hex": "#DBEBEE", "rgb": [219, 235, 238], "cmyk": [8, 1, 0, 7], "pantone": "551 (50% tint)", "source": "DG p39" }
+    ],
+    "secondary": [
+      { "id": "purple", "name": "Purple", "hex": "#ADBAE9", "rgb": [173, 186, 233], "cmyk": [26, 20, 0, 9], "pantone": "270", "source": "DG p40" },
+      { "id": "red-orange", "name": "Red Orange", "hex": "#F4694A", "rgb": [244, 105, 74], "cmyk": [0, 57, 70, 4], "pantone": "7416", "source": "DG p40" },
+      { "id": "dark-blue-green", "name": "Dark Blue Green", "hex": "#184B56", "rgb": [24, 75, 86], "cmyk": [72, 13, 0, 66], "pantone": "7477", "source": "DG p40" },
+      { "id": "golden-yellow", "name": "Golden Yellow", "hex": "#F6C328", "rgb": [246, 195, 40], "cmyk": [0, 21, 84, 4], "pantone": "123", "source": "DG p40" }
+    ],
+    "neutral": [
+      { "id": "white", "name": "White", "hex": "#FFFFFF" }
+    ],
+    "expressive": {
+      "note": "Not part of the everyday palette. Only for expressive work (merch, social campaigns, event graphics, big-moment collateral). Never for official communications, wayfinding or UI.",
+      "source": "EDG p6-7",
+      "swatches": ["#FFEF77", "#FF988A", "#C0E388", "#8BB7E3", "#336494", "#504A83"]
+    },
+    "ui_support": {
+      "note": "Not in the guides. Used by UCG's web and email templates for muted text, borders and dark mode. Keep using these rather than inventing new greys.",
+      "values": {
+        "text-muted": "#4A5A66",
+        "border": "#BFD5D9",
+        "border-soft": "#CFE1E4",
+        "navy-deep": "#141E27",
+        "page-dark": "#0F171E"
+      }
+    }
+  },
+
+  "contrast_policy": {
+    "rule": "All text meets WCAG AA: 4.5:1 for body text, 3:1 for large text (24px+ regular, or 18.5px+ bold). Icons, logos and other non-text graphics need 3:1. This is stricter than the guides, which approve some pairs that fail; those pairs may still be used for logos and decorative graphics only if they reach 3:1, otherwise not at all.",
+    "source": "ORG",
+    "pairs_table": "references/color-pairs.md"
+  },
+
+  "typography": {
+    "display": {
+      "family": "Greed Condensed",
+      "weight": 700,
+      "case": "ALL CAPS only",
+      "use": "Headlines, subheads, big numbers, eyebrow-style labels",
+      "headline_size_print": "36-60pt",
+      "subhead_size_print": "10-24pt with 20% tracking (letter-spacing 0.2em)",
+      "fallback": "Saira Condensed Bold (Google Fonts)",
+      "system_fallback": "Arial Narrow Bold",
+      "source": "DG p32, p34; fallback ORG"
+    },
+    "body": {
+      "family": "Suisse Intl",
+      "weights": [400, 600],
+      "case": "Sentence case",
+      "use": "Body copy, buttons and pills, captions, small print",
+      "body_size_print": "9-14pt",
+      "fallback": "Arial",
+      "source": "DG p33, p34; fallback ORG"
+    },
+    "by_surface": {
+      "web (UCG-owned sites and tools)": "Greed Condensed + Suisse Intl, self-hosted woff2 from UCG's own domain. Fallback stack Saira Condensed, then Arial.",
+      "email": "Saira Condensed (Google Fonts link, renders in Apple Mail/iOS) falling back to Arial Narrow for headlines; Arial for body.",
+      "google slides / docs / sheets": "Saira Condensed Bold for headlines, Arial for body.",
+      "print, social graphics, video": "Greed Condensed + Suisse Intl (licensed; UCG volunteers making UCG materials only).",
+      "anyone without the licensed fonts": "Saira Condensed Bold + Arial."
+    },
+    "buttons": "Suisse Intl (or Arial), ALL CAPS, letter-spacing 0.2em. Keep labels short. (DG p76)",
+    "lists": "0.5pt dividers between items, 15pt between text and divider, none above the first or below the last item. 30pt between a headline and the list below it. Bullets for unordered items, numbers only for sequences, rankings or counts. (DG p77)",
+    "email_signature": "Headline Arial Narrow 14pt, name and title Arial 12pt, body Arial 12pt. (DG p37)"
+  },
+
+  "design_features": {
+    "source": "DG p15-21",
+    "list": [
+      "Color fills: solid brand-color blocks behind type",
+      "Strong type: big ALL CAPS condensed headlines",
+      "Black-and-white photography with white graphics and type",
+      "Engaging photo crops that emphasize the angle and movement of the sport",
+      "Rounded corners on cards, panels and photos",
+      "Event iconography (MAG, WAG, T&T) and color overlays on photos"
+    ],
+    "color_overlay_recipe": "Black-and-white photo, solid brand color behind it, photo blend mode Screen. (DG p44)"
+  },
+
+  "checklists": {
+    "design": [
+      "Less is more. Present only critical information.",
+      "Embrace white space.",
+      "Proper hierarchy: it is read in the order you want.",
+      "Brand alignment: it represents what makes UCG unique.",
+      "Review for consistency with the design snapshot."
+    ],
+    "writing": [
+      "Keep it clear. No jargon or fluff.",
+      "Write for the reader.",
+      "Be consistent with the messaging themes and voice.",
+      "Make it conversational.",
+      "Proof for precision."
+    ],
+    "pre_ship_questions": [
+      "Is this visually on-brand? Correct logo, colors, fonts, alignment?",
+      "Does it sound like UCG? Welcoming, credible, joyful, clear?",
+      "Does it honor the people we serve? Gymnasts, clubs and families shown with dignity, respect and belonging?",
+      "Is the next step clear? Join, compete, register, volunteer, or connect?"
+    ],
+    "source": "DG p89, MG p38, CS"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "ucg-brand",
+  "version": "1.0.0",
+  "description": "United Club Gymnastics (UCG) brand guidelines: colors, type, logos, icons, voice and per-medium rules for emails, web, Google Slides/Docs/Sheets, social graphics and video.",
+  "author": { "name": "United Club Gymnastics" },
+  "homepage": "https://github.com/United-Club-Gymnastics/ucg-brand",
+  "repository": "https://github.com/United-Club-Gymnastics/ucg-brand",
+  "license": "UNLICENSED"
+}

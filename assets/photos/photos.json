@@ -1,0 +1,326 @@
+[
+ {
+  "file": "ucg-color-team-celebration.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A team in red warm-ups cheers beside the floor at Nationals.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-color-pommel-horse-finish.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A male gymnast raises both arms after finishing his pommel horse routine.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-color-judges-scoresheets.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Judges write scores on score sheets at the judging table.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-color-athletes-and-officials.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Athletes talk with officials beside the competition floor.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-color-volunteer-official.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A volunteer official in a yellow shirt holds a clipboard on the competition floor.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-color-warmup-straddle.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1335,
+  "alt": "An athlete stretches in a straddle split during warm-ups.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-color-coach-smiling.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A smiling coach with crossed arms watches the competition.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-color-bars-handstand.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast holds a handstand on the uneven bars while an official looks on.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-color-team-on-mat.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A women's team in matching leotards sits together on a mat, laughing.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-color-teammates-react.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "Teammates in navy leotards react with excitement beside the vault runway.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-color-dinosaur-fan.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 1333,
+  "height": 2000,
+  "alt": "A fan in an inflatable dinosaur costume cheers from the floor.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-color-beam-pose.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A gymnast poses with both arms raised on the balance beam.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-color-rings-swing.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A male gymnast swings on the still rings under the arena lights.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-color-bars-release.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast flies above the uneven bars during a release move.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-color-high-bar.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast swings over the high bar, seen from below.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-bw-beam-pose.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A gymnast balances on the beam with arms raised.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-bw-rings-swing.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast swings through the still rings, seen from below.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-bw-floor-split-leap.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast hits a split leap on the floor exercise.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-bw-friends-laughing.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 1335,
+  "height": 2000,
+  "alt": "Two athletes laugh together in the stands.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-bw-team-cheering.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A team throws their arms up, cheering for a teammate.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-bw-scorers-table.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "Volunteers run scoring at a laptop on the officials' table.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-bw-vault-flight.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 2000,
+  "alt": "A gymnast flies off the vault table toward the landing mat.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-bw-floor-run.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast sprints into a tumbling pass, with the crowd blurred behind.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-bw-team-huddle.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "Teammates in matching leotards huddle and talk between events.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-bw-beam-finish.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast finishes her beam routine with arms raised.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-bw-floor-tumble.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast flips through a tumbling pass on the floor.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-bw-teammates-react.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "Teammates shout and celebrate beside the vault runway.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-bw-vault-handspring.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast pushes through a handspring on the vault table.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-bw-team-on-mat.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Five teammates sit side by side on a mat, smiling.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-bw-parallel-bars.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast holds a straddle position on the parallel bars.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-bw-high-bar-release.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast flies above the high bar under the arena lights.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-bw-beam-jump.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast jumps high above the balance beam.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-bw-coach-think-positive.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 1333,
+  "height": 2000,
+  "alt": "A coach in a \"Think Positive\" shirt watches from the floor.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-bw-pommel-horse.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast swings his legs around the pommel horse.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-bw-crowd-cheering.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "Fans and teammates shout encouragement from the sidelines.",
+  "event": "2026 UCG Nationals"
+ },
+ {
+  "file": "ucg-bw-pommel-horse-salute.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast salutes behind the pommel horse after his routine.",
+  "event": "2026 UCG Nationals"
+ }
+]

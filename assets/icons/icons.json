@@ -1,0 +1,479 @@
+[
+ {
+  "label": "MAG 1",
+  "set": "event",
+  "slug": "mag-1",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "event/mag-1-navy.svg",
+   "event/mag-1-light.svg",
+   "event/mag-1-white.svg"
+  ]
+ },
+ {
+  "label": "MAG",
+  "set": "event",
+  "slug": "mag",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "event/mag-navy.svg",
+   "event/mag-light.svg",
+   "event/mag-white.svg"
+  ]
+ },
+ {
+  "label": "MAG 2",
+  "set": "event",
+  "slug": "mag-2",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "event/mag-2-navy.svg",
+   "event/mag-2-light.svg",
+   "event/mag-2-white.svg"
+  ]
+ },
+ {
+  "label": "MAG 3",
+  "set": "event",
+  "slug": "mag-3",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "event/mag-3-navy.svg",
+   "event/mag-3-light.svg",
+   "event/mag-3-white.svg"
+  ]
+ },
+ {
+  "label": "WAG 1",
+  "set": "event",
+  "slug": "wag-1",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "event/wag-1-navy.svg",
+   "event/wag-1-light.svg",
+   "event/wag-1-white.svg"
+  ]
+ },
+ {
+  "label": "BALANCE BEAM",
+  "set": "apparatus-solid",
+  "slug": "wag-balance-beam",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "apparatus-solid/wag-balance-beam-navy.svg",
+   "apparatus-solid/wag-balance-beam-light.svg",
+   "apparatus-solid/wag-balance-beam-white.svg"
+  ]
+ },
+ {
+  "label": "gradWAG",
+  "set": "event",
+  "slug": "wag-grad",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "event/wag-grad-navy.svg",
+   "event/wag-grad-light.svg",
+   "event/wag-grad-white.svg"
+  ]
+ },
+ {
+  "label": "TRAMPOLINE",
+  "set": "apparatus-solid",
+  "slug": "tnt-trampoline",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "apparatus-solid/tnt-trampoline-navy.svg",
+   "apparatus-solid/tnt-trampoline-light.svg",
+   "apparatus-solid/tnt-trampoline-white.svg"
+  ]
+ },
+ {
+  "label": "T&T",
+  "set": "event",
+  "slug": "tnt",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "event/tnt-navy.svg",
+   "event/tnt-light.svg",
+   "event/tnt-white.svg"
+  ]
+ },
+ {
+  "label": "WAG",
+  "set": "event",
+  "slug": "wag",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "event/wag-navy.svg",
+   "event/wag-light.svg",
+   "event/wag-white.svg"
+  ]
+ },
+ {
+  "label": "SYNCHRO TRAMP",
+  "set": "apparatus-solid",
+  "slug": "tnt-synchro",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "apparatus-solid/tnt-synchro-navy.svg",
+   "apparatus-solid/tnt-synchro-light.svg",
+   "apparatus-solid/tnt-synchro-white.svg"
+  ]
+ },
+ {
+  "label": "POWER TUMBLING",
+  "set": "apparatus-solid",
+  "slug": "tnt-power-tumbling",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "apparatus-solid/tnt-power-tumbling-navy.svg",
+   "apparatus-solid/tnt-power-tumbling-light.svg",
+   "apparatus-solid/tnt-power-tumbling-white.svg"
+  ]
+ },
+ {
+  "label": "FLOOR",
+  "set": "apparatus-solid",
+  "slug": "wag-floor",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "apparatus-solid/wag-floor-navy.svg",
+   "apparatus-solid/wag-floor-light.svg",
+   "apparatus-solid/wag-floor-white.svg"
+  ]
+ },
+ {
+  "label": "DOUBLE MINI",
+  "set": "apparatus-solid",
+  "slug": "tnt-double-mini",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "apparatus-solid/tnt-double-mini-navy.svg",
+   "apparatus-solid/tnt-double-mini-light.svg",
+   "apparatus-solid/tnt-double-mini-white.svg"
+  ]
+ },
+ {
+  "label": "RINGS",
+  "set": "apparatus-solid",
+  "slug": "mag-rings",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "apparatus-solid/mag-rings-navy.svg",
+   "apparatus-solid/mag-rings-light.svg",
+   "apparatus-solid/mag-rings-white.svg"
+  ]
+ },
+ {
+  "label": "POMMEL HORSE",
+  "set": "apparatus-solid",
+  "slug": "mag-pommel-horse",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "apparatus-solid/mag-pommel-horse-navy.svg",
+   "apparatus-solid/mag-pommel-horse-light.svg",
+   "apparatus-solid/mag-pommel-horse-white.svg"
+  ]
+ },
+ {
+  "label": "P BARS",
+  "set": "apparatus-solid",
+  "slug": "mag-parallel-bars",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "apparatus-solid/mag-parallel-bars-navy.svg",
+   "apparatus-solid/mag-parallel-bars-light.svg",
+   "apparatus-solid/mag-parallel-bars-white.svg"
+  ]
+ },
+ {
+  "label": "HIGH BAR",
+  "set": "apparatus-solid",
+  "slug": "mag-high-bar",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "apparatus-solid/mag-high-bar-navy.svg",
+   "apparatus-solid/mag-high-bar-light.svg",
+   "apparatus-solid/mag-high-bar-white.svg"
+  ]
+ },
+ {
+  "label": "UNEVEN BARS",
+  "set": "apparatus-solid",
+  "slug": "wag-uneven-bars",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "apparatus-solid/wag-uneven-bars-navy.svg",
+   "apparatus-solid/wag-uneven-bars-light.svg",
+   "apparatus-solid/wag-uneven-bars-white.svg"
+  ]
+ },
+ {
+  "label": "VAULT",
+  "set": "apparatus-solid",
+  "slug": "mag-vault",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "apparatus-solid/mag-vault-navy.svg",
+   "apparatus-solid/mag-vault-light.svg",
+   "apparatus-solid/mag-vault-white.svg"
+  ]
+ },
+ {
+  "label": "VAULT",
+  "set": "apparatus-solid",
+  "slug": "wag-vault",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "apparatus-solid/wag-vault-navy.svg",
+   "apparatus-solid/wag-vault-light.svg",
+   "apparatus-solid/wag-vault-white.svg"
+  ]
+ },
+ {
+  "label": "FLOOR",
+  "set": "apparatus-solid",
+  "slug": "mag-floor",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "apparatus-solid/mag-floor-navy.svg",
+   "apparatus-solid/mag-floor-light.svg",
+   "apparatus-solid/mag-floor-white.svg"
+  ]
+ },
+ {
+  "label": "BALANCE BEAM",
+  "set": "apparatus-duotone",
+  "slug": "wag-balance-beam",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "apparatus-duotone/wag-balance-beam-duotone.svg"
+  ]
+ },
+ {
+  "label": "TRAMPOLINE",
+  "set": "apparatus-duotone",
+  "slug": "tnt-trampoline",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "apparatus-duotone/tnt-trampoline-duotone.svg"
+  ]
+ },
+ {
+  "label": "SYNCHRO TRAMP",
+  "set": "apparatus-duotone",
+  "slug": "tnt-synchro",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "apparatus-duotone/tnt-synchro-duotone.svg"
+  ]
+ },
+ {
+  "label": "POWER TUMBLING",
+  "set": "apparatus-duotone",
+  "slug": "tnt-power-tumbling",
+  "source_fills": [
+   "#1E2B38",
+   "#DBEBEE"
+  ],
+  "files": [
+   "apparatus-duotone/tnt-power-tumbling-duotone.svg"
+  ]
+ },
+ {
+  "label": "FLOOR",
+  "set": "apparatus-duotone",
+  "slug": "wag-floor",
+  "source_fills": [
+   "#1E2B38",
+   "#DBEBEE"
+  ],
+  "files": [
+   "apparatus-duotone/wag-floor-duotone.svg"
+  ]
+ },
+ {
+  "label": "DOUBLE MINI",
+  "set": "apparatus-duotone",
+  "slug": "tnt-double-mini",
+  "source_fills": [
+   "#DBEBEE"
+  ],
+  "files": [
+   "apparatus-duotone/tnt-double-mini-duotone.svg"
+  ]
+ },
+ {
+  "label": "RINGS",
+  "set": "apparatus-duotone",
+  "slug": "mag-rings",
+  "source_fills": [
+   "#1E2B38",
+   "#DBEBEE"
+  ],
+  "files": [
+   "apparatus-duotone/mag-rings-duotone.svg"
+  ]
+ },
+ {
+  "label": "POMMEL HORSE",
+  "set": "apparatus-duotone",
+  "slug": "mag-pommel-horse",
+  "source_fills": [
+   "#1E2B38",
+   "#DBEBEE"
+  ],
+  "files": [
+   "apparatus-duotone/mag-pommel-horse-duotone.svg"
+  ]
+ },
+ {
+  "label": "P BARS",
+  "set": "apparatus-duotone",
+  "slug": "mag-parallel-bars",
+  "source_fills": [
+   "#1E2B38",
+   "#DBEBEE"
+  ],
+  "files": [
+   "apparatus-duotone/mag-parallel-bars-duotone.svg"
+  ]
+ },
+ {
+  "label": "HIGH BAR",
+  "set": "apparatus-duotone",
+  "slug": "mag-high-bar",
+  "source_fills": [
+   "#1E2B38",
+   "#DBEBEE"
+  ],
+  "files": [
+   "apparatus-duotone/mag-high-bar-duotone.svg"
+  ]
+ },
+ {
+  "label": "UNEVEN BARS",
+  "set": "apparatus-duotone",
+  "slug": "wag-uneven-bars",
+  "source_fills": [
+   "#1E2B38",
+   "#DBEBEE"
+  ],
+  "files": [
+   "apparatus-duotone/wag-uneven-bars-duotone.svg"
+  ]
+ },
+ {
+  "label": "VAULT",
+  "set": "apparatus-duotone",
+  "slug": "mag-vault",
+  "source_fills": [
+   "#DBEBEE"
+  ],
+  "files": [
+   "apparatus-duotone/mag-vault-duotone.svg"
+  ]
+ },
+ {
+  "label": "VAULT",
+  "set": "apparatus-duotone",
+  "slug": "wag-vault",
+  "source_fills": [
+   "#DBEBEE"
+  ],
+  "files": [
+   "apparatus-duotone/wag-vault-duotone.svg"
+  ]
+ },
+ {
+  "label": "FLOOR",
+  "set": "apparatus-duotone",
+  "slug": "mag-floor",
+  "source_fills": [
+   "#1E2B38",
+   "#DBEBEE"
+  ],
+  "files": [
+   "apparatus-duotone/mag-floor-duotone.svg"
+  ]
+ },
+ {
+  "label": "T&T 2",
+  "set": "event",
+  "slug": "tnt-2",
+  "source_fills": [
+   "#1E2B38"
+  ],
+  "files": [
+   "event/tnt-2-navy.svg",
+   "event/tnt-2-light.svg",
+   "event/tnt-2-white.svg"
+  ]
+ },
+ {
+  "label": "CLUB SPIRIT",
+  "set": "event",
+  "slug": "club-spirit",
+  "source_fills": [
+   "#1E2B38",
+   "#DBEBEE",
+   "#F0F0F0"
+  ],
+  "files": [
+   "event/club-spirit-navy.svg",
+   "event/club-spirit-light.svg",
+   "event/club-spirit-white.svg",
+   "event/club-spirit-original.svg"
+  ]
+ }
+]
