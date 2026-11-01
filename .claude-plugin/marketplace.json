@@ -1,11 +1,16 @@
 {
   "name": "ucg",
-  "owner": { "name": "United Club Gymnastics" },
+  "owner": {
+    "name": "United Club Gymnastics"
+  },
   "plugins": [
     {
       "name": "ucg-brand",
       "source": "./",
       "description": "UCG brand guidelines skill for Claude Code."
     }
-  ]
+  ],
+  "metadata": {
+    "description": "United Club Gymnastics plugins: the UCG brand guidelines skill."
+  }
 }

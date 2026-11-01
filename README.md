@@ -22,7 +22,7 @@ Read the linked references/ file for the medium you are working in before you st
 
 ### Codex
 
-Add the two lines above to your repo's `AGENTS.md`, or clone this repo and copy `skills/ucg-brand/` into `~/.codex/skills/` together with the repo (the skill reads `../../BRAND.md`).
+Add the two lines above to your repo's `AGENTS.md`. (Codex can also load `skills/ucg-brand/SKILL.md` as a skill; on its own, outside this repo, it fetches the guidelines from the URL above.)
 
 ## What's here
 

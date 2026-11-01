@@ -34,8 +34,8 @@ From the design guide (DG p37): when brand fonts aren't available, use Arial.
 Example signature:
 
 ```
-Ilana Shushansky
-Director of Operations, United Club Gymnastics
+Jordan Lee
+Events Coordinator, United Club Gymnastics
 unitedclubgymnastics.org
 ```
 
