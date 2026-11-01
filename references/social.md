@@ -28,6 +28,7 @@ Expressive work can push color, scale and energy, but every piece keeps at least
 
 - **Green light:** merch and apparel, event graphics and signage for one event, social campaigns, Nationals and launch collateral.
 - **Red light:** core logo lockups, official communications (policies, rules, registration info), permanent wayfinding, anything that must stay recognizable year to year.
+- **Mixed pieces** (e.g. a Nationals hype post that also gives registration dates): the facts (dates, deadlines, links, prices) stay in core colors and plain, readable type; the expressive range can carry the background, pattern or decoration around them.
 - You may recolor the mark within the palette, add a stroke, or use it big in the background. Never redraw or distort it.
 - Expressive color range (for these pieces only): `#FFEF77` `#FF988A` `#C0E388` `#8BB7E3` `#336494` `#504A83`. Pair them with Navy or White and still meet AA contrast for any text.
 - The **event pattern**: a repeating grid of "FOR THE LOVE OF THE SPORT" / "2026–2027 NATIONALS" lockups with the mark and "UCG", in Light Blue tones on Blue Green, for backgrounds and merch.

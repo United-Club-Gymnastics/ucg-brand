@@ -32,7 +32,7 @@ Also in `assets/logos/`: `ucg-avatar-circle` / `ucg-avatar-square` (social profi
 
 ## Icons — `assets/icons/`
 
-UCG's own pictograms (simple, bold gymnast figures with a ball-shaped head). Each has `-navy`, `-light` and `-white` SVG + PNG versions. Index with labels: `assets/icons/icons.json`.
+UCG's own pictograms (simple, bold gymnast figures with a ball-shaped head). Event and solid apparatus icons come in `-navy`, `-light` and `-white` SVG + PNG versions; the duotone set has one `-duotone` version each. Index with labels: `assets/icons/icons.json`.
 
 **Event icons** (`event/`): one figure per discipline, used to label MAG, WAG and T&T content.
 
@@ -72,4 +72,4 @@ Facebook cover, YouTube banner, Zoom backgrounds and the email header logo (`ucg
 ## Not in this repo
 
 - **Fonts.** Greed Condensed and Suisse Intl are licensed to UCG and are never published. Use Saira Condensed Bold + Arial if you don't have them.
-- **Masters and source files** (AI, EPS, the Figma templates, full-resolution photos, alpha-channel animations): in UCG's internal brand toolkit. Ask the UCG marketing team.
+- **Masters and source files** (AI, EPS, the Figma templates, full-resolution photos, alpha-channel animations): in UCG's internal brand toolkit. Ask your team lead or department head.

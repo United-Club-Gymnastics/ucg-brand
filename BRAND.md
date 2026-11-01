@@ -23,6 +23,8 @@ Welcoming, credible, joyful, practical. Write like people who know the sport and
 - Encouraging even when sharing rules or deadlines.
 - No jargon, buzzwords ("world-class", "innovative solutions"), stiff institutional language, or acronym soup. Spell out a term the first time if a newcomer wouldn't know it.
 - No emoji in official communications.
+- Dates: `April 1–4, 2027` (en dash, no spaces); short form `Apr 1–4`; with a place, `April 1–4, 2027 · Portland, OR`. Times: `10:30 AM`, `7–9 PM ET`. Numbers: numerals for scores, dates and counts (`3 events`, `9.650`).
+- Use real links. If you don't have the exact URL (registration, a course page), use https://unitedclubgymnastics.org and flag it for the person to fix; never invent a URL.
 
 ## Color
 
@@ -50,7 +52,7 @@ Body text needs **4.5:1**, large text (24px+, or 18.5px+ bold), icons and logos 
 - Text on **White, Light Blue, Blue Green, Purple or Golden Yellow** backgrounds: Navy or Dark Blue Green.
 - Text on **Red Orange** backgrounds: Navy only.
 
-**Never:** Golden Yellow, Purple, Blue Green or Light Blue text on White or Light Blue; Red Orange text on White (3.0:1); Navy on Dark Blue Green; anything on a busy photo without a solid or overlay behind it. Full table: [`references/color-pairs.md`](references/color-pairs.md).
+**Never:** Golden Yellow, Purple, Blue Green or Light Blue text on White or Light Blue; Red Orange text on White (3.0:1) or Light Blue (2.5:1); Navy on Dark Blue Green; anything on a busy photo without a solid or overlay behind it. Full table: [`references/color-pairs.md`](references/color-pairs.md).
 
 ## Type
 
@@ -100,7 +102,7 @@ The six design features:
 - Less is more: show only the critical information, with plenty of white space and a clear reading order.
 - Left-align to a grid. Center only short content.
 - Alternate section backgrounds (White → Light Blue → Blue Green → Navy) so neighbors differ.
-- Color overlay recipe: black-and-white photo, solid brand color behind it, photo blend mode Screen. Check text over it still meets contrast.
+- Color overlays: a black-and-white photo with a solid brand color behind it, photo blend mode Screen (guide recipe). Screen makes the image lighter, so use it with light colors (Blue Green, Light Blue, Purple, Golden Yellow) and put **Navy** text on it. For White text over a photo, darken instead: a Navy or Dark Blue Green duotone (or Multiply) dark enough that White stays at 4.5:1, or put the text on a solid Navy panel beside the photo.
 - Photos: real UCG athletes, documentary style, shown with dignity. Never use photos showing old NAIGC branding. Curated set with alt text: `assets/photos/photos.json`.
 - Icons: the UCG event and apparatus icons in `assets/icons/`. For general UI icons (arrows, menus) use a simple line set at a consistent stroke and keep them in brand colors. Use `→` for links and buttons.
 
@@ -110,7 +112,7 @@ The six design features:
 2. Does it sound like UCG: welcoming, credible, joyful, clear?
 3. Does it show gymnasts, clubs and families with dignity, respect and belonging?
 4. Is the next step clear?
-5. Does every text/background pair meet AA contrast, in light and dark mode?
+5. Does every text/background pair meet AA contrast, including hover states and dark mode wherever it applies (email clients always apply it; websites only if you support it)?
 
 ## By medium
 

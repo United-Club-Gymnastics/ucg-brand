@@ -60,4 +60,4 @@ python tools/extract_icons.py "<toolkit>/01_Assets/All UCG Assets.svg"
 python tools/icon_pngs.py
 ```
 
-Questions: UCG marketing team, via unitedclubgymnastics.org.
+Questions about the brand, or need a file that isn't here? Contact your team lead or department head.

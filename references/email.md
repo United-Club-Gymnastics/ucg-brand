@@ -17,6 +17,8 @@ Start from [`templates/email/ucg-announcement-email.html`](../templates/email/uc
 
 **Fonts in email:** most inboxes can't load custom fonts. Headlines use `'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif` (Saira loads from Google Fonts in Apple Mail and iOS; everyone else sees Arial Narrow or Arial). Body text is always `Arial,Helvetica,sans-serif`.
 
+**Buttons in email** use the condensed headline stack (Saira Condensed → Arial Narrow), as the template does. That's a deliberate email exception: the design guide sets buttons in Suisse Intl / Arial, which is what websites and other media use.
+
 **Sizes used by the template:** hero H1 52px (40px on mobile), section H2 36px, item titles 22px Arial bold, body 16px / 1.55, eyebrows 12–13px bold caps with 0.16em tracking, buttons 16px caps with 0.2em tracking, 8px button radius, 20px card radius, 600px container.
 
 **Contrast in dark mode:** the template remaps backgrounds and text for Apple Mail, iOS and Outlook. If you add a new color pairing, add matching dark-mode classes and check both modes against [`color-pairs.md`](color-pairs.md).
