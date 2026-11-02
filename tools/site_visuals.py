@@ -169,7 +169,7 @@ def palette_cards(ctx):
     for g in ("primary", "secondary"):
         for c in ctx.brand["colors"][g]:
             fg = readable_on(c["hex"])
-            border = "box-shadow:inset 0 -1px 0 #CFE1E4;" if c["id"] == "light-blue" else ""
+            border = "box-shadow:inset 0 -1px 0 #A5C8CF;" if c["id"] == "light-blue" else ""
             cmyk = ", ".join(str(x) for x in c["cmyk"])
             rgb = ", ".join(str(x) for x in c["rgb"])
             cards.append(f'''<div class="swatch"><div class="swatch-chip" style="background:{c["hex"]};color:{fg};{border}">{E(c["name"])}<span style="margin-left:auto;font-size:12px;letter-spacing:.12em;text-transform:uppercase">{g}</span></div>
@@ -183,13 +183,15 @@ def palette_cards(ctx):
 
 
 def support_and_expressive(ctx):
-    ui = ctx.brand["colors"]["ui_support"]["values"]
-    names = {"text-muted": "Muted text", "border": "Border", "border-soft": "Soft border", "navy-deep": "Deep navy", "page-dark": "Dark page"}
-    ui_strip = "".join(f'<div style="background:{v};color:{readable_on(v)}">{E(names[k])}<br>{v}</div>' for k, v in ui.items())
+    roles = ctx.brand["colors"]["ui_roles"]["values"]
+    names = {"text-secondary": "Secondary text", "border": "Borders", "border-input": "Form fields",
+             "surface-dark": "Dark surface", "surface-dark-alt": "Dark cards"}
+    ui_strip = "".join(f'<div style="background:{ctx.colors[c]["hex"]};color:{readable_on(ctx.colors[c]["hex"])}">{E(names[k])}<br>{E(ctx.colors[c]["name"])}</div>'
+                       for k, c in roles.items())
     ex = ctx.brand["colors"]["expressive"]["swatches"]
     ex_strip = "".join(f'<div style="background:{h};color:{readable_on(h)}">{h}</div>' for h in ex)
-    return (vis("UI support colors (from UCG's templates)", f'<div class="strip">{ui_strip}</div>',
-                "Use these for muted text, borders and dark mode rather than inventing new greys.")
+    return (vis("UI roles", f'<div class="strip">{ui_strip}</div>',
+                "Secondary text, borders and dark mode use palette colors. Don't add greys.")
             + vis("Expressive range (merch, campaigns, events only)", f'<div class="strip">{ex_strip}</div>',
                   "Not part of the everyday palette. Never for official communications, wayfinding or UI."))
 
@@ -206,7 +208,7 @@ def safe_pairs(ctx, title="Safe text on every background"):
             r = ratio(f["hex"], b["hex"])
             if r >= 4.5 and not (bg == "dark-blue-green" and fg == "navy") and not (bg == "navy" and fg == "dark-blue-green"):
                 lines.append(f'<div style="color:{f["hex"]};font-weight:700;font-size:17px;line-height:1.35">Aa {E(f["name"])} <span style="font-weight:400;font-size:13px">{r:.1f}:1</span></div>')
-        border = "border:1px solid #CFE1E4;" if bg in ("white", "light-blue") else ""
+        border = "border:1px solid #A5C8CF;" if bg in ("white", "light-blue") else ""
         panels.append(f'<div class="panel" style="background:{b["hex"]};{border}"><p class="subhead" style="margin:0 0 10px;font-size:13px;color:{readable_on(b["hex"])}">On {E(b["name"])}</p>{"".join(lines)}</div>')
     return vis(title, f'<div class="grid" style="--min:200px">{"".join(panels)}</div>')
 
@@ -507,7 +509,7 @@ def email_previews(ctx):
 
 def gmail_mock(ctx):
     return vis("A personal email", f'''<div class="card" style="max-width:640px;padding:0;overflow:hidden;font-family:Arial,Helvetica,sans-serif">
-<div style="background:#F1F5F6;padding:12px 18px;font-size:14px;color:#1E2B38;border-bottom:1px solid #CFE1E4"><b>To:</b> jordan@example.com<br><b>Subject:</b> Getting involved with UCG</div>
+<div style="background:#F1F5F6;padding:12px 18px;font-size:14px;color:#1E2B38;border-bottom:1px solid #A5C8CF"><b>To:</b> jordan@example.com<br><b>Subject:</b> Getting involved with UCG</div>
 <div style="padding:22px 22px 26px;font-size:16px;line-height:1.55;color:#1E2B38">
 <p style="margin:0 0 14px">Hi Jordan,</p><p style="margin:0 0 14px">Thanks for reaching out about getting involved with UCG. Whether you are coming from a college club, returning after time away, or looking for a new way to stay in the sport, there is a place for you here.</p>
 <p style="margin:0 0 22px">See you in the gym,</p>
@@ -519,10 +521,10 @@ def gmail_mock(ctx):
 
 def web_layout(ctx):
     bands = "".join(f'<div class="{c}" style="padding:22px 26px;{b}"><span class="subhead" style="font-size:13px">{n}</span></div>'
-                    for c, n, b in (("on-white", "White", "border:0;border-bottom:1px solid #CFE1E4;"), ("on-lb", "Light Blue", ""), ("on-bg", "Blue Green", ""), ("on-navy", "Navy", "")))
+                    for c, n, b in (("on-white", "White", "border:0;border-bottom:1px solid #A5C8CF;"), ("on-lb", "Light Blue", ""), ("on-bg", "Blue Green", ""), ("on-navy", "Navy", "")))
     radii = "".join(f'<div style="text-align:center"><div style="height:80px;background:#DBEBEE;border:2px solid #1E2B38;border-radius:{r}"></div><p class="small" style="margin:8px 0 0"><b>{n}</b><br>{r}</p></div>'
                     for n, r in (("Buttons", "8px"), ("Inputs, boxes", "12px"), ("Cards, photos", "20px"), ("Chips", "999px")))
-    return (vis("Alternate section backgrounds", f'<div style="border-radius:16px;overflow:hidden;border:1px solid #CFE1E4">{bands}</div>')
+    return (vis("Alternate section backgrounds", f'<div style="border-radius:16px;overflow:hidden;border:1px solid #A5C8CF">{bands}</div>')
             + vis("Rounded corners", f'<div class="grid" style="--min:130px">{radii}</div>'))
 
 
@@ -534,7 +536,7 @@ def web_type(ctx):
             ("Subhead / label", "14–18px, 0.2em tracking", '<span class="ucg-subhead" style="font-size:16px">Sponsorship levels</span>'),
             ("Eyebrow", "12–13px bold caps, 0.16em", '<span class="ucg-eyebrow" style="color:#184B56">New to UCG?</span>'),
             ("Body", "16px / 1.55", '<span>UCG clubs compete in three disciplines. There is a place for you on the floor.</span>')]
-    body = "".join(f'<div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #CFE1E4"><div class="small"><b>{n}</b><br><span class="muted">{s}</span></div><div style="min-width:0">{x}</div></div>' for n, s, x in rows)
+    body = "".join(f'<div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #A5C8CF"><div class="small"><b>{n}</b><br><span class="muted">{s}</span></div><div style="min-width:0">{x}</div></div>' for n, s, x in rows)
     return vis("Type scale, live", body)
 
 
@@ -551,16 +553,16 @@ def web_components(ctx):
 <div class="btn-row" style="margin-top:10px"><span class="chip" style="background:#DBEBEE;color:#184B56">✓ On track</span><span class="chip" style="background:#F6C328">● Needs attention</span><span class="chip" style="background:#F4694A">! Closes Jan 15</span></div>
 <p class="vis-note">Always pair a status color with a word or symbol.</p></div>'''
     cards = '''<div class="panel on-lb"><p class="vis-title">Cards</p><div class="grid" style="--min:160px">
-<div style="background:#FFFFFF;border-radius:20px;padding:18px"><p class="ucg-eyebrow" style="color:#184B56;margin:0 0 6px">Compete</p><p style="font-weight:700;font-size:18px;margin:0 0 6px">Find a meet</p><p class="small" style="margin:0;color:#4A5A66">Sanctioned events near you.</p></div>
+<div style="background:#FFFFFF;border-radius:20px;padding:18px"><p class="ucg-eyebrow" style="color:#184B56;margin:0 0 6px">Compete</p><p style="font-weight:700;font-size:18px;margin:0 0 6px">Find a meet</p><p class="small" style="margin:0;color:#184B56">Sanctioned events near you.</p></div>
 <div style="background:#1E2B38;border-radius:20px;padding:18px"><p class="ucg-eyebrow" style="color:#A5C8CF;margin:0 0 6px">Featured</p><p style="font-weight:700;font-size:18px;margin:0 0 6px;color:#FFFFFF">Nationals 2027</p><p class="small" style="margin:0;color:#DBEBEE">Portland, Oregon.</p></div></div></div>'''
     lst = '''<div class="panel on-white"><p class="vis-title">List with dividers</p><div>
 <div style="padding:14px 0"><b>Reach out to UCG</b><br><span class="small muted">Tell us about your club or your situation.</span></div>
-<div style="padding:14px 0;border-top:1px solid #BFD5D9"><b>Speak with the team</b><br><span class="small muted">We'll answer questions about levels and events.</span></div>
-<div style="padding:14px 0;border-top:1px solid #BFD5D9"><b>Find your next step</b><br><span class="small muted">Join a club, compete independently or volunteer.</span></div></div>
+<div style="padding:14px 0;border-top:1px solid #A5C8CF"><b>Speak with the team</b><br><span class="small muted">We'll answer questions about levels and events.</span></div>
+<div style="padding:14px 0;border-top:1px solid #A5C8CF"><b>Find your next step</b><br><span class="small muted">Join a club, compete independently or volunteer.</span></div></div>
 <p class="vis-note">Dividers between items only, none above the first or below the last.</p></div>'''
     form = '''<div class="panel on-white"><p class="vis-title">Form fields</p>
 <label style="display:block;font-weight:700;font-size:14px;margin-bottom:6px" for="demo-club">Club name</label>
-<input id="demo-club" value="Example University Gymnastics" style="width:100%;font:inherit;color:#1E2B38;padding:11px 14px;border:1.5px solid #BFD5D9;border-radius:12px;margin-bottom:14px">
+<input id="demo-club" value="Example University Gymnastics" style="width:100%;font:inherit;color:#1E2B38;padding:11px 14px;border:1.5px solid #184B56;border-radius:12px;margin-bottom:14px">
 <label style="display:block;font-weight:700;font-size:14px;margin-bottom:6px" for="demo-disc">Discipline</label>
 <select id="demo-disc" style="width:100%;font:inherit;color:#1E2B38;padding:11px 14px;border:1.5px solid #184B56;border-radius:12px;outline:3px solid rgba(24,75,86,.35);outline-offset:1px;background:#FFFFFF"><option>WAG</option><option>MAG</option><option>T&amp;T</option></select>
 <p class="vis-note">The second field shows the focus state: Dark Blue Green border and ring.</p></div>'''
@@ -574,7 +576,7 @@ def web_components(ctx):
 
 
 def web_dark(ctx):
-    return vis("", '''<div class="panel" style="background:#141E27;max-width:520px"><p class="ucg-eyebrow" style="color:#A5C8CF;margin:0 0 8px">Dark mode</p>
+    return vis("", '''<div class="panel" style="background:#1E2B38;max-width:520px"><p class="ucg-eyebrow" style="color:#A5C8CF;margin:0 0 8px">Dark mode</p>
 <p style="font-weight:700;font-size:20px;margin:0 0 6px;color:#FFFFFF">Navy surfaces, white and light blue text</p><p style="margin:0 0 14px;color:#DBEBEE">Blue Green carries links and accents.</p>
 <a class="ucg-btn ucg-btn--on-dark" href="#">Continue →</a> <a href="#" style="color:#A5C8CF;margin-left:12px">Text link</a></div>''')
 
@@ -641,7 +643,7 @@ def slide_theme(ctx):
     slots = [("Dark 1", "#1E2B38", "Navy"), ("Light 1", "#FFFFFF", "White"), ("Dark 2", "#184B56", "Dark Blue Green"),
              ("Light 2", "#DBEBEE", "Light Blue"), ("Accent 1", "#A5C8CF", "Blue Green"), ("Accent 2", "#ADBAE9", "Purple"),
              ("Accent 3", "#F6C328", "Golden Yellow"), ("Accent 4", "#F4694A", "Red Orange")]
-    strip = "".join(f'<div style="background:{h};color:{readable_on(h)};{"box-shadow:inset 0 0 0 1px #CFE1E4;" if h in ("#FFFFFF", "#DBEBEE") else ""}">{s}<br><span style="font-weight:400">{n}</span></div>' for s, h, n in slots)
+    strip = "".join(f'<div style="background:{h};color:{readable_on(h)};{"box-shadow:inset 0 0 0 1px #A5C8CF;" if h in ("#FFFFFF", "#DBEBEE") else ""}">{s}<br><span style="font-weight:400">{n}</span></div>' for s, h, n in slots)
     return vis("Theme colors to set", f'<div class="strip">{strip}</div>')
 
 
@@ -651,13 +653,13 @@ def slide_gallery(ctx):
              ("section-break", "Section break: Navy with apparatus icons"), ("closing", "Closing: solid Golden Yellow, next steps as pills")]
     real = "".join(f'<figure style="margin:0"><img src="{R}site/examples/slides/example-{f}.jpg" alt="{E(c)}" loading="lazy" style="display:block;width:100%;border-radius:10px;box-shadow:0 8px 24px rgba(30,43,56,.16)"><figcaption class="mock-label">{E(c)}</figcaption></figure>' for f, c in shots)
     D = "'Saira Condensed','Arial Narrow',Arial,sans-serif"
-    rows = "".join(f'''<div class="abs" style="left:{x}cqw;top:{y}cqw;width:41.3cqw;border-bottom:1px solid #BFD5D9;padding-bottom:1.4cqw;display:flex;gap:2cqw;align-items:baseline">
+    rows = "".join(f'''<div class="abs" style="left:{x}cqw;top:{y}cqw;width:41.3cqw;border-bottom:1px solid #A5C8CF;padding-bottom:1.4cqw;display:flex;gap:2cqw;align-items:baseline">
 <span style="font-family:{D};font-weight:700;font-size:{pt(19.5)};color:#184B56">{n}</span><span style="font-family:Arial;font-weight:700;font-size:{pt(14)};color:#1E2B38">{t}</span></div>'''
                    for x, y, n, t in ((6.2, 13, "01", "Eat, buffet is open"), (6.2, 19.7, "02", "Sponsors and volunteers"), (6.2, 26.4, "03", "Judges' awards"),
                                       (52.5, 13, "04", "Individual awards"), (52.5, 19.7, "05", "Team awards"), (52.5, 26.4, "06", "Looking ahead")))
     agenda = f'''<div class="cq slide" style="background:#DBEBEE"><div class="abs display" style="left:6.2cqw;top:5cqw;font-size:{pt(39)};color:#1E2B38">Tonight</div>{rows}
 <div class="abs" style="left:3cqw;bottom:1.4cqw;font-family:{D};font-weight:700;font-size:{pt(10)};color:#184B56">@unitedclubgymnastics</div></div>'''
-    status = "".join(f'<td style="padding:1cqw 1.4cqw;border:1px solid #BFD5D9;background:{bg};color:{fg};font-family:Arial;font-size:{pt(11)};font-weight:700">{t}</td>'
+    status = "".join(f'<td style="padding:1cqw 1.4cqw;border:1px solid #A5C8CF;background:{bg};color:{fg};font-family:Arial;font-size:{pt(11)};font-weight:700">{t}</td>'
                      for t, bg, fg in (("On track", "#DBEBEE", "#184B56"), ("At risk", "#F6C328", "#1E2B38"), ("Blocked", "#F4694A", "#1E2B38")))
     work = f'''<div class="cq slide" style="background:#FFFFFF"><div class="abs display" style="left:6.2cqw;top:5cqw;font-size:{pt(30)};color:#1E2B38">Events department</div>
 <table class="abs" style="left:6.2cqw;top:13cqw;border-collapse:collapse"><tr>{status}</tr></table>
@@ -675,8 +677,8 @@ def slide_traps(ctx):
         return f'<div class="panel on-lb" style="display:flex;align-items:center;gap:14px"{skip}><span style="font-family:{D};font-weight:700;font-size:48px;color:{color}">01</span><b style="color:#1E2B38">By level</b></div>'
     def foot(color, skip):
         return f'<div class="panel on-lb"{skip}><span style="font-size:13px;color:{color}">UCG Board of Directors · Nationals 2027</span></div>'
-    body = (f'<div class="dodont">{dont("Blue Green on Light Blue (1.4:1)", num("#A5C8CF", " data-contrast-skip"))}{do("Dark Blue Green (8.4:1)", num("#184B56", ""))}</div>'
-            f'<div class="dodont" style="margin-top:16px">{dont("Grey #74858F footer (3.1:1)", foot("#74858F", " data-contrast-skip"))}{do("#4A5A66 (5.8:1)", foot("#4A5A66", ""))}</div>')
+    body = (f'<div class="dodont">{dont("Blue Green on Light Blue (1.4:1)", num("#A5C8CF", " data-contrast-skip"))}{do("Dark Blue Green (7.9:1)", num("#184B56", ""))}</div>'
+            f'<div class="dodont" style="margin-top:16px">{dont("Grey #74858F footer (3.1:1)", foot("#74858F", " data-contrast-skip"))}{do("Dark Blue Green (7.9:1)", foot("#184B56", ""))}</div>')
     return vis("Before and after", body)
 
 
@@ -688,7 +690,7 @@ def doc_page(ctx):
     p = f'''<div class="paper-bed"><div class="paper">
 <img src="{R}assets/logos/ucg-document-header.png" alt="UCG document header" style="display:block;width:100%;margin-bottom:28px">
 <p style="font-family:{D};font-weight:700;font-size:32px;line-height:1;text-transform:uppercase;margin:0 0 6px;color:#1E2B38">Event sanctioning policy</p>
-<p style="font-size:14px;color:#4A5A66;margin:0 0 22px">Example document · Effective August 1 · Version 1.2 · Owner: Events Department</p>
+<p style="font-size:14px;color:#184B56;margin:0 0 22px">Example document · Effective August 1 · Version 1.2 · Owner: Events Department</p>
 <p style="font-size:15px;line-height:1.5;margin:0 0 10px">This policy explains how a club gets a meet sanctioned by UCG, who it applies to, and what hosts need to do before and after the event.</p>
 <p style="font-family:{D};font-weight:700;font-size:20px;text-transform:uppercase;margin:24px 0 6px;color:#1E2B38">1. Who this applies to</p>
 <p style="font-size:15px;line-height:1.5;margin:0 0 10px">Any member club hosting a competition that counts toward UCG standings.</p>
@@ -696,8 +698,8 @@ def doc_page(ctx):
 <ul style="font-size:15px;line-height:1.5;margin:0 0 14px;padding-left:22px"><li>Submit the request at least 30 days before the meet.</li><li>Use approved judges for every session.</li><li>Send results within 48 hours.</li></ul>
 <table style="width:100%;border-collapse:collapse;margin:0 0 16px"><tr><td style="background:#DBEBEE;padding:12px 14px;font-size:14px;color:#1E2B38;border-radius:4px"><b>Key rule:</b> results must be sent within 48 hours of the last session.</td></tr></table>
 <table style="width:100%;border-collapse:collapse;font-size:13px"><tr><th style="background:#1E2B38;color:#FFFFFF;text-align:left;padding:8px">Meet size</th><th style="background:#1E2B38;color:#FFFFFF;text-align:left;padding:8px">Lead time</th></tr>
-<tr><td style="padding:8px;border:.5pt solid #BFD5D9">Under 100 athletes</td><td style="padding:8px;border:.5pt solid #BFD5D9">30 days</td></tr><tr><td style="padding:8px;border:.5pt solid #BFD5D9">100 athletes or more</td><td style="padding:8px;border:.5pt solid #BFD5D9">60 days</td></tr></table>
-<div style="display:flex;justify-content:space-between;margin-top:28px;font-size:12px;color:#4A5A66;border-top:1px solid #CFE1E4;padding-top:8px"><span>Event sanctioning policy · Effective August 1</span><span>Page 1</span></div>
+<tr><td style="padding:8px;border:.5pt solid #A5C8CF">Under 100 athletes</td><td style="padding:8px;border:.5pt solid #A5C8CF">30 days</td></tr><tr><td style="padding:8px;border:.5pt solid #A5C8CF">100 athletes or more</td><td style="padding:8px;border:.5pt solid #A5C8CF">60 days</td></tr></table>
+<div style="display:flex;justify-content:space-between;margin-top:28px;font-size:12px;color:#184B56;border-top:1px solid #A5C8CF;padding-top:8px"><span>Event sanctioning policy · Effective August 1</span><span>Page 1</span></div>
 </div></div>'''
     return vis("What a UCG policy looks like", p, "Example document with placeholder content.")
 
@@ -706,13 +708,13 @@ def doc_styles(ctx):
     A = "Arial,Helvetica,sans-serif"
     D = "'Saira Condensed','Arial Narrow',Arial,sans-serif"
     rows = [("Title", f"font-family:{D};font-weight:700;font-size:30px;text-transform:uppercase;color:#1E2B38", "Code of conduct"),
-            ("Subtitle", f"font-family:{A};font-size:14px;color:#4A5A66", "Effective August 1 · Version 2.0"),
+            ("Subtitle", f"font-family:{A};font-size:14px;color:#184B56", "Effective August 1 · Version 2.0"),
             ("Heading 1", f"font-family:{D};font-weight:700;font-size:20px;text-transform:uppercase;color:#1E2B38", "2. Expectations"),
             ("Heading 2", f"font-family:{A};font-weight:700;font-size:16px;color:#184B56", "2.1 At competitions"),
             ("Heading 3", f"font-family:{A};font-weight:700;font-size:14px;color:#1E2B38", "Spectators"),
             ("Normal text", f"font-family:{A};font-size:14px;color:#1E2B38", "Treat athletes, judges and volunteers with respect."),
             ("Link", f"font-family:{A};font-size:14px;color:#184B56;text-decoration:underline", "unitedclubgymnastics.org")]
-    body = "".join(f'<div style="display:grid;grid-template-columns:minmax(110px,150px) 1fr;gap:16px;align-items:baseline;padding:12px 0;border-top:1px solid #CFE1E4"><b class="small">{n}</b><span style="{s};line-height:1.2">{E(t)}</span></div>' for n, s, t in rows)
+    body = "".join(f'<div style="display:grid;grid-template-columns:minmax(110px,150px) 1fr;gap:16px;align-items:baseline;padding:12px 0;border-top:1px solid #A5C8CF"><b class="small">{n}</b><span style="{s};line-height:1.2">{E(t)}</span></div>' for n, s, t in rows)
     return vis("The styles, rendered", f'<div class="card">{body}</div>')
 
 
@@ -770,8 +772,8 @@ def chart_svg(bg, colors, text, muted, grid):
 
 
 def sheet_charts(ctx):
-    a = chart_svg("#FFFFFF", ["#1E2B38", "#F4694A", "#184B56"], "#1E2B38", "#4A5A66", "#DBEBEE")
-    b = chart_svg("#1E2B38", ["#A5C8CF", "#F6C328", "#ADBAE9"], "#FFFFFF", "#DBEBEE", "#2F4352")
+    a = chart_svg("#FFFFFF", ["#1E2B38", "#F4694A", "#184B56"], "#1E2B38", "#1E2B38", "#DBEBEE")
+    b = chart_svg("#1E2B38", ["#A5C8CF", "#F6C328", "#ADBAE9"], "#FFFFFF", "#DBEBEE", "#184B56")
     return vis("Charts", f'<div class="compare"><div class="card" style="padding:10px">{a}<p class="mock-label">On white: Navy, Red Orange, Dark Blue Green.</p></div><div class="card" style="padding:10px">{b}<p class="mock-label">On Navy: Blue Green, Golden Yellow, Purple.</p></div></div>', "Example data.")
 
 

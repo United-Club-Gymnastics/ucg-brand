@@ -18,17 +18,17 @@ If you need to go well beyond the template or make a new kind of slide, use the 
 | Margins | | | | 0.62 in left/right, title top at 0.5 in |
 | Eyebrow above title | Arial Bold, ALL CAPS | 9.75–10.5pt | Dark Blue Green (light bg) / Blue Green (dark bg) | directly above the title |
 | Slide title | Saira Condensed Bold | 34–39pt | Navy (light bg) / White (dark bg) | y 0.5 in |
-| Intro line under title | Arial | 12pt | `#4A5A66` | ~0.5 in below title top |
+| Intro line under title | Arial | 12pt | Dark Blue Green `#184B56` | ~0.5 in below title top |
 | Cover / section title | Saira Condensed Bold | 60–84pt | White on Navy or photo | left-aligned, stacked lines |
 | Card label | Saira Condensed Bold | 9–10pt | Dark Blue Green | top of card |
 | Card heading | Arial Bold | 15–20pt | Navy, or White on Navy cards | |
-| Body text in cards | Arial | 11–12pt | Navy / `#4A5A66`; Light Blue on Navy | |
+| Body text in cards | Arial | 11–12pt | Navy; Light Blue on Navy | |
 | Big numbers | Saira Condensed Bold | 33pt+ | Navy on light, Blue Green on Navy | |
 | Footer handles | Saira Condensed Bold | 10pt | Dark Blue Green (light) / Light Blue (dark) | bottom corners, y 5.3 in: `@unitedclubgymnastics` left, event hashtag right |
 
 - **Cards:** rounded rectangles in Light Blue, Blue Green or Navy with ~0.25 in inner padding, 0.15–0.2 in gaps. Use one Navy card for the item you want noticed.
 - **Chips:** small rounded rectangle in a secondary color with Saira caps label in Navy (e.g. Golden Yellow "GLUTEN FREE").
-- **Dividers:** thin `#BFD5D9` lines between list rows; numbered rows use a Saira number then an Arial Bold label.
+- **Dividers:** thin Blue Green `#A5C8CF` lines between list rows; numbered rows use a Saira number then an Arial Bold label.
 - **Tables:** Navy or Blue Green header row, alternating White / Light Blue rows, Arial 9–10pt body, Saira caps for column headers.
 
 ## Slide types
@@ -47,7 +47,7 @@ Leadership or working-meeting decks can be simpler: White slides, Saira title, A
 ## Contrast traps seen in real decks
 
 - Blue Green numbers or text on Light Blue or White backgrounds (about 1.4:1 and 1.8:1). Use Dark Blue Green or Navy instead; keep Blue Green for text on Navy.
-- Grey `#74858F` footer text on Light Blue (3.1:1). Use `#4A5A66` or Dark Blue Green.
+- Grey `#74858F` footer text on Light Blue (3.1:1). Use Dark Blue Green or Navy.
 - Pale placeholder text such as `#9FB4BB` on white. Fine to delete before presenting, never for real content.
 - White or Light Blue text on a photo without a Navy overlay behind it.
 

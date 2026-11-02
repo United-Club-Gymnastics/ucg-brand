@@ -18,7 +18,7 @@ The details below are for building or fixing a sheet by hand (agents: copy the t
 | Title row (optional, row 1) | Saira Condensed Bold 18pt, ALL CAPS, Navy text, no fill; merged across the table width |
 | Header row | Navy `#1E2B38` fill, White Arial Bold 10pt, frozen, wrap text, vertical-align middle |
 | Data rows | Alternating White / Light Blue `#DBEBEE` (Format → Alternating colors → custom), Navy text |
-| Borders | `#BFD5D9` thin, horizontal only, or none |
+| Borders | Blue Green `#A5C8CF` thin, horizontal only, or none |
 | Totals row | Arial Bold, Light Blue or Blue Green fill, Navy text |
 
 - Freeze the header row and any identifier column.

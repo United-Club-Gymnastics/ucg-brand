@@ -46,7 +46,7 @@ Examples:
 | Neutral | White | `#FFFFFF` |
 
 - Navy carries most text and dark surfaces. Light Blue, White and Blue Green are the main light surfaces. Secondary colors are accents: chips, highlights, data, one bold slide.
-- Supporting UI values (not in the design guide; they come from UCG's HTML email templates, which were built with AI help in 2026): muted text `#4A5A66`, borders `#BFD5D9` / `#CFE1E4`.
+- UI roles use palette colors only, never extra greys: secondary text in Dark Blue Green (or Navy), dividers and card outlines in Blue Green, form-field borders in Dark Blue Green (they need 3:1), and dark surfaces in Navy with Dark Blue Green for cards and bands.
 - No gradients, no off-palette colors. Six extra "expressive" colors exist only for merch, social campaigns and event graphics (see [`references/social.md`](references/social.md)).
 
 ### Contrast is a hard rule (WCAG AA everywhere)

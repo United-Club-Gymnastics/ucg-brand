@@ -65,14 +65,15 @@
       "source": "EDG p6-7",
       "swatches": ["#FFEF77", "#FF988A", "#C0E388", "#8BB7E3", "#336494", "#504A83"]
     },
-    "ui_support": {
-      "note": "Not in the design guides. They come from UCG's HTML email templates (built with AI help in 2026): text-muted, border, navy-deep and page-dark from the monthly announcement template, border-soft from the club banner email. Keep using these rather than inventing new greys.",
+    "ui_roles": {
+      "note": "UI uses palette colors only. Don't add greys or extra navies.",
+      "source": "ORG",
       "values": {
-        "text-muted": "#4A5A66",
-        "border": "#BFD5D9",
-        "border-soft": "#CFE1E4",
-        "navy-deep": "#141E27",
-        "page-dark": "#0F171E"
+        "text-secondary": "dark-blue-green",
+        "border": "blue-green",
+        "border-input": "dark-blue-green",
+        "surface-dark": "navy",
+        "surface-dark-alt": "dark-blue-green"
       }
     }
   },

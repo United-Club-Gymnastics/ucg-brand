@@ -20,15 +20,9 @@
   --ucg-golden-yellow: #F6C328;   /* fill with navy text; never text on white */
   --ucg-white: #FFFFFF;
 
-  /* UI support (from UCG's web/email templates, not the guide) */
-  --ucg-text-muted: #4A5A66;      /* 7.1:1 on white, 5.8:1 on light blue */
-  --ucg-border: #BFD5D9;
-  --ucg-border-soft: #CFE1E4;
-  --ucg-navy-deep: #141E27;
-
   /* Semantic roles */
   --ucg-fg: var(--ucg-navy);
-  --ucg-fg-muted: var(--ucg-text-muted);
+  --ucg-fg-muted: var(--ucg-dark-blue-green); /* secondary text, notes, captions */
   --ucg-fg-link: var(--ucg-dark-blue-green);
   --ucg-fg-on-dark: var(--ucg-white);
   --ucg-fg-on-dark-muted: var(--ucg-light-blue);
@@ -37,6 +31,8 @@
   --ucg-bg-tint: var(--ucg-light-blue);
   --ucg-bg-accent: var(--ucg-blue-green);
   --ucg-bg-inverse: var(--ucg-navy);
+  --ucg-border: var(--ucg-blue-green);        /* dividers and card outlines (decorative) */
+  --ucg-border-input: var(--ucg-dark-blue-green); /* form fields need 3:1 against the page */
 
   /* Type */
   --ucg-font-display: "Greed Condensed", "Saira Condensed", "Arial Narrow", Arial, sans-serif;

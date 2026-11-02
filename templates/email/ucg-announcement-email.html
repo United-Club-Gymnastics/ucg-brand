@@ -48,31 +48,31 @@ HOW TO USE (for Claude or a person editing this file):
   }
   /* FIXED: dark mode (Apple Mail, iOS Mail, Outlook Mac, some Android) */
   @media (prefers-color-scheme: dark) {
-    body, .bg-page { background:#0F171E !important; }
-    .bg-white { background:#141E27 !important; }
+    body, .bg-page { background:#1E2B38 !important; }
+    .bg-white { background:#1E2B38 !important; }
     .bg-light { background:#1E2B38 !important; }
     .bg-accent { background:#184B56 !important; }
-    .bg-card-light { background:#243443 !important; }
-    .bg-note { background:#1E2B38 !important; border-color:#2F4352 !important; }
+    .bg-card-light, .bg-card-navy { background:#184B56 !important; }
+    .bg-note { background:#184B56 !important; border-color:#184B56 !important; }
     .t-ink { color:#FFFFFF !important; }
-    .t-muted { color:#C7DEE2 !important; }
+    .t-muted { color:#DBEBEE !important; }
     .t-eyebrow { color:#A5C8CF !important; }
     .t-link { color:#A5C8CF !important; }
-    .rule { border-color:#2F4352 !important; }
+    .rule { border-color:#184B56 !important; }
     .bar { background:#A5C8CF !important; }
     .btn-navy { background:#A5C8CF !important; }
     .btn-navy a { color:#1E2B38 !important; }
   }
   /* FIXED: dark mode (Outlook.com / Outlook apps) */
-  [data-ogsb] body, [data-ogsb] .bg-page { background:#0F171E !important; }
-  [data-ogsb] .bg-white { background:#141E27 !important; }
+  [data-ogsb] body, [data-ogsb] .bg-page { background:#1E2B38 !important; }
+  [data-ogsb] .bg-white { background:#1E2B38 !important; }
   [data-ogsb] .bg-light { background:#1E2B38 !important; }
   [data-ogsb] .bg-accent { background:#184B56 !important; }
-  [data-ogsb] .bg-card-light { background:#243443 !important; }
-  [data-ogsb] .bg-note { background:#1E2B38 !important; }
+  [data-ogsb] .bg-card-light, [data-ogsb] .bg-card-navy { background:#184B56 !important; }
+  [data-ogsb] .bg-note { background:#184B56 !important; border-color:#184B56 !important; }
   [data-ogsb] .btn-navy { background:#A5C8CF !important; }
   [data-ogsc] .t-ink { color:#FFFFFF !important; }
-  [data-ogsc] .t-muted { color:#C7DEE2 !important; }
+  [data-ogsc] .t-muted { color:#DBEBEE !important; }
   [data-ogsc] .t-eyebrow, [data-ogsc] .t-link { color:#A5C8CF !important; }
   [data-ogsc] .btn-navy a { color:#1E2B38 !important; }
 </style>
@@ -122,7 +122,7 @@ HOW TO USE (for Claude or a person editing this file):
   <!-- BLOCK: STANDARD ITEM. Title, body, optional text link. Delete the link line if not needed. -->
   <tr><td class="bg-white px" style="background:#FFFFFF;padding:16px 40px;">
     <h3 class="t-ink" style="margin:0 0 10px;font-family:Arial,Helvetica,sans-serif;font-size:22px;line-height:1.25;font-weight:700;color:#1E2B38;">[ITEM TITLE]</h3>
-    <p class="t-muted" style="margin:0 0 18px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55;color:#4A5A66;">[BODY]</p>
+    <p class="t-muted" style="margin:0 0 18px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55;color:#1E2B38;">[BODY]</p>
     <a class="t-link" href="[https://LINK]" style="font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;color:#184B56;text-decoration:none;">[LINK TEXT] &rarr;</a>
   </td></tr>
 
@@ -136,9 +136,9 @@ HOW TO USE (for Claude or a person editing this file):
     </td></tr></table>
   </td></tr>
 
-  <!-- BLOCK: NAVY CARD. Call to action (applications, volunteers). Stays dark in every mode. -->
+  <!-- BLOCK: NAVY CARD. Call to action (applications, volunteers). Stays dark in every mode (dark blue green in dark mode, so it shows on the navy page). -->
   <tr><td class="bg-white px" style="background:#FFFFFF;padding:16px 40px;">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#1E2B38;border-radius:20px;"><tr><td style="padding:28px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="bg-card-navy" style="background:#1E2B38;border-radius:20px;"><tr><td style="padding:28px;">
       <p style="margin:0 0 8px;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#A5C8CF;">[EYEBROW]</p>
       <h3 style="margin:0 0 10px;font-family:Arial,Helvetica,sans-serif;font-size:22px;line-height:1.25;font-weight:700;color:#FFFFFF;">[ITEM TITLE]</h3>
       <p style="margin:0 0 22px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55;color:#DBEBEE;">[BODY]</p>
@@ -164,14 +164,14 @@ HOW TO USE (for Claude or a person editing this file):
     <p class="t-ink" style="margin:0 0 14px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55;color:#1E2B38;">[PARAGRAPH. Repeat this line for more paragraphs. Inline links: <a class="t-link" href="[https://LINK]" style="color:#184B56;font-weight:700;">like this</a>.]</p>
 
     <!-- SUB-BLOCK: NOTE BOX. One highlighted fact. Optional. -->
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="bg-note" style="background:#FFFFFF;border:1px solid #BFD5D9;border-radius:12px;"><tr><td style="padding:18px 20px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="bg-note" style="background:#FFFFFF;border:1px solid #A5C8CF;border-radius:12px;"><tr><td style="padding:18px 20px;">
       <p class="t-ink" style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.55;color:#1E2B38;"><strong>[LABEL]:</strong> [NOTE]</p>
     </td></tr></table>
 
     <!-- SUB-BLOCK: LIST. Rule changes, dates, short items. Last row gets the bottom border too. Optional. -->
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px;">
-      <tr><td class="t-ink rule" style="padding:12px 0;border-top:1px solid #BFD5D9;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.5;color:#1E2B38;"><strong>[BOLD LEAD]</strong> [DETAIL]</td></tr>
-      <tr><td class="t-ink rule" style="padding:12px 0;border-top:1px solid #BFD5D9;border-bottom:1px solid #BFD5D9;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.5;color:#1E2B38;"><strong>[BOLD LEAD]</strong> [DETAIL]</td></tr>
+      <tr><td class="t-ink rule" style="padding:12px 0;border-top:1px solid #A5C8CF;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.5;color:#1E2B38;"><strong>[BOLD LEAD]</strong> [DETAIL]</td></tr>
+      <tr><td class="t-ink rule" style="padding:12px 0;border-top:1px solid #A5C8CF;border-bottom:1px solid #A5C8CF;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.5;color:#1E2B38;"><strong>[BOLD LEAD]</strong> [DETAIL]</td></tr>
     </table>
 
     <p style="margin:20px 0 0;"><a class="t-link" href="[https://LINK]" style="font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;color:#184B56;text-decoration:none;">[LINK TEXT] &rarr;</a></p>

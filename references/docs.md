@@ -15,7 +15,7 @@ Replace every `[bracketed]` placeholder, delete the grey guidance lines, and use
 
 - US Letter, portrait, 1 in margins (0.75 in is fine for long reference guides).
 - **Header:** the UCG document header image (`assets/logos/ucg-document-header.png`, a Navy band with the mark, "UCG" and the web address) full width at the top of page 1, or the primary logo (`ucg-primary-navy.png`, about 2.2 in wide) top-left.
-- **Footer:** document title and effective date left, page number right, Arial 9pt `#4A5A66`.
+- **Footer:** document title and effective date left, page number right, Arial 9pt Dark Blue Green `#184B56`.
 
 ## Styles
 
@@ -24,7 +24,7 @@ Set these once with Format → Paragraph styles → "Update to match", then Opti
 | Style | Font | Size | Color | Spacing |
 |---|---|---|---|---|
 | Title | Saira Condensed Bold, ALL CAPS | 28–32pt | Navy `#1E2B38` | 0 before, 6pt after |
-| Subtitle | Arial | 12pt | `#4A5A66` | 0 before, 18pt after (effective date, version, owner) |
+| Subtitle | Arial | 12pt | Dark Blue Green `#184B56` | 0 before, 18pt after (effective date, version, owner) |
 | Heading 1 | Saira Condensed Bold, ALL CAPS | 18pt | Navy | 18pt before, 6pt after |
 | Heading 2 | Arial Bold | 13pt | Dark Blue Green `#184B56` | 14pt before, 4pt after |
 | Heading 3 | Arial Bold | 11pt | Navy | 10pt before, 2pt after |
@@ -34,9 +34,9 @@ Set these once with Format → Paragraph styles → "Update to match", then Opti
 - Sentence case for Heading 2 and below; ALL CAPS only for Title and Heading 1.
 - Number policy sections (1, 1.1, 1.2) when people will cite them; otherwise use plain headings.
 - Bullets for unordered items, numbers for steps or ranked items. Keep list items short.
-- Tables: header row Navy fill with White Arial Bold text, or Light Blue fill with Navy text; body Arial 10pt; borders `#BFD5D9` at 0.5pt.
+- Tables: header row Navy fill with White Arial Bold text, or Light Blue fill with Navy text; body Arial 10pt; borders Blue Green `#A5C8CF` at 0.5pt.
 - Callouts (key rule, deadline, definition): a one-cell table with Light Blue `#DBEBEE` fill, no border, Navy text. Use Golden Yellow fill + Navy text only for warnings.
-- Never colored text other than Navy, Dark Blue Green links, or `#4A5A66` for secondary notes.
+- Never colored text other than Navy, and Dark Blue Green for links and secondary notes.
 
 ## Writing policies
 

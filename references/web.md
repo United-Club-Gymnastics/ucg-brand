@@ -32,22 +32,22 @@ Applies to unitedclubgymnastics.org, UCG web apps (registration, scoring, planne
 | H3 and below | body stack, 600 | 20–24px | Sentence case |
 | Subhead / label | display | 14–18px | ALL CAPS, letter-spacing 0.2em |
 | Eyebrow | body, 700 | 12–13px | ALL CAPS, letter-spacing 0.16em, Dark Blue Green on light, Blue Green on dark |
-| Body | body | 16px, line-height 1.55 | Navy or `#4A5A66` for secondary text |
+| Body | body | 16px, line-height 1.55 | Navy; Dark Blue Green for secondary text |
 
 ## Components
 
 - **Buttons** (DG p76): Suisse Intl / Arial, ALL CAPS, `letter-spacing: 0.2em`, short labels. Primary = Navy background + White text; on dark backgrounds = Blue Green background + Navy text. Text-only buttons are Navy (or White on dark). Add `→` for "go somewhere" actions.
 - **Chips / tags**: pill shape, a secondary color fill with Navy text. Red Orange chips only for deadlines or urgent states.
 - **Lists** (DG p77): thin 1px dividers between items (none above the first or below the last), about 15px between text and divider, 30px between a heading and the list. Bullets for unordered items; numbers only for sequences, rankings or counts.
-- **Cards**: 20px radius, White on Light Blue pages (or Light Blue on White), optional 1px `#CFE1E4` border. Navy cards for the one thing you want noticed.
-- **Forms**: 12px radius inputs, 1.5px `#BFD5D9` border, Navy text, visible focus ring in Dark Blue Green (3:1+ against the background). Labels above fields, sentence case.
+- **Cards**: 20px radius, White on Light Blue pages (or Light Blue on White), optional 1px Blue Green `#A5C8CF` border. Navy cards for the one thing you want noticed.
+- **Forms**: 12px radius inputs, 1.5px Dark Blue Green `#184B56` border (form fields need 3:1), Navy text, visible focus ring in Dark Blue Green. Labels above fields, sentence case.
 - **Tables / data**: Navy header row with White text or Light Blue header with Navy text; zebra rows in White / Light Blue. Use the discipline colors consistently: WAG Purple, MAG Blue Green, T&T Golden Yellow, always with Navy text.
 - **Icons**: UCG event and apparatus icons for discipline and apparatus (see [`assets.md`](assets.md)); a simple line icon set for UI controls, in Navy or the current text color.
 - **Status colors**: Dark Blue Green for good / on track, Golden Yellow for attention, Red Orange for urgent or error. Always pair color with a word or icon.
 
 ## Dark mode
 
-Optional. If you support it, use Navy `#1E2B38` / `#141E27` surfaces, White and Light Blue text, Blue Green accents and links, and recheck every pair. Swap logos to the `-light` or `-white` colorway.
+Optional. If you support it, use Navy `#1E2B38` surfaces with Dark Blue Green `#184B56` for cards and bands, White and Light Blue text, Blue Green accents and links, and recheck every pair. Swap logos to the `-light` or `-white` colorway.
 
 ## Accessibility checklist
 
