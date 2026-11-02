@@ -738,5 +738,2525 @@
   "alt": "A gymnast presses through a straddled handstand on the pommel horse.",
   "event": "2026 UCG Nationals",
   "source_frame": "2026_04_11_NAIGC Nationals_2902.jpg"
+ },
+ {
+  "file": "ucg-color-floor-warmup-passe.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "Gymnasts warm up across the floor, one balancing in a passé as others flip behind.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0116.jpg"
+ },
+ {
+  "file": "ucg-bw-floor-warmup-passe.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "Gymnasts warm up across the floor, one balancing in a passé as others flip behind.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0116.jpg"
+ },
+ {
+  "file": "ucg-color-vault-spotters.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A gymnast flips over the vault as two coaches stand ready to spot.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0170.jpg"
+ },
+ {
+  "file": "ucg-bw-vault-spotters.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A gymnast flips over the vault as two coaches stand ready to spot.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0170.jpg"
+ },
+ {
+  "file": "ucg-color-parallel-bars-reach.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in a maroon leotard reaches toward the parallel bars before a routine.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0201.jpg"
+ },
+ {
+  "file": "ucg-bw-parallel-bars-reach.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in a maroon leotard reaches toward the parallel bars before a routine.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0201.jpg"
+ },
+ {
+  "file": "ucg-color-rings-grin.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a blue T-shirt grins while hanging from the rings.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0308.jpg"
+ },
+ {
+  "file": "ucg-bw-rings-grin.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a blue T-shirt grins while hanging from the rings.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0308.jpg"
+ },
+ {
+  "file": "ucg-color-pommel-horse-judges.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A smiling gymnast swings a leg over the pommel horse as judges watch.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0366.jpg"
+ },
+ {
+  "file": "ucg-bw-pommel-horse-judges.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A smiling gymnast swings a leg over the pommel horse as judges watch.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0366.jpg"
+ },
+ {
+  "file": "ucg-color-teammates-cowboy-hat.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Teammates laugh as one places a pink cowboy hat on a gymnast's head.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0384.jpg"
+ },
+ {
+  "file": "ucg-bw-teammates-cowboy-hat.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Teammates laugh as one places a pink cowboy hat on a gymnast's head.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0384.jpg"
+ },
+ {
+  "file": "ucg-color-uneven-bars-handstand.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast holds a handstand on the uneven bars under the arena lights.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0431.jpg"
+ },
+ {
+  "file": "ucg-bw-uneven-bars-handstand.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast holds a handstand on the uneven bars under the arena lights.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0431.jpg"
+ },
+ {
+  "file": "ucg-color-judges-panel-smiling.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Judges in navy uniforms smile as they work at the judges' table.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0434.jpg"
+ },
+ {
+  "file": "ucg-bw-judges-panel-smiling.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Judges in navy uniforms smile as they work at the judges' table.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0434.jpg"
+ },
+ {
+  "file": "ucg-color-uneven-bars-judges.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Judges watch from their table as a gymnast handstands on the uneven bars.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0456.jpg"
+ },
+ {
+  "file": "ucg-bw-uneven-bars-judges.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Judges watch from their table as a gymnast handstands on the uneven bars.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0456.jpg"
+ },
+ {
+  "file": "ucg-color-athlete-laughing.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a light blue leotard laughs with hands on knees beside the bars.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0463.jpg"
+ },
+ {
+  "file": "ucg-bw-athlete-laughing.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a light blue leotard laughs with hands on knees beside the bars.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0463.jpg"
+ },
+ {
+  "file": "ucg-color-floor-lunge-pose.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in maroon strikes a lunging pose on the floor as teammates watch.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0496.jpg"
+ },
+ {
+  "file": "ucg-bw-floor-lunge-pose.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in maroon strikes a lunging pose on the floor as teammates watch.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0496.jpg"
+ },
+ {
+  "file": "ucg-color-judges-score-sheets.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Judges fill out score sheets beside a judges' guide and a score flip card.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0553.jpg"
+ },
+ {
+  "file": "ucg-bw-judges-score-sheets.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Judges fill out score sheets beside a judges' guide and a score flip card.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0553.jpg"
+ },
+ {
+  "file": "ucg-color-floor-arch-pose.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 1333,
+  "height": 2000,
+  "alt": "A gymnast in maroon arches back with arms spread during a floor routine.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0566.jpg"
+ },
+ {
+  "file": "ucg-bw-floor-arch-pose.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 1333,
+  "height": 2000,
+  "alt": "A gymnast in maroon arches back with arms spread during a floor routine.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0566.jpg"
+ },
+ {
+  "file": "ucg-color-teammates-hand-hold.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Two teammates in maroon leotards hold hands and smile beside the floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0613.jpg"
+ },
+ {
+  "file": "ucg-bw-teammates-hand-hold.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Two teammates in maroon leotards hold hands and smile beside the floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0613.jpg"
+ },
+ {
+  "file": "ucg-color-teammates-hair-braiding.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A teammate in a green club shirt braids a gymnast's hair before competing.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0625.jpg"
+ },
+ {
+  "file": "ucg-bw-teammates-hair-braiding.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A teammate in a green club shirt braids a gymnast's hair before competing.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0625.jpg"
+ },
+ {
+  "file": "ucg-color-beam-flip-high.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in red flips high above the balance beam as teammates watch.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0638.jpg"
+ },
+ {
+  "file": "ucg-bw-beam-flip-high.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in red flips high above the balance beam as teammates watch.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0638.jpg"
+ },
+ {
+  "file": "ucg-color-athlete-sideline-talk.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A gymnast in a red and black leotard talks with teammates on the sidelines.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0657.jpg"
+ },
+ {
+  "file": "ucg-bw-athlete-sideline-talk.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A gymnast in a red and black leotard talks with teammates on the sidelines.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0657.jpg"
+ },
+ {
+  "file": "ucg-color-beam-split-leap.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in black leaps into a split above the balance beam.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0707.jpg"
+ },
+ {
+  "file": "ucg-bw-beam-split-leap.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in black leaps into a split above the balance beam.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0707.jpg"
+ },
+ {
+  "file": "ucg-color-beam-backbend.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A gymnast in black arches backward off the balance beam with legs raised high.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0718.jpg"
+ },
+ {
+  "file": "ucg-bw-beam-backbend.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A gymnast in black arches backward off the balance beam with legs raised high.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0718.jpg"
+ },
+ {
+  "file": "ucg-color-vault-table-smile.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A smiling gymnast in maroon rests both hands on the vault table.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0747.jpg"
+ },
+ {
+  "file": "ucg-bw-vault-table-smile.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A smiling gymnast in maroon rests both hands on the vault table.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0747.jpg"
+ },
+ {
+  "file": "ucg-color-tumbling-teammates-watch.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast flips over a blue mat as teammates in navy shirts watch.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0768.jpg"
+ },
+ {
+  "file": "ucg-bw-tumbling-teammates-watch.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast flips over a blue mat as teammates in navy shirts watch.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0768.jpg"
+ },
+ {
+  "file": "ucg-color-landing-teammates-cheer.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast lands on a mat as teammates jump and cheer behind.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0770.jpg"
+ },
+ {
+  "file": "ucg-bw-landing-teammates-cheer.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast lands on a mat as teammates jump and cheer behind.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0770.jpg"
+ },
+ {
+  "file": "ucg-color-parallel-bars-handstand.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast holds a handstand on the parallel bars as a judge raises a card.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0842.jpg"
+ },
+ {
+  "file": "ucg-bw-parallel-bars-handstand.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast holds a handstand on the parallel bars as a judge raises a card.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0842.jpg"
+ },
+ {
+  "file": "ucg-color-rings-tuck-hold.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 1333,
+  "height": 2000,
+  "alt": "A gymnast in a red and navy top holds a tuck on the rings.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0867.jpg"
+ },
+ {
+  "file": "ucg-bw-rings-tuck-hold.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 1333,
+  "height": 2000,
+  "alt": "A gymnast in a red and navy top holds a tuck on the rings.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0867.jpg"
+ },
+ {
+  "file": "ucg-color-rings-hang-smile.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 1333,
+  "height": 2000,
+  "alt": "A smiling gymnast hangs straight from the rings with arms overhead.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0873.jpg"
+ },
+ {
+  "file": "ucg-bw-rings-hang-smile.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 1333,
+  "height": 2000,
+  "alt": "A smiling gymnast hangs straight from the rings with arms overhead.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0873.jpg"
+ },
+ {
+  "file": "ucg-color-teammates-watch-bars.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Teammates in navy leotards watch a gymnast swing on the uneven bars.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0879.jpg"
+ },
+ {
+  "file": "ucg-bw-teammates-watch-bars.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Teammates in navy leotards watch a gymnast swing on the uneven bars.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0879.jpg"
+ },
+ {
+  "file": "ucg-color-uneven-bars-flip.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in navy flips above the uneven bars as the team looks on.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0922.jpg"
+ },
+ {
+  "file": "ucg-bw-uneven-bars-flip.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in navy flips above the uneven bars as the team looks on.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0922.jpg"
+ },
+ {
+  "file": "ucg-color-team-group-hug.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Teammates in navy leotards wrap each other in a tight group hug.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0955.jpg"
+ },
+ {
+  "file": "ucg-bw-team-group-hug.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Teammates in navy leotards wrap each other in a tight group hug.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0955.jpg"
+ },
+ {
+  "file": "ucg-color-uneven-bars-cast.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in navy pushes up over the low bar during an uneven bars routine.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0963.jpg"
+ },
+ {
+  "file": "ucg-bw-uneven-bars-cast.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in navy pushes up over the low bar during an uneven bars routine.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0963.jpg"
+ },
+ {
+  "file": "ucg-color-uneven-bars-low-angle.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Seen from below, a gymnast in navy swings between the uneven bars.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0965.jpg"
+ },
+ {
+  "file": "ucg-bw-uneven-bars-low-angle.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Seen from below, a gymnast in navy swings between the uneven bars.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0965.jpg"
+ },
+ {
+  "file": "ucg-color-high-bar-low-angle.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Seen from below, a gymnast in a white top swings around the high bar.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0982.jpg"
+ },
+ {
+  "file": "ucg-bw-high-bar-low-angle.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Seen from below, a gymnast in a white top swings around the high bar.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0982.jpg"
+ },
+ {
+  "file": "ucg-color-official-yellow-sweatshirt.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A staff member in a yellow sweatshirt and lanyard holds papers near the floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0992.jpg"
+ },
+ {
+  "file": "ucg-bw-official-yellow-sweatshirt.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A staff member in a yellow sweatshirt and lanyard holds papers near the floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_0992.jpg"
+ },
+ {
+  "file": "ucg-color-senior-crown-thumbs-up.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A senior in a paper crown and sash gives two thumbs up among teammates.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_1040.jpg"
+ },
+ {
+  "file": "ucg-bw-senior-crown-thumbs-up.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A senior in a paper crown and sash gives two thumbs up among teammates.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_1040.jpg"
+ },
+ {
+  "file": "ucg-color-parallel-bars-l-sit.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 1333,
+  "height": 2000,
+  "alt": "A smiling gymnast in navy holds a pike support on the parallel bars.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_1060.jpg"
+ },
+ {
+  "file": "ucg-bw-parallel-bars-l-sit.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 1333,
+  "height": 2000,
+  "alt": "A smiling gymnast in navy holds a pike support on the parallel bars.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_1060.jpg"
+ },
+ {
+  "file": "ucg-color-teammates-cheer-photographer.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Teammates in navy leotards cheer and clap beside a photographer.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_1076.jpg"
+ },
+ {
+  "file": "ucg-bw-teammates-cheer-photographer.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Teammates in navy leotards cheer and clap beside a photographer.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_1076.jpg"
+ },
+ {
+  "file": "ucg-color-team-high-fives.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Teammates in navy leotards trade high fives on the competition floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_1080.jpg"
+ },
+ {
+  "file": "ucg-bw-team-high-fives.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Teammates in navy leotards trade high fives on the competition floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_1080.jpg"
+ },
+ {
+  "file": "ucg-color-teammate-phone-filming.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast films a teammate's routine on a phone from the sidelines.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_1102.jpg"
+ },
+ {
+  "file": "ucg-bw-teammate-phone-filming.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast films a teammate's routine on a phone from the sidelines.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_1102.jpg"
+ },
+ {
+  "file": "ucg-color-vault-handspring-crowd.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast flips over the vault as teammates in red and black film and watch.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_1121.jpg"
+ },
+ {
+  "file": "ucg-bw-vault-handspring-crowd.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast flips over the vault as teammates in red and black film and watch.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_1121.jpg"
+ },
+ {
+  "file": "ucg-color-vault-pike-coach.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in red soars off the vault in a pike as a coach looks on.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_1126.jpg"
+ },
+ {
+  "file": "ucg-bw-vault-pike-coach.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in red soars off the vault in a pike as a coach looks on.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_1126.jpg"
+ },
+ {
+  "file": "ucg-color-teammates-huddle-smile.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Teammates in red and black leotards smile and huddle together beside the vault.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_1142.jpg"
+ },
+ {
+  "file": "ucg-bw-teammates-huddle-smile.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Teammates in red and black leotards smile and huddle together beside the vault.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_1142.jpg"
+ },
+ {
+  "file": "ucg-color-team-hands-camera.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Laughing teammates in red and black reach their hands toward the camera.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_1157.jpg"
+ },
+ {
+  "file": "ucg-bw-team-hands-camera.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Laughing teammates in red and black reach their hands toward the camera.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_1157.jpg"
+ },
+ {
+  "file": "ucg-color-team-group-photo.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A team in red and black leotards poses together for a group photo.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_1178.jpg"
+ },
+ {
+  "file": "ucg-bw-team-group-photo.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A team in red and black leotards poses together for a group photo.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_09_NAIGC Nationals_1178.jpg"
+ },
+ {
+  "file": "ucg-color-staff-laptop-grin.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A smiling staff member in a gold sweatshirt types on a laptop at the scoring table.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1249.jpg"
+ },
+ {
+  "file": "ucg-bw-staff-laptop-grin.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A smiling staff member in a gold sweatshirt types on a laptop at the scoring table.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1249.jpg"
+ },
+ {
+  "file": "ucg-color-staff-laptop-laugh.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A laughing staff member in a gold sweatshirt works at a laptop beside a colleague.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1250.jpg"
+ },
+ {
+  "file": "ucg-bw-staff-laptop-laugh.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A laughing staff member in a gold sweatshirt works at a laptop beside a colleague.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1250.jpg"
+ },
+ {
+  "file": "ucg-color-trampoline-pike-jump.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a blue leotard holds a pike jump high above a trampoline in the convention hall.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1363.jpg"
+ },
+ {
+  "file": "ucg-bw-trampoline-pike-jump.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a blue leotard holds a pike jump high above a trampoline in the convention hall.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1363.jpg"
+ },
+ {
+  "file": "ucg-color-volunteers-hug.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Two smiling volunteers share a warm hug on the competition floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1371.jpg"
+ },
+ {
+  "file": "ucg-bw-volunteers-hug.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Two smiling volunteers share a warm hug on the competition floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1371.jpg"
+ },
+ {
+  "file": "ucg-color-official-gymnast-chat.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in black talks with officials holding a binder near the floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1391.jpg"
+ },
+ {
+  "file": "ucg-bw-official-gymnast-chat.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in black talks with officials holding a binder near the floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1391.jpg"
+ },
+ {
+  "file": "ucg-color-volunteer-table-smile.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A smiling volunteer in a gold shirt leans on a table covered with score sheets.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1417.jpg"
+ },
+ {
+  "file": "ucg-bw-volunteer-table-smile.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A smiling volunteer in a gold shirt leans on a table covered with score sheets.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1417.jpg"
+ },
+ {
+  "file": "ucg-color-judges-panel-volunteer.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Judges sit at a purple-draped table while a volunteer in gold chats beside them.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1418.jpg"
+ },
+ {
+  "file": "ucg-bw-judges-panel-volunteer.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Judges sit at a purple-draped table while a volunteer in gold chats beside them.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1418.jpg"
+ },
+ {
+  "file": "ucg-color-scoring-crew-laughing.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Staff in gold sweatshirts laugh together while working laptops at the scoring table.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1424.jpg"
+ },
+ {
+  "file": "ucg-bw-scoring-crew-laughing.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Staff in gold sweatshirts laugh together while working laptops at the scoring table.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1424.jpg"
+ },
+ {
+  "file": "ucg-color-staff-glitter-laptop.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A staff member with glitter in their hair concentrates on a laptop at the scoring table.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1427.jpg"
+ },
+ {
+  "file": "ucg-bw-staff-glitter-laptop.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A staff member with glitter in their hair concentrates on a laptop at the scoring table.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1427.jpg"
+ },
+ {
+  "file": "ucg-color-staff-bossman-head.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A staff member with BOSSMAN written on their shaved head works at a laptop.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1432.jpg"
+ },
+ {
+  "file": "ucg-bw-staff-bossman-head.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A staff member with BOSSMAN written on their shaved head works at a laptop.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1432.jpg"
+ },
+ {
+  "file": "ucg-color-volunteers-grinning-desk.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Two volunteers in gold shirts grin at each other while seated at a scoring desk.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1459.jpg"
+ },
+ {
+  "file": "ucg-bw-volunteers-grinning-desk.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Two volunteers in gold shirts grin at each other while seated at a scoring desk.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1459.jpg"
+ },
+ {
+  "file": "ucg-color-tumbling-run-red-pan.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a red and black leotard launches into a tumbling run with arms raised.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1522.jpg"
+ },
+ {
+  "file": "ucg-bw-tumbling-run-red-pan.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a red and black leotard launches into a tumbling run with arms raised.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1522.jpg"
+ },
+ {
+  "file": "ucg-color-floor-kneel-coach-watching.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 1500,
+  "height": 2000,
+  "alt": "A gymnast in a blue leotard kneels beside the floor while a coach stands behind.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1535.jpg"
+ },
+ {
+  "file": "ucg-bw-floor-kneel-coach-watching.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 1500,
+  "height": 2000,
+  "alt": "A gymnast in a blue leotard kneels beside the floor while a coach stands behind.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1535.jpg"
+ },
+ {
+  "file": "ucg-color-red-team-dance-cheer.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A team in red jackets cheers and dances along the floor sideline.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1606.jpg"
+ },
+ {
+  "file": "ucg-bw-red-team-dance-cheer.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A team in red jackets cheers and dances along the floor sideline.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1606.jpg"
+ },
+ {
+  "file": "ucg-color-floor-arms-raised-black.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in a black leotard raises both arms to salute after a floor routine.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1626.jpg"
+ },
+ {
+  "file": "ucg-bw-floor-arms-raised-black.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in a black leotard raises both arms to salute after a floor routine.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1626.jpg"
+ },
+ {
+  "file": "ucg-color-vault-handspring-navy.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A gymnast in a navy leotard pushes off the vault table as teammates film.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1664.jpg"
+ },
+ {
+  "file": "ucg-bw-vault-handspring-navy.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A gymnast in a navy leotard pushes off the vault table as teammates film.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1664.jpg"
+ },
+ {
+  "file": "ucg-color-teammates-pink-hug.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "Teammates in pink shirts hug and snap a selfie between events.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1680.jpg"
+ },
+ {
+  "file": "ucg-bw-teammates-pink-hug.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "Teammates in pink shirts hug and snap a selfie between events.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1680.jpg"
+ },
+ {
+  "file": "ucg-color-teammates-navy-filming.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "Teammates in navy leotards cheer and film a routine on their phones.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1687.jpg"
+ },
+ {
+  "file": "ucg-bw-teammates-navy-filming.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "Teammates in navy leotards cheer and film a routine on their phones.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1687.jpg"
+ },
+ {
+  "file": "ucg-color-trampoline-tuck-white.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a white top tucks high above a trampoline as a teammate watches.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1700.jpg"
+ },
+ {
+  "file": "ucg-bw-trampoline-tuck-white.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a white top tucks high above a trampoline as a teammate watches.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1700.jpg"
+ },
+ {
+  "file": "ucg-color-trampoline-red-jump.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a red top soars straight up above a trampoline beneath the hall lights.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1745.jpg"
+ },
+ {
+  "file": "ucg-bw-trampoline-red-jump.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a red top soars straight up above a trampoline beneath the hall lights.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1745.jpg"
+ },
+ {
+  "file": "ucg-color-trampoline-tuck-distant.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast tucks in the air above a trampoline while spotters stand at the frame.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1784.jpg"
+ },
+ {
+  "file": "ucg-bw-trampoline-tuck-distant.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast tucks in the air above a trampoline while spotters stand at the frame.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1784.jpg"
+ },
+ {
+  "file": "ucg-color-official-blazer-talk.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "An official in a navy blazer chats with athletes in red jackets.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1805.jpg"
+ },
+ {
+  "file": "ucg-bw-official-blazer-talk.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "An official in a navy blazer chats with athletes in red jackets.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1805.jpg"
+ },
+ {
+  "file": "ucg-color-trampoline-synchro-shirts.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 1335,
+  "height": 2000,
+  "alt": "Two athletes in dress shirts flip high above trampolines in a costumed routine.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1813.jpg"
+ },
+ {
+  "file": "ucg-bw-trampoline-synchro-shirts.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 1335,
+  "height": 2000,
+  "alt": "Two athletes in dress shirts flip high above trampolines in a costumed routine.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1813.jpg"
+ },
+ {
+  "file": "ucg-color-trampoline-dress-shirt.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "An athlete in a dress shirt and slacks bounces high above a trampoline.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1819.jpg"
+ },
+ {
+  "file": "ucg-bw-trampoline-dress-shirt.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "An athlete in a dress shirt and slacks bounces high above a trampoline.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1819.jpg"
+ },
+ {
+  "file": "ucg-color-crowd-applauding-sideline.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A crowd of athletes in team sweatshirts applauds and smiles from the sideline.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1836.jpg"
+ },
+ {
+  "file": "ucg-bw-crowd-applauding-sideline.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A crowd of athletes in team sweatshirts applauds and smiles from the sideline.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1836.jpg"
+ },
+ {
+  "file": "ucg-color-pommel-horse-maroon.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in maroon swings over the pommel horse as teammates watch.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1869.jpg"
+ },
+ {
+  "file": "ucg-bw-pommel-horse-maroon.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in maroon swings over the pommel horse as teammates watch.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1869.jpg"
+ },
+ {
+  "file": "ucg-color-pommel-horse-flair.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A gymnast in maroon swings a wide flair across the pommel horse.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1892.jpg"
+ },
+ {
+  "file": "ucg-bw-pommel-horse-flair.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A gymnast in maroon swings a wide flair across the pommel horse.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1892.jpg"
+ },
+ {
+  "file": "ucg-color-fans-flexing-green.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Team fans in green and white flex and cheer while holding a handmade sign.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1926.jpg"
+ },
+ {
+  "file": "ucg-bw-fans-flexing-green.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Team fans in green and white flex and cheer while holding a handmade sign.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1926.jpg"
+ },
+ {
+  "file": "ucg-color-pommel-horse-crowd-view.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast swings over the pommel horse in front of a large seated crowd.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1984.jpg"
+ },
+ {
+  "file": "ucg-bw-pommel-horse-crowd-view.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast swings over the pommel horse in front of a large seated crowd.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1984.jpg"
+ },
+ {
+  "file": "ucg-color-trampoline-synchro-pair.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Two gymnasts jump in sync on trampolines as judges watch from the foreground.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1997.jpg"
+ },
+ {
+  "file": "ucg-bw-trampoline-synchro-pair.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Two gymnasts jump in sync on trampolines as judges watch from the foreground.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_1997.jpg"
+ },
+ {
+  "file": "ucg-color-trampoline-judges-view.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast flips above a trampoline beyond the judges' table and score sheets.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_2006.jpg"
+ },
+ {
+  "file": "ucg-bw-trampoline-judges-view.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast flips above a trampoline beyond the judges' table and score sheets.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_2006.jpg"
+ },
+ {
+  "file": "ucg-color-trampoline-black-leotards.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Two gymnasts in black leotards jump on side-by-side trampolines.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_2038.jpg"
+ },
+ {
+  "file": "ucg-bw-trampoline-black-leotards.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Two gymnasts in black leotards jump on side-by-side trampolines.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_2038.jpg"
+ },
+ {
+  "file": "ucg-color-trampoline-finish-salute.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a black leotard salutes with arms wide after a trampoline routine.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_2040.jpg"
+ },
+ {
+  "file": "ucg-bw-trampoline-finish-salute.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a black leotard salutes with arms wide after a trampoline routine.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_2040.jpg"
+ },
+ {
+  "file": "ucg-color-team-dino-group-photo.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A large team in green poses for a playful group photo beside an inflatable dinosaur.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_2069.jpg"
+ },
+ {
+  "file": "ucg-bw-team-dino-group-photo.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A large team in green poses for a playful group photo beside an inflatable dinosaur.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_2069.jpg"
+ },
+ {
+  "file": "ucg-color-team-dino-claws.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A large team in green makes claw hands for a group photo beside an inflatable dinosaur.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_2072.jpg"
+ },
+ {
+  "file": "ucg-bw-team-dino-claws.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A large team in green makes claw hands for a group photo beside an inflatable dinosaur.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_10_NAIGC Nationals_2072.jpg"
+ },
+ {
+  "file": "ucg-color-teammates-orange-navy.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "Teammates in orange and navy leotards gather and talk between rotations.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2099.jpg"
+ },
+ {
+  "file": "ucg-bw-teammates-orange-navy.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "Teammates in orange and navy leotards gather and talk between rotations.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2099.jpg"
+ },
+ {
+  "file": "ucg-color-pommel-horse-orange-s.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in an orange singlet swings across the pommel horse as spectators look on.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2119.jpg"
+ },
+ {
+  "file": "ucg-bw-pommel-horse-orange-s.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in an orange singlet swings across the pommel horse as spectators look on.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2119.jpg"
+ },
+ {
+  "file": "ucg-color-judge-green-flag.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A judge raises a green flag at the vault judges' table.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2132.jpg"
+ },
+ {
+  "file": "ucg-bw-judge-green-flag.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A judge raises a green flag at the vault judges' table.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2132.jpg"
+ },
+ {
+  "file": "ucg-color-vault-twist-judges.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast flips off the vault table as judges watch from their table.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2134.jpg"
+ },
+ {
+  "file": "ucg-bw-vault-twist-judges.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast flips off the vault table as judges watch from their table.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2134.jpg"
+ },
+ {
+  "file": "ucg-color-mag-teammates-celebrate.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "Teammates in grey singlets cheer and celebrate together on the floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2151.jpg"
+ },
+ {
+  "file": "ucg-bw-mag-teammates-celebrate.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "Teammates in grey singlets cheer and celebrate together on the floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2151.jpg"
+ },
+ {
+  "file": "ucg-color-vault-hands-closeup.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "Close-up of a gymnast's taped hands pressing on the vault table during a handspring.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2168.jpg"
+ },
+ {
+  "file": "ucg-bw-vault-hands-closeup.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "Close-up of a gymnast's taped hands pressing on the vault table during a handspring.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2168.jpg"
+ },
+ {
+  "file": "ucg-color-beam-arms-wide-pink.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in a black and pink leotard balances on the beam with arms spread wide.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2207.jpg"
+ },
+ {
+  "file": "ucg-bw-beam-arms-wide-pink.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in a black and pink leotard balances on the beam with arms spread wide.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2207.jpg"
+ },
+ {
+  "file": "ucg-color-beam-split-jump-pink.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in a black and pink leotard lands a split jump on the balance beam.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2213.jpg"
+ },
+ {
+  "file": "ucg-bw-beam-split-jump-pink.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in a black and pink leotard lands a split jump on the balance beam.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2213.jpg"
+ },
+ {
+  "file": "ucg-color-beam-straight-jump-blue.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in a blue and gold leotard jumps high above the balance beam with arms raised.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2233.jpg"
+ },
+ {
+  "file": "ucg-bw-beam-straight-jump-blue.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in a blue and gold leotard jumps high above the balance beam with arms raised.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2233.jpg"
+ },
+ {
+  "file": "ucg-color-teammates-purple-smiles.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in a purple leotard beams with joy among teammates.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2240.jpg"
+ },
+ {
+  "file": "ucg-bw-teammates-purple-smiles.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in a purple leotard beams with joy among teammates.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2240.jpg"
+ },
+ {
+  "file": "ucg-color-floor-back-tumble-navy.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in navy flies backward through a tumbling pass on the floor mat.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2259.jpg"
+ },
+ {
+  "file": "ucg-bw-floor-back-tumble-navy.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in navy flies backward through a tumbling pass on the floor mat.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2259.jpg"
+ },
+ {
+  "file": "ucg-color-vault-handspring-navy-leo.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in a navy leotard pushes off the vault table as teammates watch.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2280.jpg"
+ },
+ {
+  "file": "ucg-bw-vault-handspring-navy-leo.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in a navy leotard pushes off the vault table as teammates watch.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2280.jpg"
+ },
+ {
+  "file": "ucg-color-vault-handstand-smile.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a navy leotard smiles while upside down in a handstand on the vault table.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2301.jpg"
+ },
+ {
+  "file": "ucg-bw-vault-handstand-smile.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a navy leotard smiles while upside down in a handstand on the vault table.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2301.jpg"
+ },
+ {
+  "file": "ucg-color-high-bar-release-crowd.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast flies above the high bar while athletes and fans watch from the floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2325.jpg"
+ },
+ {
+  "file": "ucg-bw-high-bar-release-crowd.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast flies above the high bar while athletes and fans watch from the floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2325.jpg"
+ },
+ {
+  "file": "ucg-color-high-bar-release-virginia-fans.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Fans in Virginia club jackets watch a gymnast in red fly high above the high bar.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2357.jpg"
+ },
+ {
+  "file": "ucg-bw-high-bar-release-virginia-fans.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Fans in Virginia club jackets watch a gymnast in red fly high above the high bar.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2357.jpg"
+ },
+ {
+  "file": "ucg-color-rings-l-sit-black.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in black holds an L-sit on the still rings above a busy competition floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2362.jpg"
+ },
+ {
+  "file": "ucg-bw-rings-l-sit-black.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in black holds an L-sit on the still rings above a busy competition floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2362.jpg"
+ },
+ {
+  "file": "ucg-color-floor-salute-orange-teammate.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast salutes after a floor routine while a teammate in black and orange watches.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2377.jpg"
+ },
+ {
+  "file": "ucg-bw-floor-salute-orange-teammate.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast salutes after a floor routine while a teammate in black and orange watches.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2377.jpg"
+ },
+ {
+  "file": "ucg-color-parallel-bars-rainbow-socks.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in rainbow socks swings high above the parallel bars in front of the judges.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2394.jpg"
+ },
+ {
+  "file": "ucg-bw-parallel-bars-rainbow-socks.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in rainbow socks swings high above the parallel bars in front of the judges.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2394.jpg"
+ },
+ {
+  "file": "ucg-color-teammates-high-five-blue-orange.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Teammates cheer and high-five a smiling gymnast in a blue and orange singlet.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2398.jpg"
+ },
+ {
+  "file": "ucg-bw-teammates-high-five-blue-orange.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Teammates cheer and high-five a smiling gymnast in a blue and orange singlet.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2398.jpg"
+ },
+ {
+  "file": "ucg-color-high-bar-handstand-green.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in green holds a handstand on the high bar as teammates look on.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2430.jpg"
+ },
+ {
+  "file": "ucg-bw-high-bar-handstand-green.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in green holds a handstand on the high bar as teammates look on.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2430.jpg"
+ },
+ {
+  "file": "ucg-color-parallel-bars-handstand-maroon.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in maroon balances in a handstand high on the parallel bars.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2449.jpg"
+ },
+ {
+  "file": "ucg-bw-parallel-bars-handstand-maroon.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in maroon balances in a handstand high on the parallel bars.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2449.jpg"
+ },
+ {
+  "file": "ucg-color-parallel-bars-l-sit-maroon.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in maroon holds a strong L-sit across the parallel bars.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2467.jpg"
+ },
+ {
+  "file": "ucg-bw-parallel-bars-l-sit-maroon.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in maroon holds a strong L-sit across the parallel bars.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2467.jpg"
+ },
+ {
+  "file": "ucg-color-fans-yellow-sweatshirts.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Friends in matching yellow championship sweatshirts laugh together in the crowd.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2491.jpg"
+ },
+ {
+  "file": "ucg-bw-fans-yellow-sweatshirts.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Friends in matching yellow championship sweatshirts laugh together in the crowd.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2491.jpg"
+ },
+ {
+  "file": "ucg-color-beam-split-leap-red.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in red soars through a split leap above the balance beam.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2492.jpg"
+ },
+ {
+  "file": "ucg-bw-beam-split-leap-red.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in red soars through a split leap above the balance beam.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2492.jpg"
+ },
+ {
+  "file": "ucg-color-beam-mount-navy.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in navy launches onto the balance beam as teammates watch from the mats.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2505.jpg"
+ },
+ {
+  "file": "ucg-bw-beam-mount-navy.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in navy launches onto the balance beam as teammates watch from the mats.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2505.jpg"
+ },
+ {
+  "file": "ucg-color-uneven-bars-grip-closeup.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a maroon leotard reaches for the uneven bars with chalked grips.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2511.jpg"
+ },
+ {
+  "file": "ucg-bw-uneven-bars-grip-closeup.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a maroon leotard reaches for the uneven bars with chalked grips.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2511.jpg"
+ },
+ {
+  "file": "ucg-color-high-bar-pike-green-tights.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in bright green tights tucks into a pike above the high bar.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2564.jpg"
+ },
+ {
+  "file": "ucg-bw-high-bar-pike-green-tights.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in bright green tights tucks into a pike above the high bar.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2564.jpg"
+ },
+ {
+  "file": "ucg-color-high-bar-release-green-cheer.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in bright green flies over the high bar as teammates throw their arms up.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2576.jpg"
+ },
+ {
+  "file": "ucg-bw-high-bar-release-green-cheer.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in bright green flies over the high bar as teammates throw their arms up.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2576.jpg"
+ },
+ {
+  "file": "ucg-color-teammates-hug-green-singlets.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Teammates in bright green singlets celebrate with a high five and cheers.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2589.jpg"
+ },
+ {
+  "file": "ucg-bw-teammates-hug-green-singlets.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Teammates in bright green singlets celebrate with a high five and cheers.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2589.jpg"
+ },
+ {
+  "file": "ucg-color-teammates-embrace-green.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Two gymnasts share a big smiling hug while friends crowd around to celebrate.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2595.jpg"
+ },
+ {
+  "file": "ucg-bw-teammates-embrace-green.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Two gymnasts share a big smiling hug while friends crowd around to celebrate.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2595.jpg"
+ },
+ {
+  "file": "ucg-color-teammates-double-high-five.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Two gymnasts trade an excited double high five on the competition floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2600.jpg"
+ },
+ {
+  "file": "ucg-bw-teammates-double-high-five.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Two gymnasts trade an excited double high five on the competition floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2600.jpg"
+ },
+ {
+  "file": "ucg-color-athlete-grin-arms-crossed.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a maroon singlet grins with arms crossed beside the high bar.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2638.jpg"
+ },
+ {
+  "file": "ucg-bw-athlete-grin-arms-crossed.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a maroon singlet grins with arms crossed beside the high bar.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2638.jpg"
+ },
+ {
+  "file": "ucg-color-high-bar-straddle-red.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in red and black straddles high above the bar against a dark ceiling.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2649.jpg"
+ },
+ {
+  "file": "ucg-bw-high-bar-straddle-red.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in red and black straddles high above the bar against a dark ceiling.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2649.jpg"
+ },
+ {
+  "file": "ucg-color-athlete-headphones-plush.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast wearing blue headphones rests on a mat beside a green plush toy.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2669.jpg"
+ },
+ {
+  "file": "ucg-bw-athlete-headphones-plush.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast wearing blue headphones rests on a mat beside a green plush toy.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2669.jpg"
+ },
+ {
+  "file": "ucg-color-beam-split-jump-red-black.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a red and black leotard leaps through a split jump on the beam.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2695.jpg"
+ },
+ {
+  "file": "ucg-bw-beam-split-jump-red-black.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in a red and black leotard leaps through a split jump on the beam.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2695.jpg"
+ },
+ {
+  "file": "ucg-color-beam-arms-overhead-red-black.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in red and black stands tall on the beam with arms raised overhead.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2697.jpg"
+ },
+ {
+  "file": "ucg-bw-beam-arms-overhead-red-black.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in red and black stands tall on the beam with arms raised overhead.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2697.jpg"
+ },
+ {
+  "file": "ucg-color-beam-jump-red-black.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in red and black jumps high above the balance beam.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2700.jpg"
+ },
+ {
+  "file": "ucg-bw-beam-jump-red-black.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A gymnast in red and black jumps high above the balance beam.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2700.jpg"
+ },
+ {
+  "file": "ucg-color-team-sitting-on-beam.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A team in matching red, white and blue leotards sits together on the beam, smiling.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2743.jpg"
+ },
+ {
+  "file": "ucg-bw-team-sitting-on-beam.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A team in matching red, white and blue leotards sits together on the beam, smiling.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2743.jpg"
+ },
+ {
+  "file": "ucg-color-team-beam-group-smile.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Teammates in red, white and blue leotards pose together along the balance beam.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2745.jpg"
+ },
+ {
+  "file": "ucg-bw-team-beam-group-smile.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Teammates in red, white and blue leotards pose together along the balance beam.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2745.jpg"
+ },
+ {
+  "file": "ucg-color-coach-watches-bars.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A coach in an Above the Bar jacket watches a gymnast handstand on the uneven bars.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2748.jpg"
+ },
+ {
+  "file": "ucg-bw-coach-watches-bars.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "A coach in an Above the Bar jacket watches a gymnast handstand on the uneven bars.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2748.jpg"
+ },
+ {
+  "file": "ucg-color-teammates-chalky-high-five.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Gymnasts slap chalky hands together in a high five, sending chalk into the air.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2760.jpg"
+ },
+ {
+  "file": "ucg-bw-teammates-chalky-high-five.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1333,
+  "alt": "Gymnasts slap chalky hands together in a high five, sending chalk into the air.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2760.jpg"
+ },
+ {
+  "file": "ucg-color-pommel-horse-circle-green.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in a green singlet swings around the pommel horse as teammates watch.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2789.jpg"
+ },
+ {
+  "file": "ucg-bw-pommel-horse-circle-green.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in a green singlet swings around the pommel horse as teammates watch.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2789.jpg"
+ },
+ {
+  "file": "ucg-color-athlete-green-singlet-grin.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A smiling gymnast in a green singlet adjusts grips beside the competition floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2802.jpg"
+ },
+ {
+  "file": "ucg-bw-athlete-green-singlet-grin.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A smiling gymnast in a green singlet adjusts grips beside the competition floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2802.jpg"
+ },
+ {
+  "file": "ucg-color-floor-arms-raised-finish.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast raises both arms in a victorious salute at the end of a floor routine.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2808.jpg"
+ },
+ {
+  "file": "ucg-bw-floor-arms-raised-finish.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast raises both arms in a victorious salute at the end of a floor routine.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2808.jpg"
+ },
+ {
+  "file": "ucg-color-bars-hang-three-gymnasts.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 1335,
+  "height": 2000,
+  "alt": "Three gymnasts hang together from a bar, smiling for the camera.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2825.jpg"
+ },
+ {
+  "file": "ucg-bw-bars-hang-three-gymnasts.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 1335,
+  "height": 2000,
+  "alt": "Three gymnasts hang together from a bar, smiling for the camera.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2825.jpg"
+ },
+ {
+  "file": "ucg-color-teammate-high-five-sweatshirt.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A seated teammate in a purple sweatshirt high-fives a gymnast walking past.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2838.jpg"
+ },
+ {
+  "file": "ucg-bw-teammate-high-five-sweatshirt.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A seated teammate in a purple sweatshirt high-fives a gymnast walking past.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2838.jpg"
+ },
+ {
+  "file": "ucg-color-fans-illinois-cheering.jpg",
+  "tone": "color",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "Fans in navy and orange Illinois shirts cheer from the edge of the floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2845.jpg"
+ },
+ {
+  "file": "ucg-bw-fans-illinois-cheering.jpg",
+  "tone": "black-and-white",
+  "type": "community",
+  "width": 2000,
+  "height": 1335,
+  "alt": "Fans in navy and orange Illinois shirts cheer from the edge of the floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2845.jpg"
+ },
+ {
+  "file": "ucg-color-floor-handstand-navy.jpg",
+  "tone": "color",
+  "type": "movement",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A gymnast in a navy leotard holds a straight handstand on the floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2866.jpg"
+ },
+ {
+  "file": "ucg-bw-floor-handstand-navy.jpg",
+  "tone": "black-and-white",
+  "type": "movement",
+  "width": 1335,
+  "height": 2000,
+  "alt": "A gymnast in a navy leotard holds a straight handstand on the floor.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2866.jpg"
+ },
+ {
+  "file": "ucg-color-pommel-horse-salute-maroon.jpg",
+  "tone": "color",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in maroon raises both arms to salute behind the pommel horse.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2874.jpg"
+ },
+ {
+  "file": "ucg-bw-pommel-horse-salute-maroon.jpg",
+  "tone": "black-and-white",
+  "type": "athlete",
+  "width": 2000,
+  "height": 1335,
+  "alt": "A gymnast in maroon raises both arms to salute behind the pommel horse.",
+  "event": "2026 UCG Nationals",
+  "source_frame": "2026_04_11_NAIGC Nationals_2874.jpg"
  }
 ]

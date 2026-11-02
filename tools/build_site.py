@@ -114,8 +114,8 @@ def colors_intro(frag):
     return re.sub(r"\s*The 'Guide' column.*?(</p>)", lambda m: m.group(1), frag, count=1, flags=re.S)
 
 
-PHOTOS_INTRO = ('<p>37 curated photos from 2026 UCG Nationals by photographer Bryan Johnson, each in a color and a '
-                'black-and-white edit (74 files), 2000px on the long edge. Pick the B&amp;W edit for athlete features with white type, and the color edit for community and '
+PHOTOS_INTRO = ('<p>163 photos from 2026 UCG Nationals by photographer Bryan Johnson, each in a color and a '
+                'black-and-white edit (326 files), 2000px on the long edge. Pick the B&amp;W edit for athlete features with white type, and the color edit for community and '
                 'belonging. Use them for UCG materials only, and crop rather than distort. The full Nationals sets '
                 f'<a href="{PHOTOS_DRIVE}">live in the UCG brand toolkit</a>.</p>')
 

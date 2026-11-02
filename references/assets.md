@@ -53,7 +53,7 @@ Use icons at one consistent size per layout, in a single brand color that meets 
 
 ## Photos — `assets/photos/`
 
-37 curated photos from 2026 UCG Nationals by photographer Bryan Johnson, each in a color and a black-and-white edit (74 files), 2000px on the long edge, metadata stripped. `photos.json` lists each file with ready-to-use alt text, its tone, and its type:
+163 photos from 2026 UCG Nationals by photographer Bryan Johnson, each in a color and a black-and-white edit (326 files), 2000px on the long edge, metadata stripped. `photos.json` lists each file with ready-to-use alt text, its tone, and its type:
 
 - `athlete`: a single athlete, often B&W, for heroes and quotes
 - `movement`: skills in motion, dynamic crops
