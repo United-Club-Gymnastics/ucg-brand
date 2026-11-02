@@ -2,7 +2,7 @@
 
 Policies and official documents are "core system" work: clarity beats flair. Keep them calm, consistent and easy to scan.
 
-**Start from a template** (each link makes your own copy; UCG Google accounts only):
+**Start from a template** (in the Google Docs **Template gallery** under United Club Gymnastics, or the link opens your own copy; UCG Google accounts only):
 
 - [Policy](https://docs.google.com/document/d/1oC-g9xVgEFwP1pCBPfpUfnWDGawBIE3UF858RqZhGG8/copy): purpose, scope, definitions, numbered sections, contacts, version history
 - [Change proposal](https://docs.google.com/document/d/11yKkZv8L44MRprWYa-Ppe_IXf-Wu4KcG2ku_heYfjtU/copy): the proposal, rollout and communication plan

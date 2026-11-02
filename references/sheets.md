@@ -2,7 +2,7 @@
 
 Sheets are working tools first. Brand them lightly so they look like UCG and stay easy to read.
 
-**Start from the [UCG Sheets template](https://docs.google.com/spreadsheets/d/138BylbdttmkkCohApng-HlhUDbECz8rtueqv_Tp30x0/copy)** (the link makes your own copy; UCG Google accounts only). It has the UCG theme (Arial, brand colors), a frozen Navy header row, banded rows, Status and Discipline dropdowns that color themselves, a totals row and an example chart. Google doesn't let an organization change what a new *blank* sheet looks like, so copying the template is the way to get these defaults.
+**Start from the [UCG Sheets template](https://docs.google.com/spreadsheets/d/138BylbdttmkkCohApng-HlhUDbECz8rtueqv_Tp30x0/copy)** (in the Google Sheets **Template gallery** under United Club Gymnastics, or the link opens your own copy; UCG Google accounts only). It has the UCG theme (Arial, brand colors), a frozen Navy header row, banded rows, Status and Discipline dropdowns that color themselves, a totals row and an example chart. Google doesn't let an organization change what a new *blank* sheet looks like, so starting from the template is the way to get these defaults.
 
 The details below are for building or fixing a sheet by hand (agents: copy the template with Drive `files.copy` on `138BylbdttmkkCohApng-HlhUDbECz8rtueqv_Tp30x0`).
 

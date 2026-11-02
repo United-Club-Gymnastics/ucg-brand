@@ -605,27 +605,27 @@ def template_cards(ctx, keys, title="Templates"):
         name, _, _, what = TEMPLATES[k]
         cards.append(f'''<div class="card template-card"><a href="{template_url(k, "edit")}" class="template-preview"><img src="{R}site/examples/templates/{k}.png" alt="Preview of the {E(name)}" loading="lazy"></a>
 <h3>{E(name)}</h3><p class="small">{E(what)}</p>
-<div class="btn-row"><a class="btn btn--sm" href="{template_url(k)}">Make a copy →</a><a class="btn btn--sm btn--ghost" href="{template_url(k, "edit")}">Preview</a></div></div>''')
+<div class="btn-row"><a class="btn btn--sm" href="{template_url(k)}">Use template →</a><a class="btn btn--sm btn--ghost" href="{template_url(k, "edit")}">Preview</a></div></div>''')
     layout = "--min:340px" if len(keys) % 2 == 0 else "--min:260px;max-width:440px"  # 2 x 2, or one card not stretched
     return vis(title, f'<div class="grid" style="{layout}">{"".join(cards)}</div>',
-               "The links work for anyone signed in with a UCG Google account. “Make a copy” puts your own editable copy in your Drive; the templates themselves stay untouched.")
+               "These are also in the Template gallery in Google Docs, Sheets and Slides, under United Club Gymnastics. “Use template” gives you your own copy (UCG Google accounts only); the templates themselves stay untouched.")
 
 
 DOC_STEPS = [
-    "Open the template you need and click <b>Make a copy</b> (or File → Make a copy). Save it in your team's folder.",
+    "In Google Docs, click <b>Template gallery → United Club Gymnastics</b> and pick the template (or click <b>Use template</b> above). Rename it and save it in your team's folder.",
     "Replace every <b>[bracketed]</b> placeholder and delete the grey guidance lines.",
     "Use the built-in styles (Title, Heading 1, Heading 2, Normal text) from the style menu instead of formatting by hand, so headings stay on brand.",
     "Delete any section you don't need rather than leaving it empty.",
 ]
 SLIDE_STEPS = [
-    "Click <b>Make a copy</b> (or File → Make a copy) and rename the deck.",
+    "In Google Slides, click <b>Template gallery → United Club Gymnastics → UCG Slides Template</b> (or <b>Use template</b> above) and rename the deck.",
     "Delete the example slides you don't need. Duplicate the ones you do (right-click → Duplicate) and replace the text.",
     "For a fresh slide, use <b>New slide</b> and pick a layout: they're already in UCG colors and fonts, with the footers in place.",
     "Type titles in capitals (Slides can't force caps), and keep to Saira Condensed and Arial.",
     "Swap the cover photo for one from the <a href=\"../photos/\">photo library</a> if you like; keep the Navy overlay so the text stays readable.",
 ]
 SHEET_STEPS = [
-    "Click <b>Make a copy</b> (or File → Make a copy) and rename the file.",
+    "In Google Sheets, click <b>Template gallery → United Club Gymnastics → UCG Sheets Template</b> (or <b>Use template</b> above) and rename the file.",
     "Rename the tab and the column headers. Keep the header row frozen.",
     "Type into the banded rows; extend the banding with Format → Alternating colors if you add rows.",
     "Pick Status and Discipline from the dropdowns. The words drive the colors.",

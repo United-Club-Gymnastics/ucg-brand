@@ -1,6 +1,6 @@
 # Google Slides
 
-**Start every new deck from the [UCG Slides template](https://docs.google.com/presentation/d/1aJHuTtVjkRVPzteyeOgZdMWxWDLeAFNSvdaMtY3whks/copy)** (the link makes your own copy; UCG Google accounts only). It already has the theme colors, fonts, footers and an example of every slide type below: delete the slides you don't need and duplicate the ones you do.
+**Start every new deck from the [UCG Slides template](https://docs.google.com/presentation/d/1aJHuTtVjkRVPzteyeOgZdMWxWDLeAFNSvdaMtY3whks/copy)** (in the Google Slides **Template gallery** under United Club Gymnastics, or the link opens your own copy; UCG Google accounts only). It already has the theme colors, fonts, footers and an example of every slide type below: delete the slides you don't need and duplicate the ones you do.
 
 If you need to go well beyond the template or make a new kind of slide, use the guidance below.
 
