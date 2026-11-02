@@ -115,8 +115,7 @@ def colors_intro(frag):
 
 
 PHOTOS_INTRO = ('<p>37 curated photos from 2026 UCG Nationals by photographer Bryan Johnson, each in a color and a '
-                'black-and-white edit (74 files), 2000px on the long edge. Credit "Photo: Bryan Johnson" where credits are '
-                'shown. Pick the B&amp;W edit for athlete features with white type, and the color edit for community and '
+                'black-and-white edit (74 files), 2000px on the long edge. Pick the B&amp;W edit for athlete features with white type, and the color edit for community and '
                 'belonging. Use them for UCG materials only, and crop rather than distort. The full Nationals sets '
                 f'<a href="{PHOTOS_DRIVE}">live in the UCG brand toolkit</a>.</p>')
 

@@ -38,7 +38,7 @@ class Context:
         out = {}
         for p in self.photos:
             slug = re.sub(r"^ucg-(color|bw)-", "", p["file"])[:-4]
-            f = out.setdefault(slug, {"slug": slug, "alt": p["alt"], "type": p["type"], "credit": p.get("credit", "")})
+            f = out.setdefault(slug, {"slug": slug, "alt": p["alt"], "type": p["type"]})
             f["color" if p["tone"] == "color" else "bw"] = p["file"]
         return list(out.values())
 

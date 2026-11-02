@@ -59,7 +59,7 @@ Use icons at one consistent size per layout, in a single brand color that meets 
 - `movement`: skills in motion, dynamic crops
 - `community`: teams, coaches, judges, volunteers, fans
 
-File names: `ucg-<color|bw>-<what's in it>.jpg`. Credit "Photo: Bryan Johnson" where credits are shown. Pick the B&W edit for athlete features with white type, and the color edit for community and belonging. Use them for UCG materials only, and crop rather than distort. The full Nationals sets live in the [UCG brand toolkit](https://drive.google.com/drive/folders/1M7wFuZvl7AUGmU7Rzh3bu_vErSauU2ZZ) (UCG volunteers only).
+File names: `ucg-<color|bw>-<what's in it>.jpg`. Pick the B&W edit for athlete features with white type, and the color edit for community and belonging. Use them for UCG materials only, and crop rather than distort. The full Nationals sets live in the [UCG brand toolkit](https://drive.google.com/drive/folders/1M7wFuZvl7AUGmU7Rzh3bu_vErSauU2ZZ) (UCG volunteers only).
 
 ## Social banners — `assets/social/`
 
