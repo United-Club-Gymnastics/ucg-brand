@@ -127,7 +127,7 @@ The six design features:
 - Email: [`references/email.md`](references/email.md) + [`templates/email/ucg-announcement-email.html`](templates/email/ucg-announcement-email.html)
 - Websites and web tools: [`references/web.md`](references/web.md)
 - Google Slides: [`references/slides.md`](references/slides.md)
-- Google Docs (policies, letters): [`references/docs.md`](references/docs.md)
+- Google Docs and Forms (policies, letters, forms): [`references/docs.md`](references/docs.md)
 - Google Sheets: [`references/sheets.md`](references/sheets.md)
 - Social graphics and print: [`references/social.md`](references/social.md)
 - Video and Reels: [`references/video.md`](references/video.md)

@@ -14,7 +14,7 @@ Then read the reference for the medium you're working in, from `../../references
 | HTML email, newsletter, Gmail message | `email.md`, then start from `../../templates/email/ucg-announcement-email.html` |
 | Website, web app, HTML page | `web.md` and `../../tokens/ucg.css` |
 | Google Slides deck | `slides.md` |
-| Google Doc, policy, letter | `docs.md` |
+| Google Doc, policy, letter, Google Form | `docs.md` |
 | Google Sheet | `sheets.md` |
 | Instagram, Facebook, flyer, poster, merch | `social.md` |
 | Reel, video, animation, livestream graphics | `video.md` |

@@ -586,11 +586,12 @@ def web_dark(ctx):
 # key -> (name, kind, file id, what it's for); previews in site/examples/templates/<key>.png
 TEMPLATES = {
     "slides": ("UCG Slides Template", "presentation", "1aJHuTtVjkRVPzteyeOgZdMWxWDLeAFNSvdaMtY3whks", "Branded layouts for New slide, plus an example of every slide type: cover, agenda, cards, section break, numbers, table, sponsors, closing and a working-meeting slide."),
-    "policy": ("UCG Policy Template", "document", "1oC-g9xVgEFwP1pCBPfpUfnWDGawBIE3UF858RqZhGG8", "Purpose, scope, definitions, numbered sections, contacts and version history."),
+    "policy": ("UCG Policy Template", "document", "1oC-g9xVgEFwP1pCBPfpUfnWDGawBIE3UF858RqZhGG8", "Numbered sections and subsections, amendments and a version history table."),
     "change-proposal": ("UCG Change Proposal Template", "document", "11yKkZv8L44MRprWYa-Ppe_IXf-Wu4KcG2ku_heYfjtU", "Propose a change and plan how it rolls out and who hears about it."),
-    "minutes": ("UCG Meeting Minutes Template", "document", "1TY-l1Mkk5kIwuBvkkxQU3mpWvLMLzPEKL-nCmmHlfh8", "Attendance, agenda, decisions and action items, plus minute-taking guidelines."),
+    "minutes": ("UCG Meeting Minutes Template", "document", "1Yz_r_cHrSBO9s4XeSwUXvlf468QuEn9SxWmLGFZbyE8", "Attendance, agenda and notes, action items, a sign-off block and the minute-taking guidelines from General Counsel."),
     "email-draft": ("UCG Email Draft Template", "document", "13eIZoEsXOzOZCphU0q-_o5OzgLqNAaC8tsz1A0JpJu4", "Draft an announcement email block by block before it's built in the HTML template."),
-    "sheets": ("UCG Sheets Template", "spreadsheets", "138BylbdttmkkCohApng-HlhUDbECz8rtueqv_Tp30x0", "UCG theme, frozen header, banded rows, status colors, dropdowns and a chart."),
+    "sheets": ("UCG Sheets Template", "spreadsheets", "138BylbdttmkkCohApng-HlhUDbECz8rtueqv_Tp30x0", "UCG theme, frozen header, banded rows, status colors, dropdowns, a chart and a How to use tab."),
+    "form": ("UCG Google Form Template", "forms", "1-LLH8MvdZVirtOoXdx1vy83OLZDl11T9zQEAXh3cCGk", "UCG header image, Saira Condensed headings and questions, Arial text and the Navy theme color. Collects respondents' emails."),
 }
 
 
@@ -608,12 +609,12 @@ def template_cards(ctx, keys, title="Templates"):
 <div class="btn-row"><a class="btn btn--sm" href="{template_url(k)}">Use template →</a><a class="btn btn--sm btn--ghost" href="{template_url(k, "edit")}">Preview</a></div></div>''')
     layout = "--min:340px" if len(keys) % 2 == 0 else "--min:260px;max-width:440px"  # 2 x 2, or one card not stretched
     return vis(title, f'<div class="grid" style="{layout}">{"".join(cards)}</div>',
-               "These are also in the Template gallery in Google Docs, Sheets and Slides, under United Club Gymnastics. “Use template” gives you your own copy (UCG Google accounts only); the templates themselves stay untouched.")
+               "These are also in the Template gallery in Google Docs, Sheets, Slides and Forms, under United Club Gymnastics. “Use template” gives you your own copy (UCG Google accounts only); the templates themselves stay untouched.")
 
 
 DOC_STEPS = [
     "In Google Docs, click <b>Template gallery → United Club Gymnastics</b> and pick the template (or click <b>Use template</b> above). Rename it and save it in your team's folder.",
-    "Replace every <b>[bracketed]</b> placeholder and delete the grey guidance lines.",
+    "Replace every <b>[bracketed]</b> placeholder and delete the guidance lines.",
     "Use the built-in styles (Title, Heading 1, Heading 2, Normal text) from the style menu instead of formatting by hand, so headings stay on brand.",
     "Delete any section you don't need rather than leaving it empty.",
 ]
@@ -630,6 +631,14 @@ SHEET_STEPS = [
     "Type into the banded rows; extend the banding with Format → Alternating colors if you add rows.",
     "Pick Status and Discipline from the dropdowns. The words drive the colors.",
     "Charts and new cells pick up the UCG theme (Format → Theme) automatically.",
+]
+
+FORM_STEPS = [
+    "In Google Forms, click <b>Template gallery → United Club Gymnastics → UCG Google Form Template</b> (or <b>Use template</b> above).",
+    "Rename the form and write a short description: what it's for, who should fill it in, and the deadline.",
+    "Delete the sample question and add yours. Keep question titles short and put detail in the question description.",
+    "Leave the theme as it is (header image, Saira Condensed, Arial, Navy). Swap the header image only for another UCG-branded one.",
+    "The form collects respondents' emails. Turn that off in <b>Settings</b> if you don't need them, then <b>Publish</b>.",
 ]
 
 
@@ -938,7 +947,8 @@ VISUALS = {
         "Contrast traps seen in real decks": slide_traps,
         "Setup": slide_theme,
     },
-    "docs": {"_intro": lambda c: template_cards(c, ["policy", "change-proposal", "minutes", "email-draft"]) + how_to_use(DOC_STEPS)},
+    "docs": {"_intro": lambda c: template_cards(c, ["policy", "change-proposal", "minutes", "email-draft"]) + how_to_use(DOC_STEPS),
+             "Google Forms": lambda c: template_cards(c, ["form"], "The form template") + how_to_use(FORM_STEPS, "How to use it")},
     "sheets": {
         "_intro": lambda c: template_cards(c, ["sheets"], "The template") + how_to_use(SHEET_STEPS, "How to use it")
                             + sheet_mock(c) + sheet_status(c, "Status colors") + sheet_charts(c),

@@ -7,7 +7,7 @@
 - [Email](https://united-club-gymnastics.github.io/ucg-brand/references/email.md)
 - [Web and tools](https://united-club-gymnastics.github.io/ucg-brand/references/web.md)
 - [Google Slides](https://united-club-gymnastics.github.io/ucg-brand/references/slides.md)
-- [Google Docs](https://united-club-gymnastics.github.io/ucg-brand/references/docs.md)
+- [Google Docs and Forms](https://united-club-gymnastics.github.io/ucg-brand/references/docs.md)
 - [Google Sheets](https://united-club-gymnastics.github.io/ucg-brand/references/sheets.md)
 - [Social and print](https://united-club-gymnastics.github.io/ucg-brand/references/social.md)
 - [Video and Reels](https://united-club-gymnastics.github.io/ucg-brand/references/video.md)

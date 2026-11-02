@@ -1,15 +1,15 @@
-# Google Docs (policies, guides, letters)
+# Google Docs and Forms (policies, guides, letters, forms)
 
 Policies and official documents are "core system" work: clarity beats flair. Keep them calm, consistent and easy to scan.
 
 **Start from a template** (in the Google Docs **Template gallery** under United Club Gymnastics, or the link opens your own copy; UCG Google accounts only):
 
-- [Policy](https://docs.google.com/document/d/1oC-g9xVgEFwP1pCBPfpUfnWDGawBIE3UF858RqZhGG8/copy): purpose, scope, definitions, numbered sections, contacts, version history
+- [Policy](https://docs.google.com/document/d/1oC-g9xVgEFwP1pCBPfpUfnWDGawBIE3UF858RqZhGG8/copy): numbered sections and subsections, amendments, version history
 - [Change proposal](https://docs.google.com/document/d/11yKkZv8L44MRprWYa-Ppe_IXf-Wu4KcG2ku_heYfjtU/copy): the proposal, rollout and communication plan
-- [Meeting minutes](https://docs.google.com/document/d/1TY-l1Mkk5kIwuBvkkxQU3mpWvLMLzPEKL-nCmmHlfh8/copy): attendance, agenda, decisions, action items, minute-taking guidelines
+- [Meeting minutes](https://docs.google.com/document/d/1Yz_r_cHrSBO9s4XeSwUXvlf468QuEn9SxWmLGFZbyE8/copy): attendance, agenda and notes, action items, sign-off, minute-taking guidelines
 - [Email draft](https://docs.google.com/document/d/13eIZoEsXOzOZCphU0q-_o5OzgLqNAaC8tsz1A0JpJu4/copy): draft an announcement block by block before it's built in the [HTML email template](email.md)
 
-Replace every `[bracketed]` placeholder, delete the grey guidance lines, and use the built-in styles (Title, Heading 1, Heading 2, Normal text). The rest of this page is for building something the templates don't cover.
+Replace every `[bracketed]` placeholder, delete the guidance lines, and use the built-in styles (Title, Heading 1, Heading 2, Normal text). The rest of this page is for building something the templates don't cover.
 
 ## Page setup
 
@@ -51,6 +51,10 @@ Set these once with Format → Paragraph styles → "Update to match", then Opti
 
 Follow the design guide letterhead: logo top-left, then `Date`, `From`, `Subject` lines in Arial 10pt, body Arial 11pt, sign-off with name, title and `unitedclubgymnastics.org`.
 
+## Google Forms
+
+Start from the [UCG Google Form template](https://docs.google.com/forms/d/1-LLH8MvdZVirtOoXdx1vy83OLZDl11T9zQEAXh3cCGk/copy) (in the Google Forms **Template gallery** under United Club Gymnastics). Its theme is already set: the UCG header image, Saira Condensed for the header (24) and questions (14), Arial 11 for text, Navy as the theme color, and email collection on. Give the form a clear title and a one-line description (what, who, deadline), keep question titles short, and turn off email collection if you don't need it.
+
 ## Building docs with the API (for agents)
 
-Use a UCG Google Workspace account so files land in UCG's Drive. Copy the matching template (Drive `files.copy`) instead of building from scratch: policy `1oC-g9xVgEFwP1pCBPfpUfnWDGawBIE3UF858RqZhGG8`, change proposal `11yKkZv8L44MRprWYa-Ppe_IXf-Wu4KcG2ku_heYfjtU`, meeting minutes `1TY-l1Mkk5kIwuBvkkxQU3mpWvLMLzPEKL-nCmmHlfh8`, email draft `13eIZoEsXOzOZCphU0q-_o5OzgLqNAaC8tsz1A0JpJu4`. Their named styles are already set, so apply `namedStyleType` (TITLE, HEADING_1 …) rather than formatting text by hand. Google Docs styles can't force capitals, so type Title and Heading 1 text in capitals.
+Use a UCG Google Workspace account so files land in UCG's Drive. Copy the matching template (Drive `files.copy`) instead of building from scratch: policy `1oC-g9xVgEFwP1pCBPfpUfnWDGawBIE3UF858RqZhGG8`, change proposal `11yKkZv8L44MRprWYa-Ppe_IXf-Wu4KcG2ku_heYfjtU`, meeting minutes `1Yz_r_cHrSBO9s4XeSwUXvlf468QuEn9SxWmLGFZbyE8`, email draft `13eIZoEsXOzOZCphU0q-_o5OzgLqNAaC8tsz1A0JpJu4`, form `1-LLH8MvdZVirtOoXdx1vy83OLZDl11T9zQEAXh3cCGk` (the Forms API can't set themes, so copy this one rather than creating a form). Their named styles are already set, so apply `namedStyleType` (TITLE, HEADING_1 …) rather than formatting text by hand. Google Docs styles can't force capitals, so type Title and Heading 1 text in capitals.

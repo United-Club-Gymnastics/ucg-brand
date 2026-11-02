@@ -41,8 +41,8 @@ PAGES = [
      "CSS tokens, type scale and components for UCG websites and web apps."),
     ("slides", "Google Slides", "references/slides.md", None,
      "Start every deck from the UCG Slides template, with guidance for going beyond it."),
-    ("docs", "Google Docs", "references/docs.md", None,
-     "Templates for policies, change proposals, meeting minutes and email drafts."),
+    ("docs", "Google Docs & Forms", "references/docs.md", None,
+     "Templates for policies, change proposals, meeting minutes, email drafts and forms."),
     ("sheets", "Google Sheets", "references/sheets.md", None,
      "Start from the UCG Sheets template: header rows, status colors and charts that stay readable."),
     ("social", "Social & print", "references/social.md", ["Formats", "Post recipes (from the design guide)", "Expressive design (merch, campaigns, Nationals, big moments)", "Captions", "Print"],
@@ -132,7 +132,8 @@ HUMAN = {
     "web": {"hide": ["Setup"]},
     "slides": {"hide": ["Grid and type", "Building decks with the API (for agents)"]},
     "docs": {"hide": ["Page setup", "Styles", "Writing policies", "Letters and memos", "Building docs with the API (for agents)"],
-             "edit": {"_intro": first_paragraph}},  # the template cards replace the link list
+             "edit": {"_intro": first_paragraph,  # the template cards replace the link list
+                      "Google Forms": visual_only}},
     "sheets": {"edit": {"_intro": drop_text("The details below")}},
 }
 
