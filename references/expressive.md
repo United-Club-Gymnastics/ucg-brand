@@ -37,7 +37,7 @@ Every expressive piece needs at least one recognizable **anchor** so people know
 In expressive work only (merch, campaigns, event graphics):
 
 - **Recolor** the logo or mark in any one brand-palette color (for example Purple on charcoal), with enough contrast to read: 3:1 against its background.
-- **Add a stroke** or use an outlined version.
+- **Add a stroke** or use an outlined version. Keep the stroke thinner than the gap between neighbouring V's (under 4% of the mark's width; about 3% looks right), so every outline stays separate and never touches the next one. Leave room around the mark so nothing crops the stroke.
 - **Use it huge in the background,** cropped off the edge of a shirt or graphic, behind the main logo or type.
 - **Add texture** (a distressed or print-worn finish) over the shape, without changing the shape.
 - **Repeat it** in a pattern, like the event pattern below.
@@ -93,4 +93,5 @@ Look at how big athletic brands stretch their identity across merch, events and 
 - **Do let type carry the energy.** Strong type is the fastest route to on-brand personality.
 - **Do keep every piece of text at AA contrast,** and keep the facts in core colors and plain type.
 - **Don't redraw the mark.** Recolor it, stroke it, move it, crop it big in the background; never rebuild it.
+- **Don't let outlines touch.** A stroke as wide as the gap between V's (about 4% of the mark's width) merges them.
 - **Do hire a designer** for anything big or public-facing, like apparel and large print runs. Questions about whether something is on-brand? Ask your team lead or department head.

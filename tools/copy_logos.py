@@ -38,6 +38,11 @@ for folder, sub, stem, fam in FAMILIES:
 extras = {
     SRC / "04_Mark" / "Mark - White on Dark Blue Green - Socials Profile - Circle.svg": "ucg-avatar-circle.svg",
     SRC / "06_Document Header" / "UCG - Document Header.svg": "ucg-document-header.svg",
+    SRC / "06_Document Header" / "UCG - Document Header.png": "ucg-document-header.png",
+    SRC / "04_Mark" / "UCG - Mark - Social Media Profiles and Avatars - Circle.png": "ucg-avatar-circle.png",
+    SRC / "04_Mark" / "UCG - Mark - Social Media Profiles and Avatars - Square.png": "ucg-avatar-square.png",
+    SRC / "04_Mark" / "UCG - Mark - in circle - white on dark blue green Favicon.png": "ucg-favicon.png",
+    SRC / "04_Mark" / "UCG - Mark - in circle - light blue on navy blue.png": "ucg-mark-in-circle-light-on-navy.png",
 }
 for f, name in extras.items():
     shutil.copyfile(f, DST / name)

@@ -57,6 +57,7 @@ The design guides (PDF), source files and full photo sets live in UCG's internal
 
 ```
 python tools/contrast.py                                   # regenerate references/color-pairs.md
+python tools/clean_logos.py --verify <file.svg> ...          # swap in the constructed mark, drop dead clip paths
 python tools/copy_logos.py "<toolkit>/01_Assets/01_Logo"   # refresh logos
 python tools/extract_icons.py "<toolkit>/01_Assets/All UCG Assets.svg"
 python tools/icon_pngs.py

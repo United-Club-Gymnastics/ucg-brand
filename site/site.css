@@ -108,6 +108,10 @@ tbody tr:nth-child(even) td { background: var(--ucg-light-blue); }
 .verdict { display: inline-block; font-weight: 700; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; padding: 4px 10px; border-radius: 6px; margin-bottom: 10px; }
 .verdict--do { background: var(--ucg-dark-blue-green); color: var(--ucg-white); }
 .verdict--dont { background: var(--ucg-red-orange); color: var(--ucg-navy); }
+/* label on top, example pinned to the bottom, so examples line up whether a label takes one line or two */
+.verdict-item { display: flex; flex-direction: column; }
+.verdict-item > .verdict { align-self: flex-start; }
+.verdict-item > :last-child { margin-top: auto; }
 .dodont { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
 
 /* Swatches */

@@ -12,6 +12,8 @@ from pathlib import Path
 
 from PIL import Image, ImageOps
 
+import mark_geometry as MG
+
 E = html.escape
 R = "../"
 FONTS_DRIVE = "https://drive.google.com/drive/folders/1SUukrVratYo8sd4KxiF5_eztUnhAV-_o"
@@ -130,11 +132,11 @@ def thumb(file):
 
 
 def dont(label, inner):
-    return f'<div><span class="verdict verdict--dont">✗ {E(label)}</span>{inner}</div>'
+    return f'<div class="verdict-item"><span class="verdict verdict--dont">✗ {E(label)}</span>{inner}</div>'
 
 
 def do(label, inner):
-    return f'<div><span class="verdict verdict--do">✓ {E(label)}</span>{inner}</div>'
+    return f'<div class="verdict-item"><span class="verdict verdict--do">✓ {E(label)}</span>{inner}</div>'
 
 
 def pt(v):
@@ -883,12 +885,10 @@ def mark_moves(ctx):
     def masked(src, color):
         return (f'<div aria-hidden="true" style="width:100%;height:100%;-webkit-mask:url({src}) no-repeat center/contain;'
                 f'mask:url({src}) no-repeat center/contain;background:{color}"></div>')
-    def outlined(src, color, width=2.6):
-        # outline only: the shape grown by `width`, minus the shape itself
-        return (f'<svg viewBox="0 0 100 100" style="width:100%;height:100%" aria-hidden="true"><defs><filter id="ucg-stroke" x="-10%" y="-10%" width="120%" height="120%">'
-                f'<feMorphology in="SourceAlpha" operator="dilate" radius="{width}" result="grown"/><feFlood flood-color="{color}"/>'
-                f'<feComposite in2="grown" operator="in" result="ring"/><feComposite in="ring" in2="SourceAlpha" operator="out"/></filter></defs>'
-                f'<image href="{src}" x="0" y="0" width="100" height="100" filter="url(#ucg-stroke)"/></svg>')
+    def outlined(color, width):
+        # the mark drawn inline from its construction (tools/mark_geometry.py) as an outline only,
+        # with room around it so the stroke is never cropped by the frame
+        return f'<div aria-hidden="true" style="width:100%;height:100%">{MG.outline_svg(color, width)}</div>'
     def t(inner, bg, h="150px"):
         cls = "tile on-white" if bg == "#FFFFFF" else "tile"  # white tiles get the card border
         return f'<div class="{cls}" style="background:{bg};min-height:{h};position:relative;overflow:hidden"><div style="width:100%;height:84px">{inner}</div></div>'
@@ -899,7 +899,7 @@ def mark_moves(ctx):
               f'<img src="{primary}" alt="" style="max-height:44px;position:relative"></div>')
     dos = [
         do("Recolor within the palette", t(masked(primary, "#ADBAE9"), "#1E2B38")),
-        do("Add a stroke", t(outlined(mark, "#A5C8CF"), "#1E2B38")),
+        do("Add a stroke", t(outlined("#DBEBEE", MG.STROKE_GOOD), "#1E2B38")),
         do("Use it huge in the background", big_bg),
     ]
     typed = (f'<div class="tile on-white" style="min-height:150px;gap:12px"><img src="{mark}" alt="" style="max-height:64px">'
@@ -909,6 +909,7 @@ def mark_moves(ctx):
         dont("Don't use off-palette colors", t(masked(primary, "#2FB34A"), "#FFFFFF")),
         dont("Don't retype the wordmark", typed),
         dont("Don't lose contrast", t(masked(primary, "#ADBAE9"), "#DBEBEE")),
+        dont("Don't let strokes touch", t(outlined("#DBEBEE", MG.STROKE_TOO_THICK), "#1E2B38")),
     ]
     return (vis("Do", f'<div class="grid" style="--min:220px">{"".join(dos)}</div>')
             + vis("Don't", f'<div class="grid" style="--min:220px">{"".join(donts)}</div>',

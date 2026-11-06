@@ -28,7 +28,9 @@ Badges are two-tone: `badge-circle-navy` and `badge-crest-navy` are Navy art on 
 
 Also in `assets/logos/`: `ucg-avatar-circle` / `ucg-avatar-square` (social profile images, White mark on Dark Blue Green), `ucg-favicon.png`, `ucg-mark-in-circle-*`, `ucg-document-header` (Navy header band for documents).
 
-**Rules:** don't stretch, rotate, recolor outside the colorways, add shadows or outlines, rebuild the wordmark in a font, or crop the mark. Keep clear space at least the height of the "U" in UCG around every logo. Minimum sizes: primary logo 1 in / 120px wide; mark 0.25 in / 24px. (The design guide doesn't specify clear space or minimum sizes; these are UCG's working defaults.)
+**How the mark is built** (every file uses this exact geometry, from `tools/mark_geometry.py`): six identical V's at exactly 60° steps around a round dot. Each V is two straight legs at 22.5° either side of its axis; the rounded base is a circle centred on the V's inner point with radius equal to the leg width; each leg ends square to the leg with a slight outward arc. Each V has 8 nodes. If you need the mark as a shape (for a stroke, a cut file, an embroidery file), start from these files, not a trace.
+
+**Rules:** don't stretch, rotate, recolor outside the colorways, add shadows or outlines, rebuild the wordmark in a font, or crop the mark (expressive pieces have a little more room: see [`expressive.md`](expressive.md)). Keep clear space at least the height of the "U" in UCG around every logo. Minimum sizes: primary logo 1 in / 120px wide; mark 0.25 in / 24px. (The design guide doesn't specify clear space or minimum sizes; these are UCG's working defaults.)
 
 ## Icons — `assets/icons/`
 
