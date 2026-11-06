@@ -65,7 +65,7 @@ File names: `ucg-<color|bw>-<what's in it>.jpg`. Pick the B&W edit for athlete f
 
 ## Social banners — `assets/social/`
 
-Facebook cover, YouTube banner, Zoom backgrounds and the email header logo (`ucg-email-header.png`, navy background baked in so it survives dark mode).
+Facebook cover, YouTube banner, Zoom backgrounds and the email header logo (`ucg-email-header.png`, navy background baked in so it survives dark mode). Their editable sources are the "05 Social & Digital" artboards in the toolkit's `All UCG Assets.svg` (live text in Greed and Suisse; each artboard remembers its export file name and size). The mirrored Zoom background is a clone of the regular one, so edit that one.
 
 ## Patterns — `assets/patterns/`
 

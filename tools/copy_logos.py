@@ -47,4 +47,16 @@ extras = {
 for f, name in extras.items():
     shutil.copyfile(f, DST / name)
     n += 1
+# social and digital files (sources: the "05 Social & Digital" artboards in All UCG Assets.svg)
+SOCIAL = DST.parent / "social"
+social = {
+    "UCG_Facebook_Cover_Photo.png": "ucg-facebook-cover.png",
+    "ucg-youtube-banner-2048x1152.png": "ucg-youtube-banner-2048x1152.png",
+    "UCG Zoom Background.png": "ucg-zoom-background.png",
+    "UCG Zoom Background (mirror).png": "ucg-zoom-background-mirrored.png",
+    "ucg-email-header-logo.png": "ucg-email-header.png",
+}
+for f, name in social.items():
+    shutil.copyfile(SRC.parent / f, SOCIAL / name)
+    n += 1
 print("copied", n, "files to", DST)
