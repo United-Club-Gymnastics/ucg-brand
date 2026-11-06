@@ -10,6 +10,7 @@
 - [Google Docs and Forms](https://united-club-gymnastics.github.io/ucg-brand/references/docs.md)
 - [Google Sheets](https://united-club-gymnastics.github.io/ucg-brand/references/sheets.md)
 - [Social and print](https://united-club-gymnastics.github.io/ucg-brand/references/social.md)
+- [Expressive design: merch, campaigns, event graphics](https://united-club-gymnastics.github.io/ucg-brand/references/expressive.md)
 - [Video and Reels](https://united-club-gymnastics.github.io/ucg-brand/references/video.md)
 - [Messaging](https://united-club-gymnastics.github.io/ucg-brand/references/messaging.md)
 - [Assets](https://united-club-gymnastics.github.io/ucg-brand/references/assets.md)

@@ -67,7 +67,7 @@ Facebook cover, YouTube banner, Zoom backgrounds and the email header logo (`ucg
 
 ## Patterns — `assets/patterns/`
 
-`ucg-event-pattern-2026-27.svg` / `.png`: the 2026–27 Nationals event pattern from the design guide (p54). Decorative backgrounds and merch only. See [`social.md`](social.md).
+`ucg-event-pattern-2026-27.svg` / `.png`: the 2026–27 Nationals event pattern from the design guide (p54). Decorative backgrounds and merch only. See [`expressive.md`](expressive.md).
 
 ## Palette files — `assets/palette/`
 

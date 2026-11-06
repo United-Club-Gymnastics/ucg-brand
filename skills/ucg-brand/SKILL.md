@@ -16,7 +16,8 @@ Then read the reference for the medium you're working in, from `../../references
 | Google Slides deck | `slides.md` |
 | Google Doc, policy, letter, Google Form | `docs.md` |
 | Google Sheet | `sheets.md` |
-| Instagram, Facebook, flyer, poster, merch | `social.md` |
+| Instagram, Facebook, flyer, poster | `social.md` |
+| Merch, apparel, campaigns, event graphics, Nationals hype | `expressive.md` (and `social.md` for post sizes) |
 | Reel, video, animation, livestream graphics | `video.md` |
 | Any copywriting, headlines, captions, boilerplate | `messaging.md` |
 | Picking logos, icons, photos | `assets.md` (files in `../../assets/`) |
@@ -26,7 +27,7 @@ If those files aren't available locally, fetch them from `https://united-club-gy
 
 ## Non-negotiables
 
-- Palette only: Navy `#1E2B38`, Blue Green `#A5C8CF`, Light Blue `#DBEBEE`, Purple `#ADBAE9`, Red Orange `#F4694A`, Dark Blue Green `#184B56`, Golden Yellow `#F6C328`, White. No gradients.
+- Palette only: Navy `#1E2B38`, Blue Green `#A5C8CF`, Light Blue `#DBEBEE`, Purple `#ADBAE9`, Red Orange `#F4694A`, Dark Blue Green `#184B56`, Golden Yellow `#F6C328`, White. No gradients. Expressive work (merch, campaigns) may add only the six expressive colors in `expressive.md`.
 - **WCAG AA contrast on every text/background pair** (4.5:1 body, 3:1 large text and icons), including hover, dark mode and text over photos. Never Golden Yellow, Purple, Blue Green, Light Blue or Red Orange text on White or Light Blue.
 - Headlines: Greed Condensed Bold, or Saira Condensed Bold where Greed isn't available, ALL CAPS. Body: Suisse Intl, or Arial. Never publish or link the licensed font files.
 - Use the supplied logo and icon files as-is (SVG for web, PNG for Google apps). Never redraw, stretch or recolor outside the colorways.

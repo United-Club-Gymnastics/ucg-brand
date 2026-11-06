@@ -45,15 +45,17 @@ PAGES = [
      "Templates for policies, change proposals, meeting minutes, email drafts and forms."),
     ("sheets", "Google Sheets", "references/sheets.md", None,
      "Start from the UCG Sheets template: header rows, status colors and charts that stay readable."),
-    ("social", "Social & print", "references/social.md", ["Formats", "Post recipes (from the design guide)", "Expressive design (merch, campaigns, Nationals, big moments)", "Captions", "Print"],
-     "Post recipes, expressive design, banners and print colors."),
+    ("social", "Social & print", "references/social.md", ["Formats", "Post recipes (from the design guide)", "Captions", "Print"],
+     "Post recipes, captions, banners and print colors."),
+    ("expressive", "Expressive design", "references/expressive.md", None,
+     "Merch, campaigns, event graphics and Nationals: how far to push, and the anchors that keep it UCG."),
     ("video", "Video & Reels", "references/video.md", None,
      "Animated mark loops, Reel safe areas and livestream graphics."),
 ]
 # H2 sections deliberately shown on a different page than their markdown file
 EXTRA_SECTIONS = {
     ("references/assets.md", "Social banners — assets/social/"): "social",
-    ("references/assets.md", "Patterns — assets/patterns/"): "social",
+    ("references/assets.md", "Patterns — assets/patterns/"): "expressive",  # hidden there: "The event pattern" covers it
     ("references/assets.md", "Palette files — assets/palette/"): "colors",
 }
 RESERVED = {"assets", "templates", "tokens", "tools", "skills", "references", "site"}
@@ -61,7 +63,7 @@ RESERVED = {"assets", "templates", "tokens", "tools", "skills", "references", "s
 MD_TO_PAGE = {
     "BRAND.md": "guidelines", "color-pairs.md": "colors", "messaging.md": "messaging", "email.md": "email",
     "web.md": "web", "slides.md": "slides", "docs.md": "docs", "sheets.md": "sheets", "social.md": "social",
-    "video.md": "video", "assets.md": "logos",
+    "expressive.md": "expressive", "video.md": "video", "assets.md": "logos",
 }
 DIR_TO_PAGE = {"assets/logos": "logos", "assets/icons": "icons", "assets/photos": "photos",
                "assets/animation": "video", "assets/social": "social", "references": "guidelines"}
@@ -135,6 +137,11 @@ HUMAN = {
              "edit": {"_intro": first_paragraph,  # the template cards replace the link list
                       "Google Forms": visual_only}},
     "sheets": {"edit": {"_intro": drop_text("The details below")}},
+    "expressive": {"hide": ["Patterns — assets/patterns/"],
+                   "edit": {"Where expression lives": visual_only,
+                            "Expressive colors": replace_prose("<p>Six extra colors for expressive work only, on top of the brand palette. "
+                                                               "Never use them in official communications, wayfinding, UI, Google Docs, Slides or Sheets.</p>"),
+                            "Examples from UCG merch": visual_only}},
 }
 
 CONTRAST_RULE = "text needs a contrast ratio of at least 4.5:1 against its background, large text 3:1"

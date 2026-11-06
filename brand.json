@@ -61,9 +61,10 @@
       { "id": "white", "name": "White", "hex": "#FFFFFF" }
     ],
     "expressive": {
-      "note": "Not part of the everyday palette. Only for expressive work (merch, social campaigns, event graphics, big-moment collateral). Never for official communications, wayfinding or UI.",
-      "source": "EDG p6-7",
-      "swatches": ["#FFEF77", "#FF988A", "#C0E388", "#8BB7E3", "#336494", "#504A83"]
+      "note": "Not part of the everyday palette. Only for expressive work (merch, social campaigns, event graphics, big-moment collateral). Never for official communications, wayfinding or UI. Only these six: no in-between shades (UCG decision; the guide allowed nearby colors). Text on them: Navy on the first four, White on the last two.",
+      "source": "EDG p6-7, ORG",
+      "swatches": ["#FFEF77", "#FF988A", "#C0E388", "#8BB7E3", "#336494", "#504A83"],
+      "text_on": { "#FFEF77": "#1E2B38", "#FF988A": "#1E2B38", "#C0E388": "#1E2B38", "#8BB7E3": "#1E2B38", "#336494": "#FFFFFF", "#504A83": "#FFFFFF" }
     },
     "ui_roles": {
       "note": "UI uses palette colors only. Don't add greys or extra navies.",

@@ -29,7 +29,7 @@ Add the two lines above to your repo's `AGENTS.md`. (Codex can also load `skills
 | Path | What |
 |---|---|
 | [`BRAND.md`](BRAND.md) | The rules on a few pages: palette, contrast, type, logos, voice, checklist |
-| [`references/`](references) | Detail per medium: email, web, Google Slides / Docs / Sheets, social, video, messaging, assets, color pairs |
+| [`references/`](references) | Detail per medium: email, web, Google Slides / Docs / Sheets, social, expressive design (merch, campaigns), video, messaging, assets, color pairs |
 | [`brand.json`](brand.json) | Machine-readable facts (colors with CMYK/Pantone, type specs, messaging, checklists) |
 | [`tokens/ucg.css`](tokens/ucg.css) | CSS variables and helper classes |
 | [`templates/email/`](templates/email) | UCG's HTML announcement email template |

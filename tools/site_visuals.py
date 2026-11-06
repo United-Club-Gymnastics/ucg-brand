@@ -193,7 +193,7 @@ def support_and_expressive(ctx):
     return (vis("UI roles", f'<div class="strip">{ui_strip}</div>',
                 "Secondary text, borders and dark mode use palette colors. Don't add greys.")
             + vis("Expressive range (merch, campaigns, events only)", f'<div class="strip">{ex_strip}</div>',
-                  "Not part of the everyday palette. Never for official communications, wayfinding or UI."))
+                  'Not part of the everyday palette. Never for official communications, wayfinding or UI. See <a href="../expressive/">Expressive design</a>.'))
 
 
 def safe_pairs(ctx, title="Safe text on every background"):
@@ -372,7 +372,7 @@ def logo_rules(ctx):
     donts = [
         dont("Don't stretch", t("transform:scaleX(1.5)")),
         dont("Don't rotate", t("transform:rotate(-14deg)")),
-        dont("Don't recolor", t("filter:invert(48%) sepia(79%) saturate(2476%) hue-rotate(346deg) brightness(98%) contrast(96%)")),
+        dont("Don't recolor outside the colorways", t("filter:invert(48%) sepia(79%) saturate(2476%) hue-rotate(346deg) brightness(98%) contrast(96%)")),
         dont("Don't add effects", t("filter:drop-shadow(5px 5px 0 #F6C328) drop-shadow(-2px -2px 0 #ADBAE9)")),
         dont("Don't use low contrast", t("", cls="on-dbg")),
         dont("Don't put it on a busy photo", t("position:relative", img=f"{R}assets/logos/ucg-primary-white.svg", cls="",
@@ -828,19 +828,133 @@ def event_pattern(ctx):
             f'<div class="btn-row" style="margin-top:12px"><a class="btn btn--sm" href="{base}.svg" download>SVG</a><a class="btn btn--sm btn--ghost" href="{base}.png" download>PNG</a></div>')
 
 
-def social_expressive(ctx):
-    ex = ctx.brand["colors"]["expressive"]["swatches"]
-    strip = "".join(f'<div style="background:{h};color:{readable_on(h)}">{h}</div>' for h in ex)
+# ---------- expressive design page ----------
+
+def mixed_piece(ctx):
     icons = ["mag-rings", "wag-balance-beam", "tnt-trampoline", "mag-pommel-horse"]  # each row shifts one to the right
-    mixed =f'''<div class="cq post" style="background:#8BB7E3;width:100%;max-width:360px;flex:1 1 260px">
+    mixed = f'''<div class="cq post" style="background:#8BB7E3;width:100%;max-width:360px;flex:1 1 260px">
 <div class="abs" style="inset:0;opacity:.5;display:grid;grid-template-columns:repeat(4,1fr);gap:{px(40)};padding:{px(40)}" aria-hidden="true">{"".join(f'<img src="{R}assets/icons/apparatus-solid/{icons[(c - r) % 4]}-white.svg" alt="" style="width:100%">' for r in range(5) for c in range(4))}</div>
 <div class="abs" style="left:{px(80)};right:{px(80)};top:{px(380)};background:#1E2B38;border-radius:{px(40)};padding:{px(70)}">
 <p style="margin:0 0 {px(20)};font-family:Arial;font-weight:700;font-size:{px(30)};letter-spacing:.16em;text-transform:uppercase;color:#A5C8CF">Nationals 2027</p>
 <p class="display" style="margin:0 0 {px(30)};font-size:{px(120)};color:#FFFFFF">Registration opens Dec 1</p>
 <p style="margin:0;font-family:Arial;font-size:{px(38)};color:#DBEBEE">unitedclubgymnastics.org</p></div></div>'''
-    return (vis("Expressive colors", f'<div class="strip">{strip}</div>')
-            + vis("Event pattern (decorative)", event_pattern(ctx), "From the design guide (p54). Light Blue lockups on Blue Green, for backgrounds and merch only. It's texture, so it never carries information.")
-            + vis("A mixed piece", f'<div style="display:flex;flex-wrap:wrap;gap:20px;align-items:center">{mixed}<p class="small" style="max-width:360px">Expressive background and pattern, while the facts (event, date, link) sit on a solid Navy panel in core colors and plain type.</p></div>', "Example content."))
+    return vis("A mixed piece", f'<div style="display:flex;flex-wrap:wrap;gap:20px;align-items:center">{mixed}<p class="small" style="max-width:360px">Expressive background and pattern, while the facts (event, date, link) sit on a solid Navy panel in core colors and plain type.</p></div>', "Example content.")
+
+
+def expression_lights(ctx):
+    text = md_section(ctx.md("references/expressive.md"), "Where expression lives")
+    def items(label):
+        block = re.search(rf"\*\*{label}.*?\*\*\s*\n\n(.*?)(?=\n\n\*\*|\Z)", text, re.S).group(1)
+        out = []
+        for line in re.findall(r"^- (.+)$", block, re.M):
+            m = re.match(r"\*\*(.+?)\*\*\s*(.*)", line)
+            head, rest = (m.group(1), m.group(2)) if m else (line, "")
+            out.append(f'<li style="margin-bottom:10px"><b>{E(head.rstrip(".,"))}</b>{(" — " + E(rest)) if rest else ""}</li>')
+        return "".join(out)
+    card = lambda verdict, title, body: (f'<div class="card"><span class="verdict verdict--{verdict}">{title}</span>'
+                                         f'<ul style="margin:6px 0 0;padding-left:20px">{body}</ul></div>')
+    cards = card("do", "Green light: push it", items("Green light")) + card("dont", "Red light: hold the line", items("Red light"))
+    return vis("", f'<div class="grid" style="--min:280px">{cards}</div>') + mixed_piece(ctx)
+
+
+def anchor_posters(ctx):
+    mark = f"{R}assets/logos/ucg-mark-navy.svg"
+    # 1. logo locked: the mark as drawn, huge and cropped; color pushed into the expressive range
+    p1 = f'''<div class="cq post" style="background:#FF988A"><img class="abs" src="{mark}" alt="" style="width:{px(900)};right:{px(-260)};bottom:{px(-220)}">
+<div class="abs display" style="left:{px(64)};right:{px(64)};top:{px(80)};font-size:{px(150)};color:#1E2B38">Nationals<br>2027</div>
+<div class="abs" style="left:{px(64)};top:{px(400)};font-family:Arial;font-weight:700;font-size:{px(40)};letter-spacing:.16em;text-transform:uppercase;color:#1E2B38">Portland, OR</div></div>'''
+    # 2. color locked: brand palette only; layout and graphics flex
+    tiles = [("#A5C8CF", "mag-rings", "navy"), ("#184B56", "wag-balance-beam", "light"),
+             ("#ADBAE9", "tnt-trampoline", "navy"), ("#F6C328", "mag-pommel-horse", "navy")]
+    grid = "".join(f'<div style="background:{bg};border-radius:{px(30)};display:flex;align-items:center;justify-content:center;padding:{px(40)}">'
+                   f'<img src="{R}assets/icons/apparatus-solid/{ic}-{cw}.svg" alt="" style="width:85%"></div>' for bg, ic, cw in tiles)
+    p2 = f'''<div class="cq post" style="background:#1E2B38"><div class="abs" style="left:{px(64)};right:{px(64)};top:{px(64)};height:{px(900)};display:grid;grid-template-columns:1fr 1fr;gap:{px(30)}">{grid}</div>
+<div class="abs" style="left:{px(64)};right:{px(64)};bottom:{px(150)};font-family:Arial;font-weight:700;font-size:{px(40)};letter-spacing:.2em;text-transform:uppercase;color:#FFFFFF;text-align:center">United Club Gymnastics</div>
+<div class="abs" style="left:{px(64)};right:{px(64)};bottom:{px(90)};font-family:Arial;font-size:{px(32)};letter-spacing:.2em;text-transform:uppercase;color:#A5C8CF;text-align:center">For the love of the sport</div></div>'''
+    # 3. type locked: big stacked condensed caps; color expressive, no logo needed
+    p3 = f'''<div class="cq post" style="background:#504A83"><div class="abs display" style="left:{px(56)};right:{px(40)};top:{px(70)};font-size:{px(255)};line-height:.86;color:#FFFFFF">For<br>the love<br>of the<br>sport.</div></div>'''
+    posts = (f'<div>{p1}<p class="mock-label"><b>Logo locked.</b> The mark as drawn, huge and cropped. Color pushed into the expressive range (Coral, Navy text).</p></div>'
+             f'<div>{p2}<p class="mock-label"><b>Color locked.</b> Brand palette only. Layout and graphics are free to play.</p></div>'
+             f'<div>{p3}<p class="mock-label"><b>Type locked.</b> Big stacked condensed caps. An expressive color (Indigo, White text), no logo needed.</p></div>')
+    return vis("One anchor each", f'<div class="grid" style="--min:230px">{posts}</div>', "Example content.")
+
+
+def mark_moves(ctx):
+    def masked(src, color):
+        return (f'<div aria-hidden="true" style="width:100%;height:100%;-webkit-mask:url({src}) no-repeat center/contain;'
+                f'mask:url({src}) no-repeat center/contain;background:{color}"></div>')
+    def outlined(src, color, width=2.6):
+        # outline only: the shape grown by `width`, minus the shape itself
+        return (f'<svg viewBox="0 0 100 100" style="width:100%;height:100%" aria-hidden="true"><defs><filter id="ucg-stroke" x="-10%" y="-10%" width="120%" height="120%">'
+                f'<feMorphology in="SourceAlpha" operator="dilate" radius="{width}" result="grown"/><feFlood flood-color="{color}"/>'
+                f'<feComposite in2="grown" operator="in" result="ring"/><feComposite in="ring" in2="SourceAlpha" operator="out"/></filter></defs>'
+                f'<image href="{src}" x="0" y="0" width="100" height="100" filter="url(#ucg-stroke)"/></svg>')
+    def t(inner, bg, h="150px"):
+        cls = "tile on-white" if bg == "#FFFFFF" else "tile"  # white tiles get the card border
+        return f'<div class="{cls}" style="background:{bg};min-height:{h};position:relative;overflow:hidden"><div style="width:100%;height:84px">{inner}</div></div>'
+    primary = f"{R}assets/logos/ucg-primary-navy.svg"
+    mark = f"{R}assets/logos/ucg-mark-navy.svg"
+    big_bg = (f'<div class="tile" style="background:#A5C8CF;min-height:150px;position:relative;overflow:hidden">'
+              f'<div class="abs" style="width:190px;height:190px;right:-60px;bottom:-70px">{masked(mark, "#DBEBEE")}</div>'
+              f'<img src="{primary}" alt="" style="max-height:44px;position:relative"></div>')
+    dos = [
+        do("Recolor within the palette", t(masked(primary, "#ADBAE9"), "#1E2B38")),
+        do("Add a stroke", t(outlined(mark, "#A5C8CF"), "#1E2B38")),
+        do("Use it huge in the background", big_bg),
+    ]
+    typed = (f'<div class="tile on-white" style="min-height:150px;gap:12px"><img src="{mark}" alt="" style="max-height:64px">'
+             f'<span style="font-family:\'Arial Black\',Arial;font-weight:900;font-size:52px;color:#1E2B38;letter-spacing:-.02em">UCG</span></div>')
+    donts = [
+        dont("Don't stretch or squash", f'<div class="tile on-white" style="min-height:150px;overflow:hidden"><img src="{primary}" alt="" style="max-height:70px;transform:scale(1.2,.55)"></div>'),
+        dont("Don't use off-palette colors", t(masked(primary, "#2FB34A"), "#FFFFFF")),
+        dont("Don't retype the wordmark", typed),
+        dont("Don't lose contrast", t(masked(primary, "#ADBAE9"), "#DBEBEE")),
+    ]
+    return (vis("Do", f'<div class="grid" style="--min:220px">{"".join(dos)}</div>')
+            + vis("Don't", f'<div class="grid" style="--min:220px">{"".join(donts)}</div>',
+                  "Everyday materials stick to the four supplied colorways with no outlines. See the <a href=\"../logos/\">logo rules</a>."))
+
+
+def expressive_colors(ctx):
+    ex = ctx.brand["colors"]["expressive"]
+    sw = "".join(f'''<div style="border-radius:16px;overflow:hidden;border:1px solid #A5C8CF"><div style="background:{h};color:{ex["text_on"][h]};padding:16px 16px 14px;min-height:120px;display:flex;flex-direction:column;justify-content:space-between">
+<span style="font-family:Arial;font-weight:700;font-size:32px;line-height:1">Aa</span><span style="font-size:13px;font-weight:700">{"Navy" if ex["text_on"][h] == "#1E2B38" else "White"} text · {ratio(h, ex["text_on"][h]):.1f}:1</span></div>
+<div style="background:#FFFFFF;color:#1E2B38;padding:10px 14px;font-size:14px;display:flex;justify-content:space-between;align-items:center"><b>{h}</b><button class="copy" data-copy="{h}">Copy</button></div></div>'''
+                 for h in ex["swatches"])
+    for h, fg in ex["text_on"].items():  # the page states these pairs pass AA; fail the build if one doesn't
+        if ratio(h, fg) < 4.5:
+            raise SystemExit(f"expressive text pair {fg} on {h} is below 4.5:1")
+    wheel = (f'<div class="card" style="padding:12px;max-width:520px"><img src="{R}assets/palette/ucg-color-wheel.png" alt="UCG color wheel: primary colors on one side, '
+             f'secondary on the other, expressive colors in the inner ring" style="display:block;width:100%;height:auto"></div>')
+    return (vis("The six, with the text color that works on each", f'<div class="grid" style="--min:136px">{sw}</div>',
+                "Only these six. Don't pick shades in between.")
+            + vis("How they sit with the brand palette", wheel, "Outer ring: brand primary and secondary colors. Inner ring: the expressive range."))
+
+
+MERCH = [  # file, alt text, caption (from references/expressive.md "Examples from UCG merch")
+    ("merch-logo-recolored-purple.jpg", "Primary logo printed in Purple on a charcoal heather shirt",
+     "<b>Recolored.</b> The primary logo, unchanged in shape, in Purple: a palette color the everyday colorways don't use."),
+    ("merch-badge-distressed.jpg", "Circle badge with a worn, distressed print texture on a charcoal shirt",
+     "<b>Textured.</b> A worn print finish over the badge. The shape and type stay as drawn."),
+    ("merch-tee-mark-background.jpg", "Blue Green tee with the primary logo on the chest and a huge Light Blue mark cropped off the lower edge",
+     "<b>Huge in the background.</b> The mark cropped off the edge, tone on tone, with the primary logo as the anchor."),
+    ("merch-crop-top-type.jpg", "Back of a Dark Blue Green crop top with FOR THE LOVE OF THE SPORT. running vertically down the spine",
+     "<b>Type does the work.</b> The core message set big and vertical, in condensed caps."),
+    ("merch-tee-pattern.jpg", "Tee covered in a repeating pattern of the mark and UCG, with the logotype on the chest",
+     "<b>Pattern.</b> An all-over repeat of the mark and UCG, with the logotype on top."),
+    ("merch-icons-color-blocks.jpg", "Four palette-color tiles with event icons, a worn texture, and UNITED CLUB GYMNASTICS, FOR THE LOVE OF THE SPORT below",
+     "<b>Color blocks.</b> Event icons on four palette tiles. Color and type are the anchors."),
+]
+
+
+def merch_gallery(ctx):
+    for f, *_ in MERCH:
+        if not (ctx.root / "site/examples/expressive" / f).exists():
+            raise SystemExit(f"missing merch example {f}")
+    cards = "".join(f'''<figure class="asset" style="margin:0"><img src="{R}site/examples/expressive/{f}" alt="{E(alt)}" loading="lazy" style="display:block;width:100%;aspect-ratio:1;object-fit:cover">
+<figcaption class="small" style="padding:12px 14px">{cap}</figcaption></figure>''' for f, alt, cap in MERCH)
+    return vis("", f'<div class="grid" style="--min:240px">{cards}</div>',
+               "Mockups from UCG's 2026 merch concepts. Each piece keeps at least one anchor and pushes something else.")
 
 
 def social_print(ctx):
@@ -956,9 +1070,16 @@ VISUALS = {
     "social": {
         "Formats": social_formats,
         "Post recipes (from the design guide)": social_posts,
-        "Expressive design (merch, campaigns, Nationals, big moments)": social_expressive,
         "Print": social_print,
         "Social banners — assets/social/": social_banners,
+    },
+    "expressive": {
+        "Where expression lives": expression_lights,
+        "The anchor elements": anchor_posters,
+        "What you can do with the mark": mark_moves,
+        "Expressive colors": expressive_colors,
+        "The event pattern": lambda c: vis("", event_pattern(c)),
+        "Examples from UCG merch": merch_gallery,
     },
     "video": {
         "Mark animations (ready to use)": anim_gallery,

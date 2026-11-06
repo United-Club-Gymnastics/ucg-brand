@@ -47,7 +47,7 @@ Examples:
 
 - Navy carries most text and dark surfaces. Light Blue, White and Blue Green are the main light surfaces. Secondary colors are accents: chips, highlights, data, one bold slide.
 - UI roles use palette colors only, never extra greys: secondary text in Dark Blue Green (or Navy), dividers and card outlines in Blue Green, form-field borders in Dark Blue Green (they need 3:1), and dark surfaces in Navy with Dark Blue Green for cards and bands.
-- No gradients, no off-palette colors. Six extra "expressive" colors exist only for merch, social campaigns and event graphics (see [`references/social.md`](references/social.md)).
+- No gradients, no off-palette colors. Six extra "expressive" colors exist only for merch, campaigns and event graphics, and only those six (see [`references/expressive.md`](references/expressive.md)).
 
 ### Contrast is a hard rule (WCAG AA everywhere)
 
@@ -83,7 +83,7 @@ Body text needs **4.5:1**, large text (24px+, or 18.5px+ bold), icons and logos 
 
 ## Logos
 
-Use the files exactly as drawn. Recolor only to the four supplied colorways. **Never** stretch, rotate, redraw, outline, add effects, retype the wordmark, or place on a low-contrast background.
+Use the files exactly as drawn. Recolor only to the four supplied colorways. **Never** stretch, rotate, redraw, outline, add effects, retype the wordmark, or place on a low-contrast background. (Expressive pieces like merch may also recolor within the palette, add a stroke or crop the mark big in the background, but never redraw it: [`references/expressive.md`](references/expressive.md).)
 
 | Logo | Use it for | Files (`assets/logos/`) |
 |---|---|---|
@@ -130,6 +130,7 @@ The six design features:
 - Google Docs and Forms (policies, letters, forms): [`references/docs.md`](references/docs.md)
 - Google Sheets: [`references/sheets.md`](references/sheets.md)
 - Social graphics and print: [`references/social.md`](references/social.md)
+- Merch, campaigns, event graphics (expressive design): [`references/expressive.md`](references/expressive.md)
 - Video and Reels: [`references/video.md`](references/video.md)
 - Messaging and copy library: [`references/messaging.md`](references/messaging.md)
 - Logos, icons, photos: [`references/assets.md`](references/assets.md)
