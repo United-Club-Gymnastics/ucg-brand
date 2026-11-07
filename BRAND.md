@@ -47,7 +47,7 @@ Examples:
 
 - Navy carries most text and dark surfaces. Light Blue, White and Blue Green are the main light surfaces. Secondary colors are accents: chips, highlights, data, one bold slide.
 - UI roles use palette colors only, never extra greys: secondary text in Dark Blue Green (or Navy), dividers and card outlines in Blue Green, form-field borders in Dark Blue Green (they need 3:1), and dark surfaces in Navy with Dark Blue Green for cards and bands.
-- No gradients, no off-palette colors. Six extra "expressive" colors exist only for merch, campaigns and event graphics, and only those six (see [`references/expressive.md`](references/expressive.md)).
+- No off-palette colors. Six extra "expressive" colors exist only for merch, campaigns and event graphics, and only those six (see [`references/expressive.md`](references/expressive.md)).
 
 ### Contrast is a hard rule (WCAG AA everywhere)
 
