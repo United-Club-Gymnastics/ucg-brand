@@ -19,18 +19,20 @@ Pattern: `ucg-<logo>-<colorway>.<svg|png>` (PNGs are 2400px wide, transparent).
 
 | `<colorway>` | Color | Use on |
 |---|---|---|
-| `navy` | Navy `#1E2B38` | White, Light Blue, Blue Green, Purple, Golden Yellow backgrounds |
+| `navy` | Navy `#1E2B38` | White, Light Blue, Blue Green, Purple, Golden Yellow, Red Orange backgrounds |
 | `light` | Light Blue `#DBEBEE` | Navy, Dark Blue Green, dark photos |
 | `white` | White | Navy, Dark Blue Green, dark photos and overlays |
-| `black` | Black | One-color print only |
+| `black` | Black | One-color print |
 
 Badges are two-tone: `badge-circle-navy` and `badge-crest-navy` are Navy art on a Light Blue disc/shield; `-light` is Light Blue art on Navy; `-white` is White on black; `-black` is black on White.
 
 Also in `assets/logos/`: `ucg-avatar-circle` / `ucg-avatar-square` (social profile images, White mark on Dark Blue Green), `ucg-favicon.png`, `ucg-mark-in-circle-*`, `ucg-document-header` (Navy header band for documents).
 
-**How the mark is built** (every file uses this exact geometry, from `tools/mark_geometry.py`): six identical V's at exactly 60° steps around a round dot. Each V is two straight legs at 22.5° either side of its axis; the rounded base is a circle centred on the V's inner point with radius equal to the leg width; each leg ends square to the leg with a slight outward arc. Each V has 8 nodes. If you need the mark as a shape (for a stroke, a cut file, an embroidery file), start from these files, not a trace.
+**How the mark is built** (every file uses this exact geometry, from `tools/mark_geometry.py`): six identical V's at exactly 60° steps around a round dot. Each V is two straight legs at 22.5° either side of its axis; the rounded base is a circle centered on the V's inner point with radius equal to the leg width; each leg ends square to the leg with a slight outward arc. Each V has 8 nodes. If you need the mark as a shape (for a stroke, a cut file, an embroidery file), start from these files, not a trace.
 
-**Rules:** don't stretch, rotate, recolor outside the colorways, add shadows or outlines, rebuild the wordmark in a font, or crop the mark (expressive pieces have a little more room: see [`expressive.md`](expressive.md)). Keep clear space at least the height of the "U" in UCG around every logo. Minimum sizes: primary logo 1 in / 120px wide; mark 0.25 in / 24px. (The design guide doesn't specify clear space or minimum sizes; these are UCG's working defaults.)
+**Rules:** color variations are allowed, but the structure and proportions never change (DG p26). Don't stretch, redraw, add shadows or other effects, or rebuild the wordmark in a font. Other colors: recolor the SVG in a palette color that is an approved pair for its background (DG p42; see [`color-pairs.md`](color-pairs.md)), for example Golden Yellow, Red Orange, Purple, Blue Green or Light Blue on Navy. Off-palette colors, strokes and the expressive colors: see [`expressive.md`](expressive.md). The mark can be cropped by the edge of a layout, as on the guide's lanyard (DG p86).
+
+**Recommended** (UCG defaults; the design guide doesn't set clear space or minimum sizes): clear space of about the height of the "U" in UCG; primary logo at least 1 in wide in print or 120px on screen; mark at least 0.25 in or 24px.
 
 ## Icons — `assets/icons/`
 
@@ -51,7 +53,7 @@ UCG's own pictograms (simple, bold gymnast figures with a ball-shaped head). Eve
 - WAG: `wag-vault`, `wag-uneven-bars`, `wag-balance-beam`, `wag-floor`
 - T&T: `tnt-trampoline`, `tnt-double-mini`, `tnt-power-tumbling`, `tnt-synchro`
 
-Use icons at one consistent size per layout, in a single brand color that meets 3:1 against its background. Don't mix them with emoji or other pictogram styles.
+Icons are graphics, so each needs 3:1 against its background and an approved pair (Navy on light colors, White or Light Blue on dark ones; DG p20 mixes both in one layout). They work best at a consistent size in a layout.
 
 ## Photos — `assets/photos/`
 
@@ -61,7 +63,7 @@ Use icons at one consistent size per layout, in a single brand color that meets 
 - `movement`: skills in motion, dynamic crops
 - `community`: teams, coaches, judges, volunteers, fans
 
-File names: `ucg-<color|bw>-<what's in it>.jpg`. Pick the B&W edit for athlete features with white type, and the color edit for community and belonging. Use them for UCG materials only, and crop rather than distort. The full Nationals sets live in the [UCG brand toolkit](https://drive.google.com/drive/folders/1M7wFuZvl7AUGmU7Rzh3bu_vErSauU2ZZ) (UCG volunteers only).
+File names: `ucg-<color|bw>-<what's in it>.jpg`. The design guide uses black-and-white photos with white type and graphics, for athletes and for community and team shots alike (DG p17, p47); the color edits are there when a piece needs color. Use them for UCG materials only, and crop rather than distort. The full Nationals sets live in the [UCG brand toolkit](https://drive.google.com/drive/folders/1M7wFuZvl7AUGmU7Rzh3bu_vErSauU2ZZ) (UCG volunteers only).
 
 ## Social banners — `assets/social/`
 
@@ -69,7 +71,7 @@ Facebook cover, YouTube banner, Zoom backgrounds and the email header logo (`ucg
 
 ## Patterns — `assets/patterns/`
 
-`ucg-event-pattern-2026-27.svg` / `.png`: the 2026–27 Nationals event pattern from the design guide (p54). Decorative backgrounds and merch only. See [`expressive.md`](expressive.md).
+`ucg-event-pattern-2026-27.svg` / `.png`: the 2026–27 Nationals event pattern from the design guide (p54). See [`expressive.md`](expressive.md).
 
 ## Palette files — `assets/palette/`
 

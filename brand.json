@@ -61,13 +61,13 @@
       { "id": "white", "name": "White", "hex": "#FFFFFF" }
     ],
     "expressive": {
-      "note": "Not part of the everyday palette. Only for expressive work (merch, social campaigns, event graphics, big-moment collateral). Never for official communications, wayfinding or UI. Only these six: no in-between shades (UCG decision; the guide allowed nearby colors). Text on them: Navy on the first four, White on the last two.",
+      "note": "Not part of the everyday palette. For expressive work (merch, social campaigns, event graphics, big-moment collateral); not for official communications, lasting signage and wayfinding, or anything people rely on to recognize UCG year over year (EDG p4). Only these six: no in-between shades (UCG decision; the guide allowed nearby colors). Text on them: Navy on the first four, White on the last two.",
       "source": "EDG p6-7, ORG",
       "swatches": ["#FFEF77", "#FF988A", "#C0E388", "#8BB7E3", "#336494", "#504A83"],
       "text_on": { "#FFEF77": "#1E2B38", "#FF988A": "#1E2B38", "#C0E388": "#1E2B38", "#8BB7E3": "#1E2B38", "#336494": "#FFFFFF", "#504A83": "#FFFFFF" }
     },
     "ui_roles": {
-      "note": "UI uses palette colors only. Don't add greys or extra navies.",
+      "note": "UI uses palette colors only. Don't add grays or extra navies.",
       "source": "ORG",
       "values": {
         "text-secondary": "dark-blue-green",
@@ -80,8 +80,8 @@
   },
 
   "contrast_policy": {
-    "rule": "All text meets WCAG AA: 4.5:1 for body text, 3:1 for large text (24px+ regular, or 18.5px+ bold). Icons, logos and other non-text graphics need 3:1. This is stricter than the guides, which approve some pairs that fail; those pairs may still be used for logos and decorative graphics only if they reach 3:1, otherwise not at all.",
-    "source": "ORG",
+    "rule": "A text/background pair is allowed when the design guide approves it at that size (DG p42-43) and it meets WCAG AA: 4.5:1 for body text, 3:1 for large text (24px+ regular, or 18.66px+ bold), icons, logos and other non-text graphics. Where the guide is silent, AA decides. Pairs the guide approves only for large sizes (Blue Green or Purple on Navy, Navy on Blue Green) are large text and marks only.",
+    "source": "DG p42-43, ORG (AA)",
     "pairs_table": "references/color-pairs.md"
   },
 
@@ -91,8 +91,8 @@
       "weight": 700,
       "case": "ALL CAPS only",
       "use": "Headlines, subheads, big numbers, eyebrow-style labels",
-      "headline_size_print": "36-60pt",
-      "subhead_size_print": "10-24pt with 20% tracking (letter-spacing 0.2em)",
+      "headline_size_print": "around 36-60pt",
+      "subhead_size_print": "around 10-24pt, with 20% tracking (letter-spacing 0.2em)",
       "fallback": "Saira Condensed Bold (Google Fonts)",
       "system_fallback": "Arial Narrow Bold",
       "source": "DG p32, p34; fallback ORG"
@@ -100,9 +100,8 @@
     "body": {
       "family": "Suisse Intl",
       "weights": [400, 600],
-      "case": "Sentence case",
-      "use": "Body copy, buttons and pills, captions, small print",
-      "body_size_print": "9-14pt",
+      "use": "Body copy, buttons and pills (ALL CAPS, 20% tracking), captions, small print",
+      "body_size_print": "around 9-14pt",
       "fallback": "Arial",
       "source": "DG p33, p34; fallback ORG"
     },
@@ -113,9 +112,9 @@
       "print, social graphics, video": "Greed Condensed + Suisse Intl (licensed; UCG volunteers making UCG materials only).",
       "anyone without the licensed fonts": "Saira Condensed Bold + Arial."
     },
-    "buttons": "Suisse Intl (or Arial), ALL CAPS, letter-spacing 0.2em. Keep labels short. (DG p76)",
+    "buttons": "Pills in Suisse Intl (or Arial), ALL CAPS, letter-spacing 0.2em. Keep labels clear, short and legible; color pairs follow the approved combinations. (DG p76)",
     "lists": "0.5pt dividers between items, 15pt between text and divider, none above the first or below the last item. 30pt between a headline and the list below it. Bullets for unordered items, numbers only for sequences, rankings or counts. (DG p77)",
-    "email_signature": "Headline Arial Narrow 14pt, name and title Arial 12pt, body Arial 12pt. (DG p37)"
+    "email_signature": "Greeting in Arial Narrow 14pt bold (the guide labels it the headline), body Arial 12pt, signature name in bold caps and title in Arial 12pt, then the web address. (DG p37)"
   },
 
   "design_features": {
@@ -125,10 +124,32 @@
       "Strong type: big ALL CAPS condensed headlines",
       "Black-and-white photography with white graphics and type",
       "Engaging photo crops that emphasize the angle and movement of the sport",
-      "Rounded corners on cards, panels and photos",
+      "Rounded corners on cards, panels and photos; pill-shaped buttons",
       "Event iconography (MAG, WAG, T&T) and color overlays on photos"
     ],
-    "color_overlay_recipe": "Black-and-white photo, solid brand color behind it, photo blend mode Screen. (DG p44)"
+    "color_overlay_recipe": "Black-and-white photo, solid brand color behind it, photo blend mode Screen. The guide's example uses Navy. (DG p44)"
+  },
+
+  "decisions": {
+    "note": "UCG decisions made after the guides were delivered. They override the guides.",
+    "list": [
+      "Core message is For the Love of the Sport (the guides list A Place to Land).",
+      "Fallback fonts: Saira Condensed Bold and Arial.",
+      "WCAG AA on top of the guide's approved color pairs, everywhere.",
+      "Web address: unitedclubgymnastics.org.",
+      "UI uses palette colors only: no extra grays or navies.",
+      "Expressive colors are exactly the six swatches.",
+      "The mark is the clean, constructed version in assets/logos/; outlines stay thinner than the gap between its V's.",
+      "No emoji in official communications.",
+      "Write UCG; use NAIGC only when talking about history.",
+      "Dates like April 1-4, 2027 (en dash); times like 7-9 PM ET.",
+      "Numbered policies use one automatic decimal list.",
+      "Alt text on every image, captions on every video with speech, and color never the only signal.",
+      "No shadows or other effects on logos.",
+      "Kit photos are for UCG materials only; no photographer credit needed.",
+      "Brand questions go to your team lead or department head."
+    ],
+    "source": "ORG"
   },
 
   "checklists": {

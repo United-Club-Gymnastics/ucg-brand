@@ -60,22 +60,22 @@
 </section>
 <section class="doc-section" id="sec-announcement-newsletter-emails-html">
 <div class="prose"><h2 id="announcement-newsletter-emails-html">Announcement / newsletter emails (HTML)</h2>
-<p>Start from <a href="../templates/email/ucg-announcement-email.html"><code>templates/email/ucg-announcement-email.html</code></a>. It is UCG's working monthly-announcements template (sent through iContact) and its comments explain the rules. In short:</p>
+<p>Start from <a href="../templates/email/ucg-announcement-email.html"><code>templates/email/ucg-announcement-email.html</code></a>. It is UCG's working monthly-announcements template (sent through iContact) and its comments explain how to use it. In short:</p>
 <ul>
 <li>Parts marked <strong>FIXED</strong> never change: header logo, base styles, dark-mode rules, sign-off and social links.</li>
 <li>Build the body from the <strong>BLOCKS</strong> between <code>BODY START</code> and <code>BODY END</code>: hero, feature band, section label, standard item, light card, navy card, two buttons, discipline section, deep band. Copy a block, replace every <code>[PLACEHOLDER]</code>, delete what you don't need.</li>
 <li>Keep the sender's wording. Fix only obvious typos.</li>
-<li>Alternate section backgrounds so neighbors differ: white → light blue → blue green → navy → dark blue green.</li>
-<li>Red Orange chips only for deadlines and urgent items, always with Navy text on them.</li>
-<li>Discipline chips: WAG Purple <code>#ADBAE9</code>, MAG Blue Green <code>#A5C8CF</code>, T&amp;T Golden Yellow <code>#F6C328</code>, all with Navy text.</li>
+<li>Neighboring sections usually get different backgrounds (white, light blue, blue green, navy, dark blue green), so the email reads as separate blocks.</li>
+<li>Small text follows the color pairs (<a href="../colors/"><code>color-pairs.md</code></a>): on Blue Green it's Dark Blue Green, not Navy; on Navy it's White, Light Blue or Golden Yellow, not Blue Green (DG p42–43).</li>
+<li>Chips: a Red Orange, Golden Yellow or Purple fill with Navy text.</li>
 <li>Every link is https. Buttons for main actions, text links (<code>Link text →</code>) for secondary ones.</li>
 <li>Images: only the fixed logo unless an image hosted by the email platform is supplied. Never use white or light images with transparent backgrounds; they vanish in dark mode.</li>
 <li>No unsubscribe link, address or footer below the socials. iContact adds its own.</li>
 <li>Keep every <code>class="…"</code> attribute when copying a block. The classes drive dark mode.</li>
 </ul>
-<p><strong>Fonts in email:</strong> most inboxes can't load custom fonts. Headlines use <code>'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif</code> (Saira loads from Google Fonts in Apple Mail and iOS; everyone else sees Arial Narrow or Arial). Body text is always <code>Arial,Helvetica,sans-serif</code>.</p>
-<p><strong>Buttons in email</strong> use the condensed headline stack (Saira Condensed → Arial Narrow), as the template does. That's a deliberate email exception: the design guide sets buttons in Suisse Intl / Arial, which is what websites and other media use.</p>
-<p><strong>Sizes used by the template:</strong> hero H1 52px (40px on mobile), section H2 36px, item titles 22px Arial bold, body 16px / 1.55, eyebrows 12–13px bold caps with 0.16em tracking, buttons 16px caps with 0.2em tracking, 8px button radius, 20px card radius, 600px container.</p>
+<p><strong>Fonts in email:</strong> most inboxes can't load custom fonts. Headlines use <code>'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif</code> (Saira loads from Google Fonts in Apple Mail and iOS; everyone else sees Arial Narrow or Arial). Body text and buttons are <code>Arial,Helvetica,sans-serif</code> (Arial stands in for Suisse Intl, which the guide uses for buttons, DG p76).</p>
+<p><strong>Buttons:</strong> pills, ALL CAPS, <code>letter-spacing: 0.2em</code> (DG p76). The template uses Navy with White text, and Light Blue with Navy text.</p>
+<p><strong>What the template uses</strong> (defaults, not rules): hero H1 52px (40px on mobile), section H2 36px, item titles 22px Arial bold, body 16px / 1.55, eyebrows 12–13px bold caps with 0.2em tracking, buttons 15px Arial bold caps with 0.2em tracking, 20px card radius, 600px container. List dividers are 1px, the thinnest line email clients draw reliably (the guide's 0.5pt, DG p77, is for layouts that can render it).</p>
 <p><strong>Contrast in dark mode:</strong> the template remaps backgrounds and text for Apple Mail, iOS and Outlook. If you add a new color pairing, add matching dark-mode classes and check both modes against <a href="../colors/"><code>color-pairs.md</code></a>.</p>
 </div>
 <div class="vis"><p class="vis-title">Example built from the template</p><div class="compare">

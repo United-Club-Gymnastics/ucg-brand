@@ -13,6 +13,7 @@ from pathlib import Path
 from PIL import Image, ImageOps
 
 import mark_geometry as MG
+from contrast import allowed as pair_allowed
 
 E = html.escape
 R = "../"
@@ -118,6 +119,8 @@ ON_CLASS = {"navy": "on-navy", "dark-blue-green": "on-dbg", "blue-green": "on-bg
 
 
 def readable_on(hexv):
+    if hexv.upper() == "#A5C8CF":
+        return "#184B56"
     return "#FFFFFF" if ratio("#FFFFFF", hexv) >= ratio("#1E2B38", hexv) else "#1E2B38"
 
 
@@ -160,12 +163,12 @@ def md_section(text, heading):
 def palette_cards(ctx):
     uses = {
         "navy": "Most text, dark surfaces, primary buttons.",
-        "blue-green": "Signature accent fill. Text on Navy.",
+        "blue-green": "Signature accent fill, and large type on Navy. Small text on it is Dark Blue Green.",
         "light-blue": "Light surfaces. Text on Navy.",
-        "purple": "Accent fills and chips (WAG). Navy text on it.",
-        "red-orange": "Urgent and deadline chips with Navy text. Never text on White.",
+        "purple": "Accent fills and chips with Navy text. Large type on Navy.",
+        "red-orange": "Calls to action and highlights, with Navy text on it. Large type only on White.",
         "dark-blue-green": "Links and accent text on light colors. Dark surface.",
-        "golden-yellow": "Accent fills and chips (T&T). Navy text on it.",
+        "golden-yellow": "Accent fills and chips with Navy text. Text on Navy.",
     }
     cards = []
     for g in ("primary", "secondary"):
@@ -193,9 +196,9 @@ def support_and_expressive(ctx):
     ex = ctx.brand["colors"]["expressive"]["swatches"]
     ex_strip = "".join(f'<div style="background:{h};color:{readable_on(h)}">{h}</div>' for h in ex)
     return (vis("UI roles", f'<div class="strip">{ui_strip}</div>',
-                "Secondary text, borders and dark mode use palette colors. Don't add greys.")
+                "Secondary text, borders and dark mode use palette colors. Don't add grays.")
             + vis("Expressive range (merch, campaigns, events only)", f'<div class="strip">{ex_strip}</div>',
-                  'Not part of the everyday palette. Never for official communications, wayfinding or UI. See <a href="../expressive/">Expressive design</a>.'))
+                  'Not part of the everyday palette, and not for official communications, lasting signage or anything people rely on to recognize UCG (EDG p4). See <a href="../expressive/">Expressive design</a>.'))
 
 
 def safe_pairs(ctx, title="Safe text on every background"):
@@ -208,7 +211,7 @@ def safe_pairs(ctx, title="Safe text on every background"):
                 continue
             f = ctx.colors[fg]
             r = ratio(f["hex"], b["hex"])
-            if r >= 4.5 and not (bg == "dark-blue-green" and fg == "navy") and not (bg == "navy" and fg == "dark-blue-green"):
+            if pair_allowed(fg, bg) == "any":
                 lines.append(f'<div style="color:{f["hex"]};font-weight:700;font-size:17px;line-height:1.35">Aa {E(f["name"])} <span style="font-weight:400;font-size:13px">{r:.1f}:1</span></div>')
         border = "border:1px solid #A5C8CF;" if bg in ("white", "light-blue") else ""
         panels.append(f'<div class="panel" style="background:{b["hex"]};{border}"><p class="subhead" style="margin:0 0 10px;font-size:13px;color:{readable_on(b["hex"])}">On {E(b["name"])}</p>{"".join(lines)}</div>')
@@ -226,11 +229,11 @@ def pillars(ctx, chips=False, title="Messaging themes"):
             return ""
         return '<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px">' + "".join(
             f'<span class="{cls}" style="{style}text-transform:none;letter-spacing:0;font-size:13px">{E(p)}</span>' for p in phrases.get(name, [])[:4]) + "</div>"
-    core_card = f'''<div class="panel on-navy" style="grid-column:1/-1"><p class="eyebrow" style="color:#A5C8CF">Core message</p>
+    core_card = f'''<div class="panel on-navy" style="grid-column:1/-1"><p class="eyebrow" style="color:#DBEBEE">Core message</p>
 <p class="display" style="font-size:clamp(34px,5vw,56px);margin:0 0 10px;color:#FFFFFF">{E(core["name"])}</p>
 <p style="margin:0;color:#DBEBEE;font-size:18px">{E(core["line"])}</p>{chip_row(core["name"])}</div>'''
     sup = []
-    for s, cls in zip(ctx.brand["messaging"]["supporting"], ["on-lb", "on-bg", "on-purple", "on-yellow"]):
+    for s, cls in zip(ctx.brand["messaging"]["supporting"], ["on-lb", "on-ro", "on-purple", "on-yellow"]):
         sup.append(f'''<div class="panel {cls}"><p class="eyebrow" style="color:#1E2B38">Supporting</p>
 <p class="display" style="font-size:30px;margin:0 0 8px">{E(s["name"])}</p><p style="margin:0">{E(s["line"])}</p>{chip_row(s["name"], style="background:#FFFFFF;")}</div>''')
     return vis(title, f'<div class="grid" style="--min:340px">{core_card}{"".join(sup)}</div>')
@@ -298,18 +301,19 @@ def contrast_matrix(ctx):
                 continue
             f = ctx.colors[fg]
             r = ratio(f["hex"], b["hex"])
-            if r >= 4.5:
+            a = pair_allowed(fg, bg)
+            if a == "any":
                 tag, skip = '<span class="tag tag--body">Any text</span>', ""
-            elif r >= 3:
+            elif a == "large":
                 tag, skip = '<span class="tag tag--large">Large only</span>', ' data-contrast-skip'
             else:
                 tag, skip = '<span class="tag tag--no">Never</span>', ' data-contrast-skip'
             label = readable_on(b["hex"])
             cells.append(f'<div class="cell" style="background:{b["hex"]}"{skip} title="{E(f["name"])} on {E(b["name"])}: {r:.2f}:1">'
                          f'<span class="aa" style="color:{f["hex"]}">Aa</span><span class="ratio" style="color:{label}">{r:.1f}:1</span>{tag}</div>')
-    legend = ('<div class="legend"><span><span class="tag tag--body">Any text</span> 4.5:1+</span>'
-              '<span><span class="tag tag--large">Large only</span> 3–4.5:1: 24px+ text, icons, logos</span>'
-              '<span><span class="tag tag--no">Never</span> under 3:1</span></div>')
+    legend = ('<div class="legend"><span><span class="tag tag--body">Any text</span> 4.5:1+ and approved by the guide</span>'
+              '<span><span class="tag tag--large">Large only</span> 24px+ text, icons, logos: 3:1+, or the guide approves it for large sizes only</span>'
+              '<span><span class="tag tag--no">Never</span> under 3:1, or not approved by the guide</span></div>')
     return vis("Every pairing at a glance", f'<div class="matrix-scroll"><div class="matrix">{head}{"".join(cells)}</div></div>{legend}')
 
 
@@ -322,7 +326,7 @@ def overlay_demos(ctx):
     c = f'''<div class="cq square" style="border-radius:16px;background:#1E2B38"><img class="abs" src="{thumb(f["beam-finish"]["bw"])}" alt="" style="top:0;left:0;width:55%;height:100%;object-fit:cover">
 <div class="abs" style="left:60%;right:5cqw;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center"><p class="display" style="font-size:9cqw;margin:0 0 3cqw;color:#FFFFFF">One floor. Every story.</p><p style="font-size:3.6cqw;margin:0;color:#DBEBEE">Text on a solid panel beside the photo.</p></div></div>'''
     body = (f'<div>{a}<p class="mock-label">Light: B&amp;W photo screened over Light Blue, Navy text on a Light Blue panel.</p></div>'
-            f'<div>{b}<p class="mock-label">Dark: B&amp;W photo darkened over Navy, White text.</p></div>'
+            f'<div>{b}<p class="mock-label">Darker: a B&amp;W photo toned down over Navy, White text.</p></div>'
             f'<div>{c}<p class="mock-label">Safest: White text on a solid Navy panel beside the photo.</p></div>')
     return vis("Text over photos", f'<div class="grid" style="--min:230px">{body}</div>')
 
@@ -367,14 +371,13 @@ def logo_rules(ctx):
 <div style="position:relative;padding:22px;outline:2px dashed #184B56;outline-offset:0"><img src="{logo}" alt="Primary logo with clear space" style="height:84px;display:block">
 <span style="position:absolute;top:2px;left:50%;transform:translateX(-50%);font-size:12px;font-weight:700;color:#184B56">x</span>
 <span style="position:absolute;left:6px;top:50%;transform:translateY(-50%);font-size:12px;font-weight:700;color:#184B56">x</span></div></div>
-<p class="vis-note">x = the height of the "U" in UCG. Keep at least that much empty space on every side. Minimum width 120px / 1 in. (UCG working defaults; the design guide doesn't specify them.)</p>'''
+<p class="vis-note">x = the height of the "U" in UCG. Recommended: at least that much empty space on every side, and the primary logo at least 1 in wide in print or 120px on screen. (UCG defaults; the design guide doesn't set them.)</p>'''
     f = {fr["slug"]: fr for fr in ctx.frames()}
     def t(style, img=logo, cls="on-white", extra=""):
         return f'<div class="tile {cls}" style="min-height:150px;overflow:hidden;position:relative">{extra}<img src="{img}" alt="" style="max-height:70px;{style}"></div>'
     donts = [
         dont("Don't stretch", t("transform:scaleX(1.5)")),
-        dont("Don't rotate", t("transform:rotate(-14deg)")),
-        dont("Don't recolor outside the colorways", t("filter:invert(48%) sepia(79%) saturate(2476%) hue-rotate(346deg) brightness(98%) contrast(96%)")),
+        dont("Don't use off-palette colors", f'<div class="tile on-white" style="min-height:150px"><span style="display:block;width:240px;max-width:80%;height:70px;background:#2FB34A;-webkit-mask:url({logo}) center/contain no-repeat;mask:url({logo}) center/contain no-repeat"></span></div>'),
         dont("Don't add effects", t("filter:drop-shadow(5px 5px 0 #F6C328) drop-shadow(-2px -2px 0 #ADBAE9)")),
         dont("Don't use low contrast", t("", cls="on-dbg")),
         dont("Don't put it on a busy photo", t("position:relative", img=f"{R}assets/logos/ucg-primary-white.svg", cls="",
@@ -383,6 +386,7 @@ def logo_rules(ctx):
     dos = [
         do("Navy on light", t("", cls="on-lb")),
         do("White or light on navy", t("", img=f"{R}assets/logos/ucg-primary-light.svg", cls="on-navy")),
+        do("A palette color in an approved pair", f'<div class="tile on-navy" style="min-height:150px"><span role="img" aria-label="Primary logo in Golden Yellow on Navy" style="display:block;width:240px;max-width:80%;height:70px;background:#F6C328;-webkit-mask:url({logo}) center/contain no-repeat;mask:url({logo}) center/contain no-repeat"></span></div>'),
         do("White on a dark overlay", f'<div class="tile overlay-dark" style="min-height:150px;position:relative;overflow:hidden"><img src="{thumb(f["team-celebration"]["bw"])}" alt="" class="photo-fill"><img src="{R}assets/logos/ucg-primary-white.svg" alt="" style="max-height:70px;position:relative"></div>'),
     ]
     return (vis("Clear space", clear)
@@ -424,10 +428,10 @@ def icon_usage(ctx):
     a = f'<div class="panel on-lb" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">{chips}</div>'
     b = f'''<div class="cq" style="aspect-ratio:16/9;border-radius:16px;background:#1E2B38">
 <div class="abs" style="inset:0;display:grid;grid-template-columns:repeat(3,1fr)">
-{"".join(f'<div class="cq overlay-screen" style="--overlay:{c};position:relative"><img class="photo-fill" src="{thumb(f[p]["bw"])}" alt=""><img class="abs" src="{R}assets/icons/event/{s}-navy.svg" alt="{n} icon" style="width:50cqw;left:25cqw;top:30cqw"></div>' for c, p, s, n in (("#A5C8CF", "rings-swing", "mag", "MAG"), ("#ADBAE9", "beam-walkover", "wag", "WAG"), ("#F6C328", "trampoline-straddle", "tnt", "T&amp;T")))}
+{"".join(f'<div class="cq overlay-screen" style="--overlay:{c};position:relative"><img class="photo-fill" src="{thumb(f[p]["bw"])}" alt=""><img class="abs" src="{R}assets/icons/event/{s}-navy.svg" alt="{n} icon" style="width:50cqw;left:25cqw;top:30cqw"></div>' for c, p, s, n in (("#F6C328", "rings-swing", "mag", "MAG"), ("#ADBAE9", "beam-walkover", "wag", "WAG"), ("#F4694A", "trampoline-straddle", "tnt", "T&amp;T")))}
 </div></div>'''
     return vis("In use", f'<div style="display:grid;gap:16px">{a}{b}</div>',
-               "Discipline labels on a light panel, and icons over color-overlaid photos (from the design guide). One icon color per layout.")
+               "Discipline labels on a light panel, and icons over color-overlaid photos (DG p20).")
 
 
 # ---------- photos ----------
@@ -465,7 +469,7 @@ def headline_posters(ctx, title="Set in caps, they look like this"):
     cards = []
     for (name, lines), cls in zip(cats, styles):
         heads = "".join(f'<li class="display" style="font-size:24px;margin:0 0 8px">{E(h.strip())}</li>' for h in lines.split("·"))
-        eyebrow = "#A5C8CF" if cls == "on-navy" else "#1E2B38"
+        eyebrow = {"on-navy": "#DBEBEE", "on-bg": "#184B56"}.get(cls, "#1E2B38")
         cards.append(f'<div class="panel {cls}"><p class="eyebrow" style="color:{eyebrow}">{E(name)}</p><ul style="list-style:none;margin:0;padding:0">{heads}</ul></div>')
     return vis(title, f'<div class="grid" style="--min:340px">{"".join(cards)}</div>')
 
@@ -511,11 +515,11 @@ def email_previews(ctx):
 
 def gmail_mock(ctx):
     return vis("A personal email", f'''<div class="card" style="max-width:640px;padding:0;overflow:hidden;font-family:Arial,Helvetica,sans-serif">
-<div style="background:#F1F5F6;padding:12px 18px;font-size:14px;color:#1E2B38;border-bottom:1px solid #A5C8CF"><b>To:</b> jordan@example.com<br><b>Subject:</b> Getting involved with UCG</div>
+<div style="background:#DBEBEE;padding:12px 18px;font-size:14px;color:#1E2B38;border-bottom:1px solid #A5C8CF"><b>To:</b> jordan@example.com<br><b>Subject:</b> Getting involved with UCG</div>
 <div style="padding:22px 22px 26px;font-size:16px;line-height:1.55;color:#1E2B38">
-<p style="margin:0 0 14px">Hi Jordan,</p><p style="margin:0 0 14px">Thanks for reaching out about getting involved with UCG. Whether you are coming from a college club, returning after time away, or looking for a new way to stay in the sport, there is a place for you here.</p>
+<p style="margin:0 0 14px;font-family:'Arial Narrow',Arial,sans-serif;font-weight:700;font-size:18px">Hi Jordan,</p><p style="margin:0 0 14px">Thanks for reaching out about getting involved with UCG. Whether you are coming from a college club, returning after time away, or looking for a new way to stay in the sport, there is a place for you here.</p>
 <p style="margin:0 0 22px">See you in the gym,</p>
-<p style="margin:0;font-size:16px">Jordan Lee<br>Events Coordinator, United Club Gymnastics<br><a href="https://unitedclubgymnastics.org" style="color:#184B56">unitedclubgymnastics.org</a></p>
+<p style="margin:0;font-size:16px"><b style="text-transform:uppercase">Jordan Lee</b><br>Events Coordinator, United Club Gymnastics<br><a href="https://unitedclubgymnastics.org" style="color:#184B56">unitedclubgymnastics.org</a></p>
 <img src="{R}assets/social/ucg-email-header.png" alt="United Club Gymnastics" style="display:block;width:260px;margin-top:14px;border-radius:6px"></div></div>''')
 
 
@@ -523,20 +527,20 @@ def gmail_mock(ctx):
 
 def web_layout(ctx):
     bands = "".join(f'<div class="{c}" style="padding:22px 26px;{b}"><span class="subhead" style="font-size:13px">{n}</span></div>'
-                    for c, n, b in (("on-white", "White", "border:0;border-bottom:1px solid #A5C8CF;"), ("on-lb", "Light Blue", ""), ("on-bg", "Blue Green", ""), ("on-navy", "Navy", "")))
+                    for c, n, b in (("on-white", "White", "border:0;border-bottom:1px solid #A5C8CF;"), ("on-lb", "Light Blue", ""), ("on-bg", "Blue Green", "color:#184B56;"), ("on-navy", "Navy", "")))
     radii = "".join(f'<div style="text-align:center"><div style="height:80px;background:#DBEBEE;border:2px solid #1E2B38;border-radius:{r}"></div><p class="small" style="margin:8px 0 0"><b>{n}</b><br>{r}</p></div>'
-                    for n, r in (("Buttons", "8px"), ("Inputs, boxes", "12px"), ("Cards, photos", "20px"), ("Chips", "999px")))
-    return (vis("Alternate section backgrounds", f'<div style="border-radius:16px;overflow:hidden;border:1px solid #A5C8CF">{bands}</div>')
-            + vis("Rounded corners", f'<div class="grid" style="--min:130px">{radii}</div>'))
+                    for n, r in (("Buttons, chips", "999px"), ("Inputs, boxes", "12px"), ("Cards, photos", "20px")))
+    return (vis("Section backgrounds", f'<div style="border-radius:16px;overflow:hidden;border:1px solid #A5C8CF">{bands}</div>')
+            + vis("Rounded corners (template defaults)", f'<div class="grid" style="--min:130px">{radii}</div>'))
 
 
 def web_type(ctx):
     rows = [("Display / hero", "clamp(48px, 7vw, 96px), ALL CAPS", '<span class="ucg-display" style="font-size:clamp(44px,6vw,72px)">For the love</span>'),
             ("H1", "clamp(40px, 6vw, 80px)", '<span class="ucg-display" style="font-size:clamp(36px,5vw,56px)">A guide to Nationals</span>'),
             ("H2", "clamp(32px, 4vw, 54px)", '<span class="ucg-display" style="font-size:clamp(28px,3.5vw,40px)">Find your club</span>'),
-            ("H3", "20–24px, 600, sentence case", '<span style="font-weight:700;font-size:22px">Volunteer sign-ups are open</span>'),
+            ("H3", "20–24px, 600", '<span style="font-weight:700;font-size:22px">Volunteer sign-ups are open</span>'),
             ("Subhead / label", "14–18px, 0.2em tracking", '<span class="ucg-subhead" style="font-size:16px">Sponsorship levels</span>'),
-            ("Eyebrow", "12–13px bold caps, 0.16em", '<span class="ucg-eyebrow" style="color:#184B56">New to UCG?</span>'),
+            ("Eyebrow", "12–13px bold caps, 0.2em", '<span class="ucg-eyebrow" style="color:#184B56">New to UCG?</span>'),
             ("Body", "16px / 1.55", '<span>UCG clubs compete in three disciplines. There is a place for you on the floor.</span>')]
     body = "".join(f'<div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #A5C8CF"><div class="small"><b>{n}</b><br><span class="muted">{s}</span></div><div style="min-width:0">{x}</div></div>' for n, s, x in rows)
     return vis("Type scale, live", body)
@@ -544,23 +548,24 @@ def web_type(ctx):
 
 def web_components(ctx):
     buttons = f'''<div class="panel on-white"><p class="vis-title">Buttons</p><div class="btn-row" style="align-items:center">
-<a class="ucg-btn" href="#">Register →</a><a class="ucg-btn ucg-btn--accent" href="#">Join the club</a>
-<a href="#" style="font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:13px;color:#1E2B38;text-decoration:none">Learn more →</a></div>
+<a class="ucg-btn" href="#">Register →</a><a class="ucg-btn ucg-btn--cta" href="#">Give</a><a class="ucg-btn ucg-btn--accent" href="#">Learn more</a>
+<a href="#" style="font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:13px;color:#1E2B38;text-decoration:none">Contact →</a></div>
 <div class="panel on-navy" style="margin-top:14px;padding:16px"><a class="ucg-btn ucg-btn--on-dark" href="#">Donate →</a></div>
 <details style="margin-top:12px"><summary class="small"><b>HTML</b></summary><pre><code>&lt;a class="ucg-btn" href="…"&gt;Register →&lt;/a&gt;
-&lt;a class="ucg-btn ucg-btn--accent" href="…"&gt;Join the club&lt;/a&gt;
+&lt;a class="ucg-btn ucg-btn--cta" href="…"&gt;Give&lt;/a&gt;
+&lt;a class="ucg-btn ucg-btn--accent" href="…"&gt;Learn more&lt;/a&gt;
 &lt;a class="ucg-btn ucg-btn--on-dark" href="…"&gt;Donate →&lt;/a&gt;</code></pre></details></div>'''
     chips = '''<div class="panel on-white"><p class="vis-title">Chips and status</p><div class="btn-row">
-<span class="chip" style="background:#ADBAE9">WAG</span><span class="chip" style="background:#A5C8CF">MAG</span><span class="chip" style="background:#F6C328">T&amp;T</span></div>
+<span class="chip" style="background:#ADBAE9">New</span><span class="chip" style="background:#F6C328">Nationals</span><span class="chip" style="background:#F4694A">Register now</span><span class="chip">Info</span></div>
 <div class="btn-row" style="margin-top:10px"><span class="chip" style="background:#DBEBEE;color:#184B56">✓ On track</span><span class="chip" style="background:#F6C328">● Needs attention</span><span class="chip" style="background:#F4694A">! Closes Jan 15</span></div>
 <p class="vis-note">Always pair a status color with a word or symbol.</p></div>'''
     cards = '''<div class="panel on-lb"><p class="vis-title">Cards</p><div class="grid" style="--min:160px">
 <div style="background:#FFFFFF;border-radius:20px;padding:18px"><p class="ucg-eyebrow" style="color:#184B56;margin:0 0 6px">Compete</p><p style="font-weight:700;font-size:18px;margin:0 0 6px">Find a meet</p><p class="small" style="margin:0;color:#184B56">Sanctioned events near you.</p></div>
-<div style="background:#1E2B38;border-radius:20px;padding:18px"><p class="ucg-eyebrow" style="color:#A5C8CF;margin:0 0 6px">Featured</p><p style="font-weight:700;font-size:18px;margin:0 0 6px;color:#FFFFFF">Nationals 2027</p><p class="small" style="margin:0;color:#DBEBEE">Portland, Oregon.</p></div></div></div>'''
+<div style="background:#1E2B38;border-radius:20px;padding:18px"><p class="ucg-eyebrow" style="color:#DBEBEE;margin:0 0 6px">Featured</p><p style="font-weight:700;font-size:18px;margin:0 0 6px;color:#FFFFFF">Nationals 2027</p><p class="small" style="margin:0;color:#DBEBEE">Portland, Oregon.</p></div></div></div>'''
     lst = '''<div class="panel on-white"><p class="vis-title">List with dividers</p><div>
 <div style="padding:14px 0"><b>Reach out to UCG</b><br><span class="small muted">Tell us about your club or your situation.</span></div>
-<div style="padding:14px 0;border-top:1px solid #A5C8CF"><b>Speak with the team</b><br><span class="small muted">We'll answer questions about levels and events.</span></div>
-<div style="padding:14px 0;border-top:1px solid #A5C8CF"><b>Find your next step</b><br><span class="small muted">Join a club, compete independently or volunteer.</span></div></div>
+<div style="padding:14px 0;border-top:.5pt solid #A5C8CF"><b>Speak with the team</b><br><span class="small muted">We'll answer questions about levels and events.</span></div>
+<div style="padding:14px 0;border-top:.5pt solid #A5C8CF"><b>Find your next step</b><br><span class="small muted">Join a club, compete independently or volunteer.</span></div></div>
 <p class="vis-note">Dividers between items only, none above the first or below the last.</p></div>'''
     form = '''<div class="panel on-white"><p class="vis-title">Form fields</p>
 <label style="display:block;font-weight:700;font-size:14px;margin-bottom:6px" for="demo-club">Club name</label>
@@ -570,17 +575,17 @@ def web_components(ctx):
 <p class="vis-note">The second field shows the focus state: Dark Blue Green border and ring.</p></div>'''
     table = '''<div class="panel on-white" style="grid-column:1/-1"><p class="vis-title">Table</p><div class="table-wrap" style="margin:0"><table>
 <thead><tr><th>Club</th><th>Discipline</th><th style="text-align:right">Athletes</th><th>Status</th></tr></thead>
-<tbody><tr><td>Example State</td><td><span class="chip" style="background:#ADBAE9">WAG</span></td><td style="text-align:right">24</td><td>Registered</td></tr>
-<tr><td>River City Gym</td><td><span class="chip" style="background:#A5C8CF">MAG</span></td><td style="text-align:right">12</td><td>Pending</td></tr>
-<tr><td>Northside Flyers</td><td><span class="chip" style="background:#F6C328">T&amp;T</span></td><td style="text-align:right">9</td><td>Registered</td></tr></tbody></table></div></div>'''
+<tbody><tr><td>Example State</td><td>WAG</td><td style="text-align:right">24</td><td>Registered</td></tr>
+<tr><td>River City Gym</td><td>MAG</td><td style="text-align:right">12</td><td>Pending</td></tr>
+<tr><td>Northside Flyers</td><td>T&amp;T</td><td style="text-align:right">9</td><td>Registered</td></tr></tbody></table></div></div>'''
     return vis("Components, live", f'<div class="grid" style="--min:300px">{buttons}{chips}{cards}{lst}{form}{table}</div>',
                "Example content. Buttons use the classes in tokens/ucg.css.")
 
 
 def web_dark(ctx):
-    return vis("", '''<div class="panel" style="background:#1E2B38;max-width:520px"><p class="ucg-eyebrow" style="color:#A5C8CF;margin:0 0 8px">Dark mode</p>
-<p style="font-weight:700;font-size:20px;margin:0 0 6px;color:#FFFFFF">Navy surfaces, white and light blue text</p><p style="margin:0 0 14px;color:#DBEBEE">Blue Green carries links and accents.</p>
-<a class="ucg-btn ucg-btn--on-dark" href="#">Continue →</a> <a href="#" style="color:#A5C8CF;margin-left:12px">Text link</a></div>''')
+    return vis("", '''<div class="panel" style="background:#1E2B38;max-width:520px"><p class="ucg-eyebrow" style="color:#DBEBEE;margin:0 0 8px">Dark mode</p>
+<p style="font-weight:700;font-size:20px;margin:0 0 6px;color:#FFFFFF">Navy surfaces, white and light blue text</p><p style="margin:0 0 14px;color:#DBEBEE">Golden Yellow or Light Blue for links; Blue Green for large type and rules.</p>
+<a class="ucg-btn ucg-btn--on-dark" href="#">Continue →</a> <a href="#" style="color:#F6C328;margin-left:12px">Text link</a></div>''')
 
 
 # ---------- Google templates (slides, docs, sheets) ----------
@@ -631,7 +636,7 @@ SHEET_STEPS = [
     "In Google Sheets, click <b>Template gallery → United Club Gymnastics → UCG Sheets Template</b> (or <b>Use template</b> above) and rename the file.",
     "Rename the tab and the column headers. Keep the header row frozen.",
     "Type into the banded rows; extend the banding with Format → Alternating colors if you add rows.",
-    "Pick Status and Discipline from the dropdowns. The words drive the colors.",
+    "Pick Status and Discipline from the dropdowns. The status words drive the colors.",
     "Charts and new cells pick up the UCG theme (Format → Theme) automatically.",
 ]
 
@@ -689,7 +694,7 @@ def slide_traps(ctx):
     def foot(color, skip):
         return f'<div class="panel on-lb"{skip}><span style="font-size:13px;color:{color}">UCG Board of Directors · Nationals 2027</span></div>'
     body = (f'<div class="dodont">{dont("Blue Green on Light Blue (1.4:1)", num("#A5C8CF", " data-contrast-skip"))}{do("Dark Blue Green (7.9:1)", num("#184B56", ""))}</div>'
-            f'<div class="dodont" style="margin-top:16px">{dont("Grey #74858F footer (3.1:1)", foot("#74858F", " data-contrast-skip"))}{do("Dark Blue Green (7.9:1)", foot("#184B56", ""))}</div>')
+            f'<div class="dodont" style="margin-top:16px">{dont("Gray #74858F footer (3.1:1)", foot("#74858F", " data-contrast-skip"))}{do("Dark Blue Green (7.9:1)", foot("#184B56", ""))}</div>')
     return vis("Before and after", body)
 
 
@@ -749,12 +754,12 @@ def sheet_mock(ctx):
     rows = ""
     for i, (club, disc, dc, n, st, sb, sf, fee) in enumerate(data):
         z = "#FFFFFF" if i % 2 == 0 else "#DBEBEE"
-        rows += (f'<tr><td class="rh">{i + 3}</td><td style="background:{z};color:#1E2B38">{club}</td><td style="background:{dc};color:#1E2B38;font-weight:700;text-align:center">{disc}</td>'
+        rows += (f'<tr><td class="rh">{i + 3}</td><td style="background:{z};color:#1E2B38">{club}</td><td style="background:{z};color:#1E2B38">{disc}</td>'
                  f'<td style="background:{z};color:#1E2B38;text-align:right">{n}</td><td style="background:{sb};color:{sf};font-weight:700">{st}</td><td style="background:{z};color:#1E2B38;text-align:right">{fee}</td></tr>')
     t = f'''<div class="table-wrap" style="background:#FFFFFF"><table class="sheet"><tr>{cols}</tr>
 <tr><td class="rh">1</td><td colspan="5" style="font-family:'Saira Condensed','Arial Narrow',Arial;font-weight:700;font-size:20px;text-transform:uppercase;color:#1E2B38;border-color:transparent">Nationals registrations</td></tr>
 <tr><td class="rh">2</td><th style="background:#1E2B38;color:#FFFFFF">Club</th><th style="background:#1E2B38;color:#FFFFFF">Discipline</th><th style="background:#1E2B38;color:#FFFFFF;text-align:right">Athletes</th><th style="background:#1E2B38;color:#FFFFFF">Status</th><th style="background:#1E2B38;color:#FFFFFF;text-align:right">Fees</th></tr>
-{rows}<tr><td class="rh">7</td><td style="background:#A5C8CF;color:#1E2B38;font-weight:700">Total</td><td style="background:#A5C8CF"></td><td style="background:#A5C8CF;color:#1E2B38;font-weight:700;text-align:right">62</td><td style="background:#A5C8CF"></td><td style="background:#A5C8CF;color:#1E2B38;font-weight:700;text-align:right">$3,410.00</td></tr></table></div>'''
+{rows}<tr><td class="rh">7</td><td style="background:#1E2B38;color:#FFFFFF;font-weight:700">Total</td><td style="background:#1E2B38"></td><td style="background:#1E2B38;color:#FFFFFF;font-weight:700;text-align:right">62</td><td style="background:#1E2B38"></td><td style="background:#1E2B38;color:#FFFFFF;font-weight:700;text-align:right">$3,410.00</td></tr></table></div>'''
     return vis("What a UCG sheet looks like", t, "Example data.")
 
 
@@ -801,7 +806,7 @@ def social_posts(ctx):
     f = {fr["slug"]: fr for fr in ctx.frames()}
     handle = lambda c: f'<div class="abs" style="left:{px(64)};bottom:{px(52)};font-family:Arial;font-weight:700;font-size:{px(36)};color:{c}">@unitedclubgymnastics</div>'
     p1 = f'''<div class="cq post on-bg"><img class="abs" src="{R}assets/logos/ucg-mark-navy.svg" alt="" style="width:{px(110)};right:{px(64)};top:{px(64)}">
-<div class="abs display" style="left:{px(64)};right:{px(64)};top:{px(330)};font-size:{px(190)};color:#1E2B38">For the love of the sport.</div>{handle("#1E2B38")}</div>'''
+<div class="abs display" style="left:{px(64)};right:{px(64)};top:{px(330)};font-size:{px(190)};color:#1E2B38">For the love of the sport.</div>{handle("#184B56")}</div>'''
     p2 = f'''<div class="cq post" style="background:#1E2B38"><img class="abs" src="{thumb(f["vault-layout"]["bw"])}" alt="" style="top:0;left:0;width:100%;height:68%;object-fit:cover">
 <div class="abs" style="left:0;right:0;bottom:0;height:34%;background:#1E2B38"></div>
 <div class="abs display" style="left:{px(64)};right:{px(64)};top:{px(960)};font-size:{px(150)};color:#FFFFFF">Join the club</div>{handle("#DBEBEE")}</div>'''
@@ -810,7 +815,7 @@ def social_posts(ctx):
 <div class="abs display" style="left:{px(64)};right:{px(64)};top:{px(700)};font-size:{px(120)};color:#1E2B38;text-align:center">MAG · WAG · T&amp;T</div>
 <div class="abs" style="left:{px(64)};right:{px(64)};top:{px(860)};font-family:Arial;font-size:{px(46)};color:#1E2B38;text-align:center">Three disciplines. One community.</div>{handle("#1E2B38")}</div>'''
     def car(bg, fg, eyebrow, title, sub, arrow=True):
-        return f'''<div class="cq post" style="background:{bg}"><div class="abs" style="left:{px(64)};top:{px(80)};font-family:Arial;font-weight:700;font-size:{px(44)};letter-spacing:.16em;text-transform:uppercase;color:{fg}">{eyebrow}</div>
+        return f'''<div class="cq post" style="background:{bg}"><div class="abs" style="left:{px(64)};top:{px(80)};font-family:Arial;font-weight:700;font-size:{px(44)};letter-spacing:.2em;text-transform:uppercase;color:{fg}">{eyebrow}</div>
 <div class="abs display" style="left:{px(64)};right:{px(64)};top:{px(420)};font-size:{px(150)};color:{fg}">{title}</div><div class="abs" style="left:{px(64)};right:{px(64)};top:{px(900)};font-family:Arial;font-size:{px(54)};color:{fg}">{sub}</div>
 {f'<div class="abs" style="right:{px(64)};bottom:{px(48)};font-family:Arial;font-weight:700;font-size:{px(70)};color:{fg}">→</div>' if arrow else ""}</div>'''
     carousel = (car("#1E2B38", "#FFFFFF", "Nationals 2027", "Everything you need to know", "Swipe for the details")
@@ -837,7 +842,7 @@ def mixed_piece(ctx):
     mixed = f'''<div class="cq post" style="background:#8BB7E3;width:100%;max-width:360px;flex:1 1 260px">
 <div class="abs" style="inset:0;opacity:.5;display:grid;grid-template-columns:repeat(4,1fr);gap:{px(40)};padding:{px(40)}" aria-hidden="true">{"".join(f'<img src="{R}assets/icons/apparatus-solid/{icons[(c - r) % 4]}-white.svg" alt="" style="width:100%">' for r in range(5) for c in range(4))}</div>
 <div class="abs" style="left:{px(80)};right:{px(80)};top:{px(380)};background:#1E2B38;border-radius:{px(40)};padding:{px(70)}">
-<p style="margin:0 0 {px(20)};font-family:Arial;font-weight:700;font-size:{px(30)};letter-spacing:.16em;text-transform:uppercase;color:#A5C8CF">Nationals 2027</p>
+<p style="margin:0 0 {px(20)};font-family:Arial;font-weight:700;font-size:{px(30)};letter-spacing:.2em;text-transform:uppercase;color:#DBEBEE">Nationals 2027</p>
 <p class="display" style="margin:0 0 {px(30)};font-size:{px(120)};color:#FFFFFF">Registration opens Dec 1</p>
 <p style="margin:0;font-family:Arial;font-size:{px(38)};color:#DBEBEE">unitedclubgymnastics.org</p></div></div>'''
     return vis("A mixed piece", f'<div style="display:flex;flex-wrap:wrap;gap:20px;align-items:center">{mixed}<p class="small" style="max-width:360px">Expressive background and pattern, while the facts (event, date, link) sit on a solid Navy panel in core colors and plain type.</p></div>', "Example content.")
@@ -864,7 +869,7 @@ def anchor_posters(ctx):
     # 1. logo locked: the mark as drawn, huge and cropped; color pushed into the expressive range
     p1 = f'''<div class="cq post" style="background:#FF988A"><img class="abs" src="{mark}" alt="" style="width:{px(900)};right:{px(-260)};bottom:{px(-220)}">
 <div class="abs display" style="left:{px(64)};right:{px(64)};top:{px(80)};font-size:{px(150)};color:#1E2B38">Nationals<br>2027</div>
-<div class="abs" style="left:{px(64)};top:{px(400)};font-family:Arial;font-weight:700;font-size:{px(40)};letter-spacing:.16em;text-transform:uppercase;color:#1E2B38">Portland, OR</div></div>'''
+<div class="abs" style="left:{px(64)};top:{px(400)};font-family:Arial;font-weight:700;font-size:{px(40)};letter-spacing:.2em;text-transform:uppercase;color:#1E2B38">Portland, OR</div></div>'''
     # 2. color locked: brand palette only; layout and graphics flex
     tiles = [("#A5C8CF", "mag-rings", "navy"), ("#184B56", "wag-balance-beam", "light"),
              ("#ADBAE9", "tnt-trampoline", "navy"), ("#F6C328", "mag-pommel-horse", "navy")]
@@ -872,7 +877,7 @@ def anchor_posters(ctx):
                    f'<img src="{R}assets/icons/apparatus-solid/{ic}-{cw}.svg" alt="" style="width:85%"></div>' for bg, ic, cw in tiles)
     p2 = f'''<div class="cq post" style="background:#1E2B38"><div class="abs" style="left:{px(64)};right:{px(64)};top:{px(64)};height:{px(900)};display:grid;grid-template-columns:1fr 1fr;gap:{px(30)}">{grid}</div>
 <div class="abs" style="left:{px(64)};right:{px(64)};bottom:{px(150)};font-family:Arial;font-weight:700;font-size:{px(40)};letter-spacing:.2em;text-transform:uppercase;color:#FFFFFF;text-align:center">United Club Gymnastics</div>
-<div class="abs" style="left:{px(64)};right:{px(64)};bottom:{px(90)};font-family:Arial;font-size:{px(32)};letter-spacing:.2em;text-transform:uppercase;color:#A5C8CF;text-align:center">For the love of the sport</div></div>'''
+<div class="abs" style="left:{px(64)};right:{px(64)};bottom:{px(90)};font-family:Arial;font-size:{px(32)};letter-spacing:.2em;text-transform:uppercase;color:#DBEBEE;text-align:center">For the love of the sport</div></div>'''
     # 3. type locked: big stacked condensed caps; color expressive, no logo needed
     p3 = f'''<div class="cq post" style="background:#504A83"><div class="abs display" style="left:{px(56)};right:{px(40)};top:{px(70)};font-size:{px(255)};line-height:.86;color:#FFFFFF">For<br>the love<br>of the<br>sport.</div></div>'''
     posts = (f'<div>{p1}<p class="mock-label"><b>Logo locked.</b> The mark as drawn, huge and cropped. Color pushed into the expressive range (Coral, Navy text).</p></div>'
@@ -913,7 +918,7 @@ def mark_moves(ctx):
     ]
     return (vis("Do", f'<div class="grid" style="--min:220px">{"".join(dos)}</div>')
             + vis("Don't", f'<div class="grid" style="--min:220px">{"".join(donts)}</div>',
-                  "Everyday materials stick to the four supplied colorways with no outlines. See the <a href=\"../logos/\">logo rules</a>."))
+                  "Recoloring within the palette works in any material (DG p26, p42). Expressive work adds the six expressive colors, strokes and big crops. See the <a href=\"../logos/\">logo rules</a>."))
 
 
 def expressive_colors(ctx):
@@ -934,7 +939,7 @@ def expressive_colors(ctx):
 
 MERCH = [  # file, alt text, caption (from references/expressive.md "Examples from UCG merch")
     ("merch-logo-recolored-purple.jpg", "Primary logo printed in Purple on a charcoal heather shirt",
-     "<b>Recolored.</b> The primary logo, unchanged in shape, in Purple: a palette color the everyday colorways don't use."),
+     "<b>Recolored.</b> The primary logo, unchanged in shape, printed in Purple (the charcoal is the shirt, not an ink color)."),
     ("merch-badge-distressed.jpg", "Circle badge with a worn, distressed print texture on a charcoal shirt",
      "<b>Textured.</b> A worn print finish over the badge. The shape and type stay as drawn."),
     ("merch-tee-mark-background.jpg", "Blue Green tee with the primary logo on the chest and a huge Light Blue mark cropped off the lower edge",
@@ -1000,7 +1005,7 @@ def reel_safe(ctx):
 <div class="abs" style="left:0;right:0;bottom:0;height:19.79%;background:rgba(244,105,74,.45)" aria-hidden="true"></div>
 <div class="abs" style="left:0;top:13.02%;bottom:19.79%;width:{px(120)};background:rgba(244,105,74,.3)" aria-hidden="true"></div>
 <div class="abs" style="right:0;top:13.02%;bottom:19.79%;width:{px(120)};background:rgba(244,105,74,.3)" aria-hidden="true"></div>
-<div class="abs" style="left:{px(140)};right:{px(140)};top:40%"><p style="margin:0 0 {px(20)};font-family:Arial;font-weight:700;font-size:{px(40)};letter-spacing:.16em;text-transform:uppercase;color:#A5C8CF">Nationals 2027</p>
+<div class="abs" style="left:{px(140)};right:{px(140)};top:40%"><p style="margin:0 0 {px(20)};font-family:Arial;font-weight:700;font-size:{px(40)};letter-spacing:.2em;text-transform:uppercase;color:#DBEBEE">Nationals 2027</p>
 <p class="display" style="margin:0;font-size:{px(112)};color:#FFFFFF">Registration opens Dec 1</p></div></div>'''
     notes = '''<ul class="small" style="max-width:380px"><li>Shaded: where Instagram's buttons and captions sit. Keep text out of it (about 250px top, 380px bottom, 120px sides at 1080 × 1920).</li>
 <li>Titles in Saira or Greed caps, White on a darkened photo.</li><li>Burned-in captions on every spoken video.</li></ul>'''

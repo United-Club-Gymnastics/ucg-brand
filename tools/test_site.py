@@ -1,6 +1,7 @@
 """Test the brand site the way the public sees it (Saira Condensed + Arial, no licensed fonts).
 
-Checks every page at desktop and phone width: WCAG AA contrast of all text, horizontal
+Checks every page at desktop and phone width: WCAG AA contrast of all text, palette pairs the
+design guide rejects at that size (DG p42-43, via tools/contrast.py), horizontal
 overflow, broken same-site links/images, noindex tag, console errors. Saves screenshots.
 Usage: python tools/test_site.py http://127.0.0.1:8123/ucg-brand/ <screenshot dir>
 """
@@ -17,6 +18,15 @@ BASE = sys.argv[1].rstrip("/") + "/"
 SHOTS = Path(sys.argv[2]) if len(sys.argv) > 2 else None
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_site import PAGES  # noqa: E402
+import contrast  # noqa: E402
+
+# palette pairs the guide rejects: "rgb" strings of (fg, bg) -> "small" (not for small text) or "all"
+def _rgb(h):
+    return ",".join(str(int(h[i:i + 2], 16)) for i in (1, 3, 5))
+GUIDE_BAN = {}
+for (fg, bg), g in contrast.GUIDE.items():
+    if g in ("large", "small-no", "no"):
+        GUIDE_BAN[_rgb(contrast.C[fg][1]) + "|" + _rgb(contrast.C[bg][1])] = "all" if g == "no" else "small"
 
 URLS = [BASE] + [BASE + p[0] + "/" for p in PAGES] + [BASE + "templates/email/example-announcement.html", BASE + "site/email-example-dark.html"]
 
@@ -29,7 +39,7 @@ FALLBACK = f"""@font-face{{font-family:"Greed Condensed";src:url({saira});font-w
 @font-face{{font-family:"Suisse Intl";src:local("Arial");font-weight:100 500}}
 @font-face{{font-family:"Suisse Intl";src:local("Arial Bold");font-weight:600 900}}"""
 
-CHECK_JS = r"""() => {
+CHECK_JS = r"""(ban) => {
   const rgba = s => { const m = s.match(/rgba?\(([^)]+)\)/); if (!m) return null;
     const p = m[1].split(/[ ,\/]+/).filter(Boolean).map(Number); return [p[0], p[1], p[2], p.length > 3 ? p[3] : 1]; };
   const lum = c => { const f = v => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); };
@@ -63,7 +73,10 @@ CHECK_JS = r"""() => {
     const size = parseFloat(cs.fontSize), w = parseInt(cs.fontWeight);
     const large = size >= 24 || (size >= 18.66 && w >= 700);
     const need = large ? 3 : 4.5, got = ratio(fgc, b.col);
-    if (got < need - 0.01) out.push({text: el.textContent.trim().slice(0, 50), fg: cs.color, bg: 'rgb(' + b.col.slice(0,3).map(Math.round).join(',') + ')', ratio: +got.toFixed(2), need});
+    const bgs = 'rgb(' + b.col.slice(0,3).map(Math.round).join(',') + ')';
+    if (got < need - 0.01) out.push({text: el.textContent.trim().slice(0, 50), fg: cs.color, bg: bgs, ratio: +got.toFixed(2), need});
+    const key = fgc.slice(0,3).map(Math.round).join(',') + '|' + b.col.slice(0,3).map(Math.round).join(',');
+    if (ban[key] === 'all' || (ban[key] === 'small' && !large)) out.push({text: el.textContent.trim().slice(0, 50), fg: cs.color, bg: bgs, guide: 'not approved at this size (DG p42-43)'});
   }
   const over = document.documentElement.scrollWidth > window.innerWidth + 1;
   const wide = over ? [...all].filter(e => e.getBoundingClientRect().right > window.innerWidth + 1 && !e.closest('.matrix-scroll,.table-wrap,pre'))
@@ -93,7 +106,7 @@ with sync_playwright() as p:
             # scroll through so lazy images load before screenshots
             page.evaluate("async () => { for (let y = 0; y < document.body.scrollHeight; y += 700) { window.scrollTo(0, y); await new Promise(r => setTimeout(r, 40)); } window.scrollTo(0, 0); }")
             page.wait_for_timeout(500)
-            r = page.evaluate(CHECK_JS)
+            r = page.evaluate(CHECK_JS, GUIDE_BAN)
             name = urlparse(url).path.replace("/ucg-brand/", "").strip("/").replace("/", "_") or "home"
             if r["fails"]:
                 problems.append((tag, name, "contrast", r["fails"][:8]))

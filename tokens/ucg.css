@@ -10,14 +10,14 @@
 :root {
   /* Primary palette */
   --ucg-navy: #1E2B38;            /* main text, dark surfaces, primary buttons */
-  --ucg-blue-green: #A5C8CF;      /* signature accent fill; text on navy */
+  --ucg-blue-green: #A5C8CF;      /* signature accent fill; large text on navy; small text on it is dark blue green */
   --ucg-light-blue: #DBEBEE;      /* default light page/section background */
 
   /* Secondary palette (accents, chips, data) */
   --ucg-purple: #ADBAE9;
-  --ucg-red-orange: #F4694A;      /* fill with navy text; never text on white */
+  --ucg-red-orange: #F4694A;      /* calls to action: fill with navy text; as text, large only on white */
   --ucg-dark-blue-green: #184B56; /* links and accent text on light backgrounds */
-  --ucg-golden-yellow: #F6C328;   /* fill with navy text; never text on white */
+  --ucg-golden-yellow: #F6C328;   /* fill with navy text; text on navy; never text on white */
   --ucg-white: #FFFFFF;
 
   /* Semantic roles */
@@ -26,7 +26,8 @@
   --ucg-fg-link: var(--ucg-dark-blue-green);
   --ucg-fg-on-dark: var(--ucg-white);
   --ucg-fg-on-dark-muted: var(--ucg-light-blue);
-  --ucg-accent-on-dark: var(--ucg-blue-green);
+  --ucg-accent-on-dark: var(--ucg-blue-green); /* large type, rules and icons only */
+  --ucg-fg-link-on-dark: var(--ucg-golden-yellow);
   --ucg-bg: var(--ucg-white);
   --ucg-bg-tint: var(--ucg-light-blue);
   --ucg-bg-accent: var(--ucg-blue-green);
@@ -39,17 +40,17 @@
   --ucg-font-body: "Suisse Intl", Arial, Helvetica, sans-serif;
   --ucg-tracking-display: 0.005em;   /* headlines */
   --ucg-tracking-subhead: 0.2em;     /* condensed subheads and buttons (guide: 20%) */
-  --ucg-tracking-eyebrow: 0.16em;
-  --ucg-leading-display: 0.92;
+  --ucg-tracking-eyebrow: 0.2em;
+  --ucg-leading-display: 0.92;     /* a suggestion; the guide doesn't set it */
   --ucg-leading-body: 1.55;
 
-  /* Shape */
-  --ucg-radius-btn: 8px;
+  /* Shape (template defaults; buttons and chips are pills, DG p76) */
+  --ucg-radius-btn: 999px;
   --ucg-radius-sm: 12px;    /* inputs, note boxes, small tiles */
   --ucg-radius-card: 20px;  /* cards, panels, photos */
   --ucg-radius-pill: 999px; /* chips, tags */
 
-  /* Spacing (4px grid) */
+  /* Spacing (a suggested 4px grid) */
   --ucg-space-1: 4px;  --ucg-space-2: 8px;  --ucg-space-3: 12px; --ucg-space-4: 16px;
   --ucg-space-5: 24px; --ucg-space-6: 32px; --ucg-space-7: 48px; --ucg-space-8: 64px;
 }
@@ -64,5 +65,6 @@
 .ucg-btn { display: inline-block; font-family: var(--ucg-font-body); font-weight: 600; text-transform: uppercase;
   letter-spacing: 0.2em; font-size: 0.85rem; padding: 14px 26px; border-radius: var(--ucg-radius-btn);
   background: var(--ucg-navy); color: var(--ucg-white); text-decoration: none; }
-.ucg-btn--accent { background: var(--ucg-blue-green); color: var(--ucg-navy); }
-.ucg-btn--on-dark { background: var(--ucg-blue-green); color: var(--ucg-navy); }
+.ucg-btn--accent { background: var(--ucg-light-blue); color: var(--ucg-navy); }
+.ucg-btn--cta { background: var(--ucg-red-orange); color: var(--ucg-navy); }
+.ucg-btn--on-dark { background: var(--ucg-light-blue); color: var(--ucg-navy); }

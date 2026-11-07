@@ -61,16 +61,17 @@
 </section>
 <section class="doc-section" id="sec-layout">
 <div class="prose"><h2 id="layout">Layout</h2>
+<p>Suggestions and the defaults in <code>tokens/ucg.css</code>; the design guide sets the look, not these numbers.</p>
 <ul>
 <li>Light page (<code>#FFFFFF</code> or <code>#DBEBEE</code>), Navy text. Full-bleed Navy for heroes, footers and feature bands.</li>
-<li>Alternate section backgrounds White → Light Blue → Blue Green → Navy so neighbors differ.</li>
-<li>Content max width about 1240px; 4px spacing grid (8, 12, 16, 24, 32, 48, 64). Generous white space; cut content before cramming.</li>
+<li>Neighboring sections read best with different backgrounds (White, Light Blue, Blue Green, Navy).</li>
+<li>Content max width about 1240px; spacing in steps of 4px (8, 12, 16, 24, 32, 48, 64). Generous white space; cut content before cramming (DG p89).</li>
 <li>Left-align to a grid. Center only short content (a hero line, a single call to action).</li>
-<li>Rounded corners: 8px buttons, 12px inputs and small boxes, 20px cards and photos, pills (999px) for chips and tags.</li>
-<li>Black-and-white photography with white type; color overlays use a B&amp;W photo on a brand color with <code>mix-blend-mode: screen</code>. Keep text on a solid or overlaid area that meets contrast.</li>
+<li>Rounded corners on cards, panels and photos (DG p19); pills for buttons, chips and tags (DG p76). Defaults: 12px inputs and small boxes, 20px cards and photos, 999px pills.</li>
+<li>Black-and-white photography with white type (DG p17). Color overlays: a B&amp;W photo on a brand color with <code>mix-blend-mode: screen</code> (DG p44). Keep text on a solid or overlaid area that meets the color pairs.</li>
 </ul>
 </div>
-<div class="vis"><p class="vis-title">Alternate section backgrounds</p><div style="border-radius:16px;overflow:hidden;border:1px solid #A5C8CF"><div class="on-white" style="padding:22px 26px;border:0;border-bottom:1px solid #A5C8CF;"><span class="subhead" style="font-size:13px">White</span></div><div class="on-lb" style="padding:22px 26px;"><span class="subhead" style="font-size:13px">Light Blue</span></div><div class="on-bg" style="padding:22px 26px;"><span class="subhead" style="font-size:13px">Blue Green</span></div><div class="on-navy" style="padding:22px 26px;"><span class="subhead" style="font-size:13px">Navy</span></div></div></div><div class="vis"><p class="vis-title">Rounded corners</p><div class="grid" style="--min:130px"><div style="text-align:center"><div style="height:80px;background:#DBEBEE;border:2px solid #1E2B38;border-radius:8px"></div><p class="small" style="margin:8px 0 0"><b>Buttons</b><br/>8px</p></div><div style="text-align:center"><div style="height:80px;background:#DBEBEE;border:2px solid #1E2B38;border-radius:12px"></div><p class="small" style="margin:8px 0 0"><b>Inputs, boxes</b><br/>12px</p></div><div style="text-align:center"><div style="height:80px;background:#DBEBEE;border:2px solid #1E2B38;border-radius:20px"></div><p class="small" style="margin:8px 0 0"><b>Cards, photos</b><br/>20px</p></div><div style="text-align:center"><div style="height:80px;background:#DBEBEE;border:2px solid #1E2B38;border-radius:999px"></div><p class="small" style="margin:8px 0 0"><b>Chips</b><br/>999px</p></div></div></div>
+<div class="vis"><p class="vis-title">Section backgrounds</p><div style="border-radius:16px;overflow:hidden;border:1px solid #A5C8CF"><div class="on-white" style="padding:22px 26px;border:0;border-bottom:1px solid #A5C8CF;"><span class="subhead" style="font-size:13px">White</span></div><div class="on-lb" style="padding:22px 26px;"><span class="subhead" style="font-size:13px">Light Blue</span></div><div class="on-bg" style="padding:22px 26px;color:#184B56;"><span class="subhead" style="font-size:13px">Blue Green</span></div><div class="on-navy" style="padding:22px 26px;"><span class="subhead" style="font-size:13px">Navy</span></div></div></div><div class="vis"><p class="vis-title">Rounded corners (template defaults)</p><div class="grid" style="--min:130px"><div style="text-align:center"><div style="height:80px;background:#DBEBEE;border:2px solid #1E2B38;border-radius:999px"></div><p class="small" style="margin:8px 0 0"><b>Buttons, chips</b><br/>999px</p></div><div style="text-align:center"><div style="height:80px;background:#DBEBEE;border:2px solid #1E2B38;border-radius:12px"></div><p class="small" style="margin:8px 0 0"><b>Inputs, boxes</b><br/>12px</p></div><div style="text-align:center"><div style="height:80px;background:#DBEBEE;border:2px solid #1E2B38;border-radius:20px"></div><p class="small" style="margin:8px 0 0"><b>Cards, photos</b><br/>20px</p></div></div></div>
 </section>
 <section class="doc-section" id="sec-type-scale-starting-point">
 <div class="prose"><h2 id="type-scale-starting-point">Type scale (starting point)</h2>
@@ -88,7 +89,7 @@
 <td>Display / hero</td>
 <td>display stack</td>
 <td>clamp(48px, 7vw, 96px)</td>
-<td>ALL CAPS, line-height 0.92</td>
+<td>ALL CAPS, line-height about 0.92</td>
 </tr>
 <tr>
 <td>H1</td>
@@ -106,19 +107,19 @@
 <td>H3 and below</td>
 <td>body stack, 600</td>
 <td>20–24px</td>
-<td>Sentence case</td>
+<td></td>
 </tr>
 <tr>
 <td>Subhead / label</td>
 <td>display</td>
 <td>14–18px</td>
-<td>ALL CAPS, letter-spacing 0.2em</td>
+<td>ALL CAPS, letter-spacing 0.2em (DG p34)</td>
 </tr>
 <tr>
 <td>Eyebrow</td>
 <td>body, 700</td>
 <td>12–13px</td>
-<td>ALL CAPS, letter-spacing 0.16em, Dark Blue Green on light, Blue Green on dark</td>
+<td>ALL CAPS, letter-spacing 0.2em, Dark Blue Green on light, Light Blue on dark</td>
 </tr>
 <tr>
 <td>Body</td>
@@ -129,36 +130,37 @@
 </tbody>
 </table></div>
 </div>
-<div class="vis"><p class="vis-title">Type scale, live</p><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #A5C8CF"><div class="small"><b>Display / hero</b><br/><span class="muted">clamp(48px, 7vw, 96px), ALL CAPS</span></div><div style="min-width:0"><span class="ucg-display" style="font-size:clamp(44px,6vw,72px)">For the love</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #A5C8CF"><div class="small"><b>H1</b><br/><span class="muted">clamp(40px, 6vw, 80px)</span></div><div style="min-width:0"><span class="ucg-display" style="font-size:clamp(36px,5vw,56px)">A guide to Nationals</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #A5C8CF"><div class="small"><b>H2</b><br/><span class="muted">clamp(32px, 4vw, 54px)</span></div><div style="min-width:0"><span class="ucg-display" style="font-size:clamp(28px,3.5vw,40px)">Find your club</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #A5C8CF"><div class="small"><b>H3</b><br/><span class="muted">20–24px, 600, sentence case</span></div><div style="min-width:0"><span style="font-weight:700;font-size:22px">Volunteer sign-ups are open</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #A5C8CF"><div class="small"><b>Subhead / label</b><br/><span class="muted">14–18px, 0.2em tracking</span></div><div style="min-width:0"><span class="ucg-subhead" style="font-size:16px">Sponsorship levels</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #A5C8CF"><div class="small"><b>Eyebrow</b><br/><span class="muted">12–13px bold caps, 0.16em</span></div><div style="min-width:0"><span class="ucg-eyebrow" style="color:#184B56">New to UCG?</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #A5C8CF"><div class="small"><b>Body</b><br/><span class="muted">16px / 1.55</span></div><div style="min-width:0"><span>UCG clubs compete in three disciplines. There is a place for you on the floor.</span></div></div></div>
+<div class="vis"><p class="vis-title">Type scale, live</p><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #A5C8CF"><div class="small"><b>Display / hero</b><br/><span class="muted">clamp(48px, 7vw, 96px), ALL CAPS</span></div><div style="min-width:0"><span class="ucg-display" style="font-size:clamp(44px,6vw,72px)">For the love</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #A5C8CF"><div class="small"><b>H1</b><br/><span class="muted">clamp(40px, 6vw, 80px)</span></div><div style="min-width:0"><span class="ucg-display" style="font-size:clamp(36px,5vw,56px)">A guide to Nationals</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #A5C8CF"><div class="small"><b>H2</b><br/><span class="muted">clamp(32px, 4vw, 54px)</span></div><div style="min-width:0"><span class="ucg-display" style="font-size:clamp(28px,3.5vw,40px)">Find your club</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #A5C8CF"><div class="small"><b>H3</b><br/><span class="muted">20–24px, 600</span></div><div style="min-width:0"><span style="font-weight:700;font-size:22px">Volunteer sign-ups are open</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #A5C8CF"><div class="small"><b>Subhead / label</b><br/><span class="muted">14–18px, 0.2em tracking</span></div><div style="min-width:0"><span class="ucg-subhead" style="font-size:16px">Sponsorship levels</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #A5C8CF"><div class="small"><b>Eyebrow</b><br/><span class="muted">12–13px bold caps, 0.2em</span></div><div style="min-width:0"><span class="ucg-eyebrow" style="color:#184B56">New to UCG?</span></div></div><div style="display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:16px;align-items:baseline;padding:16px 0;border-top:1px solid #A5C8CF"><div class="small"><b>Body</b><br/><span class="muted">16px / 1.55</span></div><div style="min-width:0"><span>UCG clubs compete in three disciplines. There is a place for you on the floor.</span></div></div></div>
 </section>
 <section class="doc-section" id="sec-components">
 <div class="prose"><h2 id="components">Components</h2>
 <ul>
-<li><strong>Buttons</strong> (DG p76): Suisse Intl / Arial, ALL CAPS, <code>letter-spacing: 0.2em</code>, short labels. Primary = Navy background + White text; on dark backgrounds = Blue Green background + Navy text. Text-only buttons are Navy (or White on dark). Add <code>→</code> for "go somewhere" actions.</li>
-<li><strong>Chips / tags</strong>: pill shape, a secondary color fill with Navy text. Red Orange chips only for deadlines or urgent states.</li>
-<li><strong>Lists</strong> (DG p77): thin 1px dividers between items (none above the first or below the last), about 15px between text and divider, 30px between a heading and the list. Bullets for unordered items; numbers only for sequences, rankings or counts.</li>
-<li><strong>Cards</strong>: 20px radius, White on Light Blue pages (or Light Blue on White), optional 1px Blue Green <code>#A5C8CF</code> border. Navy cards for the one thing you want noticed.</li>
-<li><strong>Forms</strong>: 12px radius inputs, 1.5px Dark Blue Green <code>#184B56</code> border (form fields need 3:1), Navy text, visible focus ring in Dark Blue Green. Labels above fields, sentence case.</li>
-<li><strong>Tables / data</strong>: Navy header row with White text or Light Blue header with Navy text; zebra rows in White / Light Blue. Use the discipline colors consistently: WAG Purple, MAG Blue Green, T&amp;T Golden Yellow, always with Navy text.</li>
+<li><strong>Buttons</strong> (DG p76): pills in Suisse Intl / Arial, ALL CAPS, <code>letter-spacing: 0.2em</code>, clear short labels. The guide's examples: Navy with White text, Red Orange for a call to action like GIVE (use Navy text on it: White on Red Orange is only 3:1), and Light Blue with Navy text. On dark backgrounds use Light Blue with Navy text. Text-only buttons are Navy or a secondary color, or White on a dark background or image. <code>→</code> works well for "go somewhere" actions.</li>
+<li><strong>Chips / tags</strong>: pills with a secondary color or Light Blue fill and Navy text. Not Blue Green with Navy text at chip sizes (DG p43).</li>
+<li><strong>Lists</strong> (DG p77): thin 0.5pt dividers between items (none above the first or below the last), 15pt between text and divider, 30pt between a heading above the list and the first item. Bullets for options and grouped ideas; numbers only for sequences, rankings or counts.</li>
+<li><strong>Cards</strong>: rounded, White on Light Blue pages (or Light Blue on White), optionally outlined in Blue Green <code>#A5C8CF</code>. A Navy card stands out from light ones.</li>
+<li><strong>Forms</strong>: 1.5px Dark Blue Green <code>#184B56</code> border (form fields need 3:1), Navy text, visible focus ring in Dark Blue Green. Labels above fields.</li>
+<li><strong>Tables / data</strong>: Navy header row with White text or Light Blue header with Navy text; zebra rows in White / Light Blue.</li>
 <li><strong>Icons</strong>: UCG event and apparatus icons for discipline and apparatus (see <a href="../logos/"><code>assets.md</code></a>); a simple line icon set for UI controls, in Navy or the current text color.</li>
-<li><strong>Status colors</strong>: Dark Blue Green for good / on track, Golden Yellow for attention, Red Orange for urgent or error. Always pair color with a word or icon.</li>
+<li><strong>Status colors</strong> (a suggestion): Dark Blue Green for good / on track, Golden Yellow for attention, Red Orange for urgent or error. Always pair color with a word or icon.</li>
 </ul>
 </div>
 <div class="vis"><p class="vis-title">Components, live</p><div class="grid" style="--min:300px"><div class="panel on-white"><p class="vis-title">Buttons</p><div class="btn-row" style="align-items:center">
-<a class="ucg-btn" href="#">Register →</a><a class="ucg-btn ucg-btn--accent" href="#">Join the club</a>
-<a href="#" style="font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:13px;color:#1E2B38;text-decoration:none">Learn more →</a></div>
+<a class="ucg-btn" href="#">Register →</a><a class="ucg-btn ucg-btn--cta" href="#">Give</a><a class="ucg-btn ucg-btn--accent" href="#">Learn more</a>
+<a href="#" style="font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:13px;color:#1E2B38;text-decoration:none">Contact →</a></div>
 <div class="panel on-navy" style="margin-top:14px;padding:16px"><a class="ucg-btn ucg-btn--on-dark" href="#">Donate →</a></div>
 <details style="margin-top:12px"><summary class="small"><b>HTML</b></summary><pre><code>&lt;a class="ucg-btn" href="…"&gt;Register →&lt;/a&gt;
-&lt;a class="ucg-btn ucg-btn--accent" href="…"&gt;Join the club&lt;/a&gt;
+&lt;a class="ucg-btn ucg-btn--cta" href="…"&gt;Give&lt;/a&gt;
+&lt;a class="ucg-btn ucg-btn--accent" href="…"&gt;Learn more&lt;/a&gt;
 &lt;a class="ucg-btn ucg-btn--on-dark" href="…"&gt;Donate →&lt;/a&gt;</code></pre></details></div><div class="panel on-white"><p class="vis-title">Chips and status</p><div class="btn-row">
-<span class="chip" style="background:#ADBAE9">WAG</span><span class="chip" style="background:#A5C8CF">MAG</span><span class="chip" style="background:#F6C328">T&amp;T</span></div>
+<span class="chip" style="background:#ADBAE9">New</span><span class="chip" style="background:#F6C328">Nationals</span><span class="chip" style="background:#F4694A">Register now</span><span class="chip">Info</span></div>
 <div class="btn-row" style="margin-top:10px"><span class="chip" style="background:#DBEBEE;color:#184B56">✓ On track</span><span class="chip" style="background:#F6C328">● Needs attention</span><span class="chip" style="background:#F4694A">! Closes Jan 15</span></div>
 <p class="vis-note">Always pair a status color with a word or symbol.</p></div><div class="panel on-lb"><p class="vis-title">Cards</p><div class="grid" style="--min:160px">
 <div style="background:#FFFFFF;border-radius:20px;padding:18px"><p class="ucg-eyebrow" style="color:#184B56;margin:0 0 6px">Compete</p><p style="font-weight:700;font-size:18px;margin:0 0 6px">Find a meet</p><p class="small" style="margin:0;color:#184B56">Sanctioned events near you.</p></div>
-<div style="background:#1E2B38;border-radius:20px;padding:18px"><p class="ucg-eyebrow" style="color:#A5C8CF;margin:0 0 6px">Featured</p><p style="font-weight:700;font-size:18px;margin:0 0 6px;color:#FFFFFF">Nationals 2027</p><p class="small" style="margin:0;color:#DBEBEE">Portland, Oregon.</p></div></div></div><div class="panel on-white"><p class="vis-title">List with dividers</p><div>
+<div style="background:#1E2B38;border-radius:20px;padding:18px"><p class="ucg-eyebrow" style="color:#DBEBEE;margin:0 0 6px">Featured</p><p style="font-weight:700;font-size:18px;margin:0 0 6px;color:#FFFFFF">Nationals 2027</p><p class="small" style="margin:0;color:#DBEBEE">Portland, Oregon.</p></div></div></div><div class="panel on-white"><p class="vis-title">List with dividers</p><div>
 <div style="padding:14px 0"><b>Reach out to UCG</b><br/><span class="small muted">Tell us about your club or your situation.</span></div>
-<div style="padding:14px 0;border-top:1px solid #A5C8CF"><b>Speak with the team</b><br/><span class="small muted">We'll answer questions about levels and events.</span></div>
-<div style="padding:14px 0;border-top:1px solid #A5C8CF"><b>Find your next step</b><br/><span class="small muted">Join a club, compete independently or volunteer.</span></div></div>
+<div style="padding:14px 0;border-top:.5pt solid #A5C8CF"><b>Speak with the team</b><br/><span class="small muted">We'll answer questions about levels and events.</span></div>
+<div style="padding:14px 0;border-top:.5pt solid #A5C8CF"><b>Find your next step</b><br/><span class="small muted">Join a club, compete independently or volunteer.</span></div></div>
 <p class="vis-note">Dividers between items only, none above the first or below the last.</p></div><div class="panel on-white"><p class="vis-title">Form fields</p>
 <label for="demo-club" style="display:block;font-weight:700;font-size:14px;margin-bottom:6px">Club name</label>
 <input id="demo-club" style="width:100%;font:inherit;color:#1E2B38;padding:11px 14px;border:1.5px solid #184B56;border-radius:12px;margin-bottom:14px" value="Example University Gymnastics"/>
@@ -166,23 +168,23 @@
 <select id="demo-disc" style="width:100%;font:inherit;color:#1E2B38;padding:11px 14px;border:1.5px solid #184B56;border-radius:12px;outline:3px solid rgba(24,75,86,.35);outline-offset:1px;background:#FFFFFF"><option>WAG</option><option>MAG</option><option>T&amp;T</option></select>
 <p class="vis-note">The second field shows the focus state: Dark Blue Green border and ring.</p></div><div class="panel on-white" style="grid-column:1/-1"><p class="vis-title">Table</p><div class="table-wrap" style="margin:0"><table>
 <thead><tr><th>Club</th><th>Discipline</th><th style="text-align:right">Athletes</th><th>Status</th></tr></thead>
-<tbody><tr><td>Example State</td><td><span class="chip" style="background:#ADBAE9">WAG</span></td><td style="text-align:right">24</td><td>Registered</td></tr>
-<tr><td>River City Gym</td><td><span class="chip" style="background:#A5C8CF">MAG</span></td><td style="text-align:right">12</td><td>Pending</td></tr>
-<tr><td>Northside Flyers</td><td><span class="chip" style="background:#F6C328">T&amp;T</span></td><td style="text-align:right">9</td><td>Registered</td></tr></tbody></table></div></div></div><p class="vis-note">Example content. Buttons use the classes in tokens/ucg.css.</p></div>
+<tbody><tr><td>Example State</td><td>WAG</td><td style="text-align:right">24</td><td>Registered</td></tr>
+<tr><td>River City Gym</td><td>MAG</td><td style="text-align:right">12</td><td>Pending</td></tr>
+<tr><td>Northside Flyers</td><td>T&amp;T</td><td style="text-align:right">9</td><td>Registered</td></tr></tbody></table></div></div></div><p class="vis-note">Example content. Buttons use the classes in tokens/ucg.css.</p></div>
 </section>
 <section class="doc-section" id="sec-dark-mode">
 <div class="prose"><h2 id="dark-mode">Dark mode</h2>
-<p>Optional. If you support it, use Navy <code>#1E2B38</code> surfaces with Dark Blue Green <code>#184B56</code> for cards and bands, White and Light Blue text, Blue Green accents and links, and recheck every pair. Swap logos to the <code>-light</code> or <code>-white</code> colorway.</p>
+<p>Optional. If you support it, use Navy <code>#1E2B38</code> surfaces with Dark Blue Green <code>#184B56</code> for cards and bands, White and Light Blue text, Golden Yellow or Light Blue links, and Blue Green only for large type, rules and icons on Navy (DG p42). Recheck every pair. Swap logos to the <code>-light</code> or <code>-white</code> colorway.</p>
 </div>
-<div class="vis"><div class="panel" style="background:#1E2B38;max-width:520px"><p class="ucg-eyebrow" style="color:#A5C8CF;margin:0 0 8px">Dark mode</p>
-<p style="font-weight:700;font-size:20px;margin:0 0 6px;color:#FFFFFF">Navy surfaces, white and light blue text</p><p style="margin:0 0 14px;color:#DBEBEE">Blue Green carries links and accents.</p>
-<a class="ucg-btn ucg-btn--on-dark" href="#">Continue →</a> <a href="#" style="color:#A5C8CF;margin-left:12px">Text link</a></div></div>
+<div class="vis"><div class="panel" style="background:#1E2B38;max-width:520px"><p class="ucg-eyebrow" style="color:#DBEBEE;margin:0 0 8px">Dark mode</p>
+<p style="font-weight:700;font-size:20px;margin:0 0 6px;color:#FFFFFF">Navy surfaces, white and light blue text</p><p style="margin:0 0 14px;color:#DBEBEE">Golden Yellow or Light Blue for links; Blue Green for large type and rules.</p>
+<a class="ucg-btn ucg-btn--on-dark" href="#">Continue →</a> <a href="#" style="color:#F6C328;margin-left:12px">Text link</a></div></div>
 </section>
 <section class="doc-section" id="sec-accessibility-checklist">
 <div class="prose"><h2 id="accessibility-checklist">Accessibility checklist</h2>
 <ul>
-<li><a class="term" href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum">AA</a><span class="term-def"> (the standard level of WCAG, the Web Content Accessibility Guidelines. In short, text needs a contrast ratio of at least 4.5:1 against its background, large text 3:1)</span> contrast for all text and UI (see <a href="../colors/"><code>color-pairs.md</code></a>), including hover, focus, disabled and dark-mode states.</li>
-<li>Never Golden Yellow, Purple, Blue Green or Red Orange text on White or Light Blue.</li>
+<li>Every text and UI pair follows <a href="../colors/"><code>color-pairs.md</code></a> (the guide's approved pairs, at <a class="term" href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum">WCAG AA</a><span class="term-def"> (the standard level of the Web Content Accessibility Guidelines: text needs a contrast ratio of at least 4.5:1 against its background, large text 3:1)</span>), including hover, focus, disabled and dark-mode states.</li>
+<li>Never small Golden Yellow, Purple, Blue Green, Light Blue or Red Orange text on White or Light Blue; Red Orange on White only for large text.</li>
 <li>Meaningful <code>alt</code> text on photos (<code>assets/photos/photos.json</code> has some ready to use); <code>aria-label</code> on icon-only buttons.</li>
 <li>Logos: <code>&lt;img src="…/ucg-primary-navy.svg" alt="United Club Gymnastics"&gt;</code>.</li>
 </ul></div>

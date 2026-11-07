@@ -9,9 +9,11 @@ Policies and official documents are "core system" work: clarity beats flair. Kee
 - [Meeting minutes](https://docs.google.com/document/d/1Yz_r_cHrSBO9s4XeSwUXvlf468QuEn9SxWmLGFZbyE8/copy): attendance, agenda and notes, action items, sign-off, minute-taking guidelines
 - [Email draft](https://docs.google.com/document/d/13eIZoEsXOzOZCphU0q-_o5OzgLqNAaC8tsz1A0JpJu4/copy): draft an announcement block by block before it's built in the [HTML email template](email.md)
 
-Replace every `[bracketed]` placeholder, delete the guidance lines, and use the built-in styles (Title, Heading 1, Heading 2, Normal text). The rest of this page is for building something the templates don't cover.
+Replace every `[bracketed]` placeholder, delete the guidance lines, and use the built-in styles (Title, Heading 1, Heading 2, Normal text). The rest of this page is for building something the templates don't cover. The fonts, palette and color pairs are rules; the page setup and styles below are what the templates use, so treat them as defaults.
 
 ## Page setup
+
+Template defaults:
 
 - US Letter, portrait, 1 in margins (0.75 in is fine for long reference guides).
 - **Header:** the UCG document header image (`assets/logos/ucg-document-header.png`, a Navy band with the mark, "UCG" and the web address) full width at the top of page 1, or the primary logo (`ucg-primary-navy.png`, about 2.2 in wide) top-left.
@@ -19,7 +21,7 @@ Replace every `[bracketed]` placeholder, delete the guidance lines, and use the 
 
 ## Styles
 
-Set these once with Format → Paragraph styles → "Update to match", then Options → "Save as my default styles".
+The templates' styles. To use them in another document, set them once with Format → Paragraph styles → "Update to match", then Options → "Save as my default styles".
 
 | Style | Font | Size | Color | Spacing |
 |---|---|---|---|---|
@@ -31,13 +33,13 @@ Set these once with Format → Paragraph styles → "Update to match", then Opti
 | Normal text | Arial | 11pt | Navy (or black) | line spacing 1.15, 8pt after |
 | Links | | | Dark Blue Green, underlined | |
 
-- Sentence case for Heading 2 and below; ALL CAPS only for Title and Heading 1.
-- **Policy numbering:** one automatic decimal list all the way down (1, 1.1, 1.1.1, 1.1.1.1 …), with Heading 1 for sections and Heading 2 for subsection titles inside the list. Never type numbers, and never use letters or Roman numerals. Change a line's level with Tab / Shift+Tab. Other documents (guides, letters) can use plain headings.
+- Title and Heading 1 are ALL CAPS, like headlines everywhere (DG p16).
+- **Policy numbering** (a UCG decision): one automatic decimal list all the way down (1, 1.1, 1.1.1, 1.1.1.1 …), with Heading 1 for sections and Heading 2 for subsection titles inside the list. Never type numbers, and never use letters or Roman numerals. Change a line's level with Tab / Shift+Tab. Other documents (guides, letters) can use plain headings.
 - **References:** cite other parts as "Section 2.3.1" (not "above" or "II.B"), and check every reference whenever the numbering changes. Leave references in the version history as written.
 - Bullets for unordered items, numbers for steps or ranked items. Keep list items short.
-- Tables: header row Navy fill with White Arial Bold text, or Light Blue fill with Navy text; body Arial 10pt; borders Blue Green `#A5C8CF` at 0.5pt.
-- Callouts (key rule, deadline, definition): a one-cell table with Light Blue `#DBEBEE` fill, no border, Navy text. Use Golden Yellow fill + Navy text only for warnings.
-- Never colored text other than Navy, and Dark Blue Green for links and secondary notes.
+- Tables: header row Navy fill with White Arial Bold text, or Light Blue fill with Navy text; body Arial 10pt; borders Blue Green `#A5C8CF` at 0.5pt (the guide's divider weight, DG p77).
+- Callouts (key rule, deadline, definition): a one-cell table with Light Blue `#DBEBEE` fill, no border, Navy text. A Golden Yellow fill with Navy text makes a warning stand out.
+- Text colors: Navy for text, Dark Blue Green for links and secondary notes. Other palette colors on White fail the color pairs as text.
 
 ## Writing policies
 

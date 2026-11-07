@@ -15,43 +15,45 @@ Applies to unitedclubgymnastics.org, UCG web apps (registration, scoring, planne
 
 ## Layout
 
+Suggestions and the defaults in `tokens/ucg.css`; the design guide sets the look, not these numbers.
+
 - Light page (`#FFFFFF` or `#DBEBEE`), Navy text. Full-bleed Navy for heroes, footers and feature bands.
-- Alternate section backgrounds White → Light Blue → Blue Green → Navy so neighbors differ.
-- Content max width about 1240px; 4px spacing grid (8, 12, 16, 24, 32, 48, 64). Generous white space; cut content before cramming.
+- Neighboring sections read best with different backgrounds (White, Light Blue, Blue Green, Navy).
+- Content max width about 1240px; spacing in steps of 4px (8, 12, 16, 24, 32, 48, 64). Generous white space; cut content before cramming (DG p89).
 - Left-align to a grid. Center only short content (a hero line, a single call to action).
-- Rounded corners: 8px buttons, 12px inputs and small boxes, 20px cards and photos, pills (999px) for chips and tags.
-- Black-and-white photography with white type; color overlays use a B&W photo on a brand color with `mix-blend-mode: screen`. Keep text on a solid or overlaid area that meets contrast.
+- Rounded corners on cards, panels and photos (DG p19); pills for buttons, chips and tags (DG p76). Defaults: 12px inputs and small boxes, 20px cards and photos, 999px pills.
+- Black-and-white photography with white type (DG p17). Color overlays: a B&W photo on a brand color with `mix-blend-mode: screen` (DG p44). Keep text on a solid or overlaid area that meets the color pairs.
 
 ## Type scale (starting point)
 
 | Element | Font | Size | Notes |
 |---|---|---|---|
-| Display / hero | display stack | clamp(48px, 7vw, 96px) | ALL CAPS, line-height 0.92 |
+| Display / hero | display stack | clamp(48px, 7vw, 96px) | ALL CAPS, line-height about 0.92 |
 | H1 | display | clamp(40px, 6vw, 80px) | ALL CAPS |
 | H2 | display | clamp(32px, 4vw, 54px) | ALL CAPS |
-| H3 and below | body stack, 600 | 20–24px | Sentence case |
-| Subhead / label | display | 14–18px | ALL CAPS, letter-spacing 0.2em |
-| Eyebrow | body, 700 | 12–13px | ALL CAPS, letter-spacing 0.16em, Dark Blue Green on light, Blue Green on dark |
+| H3 and below | body stack, 600 | 20–24px | |
+| Subhead / label | display | 14–18px | ALL CAPS, letter-spacing 0.2em (DG p34) |
+| Eyebrow | body, 700 | 12–13px | ALL CAPS, letter-spacing 0.2em, Dark Blue Green on light, Light Blue on dark |
 | Body | body | 16px, line-height 1.55 | Navy; Dark Blue Green for secondary text |
 
 ## Components
 
-- **Buttons** (DG p76): Suisse Intl / Arial, ALL CAPS, `letter-spacing: 0.2em`, short labels. Primary = Navy background + White text; on dark backgrounds = Blue Green background + Navy text. Text-only buttons are Navy (or White on dark). Add `→` for "go somewhere" actions.
-- **Chips / tags**: pill shape, a secondary color fill with Navy text. Red Orange chips only for deadlines or urgent states.
-- **Lists** (DG p77): thin 1px dividers between items (none above the first or below the last), about 15px between text and divider, 30px between a heading and the list. Bullets for unordered items; numbers only for sequences, rankings or counts.
-- **Cards**: 20px radius, White on Light Blue pages (or Light Blue on White), optional 1px Blue Green `#A5C8CF` border. Navy cards for the one thing you want noticed.
-- **Forms**: 12px radius inputs, 1.5px Dark Blue Green `#184B56` border (form fields need 3:1), Navy text, visible focus ring in Dark Blue Green. Labels above fields, sentence case.
-- **Tables / data**: Navy header row with White text or Light Blue header with Navy text; zebra rows in White / Light Blue. Use the discipline colors consistently: WAG Purple, MAG Blue Green, T&T Golden Yellow, always with Navy text.
+- **Buttons** (DG p76): pills in Suisse Intl / Arial, ALL CAPS, `letter-spacing: 0.2em`, clear short labels. The guide's examples: Navy with White text, Red Orange for a call to action like GIVE (use Navy text on it: White on Red Orange is only 3:1), and Light Blue with Navy text. On dark backgrounds use Light Blue with Navy text. Text-only buttons are Navy or a secondary color, or White on a dark background or image. `→` works well for "go somewhere" actions.
+- **Chips / tags**: pills with a secondary color or Light Blue fill and Navy text. Not Blue Green with Navy text at chip sizes (DG p43).
+- **Lists** (DG p77): thin 0.5pt dividers between items (none above the first or below the last), 15pt between text and divider, 30pt between a heading above the list and the first item. Bullets for options and grouped ideas; numbers only for sequences, rankings or counts.
+- **Cards**: rounded, White on Light Blue pages (or Light Blue on White), optionally outlined in Blue Green `#A5C8CF`. A Navy card stands out from light ones.
+- **Forms**: 1.5px Dark Blue Green `#184B56` border (form fields need 3:1), Navy text, visible focus ring in Dark Blue Green. Labels above fields.
+- **Tables / data**: Navy header row with White text or Light Blue header with Navy text; zebra rows in White / Light Blue.
 - **Icons**: UCG event and apparatus icons for discipline and apparatus (see [`assets.md`](assets.md)); a simple line icon set for UI controls, in Navy or the current text color.
-- **Status colors**: Dark Blue Green for good / on track, Golden Yellow for attention, Red Orange for urgent or error. Always pair color with a word or icon.
+- **Status colors** (a suggestion): Dark Blue Green for good / on track, Golden Yellow for attention, Red Orange for urgent or error. Always pair color with a word or icon.
 
 ## Dark mode
 
-Optional. If you support it, use Navy `#1E2B38` surfaces with Dark Blue Green `#184B56` for cards and bands, White and Light Blue text, Blue Green accents and links, and recheck every pair. Swap logos to the `-light` or `-white` colorway.
+Optional. If you support it, use Navy `#1E2B38` surfaces with Dark Blue Green `#184B56` for cards and bands, White and Light Blue text, Golden Yellow or Light Blue links, and Blue Green only for large type, rules and icons on Navy (DG p42). Recheck every pair. Swap logos to the `-light` or `-white` colorway.
 
 ## Accessibility checklist
 
-- AA contrast for all text and UI (see [`color-pairs.md`](color-pairs.md)), including hover, focus, disabled and dark-mode states.
-- Never Golden Yellow, Purple, Blue Green or Red Orange text on White or Light Blue.
+- Every text and UI pair follows [`color-pairs.md`](color-pairs.md) (the guide's approved pairs, at WCAG AA), including hover, focus, disabled and dark-mode states.
+- Never small Golden Yellow, Purple, Blue Green, Light Blue or Red Orange text on White or Light Blue; Red Orange on White only for large text.
 - Meaningful `alt` text on photos (`assets/photos/photos.json` has some ready to use); `aria-label` on icon-only buttons.
 - Logos: `<img src="…/ucg-primary-navy.svg" alt="United Club Gymnastics">`.

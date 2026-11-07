@@ -18,12 +18,15 @@ HOW TO USE (for Claude or a person editing this file):
    blocks you don't need. Blocks can repeat and go in any order.
 3. Keep the sender's wording exactly. Only fix obvious typos.
 4. Rules:
-   - Alternate section backgrounds so neighbouring sections differ:
-     white -> light blue -> blue green -> navy -> dark blue green.
-   - Red orange chips are ONLY for deadlines and urgent items.
-   - Headlines (h1/h2) are short. Sentence-case h3 for item titles.
+   - Neighboring sections usually get different backgrounds
+     (white, light blue, blue green, navy, dark blue green).
+   - Small text on blue green is dark blue green, never navy; small
+     text on navy is white or light blue, never blue green (design
+     guide p42-43). Chips: red orange, golden yellow or purple with
+     navy text.
+   - Headlines (h1/h2) are short.
    - Every link is https. Buttons for main actions, text links
-     for secondary ones. Button labels are short verbs.
+     for secondary ones. Keep button labels short.
    - No images except the FIXED logo, unless an iContact-hosted
      image URL is supplied. Never use white/light images with a
      transparent background (they vanish in phone dark mode).
@@ -56,11 +59,11 @@ HOW TO USE (for Claude or a person editing this file):
     .bg-note { background:#184B56 !important; border-color:#184B56 !important; }
     .t-ink { color:#FFFFFF !important; }
     .t-muted { color:#DBEBEE !important; }
-    .t-eyebrow { color:#A5C8CF !important; }
-    .t-link { color:#A5C8CF !important; }
+    .t-eyebrow { color:#DBEBEE !important; }
+    .t-link { color:#DBEBEE !important; }
     .rule { border-color:#184B56 !important; }
     .bar { background:#A5C8CF !important; }
-    .btn-navy { background:#A5C8CF !important; }
+    .btn-navy { background:#DBEBEE !important; }
     .btn-navy a { color:#1E2B38 !important; }
   }
   /* FIXED: dark mode (Outlook.com / Outlook apps) */
@@ -70,10 +73,10 @@ HOW TO USE (for Claude or a person editing this file):
   [data-ogsb] .bg-accent { background:#184B56 !important; }
   [data-ogsb] .bg-card-light, [data-ogsb] .bg-card-navy { background:#184B56 !important; }
   [data-ogsb] .bg-note { background:#184B56 !important; border-color:#184B56 !important; }
-  [data-ogsb] .btn-navy { background:#A5C8CF !important; }
+  [data-ogsb] .btn-navy { background:#DBEBEE !important; }
   [data-ogsc] .t-ink { color:#FFFFFF !important; }
   [data-ogsc] .t-muted { color:#DBEBEE !important; }
-  [data-ogsc] .t-eyebrow, [data-ogsc] .t-link { color:#A5C8CF !important; }
+  [data-ogsc] .t-eyebrow, [data-ogsc] .t-link { color:#DBEBEE !important; }
   [data-ogsc] .btn-navy a { color:#1E2B38 !important; }
 </style>
 </head>
@@ -97,7 +100,7 @@ HOW TO USE (for Claude or a person editing this file):
 
   <!-- BLOCK: HERO. Use once, first. Month eyebrow, short headline, intro. Closing line optional. -->
   <tr><td style="background:#1E2B38;padding:24px 40px 44px;" class="px">
-    <p style="margin:0 0 12px;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#A5C8CF;">[MONTH] Announcements</p>
+    <p style="margin:0 0 12px;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#DBEBEE;">[MONTH] Announcements</p>
     <h1 class="h1" style="margin:0 0 20px;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:52px;line-height:0.92;letter-spacing:0.005em;text-transform:uppercase;color:#FFFFFF;">[HEADLINE]</h1>
     <p style="margin:0 0 16px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55;color:#DBEBEE;">[INTRO PARAGRAPH]</p>
     <p style="margin:0;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:22px;letter-spacing:0.08em;text-transform:uppercase;color:#A5C8CF;">[OPTIONAL CLOSING LINE]</p>
@@ -105,11 +108,11 @@ HOW TO USE (for Claude or a person editing this file):
 
   <!-- BLOCK: FEATURE BAND (blue green). One headline item with a button. -->
   <tr><td class="bg-accent px" style="background:#A5C8CF;padding:40px;">
-    <p class="t-eyebrow" style="margin:0 0 8px;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#184B56;">[EYEBROW, 2-4 WORDS]</p>
+    <p class="t-eyebrow" style="margin:0 0 8px;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#184B56;">[EYEBROW, 2-4 WORDS]</p>
     <h2 class="t-ink" style="margin:0 0 14px;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:36px;line-height:0.95;text-transform:uppercase;color:#1E2B38;">[SHORT HEADLINE]</h2>
-    <p class="t-ink" style="margin:0 0 24px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55;color:#1E2B38;">[BODY]</p>
-    <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td class="btn-navy" style="background:#1E2B38;border-radius:8px;">
-      <a href="[https://LINK]" style="display:inline-block;padding:14px 26px;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:16px;letter-spacing:0.2em;text-transform:uppercase;color:#FFFFFF;text-decoration:none;">[BUTTON LABEL] &rarr;</a>
+    <p class="t-muted" style="margin:0 0 24px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55;color:#184B56;">[BODY]</p>
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td class="btn-navy" style="background:#1E2B38;border-radius:999px;">
+      <a href="[https://LINK]" style="display:inline-block;padding:14px 26px;font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;color:#FFFFFF;text-decoration:none;">[BUTTON LABEL] &rarr;</a>
     </td></tr></table>
   </td></tr>
 
@@ -126,7 +129,7 @@ HOW TO USE (for Claude or a person editing this file):
     <a class="t-link" href="[https://LINK]" style="font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;color:#184B56;text-decoration:none;">[LINK TEXT] &rarr;</a>
   </td></tr>
 
-  <!-- BLOCK: LIGHT CARD. Item that needs emphasis. Chip optional: deadlines use red orange #F4694A, otherwise blue green #A5C8CF or purple #ADBAE9. -->
+  <!-- BLOCK: LIGHT CARD. Item that needs emphasis. Chip optional: red orange #F4694A, golden yellow #F6C328 or purple #ADBAE9, with navy text. -->
   <tr><td class="bg-white px" style="background:#FFFFFF;padding:16px 40px;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="bg-card-light" style="background:#DBEBEE;border-radius:20px;"><tr><td style="padding:28px;">
       <span style="display:inline-block;margin-bottom:12px;padding:4px 12px;border-radius:999px;background:#F4694A;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#1E2B38;">[CHIP TEXT]</span>
@@ -139,11 +142,11 @@ HOW TO USE (for Claude or a person editing this file):
   <!-- BLOCK: NAVY CARD. Call to action (applications, volunteers). Stays dark in every mode (dark blue green in dark mode, so it shows on the navy page). -->
   <tr><td class="bg-white px" style="background:#FFFFFF;padding:16px 40px;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="bg-card-navy" style="background:#1E2B38;border-radius:20px;"><tr><td style="padding:28px;">
-      <p style="margin:0 0 8px;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#A5C8CF;">[EYEBROW]</p>
+      <p style="margin:0 0 8px;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#DBEBEE;">[EYEBROW]</p>
       <h3 style="margin:0 0 10px;font-family:Arial,Helvetica,sans-serif;font-size:22px;line-height:1.25;font-weight:700;color:#FFFFFF;">[ITEM TITLE]</h3>
       <p style="margin:0 0 22px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55;color:#DBEBEE;">[BODY]</p>
-      <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td style="background:#A5C8CF;border-radius:8px;">
-        <a href="[https://LINK]" style="display:inline-block;padding:14px 26px;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:16px;letter-spacing:0.2em;text-transform:uppercase;color:#1E2B38;text-decoration:none;">[BUTTON LABEL] &rarr;</a>
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td style="background:#DBEBEE;border-radius:999px;">
+        <a href="[https://LINK]" style="display:inline-block;padding:14px 26px;font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;color:#1E2B38;text-decoration:none;">[BUTTON LABEL] &rarr;</a>
       </td></tr></table>
     </td></tr></table>
   </td></tr>
@@ -151,13 +154,13 @@ HOW TO USE (for Claude or a person editing this file):
   <!-- BLOCK: TWO BUTTONS. Paired links (slides + recording, register + details). Put inside any item, or use as its own row like this. Delete the second button + gap for one button. -->
   <tr><td class="bg-white px" style="background:#FFFFFF;padding:8px 40px 16px;">
     <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
-      <td class="btn-cell btn-navy" style="background:#1E2B38;border-radius:8px;"><a href="[https://LINK 1]" style="display:inline-block;padding:14px 24px;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:16px;letter-spacing:0.2em;text-transform:uppercase;color:#FFFFFF;text-decoration:none;">[LABEL 1] &rarr;</a></td>
+      <td class="btn-cell btn-navy" style="background:#1E2B38;border-radius:999px;"><a href="[https://LINK 1]" style="display:inline-block;padding:14px 24px;font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;color:#FFFFFF;text-decoration:none;">[LABEL 1] &rarr;</a></td>
       <td class="btn-gap" style="width:12px;">&nbsp;</td>
-      <td class="btn-cell" style="background:#A5C8CF;border-radius:8px;"><a href="[https://LINK 2]" style="display:inline-block;padding:14px 24px;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:16px;letter-spacing:0.2em;text-transform:uppercase;color:#1E2B38;text-decoration:none;">[LABEL 2] &rarr;</a></td>
+      <td class="btn-cell" style="background:#DBEBEE;border-radius:999px;"><a href="[https://LINK 2]" style="display:inline-block;padding:14px 24px;font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;color:#1E2B38;text-decoration:none;">[LABEL 2] &rarr;</a></td>
     </tr></table>
   </td></tr>
 
-  <!-- BLOCK: DISCIPLINE SECTION (light blue). Chip + headline for WAG / MAG / TNT news. Chip colors: WAG purple #ADBAE9, MAG blue green #A5C8CF, TNT golden yellow #F6C328. For a white version use #FFFFFF + class bg-white. -->
+  <!-- BLOCK: DISCIPLINE SECTION (light blue). Chip + headline for WAG / MAG / TNT news. Chip: purple #ADBAE9, golden yellow #F6C328 or red orange #F4694A, with navy text. For a white version use #FFFFFF + class bg-white. -->
   <tr><td class="bg-light px" style="background:#DBEBEE;padding:40px 40px 44px;">
     <span style="display:inline-block;margin-bottom:12px;padding:4px 12px;border-radius:999px;background:#ADBAE9;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:13px;letter-spacing:0.2em;color:#1E2B38;">[WAG / MAG / TNT]</span>
     <h2 class="t-ink" style="margin:0 0 16px;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:36px;line-height:0.95;text-transform:uppercase;color:#1E2B38;">[SHORT HEADLINE]</h2>
@@ -190,8 +193,8 @@ HOW TO USE (for Claude or a person editing this file):
   <!-- FIXED: sign-off and socials. Nothing goes below this; iContact adds its footer. -->
   <tr><td style="background:#1E2B38;border-radius:0 0 20px 20px;padding:40px;" class="px" align="center">
     <p style="margin:0 0 6px;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:28px;letter-spacing:0.005em;text-transform:uppercase;color:#FFFFFF;">For the Love of the Sport.</p>
-    <p style="margin:0;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:14px;letter-spacing:0.2em;text-transform:uppercase;color:#A5C8CF;">
-      <a href="https://www.facebook.com/unitedclubgymnastics" style="color:#A5C8CF;text-decoration:none;">Facebook</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://www.instagram.com/unitedclubgymnastics" style="color:#A5C8CF;text-decoration:none;">Instagram</a>
+    <p style="margin:0;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:14px;letter-spacing:0.2em;text-transform:uppercase;color:#DBEBEE;">
+      <a href="https://www.facebook.com/unitedclubgymnastics" style="color:#DBEBEE;text-decoration:none;">Facebook</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://www.instagram.com/unitedclubgymnastics" style="color:#DBEBEE;text-decoration:none;">Instagram</a>
     </p>
   </td></tr>
 

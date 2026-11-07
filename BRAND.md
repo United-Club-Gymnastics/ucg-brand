@@ -1,6 +1,6 @@
 # United Club Gymnastics (UCG) brand guidelines
 
-Short rules for anyone, person or AI agent, making UCG materials: emails, web pages and tools, slides, docs, sheets, social graphics and video. Follow them exactly. Details per medium live in `references/`; assets live in `assets/`.
+Short rules for anyone, person or AI agent, making UCG materials: emails, web pages and tools, slides, docs, sheets, social graphics and video. The rules come from the 2026 guides by Build Design Studio (cited as DG, EDG, MG with page numbers) plus a short list of [UCG decisions](#ucg-decisions). Sizes, spacing and layouts labeled as template defaults or suggestions are starting points, not rules. Details per medium live in `references/`; assets live in `assets/`.
 
 - Repo: https://github.com/United-Club-Gymnastics/ucg-brand
 - Assets base URL: `https://united-club-gymnastics.github.io/ucg-brand/assets/`
@@ -12,16 +12,16 @@ United Club Gymnastics (UCG, formerly NAIGC) is a nonprofit, volunteer-run organ
 
 **Core message: For the Love of the Sport.** Healthy competition fueled by joy, passion and personal drive. As a sign-off or tagline it is written `For the Love of the Sport.` (with the period).
 
-Supporting messages: **A Place to Land** (a long-term competitive home beyond traditional pathways) · **Open Gym** (anyone can belong and compete) · **On the Same Team** (camaraderie across clubs) · **Good Spot** (structure that keeps competition safe, fair and organized). See [`references/messaging.md`](references/messaging.md) for approved headlines, one-liners and boilerplate.
+Supporting messages: **A Place to Land** (a long-term competitive home beyond traditional pathways) · **Open Gym** (anyone can belong and compete) · **On the Same Team** (camaraderie across clubs) · **Good Spot** (structure that keeps competition safe, fair and organized). See [`references/messaging.md`](references/messaging.md) for the approved headlines, one-liners and boilerplate.
 
 ## Voice
 
-Welcoming, credible, joyful, practical. Write like people who know the sport and care about the people in it.
+Welcoming, credible, joyful, practical (MG p29). Write like people who know the sport and care about the people in it.
 
 - Speak to the reader ("you"); UCG is "we".
 - Short, clear, conversational sentences. Lead with what matters, then make the next step obvious (join, compete, register, volunteer, connect).
 - Encouraging even when sharing rules or deadlines.
-- No jargon, buzzwords ("world-class", "innovative solutions"), stiff institutional language, or acronym soup. Spell out a term the first time if a newcomer wouldn't know it.
+- No jargon, buzzwords ("world-class", "innovative solutions"), stiff institutional language, or acronym soup (MG p38). Spelling out a term the first time helps newcomers.
 - No emoji in official communications.
 - Dates: `April 1–4, 2027` (en dash, no spaces); short form `Apr 1–4`; with a place, `April 1–4, 2027 · Portland, OR`. Times: `10:30 AM`, `7–9 PM ET`. Numbers: numerals for scores, dates and counts (`3 events`, `9.650`).
 - Use real links. If you don't have the exact URL (registration, a course page), use https://unitedclubgymnastics.org and flag it for the person to fix; never invent a URL.
@@ -45,21 +45,25 @@ Examples:
 | Secondary | Golden Yellow | `#F6C328` |
 | Neutral | White | `#FFFFFF` |
 
-- Navy carries most text and dark surfaces. Light Blue, White and Blue Green are the main light surfaces. Secondary colors are accents: chips, highlights, data, one bold slide.
-- UI roles use palette colors only, never extra greys: secondary text in Dark Blue Green (or Navy), dividers and card outlines in Blue Green, form-field borders in Dark Blue Green (they need 3:1), and dark surfaces in Navy with Dark Blue Green for cards and bands.
-- No off-palette colors. Six extra "expressive" colors exist only for merch, campaigns and event graphics, and only those six (see [`references/expressive.md`](references/expressive.md)).
+- Navy carries most text and dark surfaces. Light Blue, White and Blue Green are the main light surfaces. Secondary colors are accents: chips, highlights, calls to action (the guide's GIVE button is Red Orange, DG p76), data.
+- UI roles use palette colors only, never extra grays: secondary text in Dark Blue Green (or Navy), dividers and card outlines in Blue Green, form-field borders in Dark Blue Green (they need 3:1), and dark surfaces in Navy with Dark Blue Green for cards and bands.
+- No off-palette colors (EDG p4–6). Six extra "expressive" colors exist for merch, campaigns and event graphics, and only those six (see [`references/expressive.md`](references/expressive.md)).
 
-### Contrast is a hard rule (WCAG AA everywhere)
+### Color pairs: the guide's approved pairs, at WCAG AA
 
-Body text needs **4.5:1**, large text (24px+, or 18.5px+ bold), icons and logos need **3:1**.
+A text/background pair is allowed when it is approved in the design guide (DG p42–43) **and** meets WCAG AA at that size: **4.5:1** for body text, **3:1** for large text (24px+, or 18.66px+ bold), icons and logos. Where the guide is silent, AA decides.
 
-**Safe text pairs:**
+**Safe at any size:**
 
-- Text on **Navy** or **Dark Blue Green** backgrounds: White, Light Blue, Blue Green, Golden Yellow or Purple. Red Orange works on Navy only.
-- Text on **White, Light Blue, Blue Green, Purple or Golden Yellow** backgrounds: Navy or Dark Blue Green.
-- Text on **Red Orange** backgrounds: Navy only.
+- On **Navy**: White, Light Blue, Golden Yellow, Red Orange.
+- On **Dark Blue Green**: White, Light Blue, Blue Green, Purple, Golden Yellow.
+- On **White, Light Blue, Purple or Golden Yellow**: Navy or Dark Blue Green.
+- On **Red Orange**: Navy.
+- On **Blue Green**: Dark Blue Green.
 
-**Never:** Golden Yellow, Purple, Blue Green or Light Blue text on White or Light Blue; Red Orange text on White (3.0:1) or Light Blue (2.5:1); Navy on Dark Blue Green; anything on a busy photo without a solid or overlay behind it. Full table: [`references/color-pairs.md`](references/color-pairs.md).
+**Large text, icons and logos only:** Blue Green or Purple on Navy (DG p42); Navy on Blue Green (DG p43); Red Orange on White or Dark Blue Green; White on Red Orange.
+
+**Never:** Golden Yellow, Purple, Blue Green or Light Blue on White or Light Blue; Navy on Dark Blue Green (or the reverse); Dark Blue Green on Red Orange (DG p43); text on a busy part of a photo where it doesn't meet the ratio. Full table: [`references/color-pairs.md`](references/color-pairs.md).
 
 ## Type
 
@@ -68,51 +72,51 @@ Body text needs **4.5:1**, large text (24px+, or 18.5px+ bold), icons and logos 
 | Headlines, subheads, big numbers | **Greed Condensed Bold**, ALL CAPS | **Saira Condensed Bold** | Arial Narrow Bold |
 | Body, buttons, captions | **Suisse Intl** Regular / Semibold | **Arial** | Arial |
 
-- Headlines are ALL CAPS, short and tight (line-height ~0.92, tracking ~0). Condensed subheads and labels use 20% tracking (`letter-spacing: 0.2em`).
-- Body copy is sentence case. Avoid Title Case for anything but proper names.
-- Buttons: Suisse Intl or Arial, ALL CAPS, `letter-spacing: 0.2em`, short verb labels ("Register", "Join the club").
+- Headlines are ALL CAPS (DG p16, p32). The guide suggests around 36–60pt for print headlines, 10–24pt for subheads and 9–14pt for body copy (DG p34).
+- Condensed subheads and labels use 20% tracking (`letter-spacing: 0.2em`, DG p34).
+- Buttons and pills: Suisse Intl or Arial, ALL CAPS, 20% tracking (`letter-spacing: 0.2em`). Keep labels clear, short and legible (DG p76).
 - Greed and Suisse are licensed to UCG. Only UCG volunteers making UCG materials may use them, and only UCG-owned websites may self-host them. Volunteers download them from the [UCG fonts folder](https://drive.google.com/drive/folders/1SUukrVratYo8sd4KxiF5_eztUnhAV-_o) (UCG Google accounts only). **Never copy or re-share the font files anywhere else.** If you don't have them, use Saira Condensed Bold + Arial.
 
 | Surface | Fonts |
 |---|---|
 | Google Slides, Docs, Sheets | Saira Condensed Bold + Arial |
-| Email | Saira Condensed (Google Fonts link) → Arial Narrow for headlines, Arial for body |
+| Email | Saira Condensed (Google Fonts link) → Arial Narrow for headlines, Arial for body and buttons |
 | UCG websites and tools | Greed + Suisse self-hosted on UCG's domain, falling back to Saira Condensed + Arial |
 | Print, social graphics, Reels | Greed + Suisse (licensed volunteers), else Saira + Arial |
 | Livestream / broadcast graphics | Saira Condensed + Arial (Greed's license doesn't cover broadcast video) |
 
 ## Logos
 
-Use the files exactly as drawn. Recolor only to the four supplied colorways. **Never** stretch, rotate, redraw, outline, add effects, retype the wordmark, or place on a low-contrast background. (Expressive pieces like merch may also recolor within the palette, add a stroke or crop the mark big in the background, but never redraw it: [`references/expressive.md`](references/expressive.md).)
+Use the supplied files. Color variations are permitted, but the structure and proportions of the logo never change (DG p26). **Never** stretch, redraw, retype the wordmark, add shadows or other effects, or place a logo where it doesn't meet 3:1 against its background. Expressive pieces like merch can also use the six expressive colors, add a stroke or crop the mark big in the background: [`references/expressive.md`](references/expressive.md).
 
-| Logo | Use it for | Files (`assets/logos/`) |
+**Colors:** the files come in four colorways: **navy** for light backgrounds, **light** (Light Blue) or **white** for Navy, Dark Blue Green and dark photos, and **black**, which suits one-color print. You can also recolor a logo in any palette color that is an approved pair for its background (DG p42): for example Golden Yellow, Red Orange, Purple or Blue Green on Navy, or Red Orange or Dark Blue Green on White. Seasonal and event recolors of the avatars are fine within the palette (DG p66).
+
+| Logo | Typical use | Files (`assets/logos/`) |
 |---|---|---|
-| **Primary** (mark + UNITED CLUB GYMNASTICS) | Default, headers, documents | `ucg-primary-{navy,light,black,white}.{svg,png}` |
-| **Secondary** (mark + UCG) | Compact horizontal spaces | `ucg-secondary-…` |
+| **Primary** (mark + UNITED CLUB GYMNASTICS) | The default | `ucg-primary-{navy,light,black,white}.{svg,png}` |
+| **Secondary** (mark + UCG) | Horizontal spaces | `ucg-secondary-…` |
 | **Logotype** (big UCG + full name) | Covers, signage, big moments | `ucg-logotype-…` |
 | **Mark** (the burst) | Avatars, favicons, small spaces, watermarks | `ucg-mark-…` |
 | Badges (circle, crest) | Merch, medals, stickers, social | `ucg-badge-circle-…`, `ucg-badge-crest-…` |
-| Wordmarks | Footers, tight horizontal strips | `ucg-wordmark-full-name-…`, `ucg-wordmark-ucg-…` |
+| Wordmarks | Footers, thin horizontal strips | `ucg-wordmark-full-name-…`, `ucg-wordmark-ucg-…` |
 
-Colorways: **navy** on light backgrounds, **light** (Light Blue) or **white** on navy, dark blue green or dark photos, **black** only for one-color print. Leave clear space around a logo at least the height of the "U" in UCG, and don't shrink the primary logo below 120px (1 in) wide. Social avatars: `ucg-avatar-circle.png` / `ucg-avatar-square.png`. More: [`references/assets.md`](references/assets.md).
+Recommended (UCG defaults; the guide doesn't set them): clear space around a logo of about the height of the "U" in UCG, and the primary logo at least 1 in wide in print or 120px on screen. Social avatars: `ucg-avatar-circle.png` / `ucg-avatar-square.png`. More: [`references/assets.md`](references/assets.md).
 
 ## Look and feel
 
-The six design features:
+The six design features (DG p15–21):
 
 1. **Color fills**: solid brand-color blocks behind type.
 2. **Strong type**: big ALL CAPS condensed headlines.
 3. **Black-and-white photography** with white type and graphics.
 4. **Dynamic crops** that show the angle and movement of the sport.
-5. **Rounded corners** on cards, panels and photos (8px buttons, 12px small boxes, 20px cards, pills for chips).
+5. **Rounded corners** on cards, panels and photos, and pill-shaped buttons and chips (DG p76).
 6. **Event icons** (MAG, WAG, T&T and apparatus) and **color overlays** on photos.
 
-- Less is more: show only the critical information, with plenty of white space and a clear reading order.
-- Left-align to a grid. Center only short content.
-- Alternate section backgrounds (White → Light Blue → Blue Green → Navy) so neighbors differ.
-- Color overlays: a black-and-white photo with a solid brand color behind it, photo blend mode Screen (guide recipe). Screen makes the image lighter, so use it with light colors (Blue Green, Light Blue, Purple, Golden Yellow) and put **Navy** text on it. For White text over a photo, darken instead: a Navy or Dark Blue Green duotone (or Multiply) dark enough that White stays at 4.5:1, or put the text on a solid Navy panel beside the photo.
-- Photos: real UCG athletes, documentary style, shown with dignity. Never use photos showing old NAIGC branding. Curated set with alt text: `assets/photos/photos.json`.
-- Icons: the UCG event and apparatus icons in `assets/icons/`. For general UI icons (arrows, menus) use a simple line set at a consistent stroke and keep them in brand colors. Use `→` for links and buttons.
+- Less is more: show only the critical information, with plenty of white space and a clear reading order (DG p89).
+- Color overlays: a black-and-white photo over a solid brand color, photo blend mode Screen (DG p44; the guide's example uses Navy). Text on top still follows the color pairs; if it doesn't meet them, put it on a solid panel.
+- Photos: real UCG athletes, documentary style, shown with dignity. The guide shows athletes and community/team photos in black and white (DG p17, p47). Don't use photos showing old NAIGC branding. Curated set with alt text: `assets/photos/photos.json`.
+- Icons: the UCG event and apparatus icons in `assets/icons/`. For general UI icons (arrows, menus), a simple line set in brand colors works well.
 
 ## Before anything ships
 
@@ -120,7 +124,23 @@ The six design features:
 2. Does it sound like UCG: welcoming, credible, joyful, clear?
 3. Does it show gymnasts, clubs and families with dignity, respect and belonging?
 4. Is the next step clear?
-5. Does every text/background pair meet AA contrast, including hover states and dark mode wherever it applies (email clients always apply it; websites only if you support it)?
+5. Does every text/background pair meet the color pairs above, including hover states and dark mode wherever it applies (email clients always apply it; websites only if you support it)?
+
+## UCG decisions
+
+Made by UCG after the guides were delivered. Where they differ from the guides, they win.
+
+- **For the Love of the Sport** is the core message (the guide lists A Place to Land as core).
+- **Fallback fonts** are Saira Condensed Bold and Arial.
+- **WCAG AA** on top of the guide's approved pairs, everywhere.
+- **unitedclubgymnastics.org** is the web address (the guides say unitedgymnastics.org).
+- **Palette-only UI**: no extra grays or navies.
+- **Expressive colors** are exactly the six swatches, no in-between shades.
+- **The mark** is the clean, constructed version in `assets/logos/`; any outline stays thinner than the gap between its V's.
+- **House style:** no emoji in official communications; "UCG", with "NAIGC" only for history; the date and time formats above; numbered policies use one automatic decimal list ([`references/docs.md`](references/docs.md)).
+- **Accessibility:** alt text on every image, captions on every video with speech, and color never the only signal (pair it with a word or icon).
+- **Photos** in this kit are for UCG materials only, with no photographer credit needed.
+- **Brand questions** go to your team lead or department head.
 
 ## By medium
 
@@ -135,4 +155,4 @@ The six design features:
 - Messaging and copy library: [`references/messaging.md`](references/messaging.md)
 - Logos, icons, photos: [`references/assets.md`](references/assets.md)
 
-*Based on the 2026 UCG Design, Messaging and Expressive Design guides by Build Design Studio, with later UCG decisions: For the Love of the Sport is the core message; Saira Condensed and Arial are the fallbacks; AA contrast everywhere.*
+*Based on the 2026 UCG Design, Messaging and Expressive Design guides by Build Design Studio, with the UCG decisions above.*
