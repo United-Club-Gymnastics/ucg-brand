@@ -18,12 +18,13 @@ HOW TO USE (for Claude or a person editing this file):
    blocks you don't need. Blocks can repeat and go in any order.
 3. Keep the sender's wording exactly. Only fix obvious typos.
 4. Rules:
-   - Neighboring sections usually get different backgrounds
-     (white, light blue, blue green, navy, dark blue green).
-   - Small text on blue green is dark blue green, never navy; small
-     text on navy is white or light blue, never blue green (design
-     guide p42-43). Chips: red orange, golden yellow or purple with
-     navy text.
+   - Dark text on light backgrounds (UCG decision, 2026-11-10):
+     sections are white, light blue or blue green. Navy is for
+     text and buttons, never a section or card background.
+     Neighboring sections usually get different backgrounds.
+   - Small text on blue green is dark blue green, never navy
+     (design guide p42-43). Chips: red orange, golden yellow or
+     purple with navy text.
    - Headlines (h1/h2) are short.
    - Every link is https. Buttons for main actions, text links
      for secondary ones. Keep button labels short.
@@ -89,21 +90,21 @@ HOW TO USE (for Claude or a person editing this file):
 <tr><td align="center" style="padding:24px 12px;">
 <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;">
 
-  <!-- FIXED: header logo (navy background is baked into the image so it survives dark mode) -->
-  <tr><td style="background:#1E2B38;border-radius:20px 20px 0 0;padding:24px 40px 8px;text-align:center;" class="px" align="center">
+  <!-- FIXED: header logo. This strip stays White in dark mode too: the logo image has White baked in, so it never shows as a white box on Navy and never vanishes. -->
+  <tr><td style="background:#FFFFFF;border-radius:20px 20px 0 0;padding:32px 40px 12px;text-align:center;" class="px" align="center">
     <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;"><tr><td align="center">
-      <a href="https://unitedclubgymnastics.org/"><img src="https://staticapp.icpsc.com/icp/resources/mogile/1788236/a595e578c442acf81ce4a3c2f7483a70.png" width="520" alt="United Club Gymnastics" style="display:block;margin:0 auto;width:520px;max-width:100%;height:auto;border:0;"></a>
+      <a href="https://unitedclubgymnastics.org/"><img src="https://united-club-gymnastics.github.io/ucg-brand/assets/social/ucg-email-header-light.png" width="360" alt="United Club Gymnastics" style="display:block;margin:0 auto;width:360px;max-width:100%;height:auto;border:0;"></a>
     </td></tr></table>
   </td></tr>
 
   <!-- ============================ BODY START ============================ -->
 
   <!-- BLOCK: HERO. Use once, first. Month eyebrow, short headline, intro. Closing line optional. -->
-  <tr><td style="background:#1E2B38;padding:24px 40px 44px;" class="px">
-    <p style="margin:0 0 12px;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#DBEBEE;">[MONTH] Announcements</p>
-    <h1 class="h1" style="margin:0 0 20px;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:52px;line-height:0.92;letter-spacing:0.005em;text-transform:uppercase;color:#FFFFFF;">[HEADLINE]</h1>
-    <p style="margin:0 0 16px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55;color:#DBEBEE;">[INTRO PARAGRAPH]</p>
-    <p style="margin:0;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:22px;letter-spacing:0.08em;text-transform:uppercase;color:#A5C8CF;">[OPTIONAL CLOSING LINE]</p>
+  <tr><td class="bg-white px" style="background:#FFFFFF;padding:12px 40px 44px;">
+    <p class="t-eyebrow" style="margin:0 0 12px;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#184B56;">[MONTH] Announcements</p>
+    <h1 class="h1 t-ink" style="margin:0 0 20px;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:52px;line-height:0.92;letter-spacing:0.005em;text-transform:uppercase;color:#1E2B38;">[HEADLINE]</h1>
+    <p class="t-ink" style="margin:0 0 16px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55;color:#1E2B38;">[INTRO PARAGRAPH]</p>
+    <p class="t-eyebrow" style="margin:0;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:22px;letter-spacing:0.08em;text-transform:uppercase;color:#184B56;">[OPTIONAL CLOSING LINE]</p>
   </td></tr>
 
   <!-- BLOCK: FEATURE BAND (blue green). One headline item with a button. -->
@@ -139,14 +140,14 @@ HOW TO USE (for Claude or a person editing this file):
     </td></tr></table>
   </td></tr>
 
-  <!-- BLOCK: NAVY CARD. Call to action (applications, volunteers). Stays dark in every mode (dark blue green in dark mode, so it shows on the navy page). -->
+  <!-- BLOCK: ACTION CARD. Call to action (applications, volunteers): light blue card with a navy button. On a light blue section, swap the card to white (#FFFFFF). -->
   <tr><td class="bg-white px" style="background:#FFFFFF;padding:16px 40px;">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="bg-card-navy" style="background:#1E2B38;border-radius:20px;"><tr><td style="padding:28px;">
-      <p style="margin:0 0 8px;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#DBEBEE;">[EYEBROW]</p>
-      <h3 style="margin:0 0 10px;font-family:Arial,Helvetica,sans-serif;font-size:22px;line-height:1.25;font-weight:700;color:#FFFFFF;">[ITEM TITLE]</h3>
-      <p style="margin:0 0 22px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55;color:#DBEBEE;">[BODY]</p>
-      <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td style="background:#DBEBEE;border-radius:999px;">
-        <a href="[https://LINK]" style="display:inline-block;padding:14px 26px;font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;color:#1E2B38;text-decoration:none;">[BUTTON LABEL] &rarr;</a>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="bg-card-light" style="background:#DBEBEE;border-radius:20px;"><tr><td style="padding:28px;">
+      <p class="t-eyebrow" style="margin:0 0 8px;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#184B56;">[EYEBROW]</p>
+      <h3 class="t-ink" style="margin:0 0 10px;font-family:Arial,Helvetica,sans-serif;font-size:22px;line-height:1.25;font-weight:700;color:#1E2B38;">[ITEM TITLE]</h3>
+      <p class="t-ink" style="margin:0 0 22px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55;color:#1E2B38;">[BODY]</p>
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td class="btn-navy" style="background:#1E2B38;border-radius:999px;">
+        <a href="[https://LINK]" style="display:inline-block;padding:14px 26px;font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;color:#FFFFFF;text-decoration:none;">[BUTTON LABEL] &rarr;</a>
       </td></tr></table>
     </td></tr></table>
   </td></tr>
@@ -180,21 +181,21 @@ HOW TO USE (for Claude or a person editing this file):
     <p style="margin:20px 0 0;"><a class="t-link" href="[https://LINK]" style="font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;color:#184B56;text-decoration:none;">[LINK TEXT] &rarr;</a></p>
   </td></tr>
 
-  <!-- BLOCK: DEEP BAND (dark blue green). Longer feature or article (health, spotlight, story). Stays dark in every mode. -->
-  <tr><td style="background:#184B56;padding:44px 40px;" class="px">
-    <p style="margin:0 0 8px;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:16px;letter-spacing:0.2em;text-transform:uppercase;color:#A5C8CF;">[SECTION NAME]</p>
-    <h2 style="margin:0 0 6px;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:36px;line-height:0.95;text-transform:uppercase;color:#FFFFFF;">[SHORT HEADLINE]</h2>
-    <p style="margin:0 0 20px;font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.5;color:#A5C8CF;">[OPTIONAL SUBTITLE]</p>
-    <p style="margin:0 0 14px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55;color:#DBEBEE;">[PARAGRAPH. Repeat for more. Last paragraph uses margin:0.]</p>
+  <!-- BLOCK: FEATURE ARTICLE (white, blue green rule on top). Longer feature or article (health, spotlight, story). -->
+  <tr><td class="bg-white rule px" style="background:#FFFFFF;border-top:6px solid #A5C8CF;padding:44px 40px;">
+    <p class="t-eyebrow" style="margin:0 0 8px;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:16px;letter-spacing:0.2em;text-transform:uppercase;color:#184B56;">[SECTION NAME]</p>
+    <h2 class="t-ink" style="margin:0 0 6px;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:36px;line-height:0.95;text-transform:uppercase;color:#1E2B38;">[SHORT HEADLINE]</h2>
+    <p class="t-muted" style="margin:0 0 20px;font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.5;color:#184B56;">[OPTIONAL SUBTITLE]</p>
+    <p class="t-ink" style="margin:0 0 14px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55;color:#1E2B38;">[PARAGRAPH. Repeat for more. Last paragraph uses margin:0.]</p>
   </td></tr>
 
   <!-- ============================= BODY END ============================= -->
 
   <!-- FIXED: sign-off and socials. Nothing goes below this; iContact adds its footer. -->
-  <tr><td style="background:#1E2B38;border-radius:0 0 20px 20px;padding:40px;" class="px" align="center">
-    <p style="margin:0 0 6px;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:28px;letter-spacing:0.005em;text-transform:uppercase;color:#FFFFFF;">For the Love of the Sport.</p>
-    <p style="margin:0;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:14px;letter-spacing:0.2em;text-transform:uppercase;color:#DBEBEE;">
-      <a href="https://www.facebook.com/unitedclubgymnastics" style="color:#DBEBEE;text-decoration:none;">Facebook</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="https://www.instagram.com/unitedclubgymnastics" style="color:#DBEBEE;text-decoration:none;">Instagram</a>
+  <tr><td class="bg-accent px" style="background:#A5C8CF;border-radius:0 0 20px 20px;padding:40px;" align="center">
+    <p class="t-ink" style="margin:0 0 6px;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:28px;letter-spacing:0.005em;text-transform:uppercase;color:#1E2B38;">For the Love of the Sport.</p>
+    <p class="t-link" style="margin:0;font-family:'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif;font-weight:700;font-size:14px;letter-spacing:0.2em;text-transform:uppercase;color:#184B56;">
+      <a class="t-link" href="https://www.facebook.com/unitedclubgymnastics" style="color:#184B56;text-decoration:none;">Facebook</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a class="t-link" href="https://www.instagram.com/unitedclubgymnastics" style="color:#184B56;text-decoration:none;">Instagram</a>
     </p>
   </td></tr>
 

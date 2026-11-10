@@ -974,7 +974,8 @@ def social_print(ctx):
 
 def social_banners(ctx):
     items = [("ucg-facebook-cover.png", "Facebook cover", "on-white"), ("ucg-youtube-banner-2048x1152.png", "YouTube banner", "on-white"),
-             ("ucg-zoom-background.png", "Zoom background", "on-white"), ("ucg-email-header.png", "Email header", "on-navy")]
+             ("ucg-zoom-background.png", "Zoom background", "on-white"), ("ucg-email-header.png", "Email header (signatures)", "on-navy"),
+             ("ucg-email-header-light.png", "Email header (announcements)", "on-white")]
     t = "".join(f'<div class="asset"><div class="{c}" style="padding:14px;display:flex;align-items:center;justify-content:center;min-height:150px"><img src="{R}assets/social/{f}" alt="{n}" loading="lazy" style="max-height:160px"></div><div class="meta"><b>{n}</b><span class="dl"><a href="{R}assets/social/{f}" download>PNG</a></span></div></div>' for f, n, c in items)
     return vis("", f'<div class="grid" style="--min:260px">{t}</div>')
 

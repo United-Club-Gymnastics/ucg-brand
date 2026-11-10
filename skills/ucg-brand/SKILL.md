@@ -29,6 +29,7 @@ If those files aren't available locally, fetch them from `https://united-club-gy
 
 - Palette only: Navy `#1E2B38`, Blue Green `#A5C8CF`, Light Blue `#DBEBEE`, Purple `#ADBAE9`, Red Orange `#F4694A`, Dark Blue Green `#184B56`, Golden Yellow `#F6C328`, White. Expressive work (merch, campaigns) may add only the six expressive colors in `expressive.md`.
 - **Color pairs: the design guide's approved pairs, at WCAG AA** (4.5:1 body, 3:1 large text and icons), including hover, dark mode and text over photos (`color-pairs.md`). Never Golden Yellow, Purple, Blue Green or Light Blue text on White or Light Blue. Small text on Blue Green is Dark Blue Green, not Navy; Blue Green and Purple on Navy are for large text only.
+- **Emails are dark text on light backgrounds** (UCG decision): White, Light Blue and Blue Green sections; Navy only for text and buttons.
 - Headlines: Greed Condensed Bold, or Saira Condensed Bold where Greed isn't available, ALL CAPS. Body and buttons: Suisse Intl, or Arial. Buttons are pills. Never publish or link the licensed font files.
 - Use the supplied logo and icon files (SVG for web, PNG for Google apps). Never redraw, stretch or add effects. Recoloring is fine in any palette color that is an approved pair for its background.
 - Rules come from Build's guides or UCG decisions (listed in `BRAND.md`). Sizes and layouts marked as template defaults or suggestions are starting points, not rules.

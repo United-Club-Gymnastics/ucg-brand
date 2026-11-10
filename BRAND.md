@@ -133,6 +133,7 @@ Made by UCG after the guides were delivered. Where they differ from the guides, 
 - **For the Love of the Sport** is the core message (the guide lists A Place to Land as core).
 - **Fallback fonts** are Saira Condensed Bold and Arial.
 - **WCAG AA** on top of the guide's approved pairs, everywhere.
+- **Emails are dark text on light backgrounds** (2026-11-10): White, Light Blue and Blue Green sections; Navy only for text and buttons ([`references/email.md`](references/email.md)).
 - **unitedclubgymnastics.org** is the web address (the guides say unitedgymnastics.org).
 - **Palette-only UI**: no extra grays or navies.
 - **Expressive colors** are exactly the six swatches, no in-between shades.

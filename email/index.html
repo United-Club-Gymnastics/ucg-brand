@@ -63,20 +63,21 @@
 <p>Start from <a href="../templates/email/ucg-announcement-email.html"><code>templates/email/ucg-announcement-email.html</code></a>. It is UCG's working monthly-announcements template (sent through iContact) and its comments explain how to use it. In short:</p>
 <ul>
 <li>Parts marked <strong>FIXED</strong> never change: header logo, base styles, dark-mode rules, sign-off and social links.</li>
-<li>Build the body from the <strong>BLOCKS</strong> between <code>BODY START</code> and <code>BODY END</code>: hero, feature band, section label, standard item, light card, navy card, two buttons, discipline section, deep band. Copy a block, replace every <code>[PLACEHOLDER]</code>, delete what you don't need.</li>
+<li><strong>Dark text on light backgrounds</strong> (UCG decision, 2026-11-10): readers found light text on dark sections harder to read. Sections and cards are White, Light Blue or Blue Green; Navy is for text and buttons only. The header is a White strip with the Navy logo, and the sign-off sits on Blue Green.</li>
+<li>Build the body from the <strong>BLOCKS</strong> between <code>BODY START</code> and <code>BODY END</code>: hero, feature band, section label, standard item, light card, action card, two buttons, discipline section, feature article. Copy a block, replace every <code>[PLACEHOLDER]</code>, delete what you don't need.</li>
 <li>Keep the sender's wording. Fix only obvious typos.</li>
-<li>Neighboring sections usually get different backgrounds (white, light blue, blue green, navy, dark blue green), so the email reads as separate blocks.</li>
-<li>Small text follows the color pairs (<a href="../colors/"><code>color-pairs.md</code></a>): on Blue Green it's Dark Blue Green, not Navy; on Navy it's White, Light Blue or Golden Yellow, not Blue Green (DG p42–43).</li>
+<li>Neighboring sections usually get different backgrounds (white, light blue, blue green), so the email reads as separate blocks. A feature article on White after another White section gets its Blue Green top rule as the divider.</li>
+<li>Small text follows the color pairs (<a href="../colors/"><code>color-pairs.md</code></a>): on Blue Green it's Dark Blue Green, not Navy (DG p42–43).</li>
 <li>Chips: a Red Orange, Golden Yellow or Purple fill with Navy text.</li>
 <li>Every link is https. Buttons for main actions, text links (<code>Link text →</code>) for secondary ones.</li>
-<li>Images: only the fixed logo unless an image hosted by the email platform is supplied. Never use white or light images with transparent backgrounds; they vanish in dark mode.</li>
+<li>Images: only the fixed logo unless an image hosted by the email platform is supplied. The logo is <code>assets/social/ucg-email-header-light.png</code> (Navy logo with White baked in, shown 360px wide); the header strip stays White in dark mode so the image never shows as a white box. Never use images with transparent backgrounds; they vanish in dark mode.</li>
 <li>No unsubscribe link, address or footer below the socials. iContact adds its own.</li>
 <li>Keep every <code>class="…"</code> attribute when copying a block. The classes drive dark mode.</li>
 </ul>
 <p><strong>Fonts in email:</strong> most inboxes can't load custom fonts. Headlines use <code>'Greed Condensed','Saira Condensed','Arial Narrow',Arial,sans-serif</code> (Saira loads from Google Fonts in Apple Mail and iOS; everyone else sees Arial Narrow or Arial). Body text and buttons are <code>Arial,Helvetica,sans-serif</code> (Arial stands in for Suisse Intl, which the guide uses for buttons, DG p76).</p>
-<p><strong>Buttons:</strong> pills, ALL CAPS, <code>letter-spacing: 0.2em</code> (DG p76). The template uses Navy with White text, and Light Blue with Navy text.</p>
+<p><strong>Buttons:</strong> pills, ALL CAPS, <code>letter-spacing: 0.2em</code> (DG p76). The template uses Navy with White text (short bold labels, the one light-on-dark element), and Light Blue with Navy text for a second button.</p>
 <p><strong>What the template uses</strong> (defaults, not rules): hero H1 52px (40px on mobile), section H2 36px, item titles 22px Arial bold, body 16px / 1.55, eyebrows 12–13px bold caps with 0.2em tracking, buttons 15px Arial bold caps with 0.2em tracking, 20px card radius, 600px container. List dividers are 1px, the thinnest line email clients draw reliably (the guide's 0.5pt, DG p77, is for layouts that can render it).</p>
-<p><strong>Contrast in dark mode:</strong> the template remaps backgrounds and text for Apple Mail, iOS and Outlook. If you add a new color pairing, add matching dark-mode classes and check both modes against <a href="../colors/"><code>color-pairs.md</code></a>.</p>
+<p><strong>Contrast in dark mode:</strong> when a reader's device is in dark mode, the template remaps sections to Navy and Dark Blue Green with White and Light Blue text, for Apple Mail, iOS and Outlook. That's the reader's choice, so it stays. If you add a new color pairing, add matching dark-mode classes and check both modes against <a href="../colors/"><code>color-pairs.md</code></a>.</p>
 </div>
 <div class="vis"><p class="vis-title">Example built from the template</p><div class="compare">
 <div><p class="mock-label" style="margin:0 0 8px"><b>Light mode</b></p><iframe class="email-frame" loading="lazy" src="../site/email-example-light.html" title="Example UCG announcement email, light mode"></iframe></div>

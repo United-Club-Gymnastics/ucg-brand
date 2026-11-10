@@ -67,7 +67,7 @@ File names: `ucg-<color|bw>-<what's in it>.jpg`. The design guide uses black-and
 
 ## Social banners — `assets/social/`
 
-Facebook cover, YouTube banner, Zoom backgrounds and the email header logo (`ucg-email-header.png`, navy background baked in so it survives dark mode). Their editable sources are the "05 Social & Digital" artboards in the toolkit's `All UCG Assets.svg` (live text in Greed and Suisse; each artboard remembers its export file name and size). The mirrored Zoom background is a clone of the regular one, so edit that one.
+Facebook cover, YouTube banner, Zoom backgrounds the email header logo (`ucg-email-header.png`, navy background baked in so it survives dark mode, for personal signatures) and the announcement email's header (`ucg-email-header-light.png`, Navy logo with White baked in). Their editable sources are the "05 Social & Digital" artboards in the toolkit's `All UCG Assets.svg` (live text in Greed and Suisse; each artboard remembers its export file name and size). The mirrored Zoom background is a clone of the regular one, so edit that one.
 
 ## Patterns — `assets/patterns/`
 
